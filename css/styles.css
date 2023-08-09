@@ -1,16 +1,13 @@
-body {
+ /* body {
     background-color: bisque;
     display: flex;
     
-}
+} */
 
 #destaque {
-    width: 100%;
+    width: 50%;
     height: 100vh;
     background: url("../images/destaque-login.jpg");
-    background-size: cover;
- 
-    /* align-items: center;
-    flex-direction: column; */
-    
-}
+    background-size: cover;  
+    /* background-attachment: fixed; */
+} 
