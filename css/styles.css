@@ -11,3 +11,7 @@
     background-size: cover;  
     /* background-attachment: fixed; */
 } 
+
+#pata {
+    background: url("../icones/bicho-de-estimacao.jpg") ;
+}
