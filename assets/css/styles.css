@@ -6,6 +6,8 @@
     height: 100vh;
     background: url("../../images/destaque-login.jpg");
     background-size: cover;  
+    border-radius: 0;
+    border-top: 0;
 } 
 
 
@@ -14,15 +16,11 @@
     height: 8vh;
     background: url("../../icones/pet2.png") top center;
     background-size: cover;
-    /* background-color: black; */
-    /* position: absolute; */
-    /* left: 48px;
-    top: -33px; */
     margin: 10px;
 }
 
 h1 {
-    font-size: 30px;
+    font-size: 2rem;
     color: #1E266D;
     padding: 8px;
 }
@@ -38,7 +36,7 @@ h1 {
 
 .input {
     width: 350px;
-    height: 2px;
+    
 }
 
 .cadeado {
@@ -49,7 +47,6 @@ h1 {
 }
 
 .estilo-cadeado {
-    /* background-color: black; */
     display: flex;
     justify-content: center;
 }
@@ -65,10 +62,7 @@ h1 {
     height: 61px;
     background-color: #FF7F50;
     border: solid;
-    cursor: pointer;
-    
-    
-    
+    cursor: pointer; 
 }
 
 .botao:hover, .botao:focus, .botao:active {
@@ -77,3 +71,56 @@ h1 {
     background-color: #e96d3f;
 }
 
+.tag-style {
+    position: relative;
+    padding: 6px;
+    right: -5px;
+}
+
+@media screen and (max-width: 1326px) {
+    #pata {
+        width: 8.1%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 982px) {
+    
+    .estilo-cadeado {
+        display: flex;
+        justify-content: right;
+        right: 14px;
+        position: relative;
+    }
+    
+    .hero {
+        bottom: -11px;
+        
+    }
+
+    #destaque {
+        width: 45%;
+
+    } 
+    
+    
+    #pata {
+        width: 7%;
+        height: 4.8vh;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .input {
+        width: 300px;
+    }
+
+    .botao {
+        width: 305px;
+    }
+
+}
