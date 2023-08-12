@@ -37,16 +37,43 @@ h1 {
 }
 
 .input {
-    width: 420px;
+    width: 350px;
     height: 2px;
 }
 
 .cadeado {
-    margin: 6px;
+    margin: 9px;
     width: 4%;
     height: 4vh;
-    background: url("../../icones/lock1.png");
     background-size: cover;
+}
+
+.estilo-cadeado {
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    position: relative;
+    bottom: -11px;
     
+}
+
+.botao {
+    width: 350px;
+    height: 61px;
+    background-color: #FF7F50;
+    border: solid;
+    cursor: pointer;
+    
+    
+    
+}
+
+.botao:hover, .botao:focus, .botao:active {
+    border: solid;
+    cursor: pointer;
+    background-color: #e96d3f;
 }
 
