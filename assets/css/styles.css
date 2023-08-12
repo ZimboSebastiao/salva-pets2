@@ -1,6 +1,24 @@
 /*--------------------------------------------------------------
 # Estilização Página de Login
 --------------------------------------------------------------*/
+.container {
+    width: 100%;
+    padding-right: 38px;
+    padding-left: 38px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+.row {
+    --bs-gutter-x: 1.6rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(var(--bs-gutter-x) * -3);
+    margin-left: calc(var(--bs-gutter-x) * -3);
+  }
+
 #destaque {
     width: 50%;
     height: 100vh;
@@ -10,11 +28,10 @@
     border-top: 0;
 } 
 
-
 #pata {
-    width: 9%;
-    height: 8vh;
-    background: url("../../icones/pet2.png") top center;
+    width: 6%;
+    height: 6vh;
+    background: url("../../icones/pet1.png") top center;
     background-size: cover;
     margin: 10px;
 }
@@ -54,10 +71,11 @@ h1 {
 .hero {
     position: relative;
     bottom: -11px;
-    
 }
 
+
 .botao {
+    pointer-events: auto;
     width: 350px;
     height: 61px;
     background-color: #FF7F50;
@@ -65,11 +83,32 @@ h1 {
     cursor: pointer; 
 }
 
-.botao:hover, .botao:focus, .botao:active {
+.botao:hover, .botao:focus{
     border: solid;
+    border-color: #e96d3f;
     cursor: pointer;
     background-color: #e96d3f;
 }
+  
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+  .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #e96d3f;
+    border-color:#e96d3f;
+  }
+  
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.25rem rgb(219, 106, 65);
+  }
+
+
+
+
+
+
+
+
 
 .tag-style {
     position: relative;
