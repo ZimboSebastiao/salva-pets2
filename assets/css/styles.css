@@ -1,0 +1,45 @@
+/*--------------------------------------------------------------
+# Estilização Página de Login
+--------------------------------------------------------------*/
+#destaque {
+    width: 50%;
+    height: 100vh;
+    background: url("../../images/destaque-login.jpg");
+    background-size: cover;  
+} 
+
+
+#pata {
+    width: 9%;
+    height: 8vh;
+    background: url("../../icones/pet2.png") top center;
+    background-size: cover;
+    /* background-color: black; */
+    /* position: absolute; */
+    /* left: 48px;
+    top: -33px; */
+    margin: 10px;
+}
+
+h1 {
+    font-size: 30px;
+    color: #1E266D;
+    padding: 8px;
+}
+
+.estilo-p {
+    color: #C3C7E5;
+    padding: 10px;
+}
+
+.estilo-form {
+    /* background-color: black; */
+    padding: 10px;
+}
+
+.input {
+    width: 420px;
+    height: 2px;
+    /* background-color: aqua; */
+}
+
