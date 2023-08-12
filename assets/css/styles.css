@@ -52,8 +52,7 @@ h1 {
 }
 
 .input {
-    width: 350px;
-    
+    width: 370px;
 }
 
 .cadeado {
@@ -76,7 +75,7 @@ h1 {
 
 .botao {
     pointer-events: auto;
-    width: 350px;
+    width: 370px;
     height: 61px;
     background-color: #FF7F50;
     border: solid;
