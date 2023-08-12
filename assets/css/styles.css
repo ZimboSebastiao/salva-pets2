@@ -33,13 +33,20 @@ h1 {
 }
 
 .estilo-form {
-    /* background-color: black; */
     padding: 10px;
 }
 
 .input {
     width: 420px;
     height: 2px;
-    /* background-color: aqua; */
+}
+
+.cadeado {
+    margin: 6px;
+    width: 4%;
+    height: 4vh;
+    background: url("../../icones/lock1.png");
+    background-size: cover;
+    
 }
 
