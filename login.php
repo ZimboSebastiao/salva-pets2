@@ -50,7 +50,7 @@
                         <br>
                         <div>
                             <button class="btn btn-primary btn-lg botao">Entrar</button>
-                            <p class="tag-style">Não tem uma conta? <a href="">Crie uma conta de graça</a></p>
+                            <p class="tag-style">Não tem uma conta? <a href="cadastro.php">Crie uma conta de graça</a></p>
                         </div>
                     </form>
                 </section> 
