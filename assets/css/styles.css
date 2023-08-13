@@ -74,16 +74,28 @@ h1 {
 
 
 .botao {
-    pointer-events: auto;
     width: 370px;
     height: 61px;
     background-color: #FF7F50;
-    border: solid;
+    border-color: #e96d3f;
     cursor: pointer; 
 }
 
 .botao:hover, .botao:focus{
-    border: solid;
+    border-color: #e96d3f;
+    border-color: #e96d3f;
+    cursor: pointer;
+    background-color: #e96d3f;
+}
+
+.enviar {
+    background-color: #FF7F50;
+    cursor: pointer; 
+    border-color: #e96d3f;
+}
+
+.enviar:hover, .enviar:focus{
+    
     border-color: #e96d3f;
     cursor: pointer;
     background-color: #e96d3f;
