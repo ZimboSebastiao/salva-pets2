@@ -52,13 +52,13 @@ h1 {
 }
 
 .input {
-    width: 370px;
+    width: 395px;
 }
 
 .cadeado {
     margin: 9px;
-    width: 4%;
-    height: 2.8vh;
+    width: 3%;
+    height: 2.1vh;
     background-size: cover;
 }
 
@@ -69,12 +69,12 @@ h1 {
 
 .hero {
     position: relative;
-    bottom: -11px;
+    bottom: -9px;
 }
 
 
 .botao {
-    width: 370px;
+    width: 395px;
     height: 61px;
     background-color: #FF7F50;
     border-color: #e96d3f;
