@@ -49,13 +49,13 @@
     </div>
 
     <div class="dropdown mt-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+      <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
         Ajuda
       </button>
     </div>
 
     <div class="dropdown mt-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+      <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
         Contato
       </button>
     </div>
