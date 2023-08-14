@@ -29,16 +29,40 @@
 
     <div class="dropdown mt-3">
       <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-        Dropdown button
+        Nossos Pets
       </button>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><a class="dropdown-item" href="#">Cachorros</a></li>
+        <li><a class="dropdown-item" href="#">Gatos</a></li>
       </ul>
     </div>
-  
+    
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        Quem Somos
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Processo de adoção</a></li>
+        <li><a class="dropdown-item" href="#">Nosso time</a></li>
+        <li><a class="dropdown-item" href="#">Contato</a></li>
+      </ul>
     </div>
+
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        Ajuda
+      </button>
+    </div>
+
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        Contato
+      </button>
+    </div>
+   
+    
+</div>
+
 
     <div class="dropdown mt-3">
       <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
