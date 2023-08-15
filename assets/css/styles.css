@@ -214,15 +214,15 @@ h1 {
   
   .btn-secondary:hover {
     color: #fff;
-    background-color: #1f2dad;
+    background-color: #0a1579;
     border-color: #040726;
   }
   
   .btn-secondary:focus, .btn-secondary.focus {
     color: #fff;
-    background-color: #1f2dad;
-    border-color: #1f2dad;
-    box-shadow: 0 0 0 0.25rem #1f2dad;
+    background-color: #0a1579;
+    border-color: #0a1579;
+    box-shadow: 0 0 0 0.25rem #0a1579;
   }
   
   .btn-secondary.disabled, .btn-secondary:disabled {
@@ -240,6 +240,9 @@ h1 {
   
   .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary:not(:disabled):not(.disabled).active:focus,
   .show > .btn-secondary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.25rem #1f2dad;
+    box-shadow: 0 0 0 0.25rem #0a1579;
   }
   
+.legenda {background-color: #040726;}
+.lgend {background-color: #040726;}
+
