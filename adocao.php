@@ -29,7 +29,13 @@
 
     <div class="dropdown mt-3">
       <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-        Nossos Pets
+        <img src="icones/pet-house1.png" alt="Home">
+      </button>
+    </div>
+
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        <img src="icones/gato1.png" alt="Nossos pets">
       </button>
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Cachorros</a></li>
@@ -39,7 +45,7 @@
     
     <div class="dropdown mt-3">
       <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-        Quem Somos
+        <img src="icones/pessoas-juntas1.png" alt="Quem somos">
       </button>
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Processo de adoção</a></li>
