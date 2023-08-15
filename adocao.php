@@ -13,12 +13,13 @@
 
 <!-- ======== SideBar ======== -->
 <section>
-<a class="btn " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+<a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
   <img src="icones/cardapio.png" alt="">
 </a>
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
+    <img src="icones/pet3.png" alt="">
     <h5 class="offcanvas-title" id="offcanvasExampleLabel">SalvaPets</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 </div>
@@ -28,9 +29,10 @@
     <div>
 
     <div class="dropdown mt-3">
-      <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
-        <img src="icones/pet-house1.png" alt="Home">
-      </button>
+      
+    <a class="btn btn-secondary" href="cadastro.php" role="button" aria-controls="offcanvasExample">
+      <img src="icones/pet-house1.png" alt="Home">
+    </a>
     </div>
 
     <div class="dropdown mt-3">
@@ -55,15 +57,15 @@
     </div>
 
     <div class="dropdown mt-3">
-      <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
+      <a class="btn btn-secondary" href="cadastro.php" role="button" aria-controls="offcanvasExample">
         <img src="icones/ajuda1.png" alt="Ajuda">
-      </button>
+      </a>
     </div>
 
     <div class="dropdown mt-3">
-      <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
+      <a class="btn btn-secondary" href="cadastro.php" role="button" aria-controls="offcanvasExample">
         <img src="icones/atendimento-ao-cliente1.png" alt="Contato">
-      </button>
+      </a>
     </div>
    
     
