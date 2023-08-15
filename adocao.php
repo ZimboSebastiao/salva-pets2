@@ -34,7 +34,7 @@
     </div>
 
     <div class="dropdown mt-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+      <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
         <img src="icones/gato1.png" alt="Nossos pets">
       </button>
       <ul class="dropdown-menu">
@@ -44,7 +44,7 @@
     </div>
     
     <div class="dropdown mt-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+      <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
         <img src="icones/pessoas-juntas1.png" alt="Quem somos">
       </button>
       <ul class="dropdown-menu">
