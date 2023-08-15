@@ -14,7 +14,7 @@
 <!-- ======== SideBar ======== -->
 <section>
 <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-  Link with href
+  <img src="icones/cardapio.png" alt="">
 </a>
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -28,7 +28,7 @@
     <div>
 
     <div class="dropdown mt-3">
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+      <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
         <img src="icones/pet-house1.png" alt="Home">
       </button>
     </div>
@@ -56,19 +56,20 @@
 
     <div class="dropdown mt-3">
       <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
-        Ajuda
+        <img src="icones/ajuda1.png" alt="Ajuda">
       </button>
     </div>
 
     <div class="dropdown mt-3">
       <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown">
-        Contato
+        <img src="icones/atendimento-ao-cliente1.png" alt="Contato">
       </button>
     </div>
    
     
 </div>
 
+<hr>
 
     <div class="dropdown mt-3">
       <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
