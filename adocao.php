@@ -13,7 +13,7 @@
 
 <!-- ======== SideBar ======== -->
 <section>
-<a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+<a class="btn " data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
   <img src="icones/cardapio.png" alt="">
 </a>
 
