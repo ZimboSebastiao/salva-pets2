@@ -203,7 +203,11 @@ h1 {
 # Estilização Página de Processo de adoção
 --------------------------------------------------------------*/
 
-.botaoH {height: 35px;}
+.botaoH {
+    height: 35px;
+    width: 120px;
+    
+}
   
   .btn-primary {
     color: #fff; 
@@ -217,3 +221,23 @@ h1 {
     background-color: #e96d3f; 
     border-color: #e96d3f;
   }
+
+  
+  .navbar-dark .navbar-brand,
+  .navbar-dark .navbar-nav .nav-link {
+    color: #1E266D; /* Cor do texto na barra de navegação */
+    font-weight: bold;
+}
+
+.bg-dark {
+    background-color: #fff1eb !important; 
+  }
+
+.cabecalho {
+    color: #000 !important;
+    background-color: #fff1eb; 
+}
+  
+
+ 
+  
