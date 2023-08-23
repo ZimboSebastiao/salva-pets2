@@ -81,10 +81,10 @@
         </section> 
 
         </div>
-
+   
         <!-- ========== Destaque ========== -->
         <div class="col-8" id="destaque"></div>
-    
+
     </div>
 </div>
 

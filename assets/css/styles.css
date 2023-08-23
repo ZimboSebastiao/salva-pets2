@@ -22,10 +22,10 @@
     width: 50%;
     height: 100vh;
     background: url("../../images/destaque-login.jpg");
-    background-size: cover;  
+    background-size: cover;
     border-radius: 0;
     border-top: 0;
-} 
+}
 
 #pata {
     width: 4%;
@@ -77,10 +77,11 @@ h1 {
     height: 61px;
     background-color: #FF7F50;
     border-color: #e96d3f;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
-.botao:hover, .botao:focus{
+.botao:hover,
+.botao:focus {
     border-color: #e96d3f;
     border-color: #e96d3f;
     cursor: pointer;
@@ -89,28 +90,31 @@ h1 {
 
 .enviar {
     background-color: #FF7F50;
-    cursor: pointer; 
+    cursor: pointer;
     border-color: #e96d3f;
 }
 
-.enviar:hover, .enviar:focus{
-    
+.enviar:hover,
+.enviar:focus {
+
     border-color: #e96d3f;
     cursor: pointer;
     background-color: #e96d3f;
 }
-  
-.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
-  .show > .btn-primary.dropdown-toggle {
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show>.btn-primary.dropdown-toggle {
     color: #fff;
     background-color: #e96d3f;
-    border-color:#e96d3f;
-  }
-  
-.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
-  .show > .btn-primary.dropdown-toggle:focus {
+    border-color: #e96d3f;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.25rem rgb(219, 106, 65);
-  }
+}
 
 .tag-style {
     position: relative;
@@ -126,25 +130,25 @@ h1 {
 
 
 @media screen and (max-width: 982px) {
-    
+
     .estilo-cadeado {
         display: flex;
         justify-content: right;
         right: 14px;
         position: relative;
     }
-    
+
     .hero {
         bottom: -11px;
-        
+
     }
 
     #destaque {
         width: 45%;
 
-    } 
-    
-    
+    }
+
+
     #pata {
         width: 7%;
         height: 4.8vh;
@@ -164,6 +168,52 @@ h1 {
 
 }
 
+/* Modifição para telas pequenas*/
+
+@media screen and (max-width: 767px) {
+
+    #pata {
+        width: 13%;
+    }
+
+
+    .input {
+        width: 250px;
+    }
+
+    #destaque {
+        width: 50%;
+
+    }
+
+    .botao {
+        width: 250px;
+    }
+
+    .estilo-cadeado {
+        display: inline-block;
+        /* Certifica-se de que o elemento ocupe apenas o espaço necessário */
+        vertical-align: middle;
+        /* Alinha verticalmente com os inputs */
+        margin-right: 10px;
+    }
+
+    .cadeado {
+        width: auto;
+    }
+
+    .hero {
+        display: inline-block;
+        /* Para que ele fique na mesma linha que o .estilo-cadeado */
+        vertical-align: middle;
+        margin-right: 20px ;
+    }
+
+
+
+}
+
+
 
 /*--------------------------------------------------------------
 # Estilização Página de Cadastro
@@ -173,10 +223,10 @@ h1 {
     width: 50%;
     height: 125vh;
     background: url(../../images/destaque-cadastro.jpg);
-    background-size: cover;  
+    background-size: cover;
     border-radius: 0;
     border-top: 0;
-} 
+}
 
 .estilo-l {
     font-size: 14px;
@@ -189,9 +239,9 @@ h1 {
     color: #C3C7E5;
     position: relative;
     padding: 6px;
-    right: -90px;  
+    right: -90px;
 }
-  
+
 .form-check-input:checked[type="checkbox"] {
     background-color: #FF7F50;
     border-color: #FF7F50;
@@ -201,6 +251,7 @@ h1 {
 
 /*--------------------------------------------------------------
 # Estilização Página de Processo de adoção
+<<<<<<< Updated upstream
 --------------------------------------------------------------*/
 
 .botaoH {
@@ -254,3 +305,6 @@ h1 {
 
  
   
+=======
+--------------------------------------------------------------*/
+>>>>>>> Stashed changes
