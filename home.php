@@ -41,7 +41,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Contato</a>
             </li>
-            <a href="login.php" class="btn btn-primary botaoH" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+            <a href="login.php" class="btn btn-primary botaoH" tabindex="-1" role="button" aria-disabled="true">Entrar</a>
           </ul>
         </div>
       </div>
