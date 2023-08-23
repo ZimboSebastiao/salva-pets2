@@ -204,3 +204,17 @@ h1 {
 # Estilização Página de Processo de adoção
 --------------------------------------------------------------*/
 
+.botaoH {height: 35px;}
+  
+  .btn-primary {
+    color: #fff; 
+    background-color: #e96d3f; 
+    border-color: #e96d3f;
+  }
+  
+  
+  .botaoH:hover {
+    color: #fff; 
+    background-color: #e96d3f; 
+    border-color: #e96d3f;
+  }
