@@ -233,6 +233,19 @@ h1 {
     background-color: #fff1eb !important; 
   }
 
+.navbar-dark .navbar-toggler {
+    border-color: #1E266D; /* Cor da borda do botão de toggler */
+  }
+
+  
+.navbar-dark .navbar-toggler:hover {
+    background-color: rgba(17, 16, 16, 0.3); /* Cor de fundo do botão de toggler ao passar o mouse */
+  }
+
+.navbar-dark .navbar-toggler-icon {
+    background-color: #352f2f; /* Cor do ícone do botão de toggler (ícone "hamburguer") */
+  }
+
 .cabecalho {
     color: #000 !important;
     background-color: #fff1eb; 
