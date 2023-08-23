@@ -30,7 +30,7 @@
     <div>
 
     <!-- ======== LINK INICIAL ======== -->
-    <div class="dropdown mt-3">
+    <div class="dropdown col-12 d-grid">
       <a class="btn btn-secondary" href="cadastro.php" role="button" aria-controls="offcanvasExample" data-bs-toggle="tooltip" data-bs-placement="auto" title="Inicial">
         <img src="icones/pet-house1.png" alt="Home">
       </a>

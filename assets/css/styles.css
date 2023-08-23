@@ -246,3 +246,7 @@ h1 {
 .legenda {background-color: #040726;}
 .lgend {background-color: #040726;}
 
+.d-grid {
+    display: grid;
+    justify-content: start; /* Isso alinha o conteúdo à esquerda */
+  }

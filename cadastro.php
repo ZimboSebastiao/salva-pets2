@@ -39,7 +39,7 @@
                         </div>
                         
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" required>
+                            <input type="number" class="form-control input" id="floatingInputGroup2" placeholder="Username" required>
                             <label for="floatingInputGroup2">CEP</label>
                         </div>
 
