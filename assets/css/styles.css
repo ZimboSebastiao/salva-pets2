@@ -230,10 +230,13 @@ h1 {
 }
 
 .bg-dark {
-    background-color: #fff1eb !important; /* Cor de fundo escura da barra de navegação (important para priorizar) */
-    /* Você pode substituir a cor de fundo pela cor desejada */
+    background-color: #fff1eb !important; 
   }
 
+.cabecalho {
+    color: #000 !important;
+    background-color: #fff1eb; 
+}
   
 
  
