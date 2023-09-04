@@ -168,7 +168,19 @@ h1 {
 
 }
 
-/* Modifição para telas pequenas*/
+@media screen and (max-width: 991px) {
+    .row{
+        --bs-gutter-x: 3rem;
+    }
+    
+}
+
+@media screen and (max-width: 815px){
+ .row{
+    --bs-gutter-x: 2rem;
+}
+}
+/* Modifição para telas pequenas | Página de Login*/
 
 @media screen and (max-width: 767px) {
 
@@ -210,11 +222,55 @@ h1 {
     }
 
 
+  .row{
+    --bs-gutter-x: 4rem;
+  }
 
 }
 
+@media screen and (max-width: 720px) {
+    .row{
+        --bs-gutter-x: 3rem;
+    }
+
+    .estilo-cadeado {
+        right: 15px;
+    }
+
+    .hero{
+        bottom: -1px;
+    }
+}
+
+@media screen and (max-width: 641px){
+    .row{
+        --bs-gutter-x: 2rem;
+    }
+}
 
 
+@media screen and (max-width: 580px){
+    .row{
+        --bs-gutter-x: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 510px){
+    
+    .estilo-form{
+        padding: 3px;
+    }
+}
+
+@media screen and (max-width:498px) {
+    .input{
+       width: 240px;
+    }
+
+    .botao{
+        width: 240px;
+    }
+}
 /*--------------------------------------------------------------
 # Estilização Página de Cadastro
 --------------------------------------------------------------*/
