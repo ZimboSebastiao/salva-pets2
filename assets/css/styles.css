@@ -3,8 +3,8 @@
 --------------------------------------------------------------*/
 .container {
     width: 100%;
-    padding-right: 50px;
-    padding-left: 60px;
+    /* padding-right: 50px;
+    padding-left: 60px; */
     margin-right: auto;
     margin-left: auto;
 }
@@ -411,6 +411,7 @@ h1 {
     color: #000 !important;
     background-color: #fff1eb; 
 }
-  
-
+.form-control, ::placeholder{
+    background-color: #FFF1EB;
+}
 
