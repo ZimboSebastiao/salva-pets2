@@ -35,12 +35,14 @@
                     <label for="floatingPassword">Senha</label>
                 </div>
 
-                <div>
+                
                     <div class="estilo-cadeado">
-                        <img class="cadeado" src="icones/lock.png" alt="">
+                        <div class="esqueci-senha">
+                            <img class="cadeado" src="icones/lock1.png" alt="">
+                            <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="" rel="" >Esqueci a senha</a>
+                        </div>
                         
                         <div class="hero">
-                            <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="" rel="" >Esqueci a senha</a>
                             
                             <!-- Modal -->
                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -69,7 +71,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+            
 
                 <br>
 
