@@ -271,6 +271,60 @@ h1 {
         width: 240px;
     }
 }
+
+@media screen and (max-width: 476px ){
+    .input{
+        width: 220px;
+     }
+ 
+     .botao{
+         width: 220px;
+     }
+}
+
+@media screen and (max-width: 440px) {
+    .input{
+        width: 200px;
+     }
+ 
+     .botao{
+         width: 200px;
+     }
+    
+}
+
+@media screen and (max-width: 406px) {
+    .input{
+        width: 190px;
+     }
+ 
+     .botao{
+         width: 190px;
+     }
+    
+}
+
+@media screen and (max-width: 391px) {
+    
+    .tag-style{
+        padding: 4px;
+    }
+
+    .hero{
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 378px) {
+
+    .estilo-form{
+        padding: 1px;
+    }
+    
+    .estilo-cadeado{
+        right:10px;
+    }
+}
 /*--------------------------------------------------------------
 # Estilização Página de Cadastro
 --------------------------------------------------------------*/
