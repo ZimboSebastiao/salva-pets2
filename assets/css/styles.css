@@ -357,7 +357,8 @@ h1 {
     color: #000 !important;
     background-color: #fff1eb; 
 }
+
+/* Input de buscas */
 .form-control, ::placeholder{
     background-color: #FFF1EB;
 }
-
