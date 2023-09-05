@@ -28,11 +28,12 @@
 }
 
 #pata {
-    width: 4%;
+    width: 25px;
     height: 2.8vh;
     background: url("../../icones/pet1.png") top center;
     background-size: cover;
     margin: 10px;
+    
 }
 
 h1 {
@@ -55,10 +56,11 @@ h1 {
 }
 
 .cadeado {
-    margin: 9px;
-    width: 3%;
-    height: 2.1vh;
+    margin: 5px;
+    width: 20px;
+    height: 2.1vh; 
     background-size: cover;
+    
 }
 
 .estilo-cadeado {
@@ -122,155 +124,120 @@ h1 {
     right: -5px;
 }
 
-@media screen and (max-width: 1326px) {
-    #pata {
-        width: 8.1%;
-    }
-}
-
 
 @media screen and (max-width: 982px) {
 
     .estilo-cadeado {
-        display: flex;
         justify-content: right;
-        right: 14px;
+        right: 80px;
         position: relative;
     }
 
     .hero {
-        bottom: -11px;
+        bottom: -9px;
+
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .row {
+        --bs-gutter-x: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 926px) {
+    .row {
+        --bs-gutter-x: 1.6rem;
+    }
+}
+
+/* Modifição para telas pequenas | Página de Login*/
+
+@media screen and (max-width: 808px) {
+    .row {
+        --bs-gutter-x: 1rem;
 
     }
 
-    #destaque {
-        width: 45%;
 
+    .input {
+        width: 350px;
     }
 
-
-    #pata {
-        width: 7%;
-        height: 4.8vh;
+    .botao {
+        width: 350px;
     }
+}
 
-    h1 {
-        font-size: 1.6rem;
-    }
+@media screen and (max-width: 767px) {
+
+   
 
     .input {
         width: 300px;
     }
 
     .botao {
-        width: 305px;
+        width: 300px;
+    }
+
+
+    .row {
+        --bs-gutter-x: 2rem;
     }
 
 }
 
-@media screen and (max-width: 991px) {
-    .row{
-        --bs-gutter-x: 3rem;
-    }
-    
-}
-
-@media screen and (max-width: 815px){
- .row{
-    --bs-gutter-x: 2rem;
-}
-}
-/* Modifição para telas pequenas | Página de Login*/
-
-@media screen and (max-width: 767px) {
-
-    #pata {
-        width: 13%;
-    }
-
-
-    .input {
-        width: 250px;
-    }
+@media screen and (max-width:666px) {
 
     #destaque {
-        width: 50%;
+        background-image: none;
 
+    }
+
+    .row {
+        --bs-gutter-x: -3rem;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        /* Adjust the maximum width as needed */
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .col-6 {
+        width: 100%;
+    }
+
+    .estilo-cadeado {
+        right: 0px;
+    }
+
+
+    .hero {
+        bottom: -11px;
+    }
+
+   
+    .input {
+        width: 350px;
     }
 
     .botao {
-        width: 250px;
+        width: 350px;
     }
 
-    .estilo-cadeado {
-        display: inline-block;
-        /* Certifica-se de que o elemento ocupe apenas o espaço necessário */
-        vertical-align: middle;
-        /* Alinha verticalmente com os inputs */
-        margin-right: 10px;
+    h1 {
+        font-size: 2rem;
     }
-
-    .cadeado {
-        width: auto;
-    }
-
-    .hero {
-        display: inline-block;
-        /* Para que ele fique na mesma linha que o .estilo-cadeado */
-        vertical-align: middle;
-        margin-right: 20px ;
-    }
-
-
-  .row{
-    --bs-gutter-x: 4rem;
-  }
 
 }
 
-@media screen and (max-width: 720px) {
-    .row{
-        --bs-gutter-x: 3rem;
-    }
-
-    .estilo-cadeado {
-        right: 15px;
-    }
-
-    .hero{
-        bottom: -1px;
-    }
-}
-
-@media screen and (max-width: 641px){
-    .row{
-        --bs-gutter-x: 2rem;
-    }
-}
 
 
-@media screen and (max-width: 580px){
-    .row{
-        --bs-gutter-x: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 510px){
-    
-    .estilo-form{
-        padding: 3px;
-    }
-}
-
-@media screen and (max-width:498px) {
-    .input{
-       width: 240px;
-    }
-
-    .botao{
-        width: 240px;
-    }
-}
 /*--------------------------------------------------------------
 # Estilização Página de Cadastro
 --------------------------------------------------------------*/
@@ -313,52 +280,55 @@ h1 {
 .botaoH {
     height: 35px;
     width: 120px;
-    
-}
-  
-  .btn-primary {
-    color: #fff; 
-    background-color: #e96d3f; 
-    border-color: #e96d3f;
-  }
-  
-  
-  .botaoH:hover {
-    color: #fff; 
-    background-color: #e96d3f; 
-    border-color: #e96d3f;
-  }
 
-  
-  .navbar-dark .navbar-brand,
-  .navbar-dark .navbar-nav .nav-link {
-    color: #1E266D; /* Cor do texto na barra de navegação */
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #e96d3f;
+    border-color: #e96d3f;
+}
+
+
+.botaoH:hover {
+    color: #fff;
+    background-color: #e96d3f;
+    border-color: #e96d3f;
+}
+
+
+.navbar-dark .navbar-brand,
+.navbar-dark .navbar-nav .nav-link {
+    color: #1E266D;
+    /* Cor do texto na barra de navegação */
     font-weight: bold;
 }
 
 .bg-dark {
-    background-color: #fff1eb !important; 
-  }
+    background-color: #fff1eb !important;
+}
 
 .navbar-dark .navbar-toggler {
-    border-color: #1E266D; /* Cor da borda do botão de toggler */
-  }
+    border-color: #1E266D;
+    /* Cor da borda do botão de toggler */
+}
 
-  
+
 .navbar-dark .navbar-toggler:hover {
-    background-color: rgba(17, 16, 16, 0.3); /* Cor de fundo do botão de toggler ao passar o mouse */
-  }
+    background-color: rgba(17, 16, 16, 0.3);
+    /* Cor de fundo do botão de toggler ao passar o mouse */
+}
 
 .navbar-dark .navbar-toggler-icon {
-    background-color: #352f2f; /* Cor do ícone do botão de toggler (ícone "hamburguer") */
-  }
+    background-color: #352f2f;
+    /* Cor do ícone do botão de toggler (ícone "hamburguer") */
+}
 
 .cabecalho {
     color: #000 !important;
-    background-color: #fff1eb; 
+    background-color: #fff1eb;
 }
-
-/* Input de buscas */
 .form-control, ::placeholder{
     background-color: #FFF1EB;
 }
+
