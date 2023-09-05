@@ -333,3 +333,8 @@ h1 {
 ::placeholder {
     background-color: #FFF1EB;
 }
+
+img {
+
+    padding-right: 10px;
+}
