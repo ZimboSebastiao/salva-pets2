@@ -336,7 +336,12 @@ h1 {
     border-color: #FF7F50;
 }
 
-
+@media screen and (max-width: 666px) {
+    #teste{
+        display: none;
+    }
+    
+}
 
 /*--------------------------------------------------------------
 # Estilização Página de Processo de adoção
