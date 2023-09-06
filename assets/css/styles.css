@@ -236,8 +236,74 @@ h1 {
 
 }
 
+/* Centralizando para telas Menores */
+@media screen and (max-width: 600px) {
+    .row {
+        --bs-gutter-x: -2rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 500px){
+    .row {
+        --bs-gutter-x: -1rem;
+    }
+
+}
+
+/* Faznedo mudanças no Visual  */
+@media screen and (max-width: 458px){
+    .input{
+        width: 300px;
+    }
+
+    .botao{
+        width: 300px;
+    }
+
+    .estilo-cadeado{
+        right: 35px;
+    }
+
+    .estilo-p{
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+  .estilo-cadeado{
+    right: -35px;
+  }
+
+  #pata{
+    height: 3.7vh;
+  }
+}
 
 
+@media screen and (max-width: 370px) {
+    .input{
+        width: 250px;
+    }
+    .botao{
+        width: 250px;
+    }
+
+    .estilo-cadeado{
+        right: -9px;
+    }
+}
+
+@media screen and (max-width: 344px) {
+    .row {
+        --bs-gutter-x: none;
+    }
+
+        .estilo-cadeado{
+            right: 50px;
+        }
+}
 /*--------------------------------------------------------------
 # Estilização Página de Cadastro
 --------------------------------------------------------------*/

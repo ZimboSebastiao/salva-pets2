@@ -38,7 +38,7 @@
                 
                     <div class="estilo-cadeado">
                         <div class="esqueci-senha">
-                            <img class="cadeado" src="icones/lock1.png" alt="">
+                            <img class="cadeado" src="icones/lock1.svg" alt="">
                             <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="" rel="" >Esqueci a senha</a>
                         </div>
                         
