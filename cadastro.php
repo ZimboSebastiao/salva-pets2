@@ -1,3 +1,18 @@
+<?php
+require_once "conecta.php";
+if(isset($_POST["inserir"])){
+    require_once "funcoes.php";
+    $nome = filter_input(INPUT_POST,"nome",FILTER_SANITIZE_SPECIAL_CHARS);
+    $email = filter_input(INPUT_POST,"email",FILTER_SANITIZE_EMAIL);
+    $cep = filter_input(INPUT_POST,"cep",FILTER_SANITIZE_NUMBER_INT);
+    $senha = filter_input(INPUT_POST,"senha",FILTER_SANITIZE_SPECIAL_CHARS);
+
+    InserirUsuario($conexao,$nome,$email,$cep,$senha);
+
+    header("location:home.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -29,22 +44,22 @@
                     <form action=""  method="post">
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" required>
+                            <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" required name="nome">
                             <label for="floatingInputGroup2">Nome completo</label>
                         </div>
                         
                         <div class="form-floating mb-3">
-                            <input class="form-control input" id="floatingInput" placeholder="name@example.com" required type="email">
+                            <input class="form-control input" id="floatingInput" name="email" placeholder="name@example.com" required type="email">
                             <label for="floatingInput">E-mail</label>
                         </div>
                         
                         <div class="form-floating mb-3">
-                            <input type="number" class="form-control input" id="floatingInputGroup2" placeholder="Username" required>
+                            <input type="number" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="cep" required>
                             <label for="floatingInputGroup2">CEP</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input  class="form-control input" id="floatingPassword" placeholder="Password" required type="password">
+                            <input  class="form-control input" id="floatingPassword" placeholder="Password" required type="password" name="senha">
                             <label for="floatingPassword">Senha</label>
                         </div>
 
@@ -62,7 +77,7 @@
                         </div>
 
                         <div>
-                            <button class="btn btn-primary btn-lg botao">Criar Conta</button>
+                            <button class="btn btn-primary btn-lg botao" name="inserir">Criar Conta</button>
                             <p class="tag-style-c">Já tem uma conta? <a href="login.php">Login</a></p>
                         </div>
 
