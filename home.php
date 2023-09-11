@@ -50,8 +50,8 @@
     </nav>
 
     <!-- Destaque encontre e adote -->
-    <div class="cabecalho">
-      <h1>Encontre e adote <br>
+    <div class="cabecalho ">
+      <h1 class="me-5 ">Encontre e adote <br>
         um pet para você.</h1>
 
       <p>
@@ -85,7 +85,7 @@
       </div>
 
       <!-- Botão de busca -->
-      <div class="d-grid gap-2">
+      <div class="d-grid gap-2 p-5">
         <button class="btn btn-primary" type="button">Buscar Pet</button>
       </div>
 
@@ -93,7 +93,7 @@
   </header>
   <main>
     <!-- Titulos pre cards pets -->
-    <article class="pet-ideal text-center">
+    <article class="pet-ideal text-center p-5">
       <h2>Pets para você</h2>
       <h3>Descubra o pet que mais faz sentido para você</h3>
       <p class="text-primary">Encontre o pet ideal para o seu convívio</p>
