@@ -405,3 +405,7 @@ h1 {
     background-color: #FFF1EB;
 } */
 
+.cont, ::placeholder{
+    background-color: #FFF1EB;
+}
+
