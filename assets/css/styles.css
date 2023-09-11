@@ -9,6 +9,8 @@
     margin-left: auto;
 }
 
+a {text-decoration: none;}
+
 .row {
     --bs-gutter-x: 1.6rem;
     --bs-gutter-y: 0;
@@ -62,6 +64,7 @@ h1 {
     background-size: cover;
     
 }
+
 
 .estilo-cadeado {
     display: flex;
