@@ -54,7 +54,7 @@ if(isset($_POST["inserir"])){
                         </div>
                         
                         <div class="form-floating mb-3">
-                            <input type="number" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="cep" required>
+                            <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="cep" required>
                             <label for="floatingInputGroup2">CEP</label>
                         </div>
 
