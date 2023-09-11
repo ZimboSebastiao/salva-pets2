@@ -30,8 +30,8 @@ a {text-decoration: none;}
 }
 
 #pata {
-    width: 25px;
-    height: 2.8vh;
+    width: 2rem;
+    height: 5vh;
     background: url("../../icones/pet1.png") top center;
     background-size: cover;
     margin: 10px;
