@@ -409,3 +409,33 @@ h1 {
     background-color: #FFF1EB;
 }
 
+
+
+
+/*--------------------------------------------------------------
+# Estilização Página de Adoção
+--------------------------------------------------------------*/
+
+.customize {font-weight: bold;}
+
+.espaco {
+    width: 60%;
+}
+
+header, nav, div, ul, li {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.cor {
+    color: #1E266D;
+    font-weight: bold;
+}
+
+
+.dividir {
+    display: flex;
+    justify-content: space-between;
+}
