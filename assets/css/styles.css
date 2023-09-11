@@ -416,13 +416,13 @@ h1 {
 # Estilização Página de Adoção
 --------------------------------------------------------------*/
 
-/* .customize {font-weight: bold;}
+.customize {font-weight: bold;}
 
 .espaco {
     width: 60%;
 }
 
-header, nav, div, ul, li {
+header nav div ul, li {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -438,4 +438,4 @@ header, nav, div, ul, li {
 .dividir {
     display: flex;
     justify-content: space-between;
-} */
+}
