@@ -11,8 +11,8 @@
 </head>
 
 <body>
-  <header>
 
+  <header>
     <!-- Menu Responsivo -->
     <nav class="navbar navbar-expand-lg static-top dividir">
       <a class="navbar-brand customize" href="#">
@@ -49,26 +49,30 @@
             </li>
           </ul>
         </div>
-
+        </div>
+        </div>
       </div>
-      
-    </div>
-    
-  </nav>
-  
-</div>
-
-</header>
-<hr>
+    </nav>
+  </header>
+  <hr>
 
   <main>
+
     <div class="container-2">
-      <h4>Dados Básicos</h4>
+      <h5>Dados Básicos</h5>
       <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
         <div class="progress-bar progress-bar-striped  progress-bar-animated cor-padrao" style="width: 25%">25%</div>
       </div>
 
+      <div class="personalizar">
+        <h1>Vamos Adotar seu</h1>
+        <h1>pet bem rápido</h1>
+      </div>
+
     </div>
+
+
+
   </main>
   <footer></footer>
 
