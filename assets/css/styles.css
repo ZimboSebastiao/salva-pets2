@@ -455,3 +455,10 @@ header nav div ul, li {
     text-align: center;
     padding-top: 25px;
 }
+
+.complemento-numero {
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}

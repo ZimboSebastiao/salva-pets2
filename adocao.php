@@ -65,8 +65,68 @@
       </div>
 
       <div class="personalizar">
+
         <h1>Vamos Adotar seu</h1>
         <h1>pet bem rápido</h1>
+
+
+        <section class="estilo-form">
+          <form action=""  method="post">
+
+              <!-- ====== Nome Completo ====== -->
+              <div class="form-floating mb-3">
+                  <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" required name="nome">
+                  <label for="floatingInputGroup2">Nome completo</label>
+              </div>
+              
+              <!-- ====== E-mail ====== -->
+              <div class="form-floating mb-3">
+                  <input class="form-control input" id="floatingInput" name="email" placeholder="name@example.com" required type="email">
+                  <label for="floatingInput">E-mail</label>
+              </div>
+              
+              <!-- ====== Estado ====== -->
+              <div class="form-floating mb-3">
+                  <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="estado" required>
+                  <label for="floatingInputGroup2">Estado</label>
+              </div>
+
+              <!-- ====== Cidade ====== -->
+              <div class="form-floating mb-3">
+                  <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="cidade" required>
+                  <label for="floatingInputGroup2">Cidade</label>
+              </div>
+
+              <!-- ====== Endereço ====== -->
+              <div class="form-floating mb-3">
+                  <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="endereco" required>
+                  <label for="floatingInputGroup2">Endereço</label>
+              </div>
+
+              <div class="complemento-numero">
+                <!-- ====== Número ====== -->
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="numero" required>
+                    <label for="floatingInputGroup2">Número</label>
+                </div>
+  
+                <!-- ====== Complemento ====== -->
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="completo" required>
+                    <label for="floatingInputGroup2">Completo</label>
+                </div>
+              </div>
+
+
+              <div>
+                  <button class="btn btn-primary btn-lg botao" name="inserir">Criar Conta</button>
+                  <p class="tag-style-c">Já tem uma conta? <a href="login.php">Login</a></p>
+              </div>
+
+          </form>
+
+        </section> 
+
       </div>
 
     </div>
