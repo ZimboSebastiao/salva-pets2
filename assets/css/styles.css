@@ -456,6 +456,10 @@ header nav div ul, li {
     padding-top: 25px;
 }
 
+.limitador {
+    width: 95%;
+}
+
 .complemento-numero {
     display: flex;
     justify-content: space-evenly;
