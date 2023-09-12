@@ -439,3 +439,13 @@ header nav div ul, li {
     display: flex;
     justify-content: space-between;
 }
+
+.container-2 {
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cor-padrao {
+    background-color: #db4712;
+}

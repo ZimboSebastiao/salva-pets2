@@ -62,9 +62,13 @@
 <hr>
 
   <main>
-  <div class="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
-  <div class="progress-bar" style="width: 25%"></div>
-</div>
+    <div class="container-2">
+      <h4>Dados Básicos</h4>
+      <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped  progress-bar-animated cor-padrao" style="width: 25%">25%</div>
+      </div>
+
+    </div>
   </main>
   <footer></footer>
 
