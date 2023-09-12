@@ -42,6 +42,7 @@ h1 {
     font-size: 2rem;
     color: #1E266D;
     padding: 8px;
+    font-weight: bold;
 }
 
 .estilo-p {
@@ -448,4 +449,9 @@ header nav div ul, li {
 
 .cor-padrao {
     background-color: #db4712;
+}
+
+.personalizar {
+    text-align: center;
+    padding-top: 25px;
 }
