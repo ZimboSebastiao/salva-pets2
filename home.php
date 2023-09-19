@@ -68,12 +68,9 @@
 
       <!-- INPUT CIDADE -->
       <div class="input-group mb-2  bg-dark">
-        <img src="icones/pata (1).png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
+        <!-- <img src="icones/pata (1).png" alt="" width="10%"> -->
+        <input type="text" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
       </div>
-
-      
-
 
 
       <!-- INPUT REGIÃO -->
@@ -83,14 +80,14 @@
 
       <!-- INPUT ANIMAL -->
       <div class="input-group mb-2  bg-dark">
-        <img src="icones/bola-de-cachorro (1).png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
+        <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
+        <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
       </div>
 
       <!-- INPUT RAÇA -->
       <div class="input-group mb-2  bg-dark">
-        <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
+        <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
+        <input type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
       </div>
 
       <!-- BOTÃO BUSCAR PET -->

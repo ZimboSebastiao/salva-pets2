@@ -451,8 +451,23 @@ header nav div ul, li {
     background-color: #db4712;
 }
 
+.icon-city {
+    background: url(../../icones/pata.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
 .icon-house {
     background: url(../../icones/pet-house4.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-animal {
+    background: url(../../icones/bola-de-cachorro.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-race {
+    background: url(../../icones/bicho-de-estimacao.png) no-repeat scroll 7px 7px ;
     padding-left:50px;
 }
 
