@@ -402,13 +402,21 @@ h1 {
     background-color: #fff1eb;
 }
 
-/* .form-control, ::placeholder{
-    background-color: #FFF1EB;
-} */
-
-.cont, ::placeholder{
+.form-control, ::placeholder{
     background-color: #FFF1EB;
 }
+
+.form-floating>.form-control, .form-floating>.form-control-plaintext{
+    background-color: #FFF1EB;
+}
+
+.floatingInput{
+    background-color: #FFF1EB;
+}
+
+/* .cont, ::placeholder{
+    background-color: #FFF1EB;
+} */
 
 
 
