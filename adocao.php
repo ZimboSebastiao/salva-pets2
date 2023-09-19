@@ -13,46 +13,30 @@
 <body>
 
 <header>
-  <!-- Menu Responsivo -->
-  <nav class="navbar navbar-expand-lg static-top dividir">
+  <div class="limitador">
     <a class="navbar-brand customize" href="#">
       <img src="icones/pet1.png" alt="..." height="46">
       SalvaPets
     </a>
-
-    <div class="espaco">
-
-    <div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto cor">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Nossos Pets
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Cachorros</a></li>
-              <li><a class="dropdown-item" href="#">Gatos</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Quem Somos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Ajuda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contato</a>
-          </li>
-        </ul>
-      </div>
-      </div>
-      </div>
-    </div>
-  </nav>
+    
+    <nav>
+      <h2><a href="" class="icone">&equiv;</a></h2>
+      <ul class="menu">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Nossos Pets
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Cachorros</a></li>
+            <li><a class="dropdown-item" href="#">Gatos</a></li>
+          </ul>
+        </li>
+        <li><a  href="#">Quem Somos</a></li>
+        <li ><a href="#">Ajuda</a></li>
+        <li ><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 <hr>
 
@@ -76,9 +60,9 @@
   </div>
   
   <!-- ====== FORMULÁRIO ====== -->
-  <div class="container text-center bg-primary form">
-    <div class="row bg-success text-center section">
-      <section class="estilo-form control-group">
+  <div class="container text-center bg-primary">
+    <div class="row bg-success text-center">
+      <section class="estilo-form">
         <form action=""  method="post">
 
             <!-- ====== Nome Completo ====== -->
@@ -128,7 +112,7 @@
 
 
             <div>
-                <button class="btn btn-primary btn-lg botao" name="inserir">Criar Conta</button>
+                <button class="btn btn-primary btn-lg botao" name="inserir">Próxima etapa</button>
                 
             </div>
 
@@ -145,6 +129,7 @@
   <footer></footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="js/menu.js"></script>
 </body>
 
 </html>
