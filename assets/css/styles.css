@@ -122,6 +122,12 @@ h1 {
     right: -5px;
 }
 
+/* Página Login */
+@media screen and (max-width: 1100px){
+    .row{
+        --bs-gutter-x: 4rem;
+    }
+}
 
 @media screen and (max-width: 982px) {
 
@@ -138,29 +144,20 @@ h1 {
 }
 
 @media screen and (max-width: 991px) {
-    .row {
-        --bs-gutter-x: 1rem;
-    }
-
+    
     .btn-primary {
         display: hidden;
     }
 }
 
-@media screen and (max-width: 926px) {
-    .row {
-        --bs-gutter-x: 1.6rem;
-    }
-}
 
 /* Modifição para telas pequenas | Página de Login*/
 
 @media screen and (max-width: 808px) {
     .row {
-        --bs-gutter-x: 1rem;
+        --bs-gutter-x: 3.7rem;
 
     }
-
 
     .input {
         width: 350px;
@@ -174,7 +171,6 @@ h1 {
 @media screen and (max-width: 767px) {
 
    
-
     .input {
         width: 300px;
     }
@@ -185,7 +181,7 @@ h1 {
 
 
     .row {
-        --bs-gutter-x: 2rem;
+        --bs-gutter-x: 3rem;
     }
 
 }
@@ -253,7 +249,7 @@ h1 {
 
 }
 
-/* Faznedo mudanças no Visual  */
+/* Fazendo mudanças no Visual  */
 @media screen and (max-width: 458px){
     .input{
         width: 300px;
@@ -337,6 +333,18 @@ h1 {
     border-color: #FF7F50;
 }
 
+@media screen and (max-width: 767px) {
+
+    .estilo-l{
+     right: -3px;
+    }}
+
+    @media screen and (max-width: 700px) {
+        .estilo-l{
+            right: -20px;
+            padding: 3px;
+        }
+    }
 @media screen and (max-width: 666px) {
     #teste{
         display: none;
