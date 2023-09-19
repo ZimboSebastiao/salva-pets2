@@ -66,34 +66,31 @@
         Adote um pet para fazer companhia🐾
       </p>
 
- 
+      <!-- INPUT CIDADE -->
       <div class="input-group mb-2  bg-dark">
-        <img src="icones/pata (1).png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
-      </div>
-
-      
-
-
-
-
-      <div class="input-group mb-2  bg-dark">
-        <img src="icones/pet-house.png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
+        <!-- <img src="icones/pata (1).png" alt="" width="10%"> -->
+        <input type="text" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
       </div>
 
 
+      <!-- INPUT REGIÃO -->
       <div class="input-group mb-2  bg-dark">
-        <img src="icones/bola-de-cachorro (1).png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
+        <input type="text" class="form-control cont icon-house" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
       </div>
 
+      <!-- INPUT ANIMAL -->
       <div class="input-group mb-2  bg-dark">
-        <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
+        <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
+        <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
       </div>
 
-    
+      <!-- INPUT RAÇA -->
+      <div class="input-group mb-2  bg-dark">
+        <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
+        <input type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
+      </div>
+
+      <!-- BOTÃO BUSCAR PET -->
       <div class="d-grid gap-2 p-5">
         <button class="btn btn-primary" type="button">Buscar Pet</button>
       </div>
@@ -164,8 +161,8 @@
 
 
       <div class="input-group mb-2  bg-dark">
-        <img src="icones/pet-house.png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
+        <img src="icones/pet-house.png" alt="" width="10%"> 
+        <input type="text" class="form-control cont input-icon" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
       </div>
 
 
@@ -186,6 +183,7 @@
 
     </div>
   </header> -->
+   
 
 
 
@@ -239,6 +237,10 @@
           </div>
         </div>
       </div>
+
+      
+
+
 
       <!-- card adotar pet -->
       <img src="/images/mulher-cacholo.PNG" alt="" class="">
