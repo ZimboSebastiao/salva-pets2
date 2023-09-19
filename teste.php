@@ -58,19 +58,38 @@
 
   <main>
 
-  <div class="container text-center bg-primary">
-  <div class="row bg-success">
-    <div class="col-12 bg-danger">
-      Column
+  <form class="form">
+  <div class="section">
+    <div class="control-group">
+      <label class="control-label">Selecione algo</label>
+      <select class="control">
+            <option disabled>Selecione Algo</option>
+      </select>
     </div>
-    <div class="col bg-warning">
-      Column
+
+    <div class="control-group">
+      <label class="control-label">Escreva algo</label>
+      <input type="text" class="control"/>
     </div>
-    <div class="col bg-info">
-      Column
-    </div>
+
   </div>
-</div>
+
+  <div class="section">
+    <div class="control-group">
+      <label class="control-label">Escreva algo</label>
+      <input type="text" class="control"/>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Marque algo</label>
+      <label>
+        <input type="checkbox"/>
+        Concordo (checkbox)
+      </label>
+    </div>
+
+  </div>
+</form>
 
   </main>
   <footer></footer>

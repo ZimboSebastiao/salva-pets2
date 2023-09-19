@@ -76,9 +76,9 @@
   </div>
   
   <!-- ====== FORMULÁRIO ====== -->
-  <div class="container text-center bg-primary">
-    <div class="row bg-success text-center">
-      <section class="estilo-form">
+  <div class="container text-center bg-primary form">
+    <div class="row bg-success text-center section">
+      <section class="estilo-form control-group">
         <form action=""  method="post">
 
             <!-- ====== Nome Completo ====== -->

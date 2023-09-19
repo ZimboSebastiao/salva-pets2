@@ -493,3 +493,39 @@ header nav div ul, li {
     position: relative;
     padding-left: 50px;
 } */
+
+
+
+
+
+
+
+
+
+.form {
+    display: flex;
+    width: 550px;
+    background-color: black;
+    color: #CCC;
+  }
+  
+  .form .section {
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 30px;
+  }
+  
+  .form .section .control-group {
+    margin-top: 10px;
+  }
+  
+  .form .section .control-group .control {
+    width: 100%;
+  }
+  
+  
+  .form .section .control-group .control-label {
+    display: block;
+    width: 100%;
+    margin-bottom: 4px;
+  }

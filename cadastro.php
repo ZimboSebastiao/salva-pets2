@@ -34,7 +34,8 @@ if(isset($_POST["inserir"])){
               <div class="col-6">
                   
                 <div>
-                    <div id="pata" class="d-flex flex-column justify-content-center align-items-center"></div>
+                    <img src="icones/pet1.png" alt="..." height="42">
+                    <div class="d-flex flex-column justify-content-center align-items-center"></div>
                     <h1>A sua adoção <br> começa aqui</h1>
 
                     <p class="estilo-p">Faça parte de um mundo mais amigável</p>
