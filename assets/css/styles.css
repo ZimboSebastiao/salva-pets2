@@ -485,9 +485,9 @@ nav h2 a {
 
 
 
-nav  a:hover, nav a:focus{
+/* nav  a:hover, nav a:focus{
     background-color: #ffe9e0;
-}
+} */
 
 .menu {
     list-style: none;
