@@ -598,6 +598,7 @@ nav h2 a {
 --------------------------------------------------------------*/
 
 .footer-color {
+    margin-top: 40px;
     background-color: #040726;
     color: white !important;
 }
