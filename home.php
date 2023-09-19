@@ -164,7 +164,7 @@
 
 
       <div class="input-group mb-2  bg-dark">
-        <!-- <img src="icones/pet-house.png" alt="" width="10%"> -->
+        <img src="icones/pet-house.png" alt="" width="10%"> 
         <input type="text" class="form-control cont input-icon" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
       </div>
 
@@ -186,6 +186,7 @@
 
     </div>
   </header> -->
+   
 
 
 
