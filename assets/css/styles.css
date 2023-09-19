@@ -416,11 +416,13 @@ h1 {
 }
 
 .form-control, ::placeholder{
-    background-color: #FFF1EB;
+    /* background-color: #FFF1EB; */
+    background-color: #ffffff;
 }
 
 .form-floating>.form-control, .form-floating>.form-control-plaintext{
-    background-color: #FFF1EB;
+    /* background-color: #FFF1EB; */
+    background-color: #ffffff;
 }
 
 .floatingInput{
@@ -553,9 +555,21 @@ nav h2 a {
 .Beetle-letters {color: #C3C7E5;}
 
 .decrease-letters {font-size: 10px;}
+
 .decrease {
     font-weight: bold;
     color: #070b35;
+}
+
+.divide {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.entry {width: 255px;}
+
+.form-floating {
+    margin-right: 6px; /* Adicione a margem desejada entre os elementos */
 }
 
 .icon-city {

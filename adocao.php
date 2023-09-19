@@ -67,55 +67,55 @@
   </div>
   
   <!-- ====== FORMULÁRIO ====== -->
-  <div class="container bg-primary">
-    <div class="row bg-success">
+  <div class="container">
+    <div class="row">
       <section class="estilo-form">
         <form action=""  method="post">
 
             <!-- ====== Nome Completo ====== -->
-            <div class="form-floating mb-3  bg-danger">
+            <div class="form-floating mb-3">
                 <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" required name="nome">
                 <label for="floatingInputGroup2">Nome completo</label>
             </div>
             
             <!-- ====== E-mail ====== -->
-            <div class="form-floating mb-3 bg-danger">
+            <div class="form-floating mb-3">
                 <input class="form-control input" id="floatingInput" name="email" placeholder="name@example.com" required type="email">
                 <label for="floatingInput">E-mail</label>
             </div>
             
             <!-- ====== Estado ====== -->
-            <div class="form-floating mb-3 bg-danger">
+            <div class="form-floating mb-3">
                 <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="estado" required>
                 <label for="floatingInputGroup2">Estado</label>
             </div>
 
             <!-- ====== Cidade ====== -->
-            <div class="form-floating mb-3 bg-danger">
+            <div class="form-floating mb-3">
                 <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="cidade" required>
                 <label for="floatingInputGroup2">Cidade</label>
             </div>
 
             <!-- ====== Endereço ====== -->
-            <div class="form-floating mb-3 bg-danger">
+            <div class="form-floating mb-3">
                 <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="endereco" required>
                 <label for="floatingInputGroup2">Endereço</label>
             </div>
 
-            <div class="bg-primary">
+            <div class="divide entry">
 
               <!-- ====== Número ====== -->
-              <!-- <div class="form-floating mb-3">
-                  <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="numero" required>
+              <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInputGroup2" placeholder="Username" name="numero" required>
                   <label for="floatingInputGroup2">Número</label>
-              </div> -->
+              </div>
 
               <!-- ====== Complemento ====== -->
-              <!-- <div class="form-floating mb-3">
-                  <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="completo" required>
+              <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInputGroup2" placeholder="Username" name="completo" required>
                   <label for="floatingInputGroup2">Completo</label>
               </div>
-            </div> -->
+            </div>
 
 
             <div>
