@@ -78,8 +78,7 @@
 
 
       <div class="input-group mb-2  bg-dark">
-        <img src="icones/pet-house.png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
+        <input type="text" class="form-control cont icon-house" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
       </div>
 
 

@@ -451,10 +451,9 @@ header nav div ul, li {
     background-color: #db4712;
 }
 
-.input-icon {
+.icon-house {
     background: url(../../icones/pet-house4.png) no-repeat scroll 7px 7px ;
     padding-left:50px;
-
 }
 
 .personalizar {
