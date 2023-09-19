@@ -1,5 +1,7 @@
 * {box-sizing: border-box;}   
 img {max-width: 100%;}
+html { font-size: 14px;}
+
 /*--------------------------------------------------------------
 # Estilização Página de Login
 --------------------------------------------------------------*/
@@ -492,7 +494,7 @@ nav  a:hover, nav a:focus{
 }
 
 .menu a {
-    
+
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -511,15 +513,13 @@ nav  a:hover, nav a:focus{
 }
 
 @media screen and (min-width: 530px) {
-    /* Esconder a palavra menu e deixar lado a lado */
-
     nav h2 {display: none;}
 
     .menu {
         display: flex;
         text-transform: uppercase; 
-        /* justify-content: space-between;
-        align-items: center;    */
+        justify-content: space-between;
+        align-items: center;   
     }
     
 
