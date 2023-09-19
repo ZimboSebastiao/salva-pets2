@@ -508,7 +508,7 @@ nav h2 a {
 
 @media screen and (min-width: 530px) {
     nav h2 {display: none;}
-    html { font-size: 17px;}
+    html { font-size: 0.9rem;}
     .menu {
         display: flex;
         text-transform: uppercase; 
