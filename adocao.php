@@ -18,7 +18,6 @@
       <img src="icones/pet1.png" alt="..." height="46">
       SalvaPets
     </a>
-    
     <nav>
       <h2><a href="" class="icone">&equiv;</a></h2>
       <ul class="menu">
@@ -45,16 +44,11 @@
   <div class="container-2">
     <h5>Dados Básicos</h5>
     <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-      <div class="progress-bar progress-bar-striped  progress-bar-animated cor-padrao" style="width: 25%">25%</div>
+      <div class="progress-bar progress-bar-striped  progress-bar-animated cor-padrao" style="width: 35%">25%</div>
     </div>
 
     <div class="personalizar">
-
-      <h1>Vamos Adotar seu</h1>
-      <h1>pet bem rápido</h1>
-
-      
-      
+      <h1>Vamos Adotar seu <br> pet bem rápido</h1>
     </div>
     
   </div>
@@ -98,17 +92,17 @@
             <div class="complemento-numero col-12 bg-primary">
 
               <!-- ====== Número ====== -->
-              <div class="form-floating mb-3">
+              <!-- <div class="form-floating mb-3">
                   <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="numero" required>
                   <label for="floatingInputGroup2">Número</label>
-              </div>
+              </div> -->
 
               <!-- ====== Complemento ====== -->
-              <div class="form-floating mb-3">
+              <!-- <div class="form-floating mb-3">
                   <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="completo" required>
                   <label for="floatingInputGroup2">Completo</label>
               </div>
-            </div>
+            </div> -->
 
 
             <div>

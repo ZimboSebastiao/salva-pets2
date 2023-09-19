@@ -448,12 +448,14 @@ a {text-decoration: none;}
 }
 
 
-/* header nav div ul, li {
-    width: 100%;
+body {
+    background-color: white;
     display: flex;
-    justify-content: space-evenly;
-    align-items: start;
-} */
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {flex: 1;}
 
 .limitador {
     width: 97vw;
@@ -461,11 +463,10 @@ a {text-decoration: none;}
 }
 
 header {
-    /* Tornando o cabeçalho fixo ao rolar a pagina */
     z-index: 100;
     position: sticky;
     top: 0;
-
+    background-color: rgb(255, 255, 255);
 }
 
 header div {
@@ -485,7 +486,7 @@ nav h2 a {
 
 
 nav  a:hover, nav a:focus{
-    background-color: #FFF1EB;
+    background-color: #ffe9e0;
 }
 
 .menu {
@@ -494,13 +495,11 @@ nav  a:hover, nav a:focus{
 }
 
 .menu a {
-
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
-   
 }
 
 .menu.aberto{
@@ -522,22 +521,11 @@ nav  a:hover, nav a:focus{
         align-items: center;   
     }
     
-
     nav {width: 70%;}
 
-    /* Ao devolver o tamanho de 100% para cada <li> na pratica isso criará um espaçamento no texto/link */
     .menu li { width: 100%;}
-
-
-
-
 }
 
-
-/* @media screen and (min-width: 1000px) {
-    html { font-size: 16px;}
-    .limitador {max-width: 1000px;}
-} */
 
 
 /* .cor {
@@ -585,7 +573,8 @@ nav  a:hover, nav a:focus{
 
 .personalizar {
     text-align: center;
-    padding-top: 25px;
+    padding-top: 20px;
+    padding: 9px;
 }
 
 
