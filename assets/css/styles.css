@@ -526,11 +526,6 @@ nav h2 a {
 
 
 
-/* .cor {
-    color: #1E266D;
-    font-weight: bold;
-} */
-
 
 .dividir {
     display: flex;
@@ -553,7 +548,7 @@ nav h2 a {
 }
 
 .Beetle-letters {color: #C3C7E5;}
-
+.negrito {font-weight: bold;}
 .decrease-letters {font-size: 10px;}
 
 .decrease {
@@ -592,13 +587,17 @@ nav h2 a {
     padding-left:50px;
 }
 
-
-
 .personalizar {
     text-align: center;
     padding-top: 20px;
     padding: 9px;
 }
 
+/*--------------------------------------------------------------
+# Estilização do Footer
+--------------------------------------------------------------*/
 
-
+.footer-color {
+    background-color: #040726;
+    color: white !important;
+}
