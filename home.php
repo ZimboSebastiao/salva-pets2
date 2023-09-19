@@ -15,7 +15,7 @@
 
 <header>
   <!-- Menu Responsivo -->
-  <nav class="navbar navbar-expand-lg static-top dividir cont">
+  <nav class="navbar navbar-expand-lg static-top dividir cont px-5">
     <a class="navbar-brand customize" href="#">
       <img src="icones/pet1.png" alt="..." height="46">
       SalvaPets
@@ -48,12 +48,12 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Contato</a>
           </li>
-          <a href="login.php" class="btn btn-primary px-5" tabindex="-1" role="button" aria-disabled="true">Entrar</a>
         </ul>
       </div>
-      </div>
-      </div>
     </div>
+  </div>
+</div>
+<a  href="login.php" class="btn btn-primary px-5"  tabindex="-1" role="button" aria-disabled="true">Entrar</a>
   </nav>
 
   <div class="cabecalho ">
