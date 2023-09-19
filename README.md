@@ -68,3 +68,6 @@ Com esse modelo, os usuários podem se cadastrar no site e fornecer informaçõe
 Para exibir informações sobre um animal de estimação, você pode criar páginas de detalhes que mostram os dados do animal, como nome, espécie, raça, idade, descrição e uma imagem. Essas informações podem ser obtidas da tabela de Animais de Estimação com base no ID do animal selecionado.
 
 Lembre-se de implementar medidas de segurança adequadas para proteger os dados dos usuários, como o armazenamento seguro de senhas e a autenticação apropriada quando os usuários desejam acessar informações ou executar ações em seus perfis. Além disso, considere a conformidade com regulamentos de privacidade de dados, como o GDPR, se aplicável à sua região.
+
+
+border-end-0 border rounded-pill

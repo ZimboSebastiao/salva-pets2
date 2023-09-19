@@ -449,3 +449,9 @@ header nav div ul, li {
 .cor-padrao {
     background-color: #db4712;
 }
+
+.input-icon {
+    background: url(../../icones/pet-house4.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+
+}

@@ -72,8 +72,8 @@
 
       <!-- Input Região -->
       <div class="input-group mb-2  bg-dark">
-        <img src="icones/pet-house.png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
+        <!-- <img src="icones/pet-house.png" alt="" width="10%"> -->
+        <input type="text" class="form-control cont input-icon" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
       </div>
 
       <!-- Input Animal-->
@@ -144,6 +144,10 @@
           </div>
         </div>
       </div>
+
+      
+
+
 
       <!-- card adotar pet -->
       <img src="/images/mulher-cacholo.PNG" alt="" class="">
