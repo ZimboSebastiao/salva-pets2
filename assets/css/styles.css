@@ -7,8 +7,6 @@ html { font-size: 14px;}
 --------------------------------------------------------------*/
 .container {
     width: 65%;
-    /* padding-right: 50px;
-    padding-left: 60px; */
     margin-right: auto;
     margin-left: auto;
 }
@@ -43,7 +41,7 @@ a {text-decoration: none;}
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: #1E266D;
     padding: 8px;
     font-weight: bold;
@@ -231,9 +229,9 @@ h1 {
         width: 350px;
     }
 
-    h1 {
+    /* h1 {
         font-size: 2rem;
-    }
+    } */
 
 }
 
@@ -443,9 +441,6 @@ h1 {
 .customize {font-weight: bold;}
 a {text-decoration: none;}
 
-.espaco {
-    width: 60%;
-}
 
 
 body {
@@ -513,13 +508,14 @@ nav h2 a {
 
 @media screen and (min-width: 530px) {
     nav h2 {display: none;}
-
+    html { font-size: 17px;}
     .menu {
         display: flex;
         text-transform: uppercase; 
         justify-content: space-between;
         align-items: center;   
     }
+    
     
     nav {width: 70%;}
 
@@ -547,6 +543,19 @@ nav h2 a {
 
 .cor-padrao {
     background-color: #db4712;
+}
+
+.progress-text {
+    display: flex;  
+    justify-content: space-around;
+}
+
+.Beetle-letters {color: #C3C7E5;}
+
+.decrease-letters {font-size: 10px;}
+.decrease {
+    font-weight: bold;
+    color: #070b35;
 }
 
 .icon-city {
@@ -577,12 +586,5 @@ nav h2 a {
     padding: 9px;
 }
 
-
-.complemento-numero {
-    display: flex;
-    justify-content: space-evenly;
-    
-    
-}
 
 

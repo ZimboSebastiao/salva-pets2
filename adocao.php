@@ -12,6 +12,7 @@
 
 <body>
 
+<!-- ======== CABEÇALHO ======== -->
 <header>
   <div class="limitador">
     <a class="navbar-brand customize" href="#">
@@ -41,14 +42,20 @@
     </nav>
   </div>
 </header>
-<hr>
+<hr> <!-- FIM CABEÇALHO  -->
 
+
+
+<!-- ======== CONTEÚDO ======== -->
 <main>
-
   <div class="container-2">
-    <h5>Dados Básicos</h5>
-    <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-      <div class="progress-bar progress-bar-striped  progress-bar-animated cor-padrao" style="width: 35%">25%</div>
+    <div class="progress-text decrease-letters">
+      <span class="decrease">Dados Básicos</span>
+      <span class="Beetle-letters">Te conhecendo</span>
+      <span class="Beetle-letters">Adotou!</span>
+    </div>
+    <div class="progress tes" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+      <div class="progress-bar progress-bar-striped  progress-bar-animated cor-padrao" style="width: 28%">25%</div>
     </div>
 
     <div class="personalizar">
@@ -121,7 +128,7 @@
   </div>
 
 
-</main>
+</main> <!-- FIM CONTEÚDO  -->
 
 
   <footer></footer>
