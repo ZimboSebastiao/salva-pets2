@@ -536,7 +536,7 @@ nav h2 a {
 }
 
 .container-2 {
-    width: 85%;
+    width: 90%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -547,7 +547,7 @@ nav h2 a {
 
 .progress-text {
     display: flex;  
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .Beetle-letters {color: #C3C7E5;}
