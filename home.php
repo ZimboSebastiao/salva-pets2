@@ -13,180 +13,83 @@
 <body>
 
 
-<header>
-  <!-- Menu Responsivo -->
-  <nav class="navbar navbar-expand-lg static-top dividir cont px-5">
+<!-- ======== CABEÇALHO ======== -->
+<header class="menu-color">
+  <div class="limitador">
     <a class="navbar-brand customize" href="#">
       <img src="icones/pet1.png" alt="..." height="46">
       SalvaPets
     </a>
+    <nav>
+        <h2><a href="" class="icone">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-nested" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+        </a></h2>
 
-    <div class="espaco">
-
-    <div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto cor">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Nossos Pets
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Cachorros</a></li>
-              <li><a class="dropdown-item" href="#">Gatos</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Quem Somos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Ajuda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contato</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-<a  href="login.php" class="btn btn-primary px-5"  tabindex="-1" role="button" aria-disabled="true">Entrar</a>
-  </nav>
-
-  <div class="cabecalho ">
-      <h1 class="me-5 ">Encontre e adote <br>
-        um pet para você.</h1>
-
-      <p>
-        Você não pode comprar amor,
-        mas você pode adotar ele.
-        Adote um pet para fazer companhia🐾
-      </p>
-
-      <!-- INPUT CIDADE -->
-      <div class="input-group mb-2  bg-dark">
-        <!-- <img src="icones/pata (1).png" alt="" width="10%"> -->
-        <input type="text" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
-      </div>
-
-
-      <!-- INPUT REGIÃO -->
-      <div class="input-group mb-2  bg-dark">
-        <input type="text" class="form-control cont icon-house" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
-      </div>
-
-      <!-- INPUT ANIMAL -->
-      <div class="input-group mb-2  bg-dark">
-        <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
-        <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
-      </div>
-
-      <!-- INPUT RAÇA -->
-      <div class="input-group mb-2  bg-dark">
-        <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
-        <input type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
-      </div>
-
-      <!-- BOTÃO BUSCAR PET -->
-      <div class="d-grid gap-2 p-5">
-        <button class="btn btn-primary" type="button">Buscar Pet</button>
-      </div>
-
-    </div>
-</header>
-
-
-
-  <!-- <header>
-
-   
-    <nav class="navbar navbar-expand-lg  bg-dark static-top">
-      <div class="container w-100">
-        <a class="navbar-brand" href="#">
-          <img src="icones/pet1.png" alt="..." height="46">
-          Salva Pets
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
+          <ul class="menu menu-color">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Nossos Pets
               </a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <ul class="dropdown-menu dropdown-menu-end menu-color" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#">Cachorros</a></li>
                 <li><a class="dropdown-item" href="#">Gatos</a></li>
               </ul>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Serviços</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Quem Somos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contato</a>
-            </li>
-            <a href="login.php" class="btn btn-primary px-5" tabindex="-1" role="button" aria-disabled="true">Entrar</a>
+            <li><a href="#">Quem Somos</a></li>
+            <li><a href="#">Ajuda</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a  href="login.php" class="btn btn-primary"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
           </ul>
-        </div>
-      </div>
+  
     </nav>
+  </div>
 
+</header>
+<div class="cabecalho">
+    <h1 class="me-5 ">Encontre e adote <br>
+      um pet para você.</h1>
 
-    <div class="cabecalho ">
-      <h1 class="me-5 ">Encontre e adote <br>
-        um pet para você.</h1>
+    <p>
+      Você não pode comprar amor,
+      mas você pode adotar ele.
+      Adote um pet para fazer companhia🐾
+    </p>
 
-      <p>
-        Você não pode comprar amor,
-        mas você pode adotar ele.
-        Adote um pet para fazer companhia🐾
-      </p>
-
- 
-      <div class="input-group mb-2  bg-dark">
-        <img src="icones/pata (1).png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
-      </div>
-
-      
-
-
-
-
-      <div class="input-group mb-2  bg-dark">
-        <img src="icones/pet-house.png" alt="" width="10%"> 
-        <input type="text" class="form-control cont input-icon" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
-      </div>
-
-
-      <div class="input-group mb-2  bg-dark">
-        <img src="icones/bola-de-cachorro (1).png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
-      </div>
-
-      <div class="input-group mb-2  bg-dark">
-        <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
-      </div>
-
-    
-      <div class="d-grid gap-2 p-5">
-        <button class="btn btn-primary" type="button">Buscar Pet</button>
-      </div>
-
+    <!-- INPUT CIDADE -->
+    <div class="input-group mb-2  bg-dark">
+      <!-- <img src="icones/pata (1).png" alt="" width="10%"> -->
+      <input type="text" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
     </div>
-  </header> -->
+
+
+    <!-- INPUT REGIÃO -->
+    <div class="input-group mb-2  bg-dark">
+      <input type="text" class="form-control cont icon-house" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
+    </div>
+
+    <!-- INPUT ANIMAL -->
+    <div class="input-group mb-2  bg-dark">
+      <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
+      <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
+    </div>
+
+    <!-- INPUT RAÇA -->
+    <div class="input-group mb-2  bg-dark">
+      <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
+      <input type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
+    </div>
+
+    <!-- BOTÃO BUSCAR PET -->
+    <div class="d-grid gap-2 p-5">
+      <button class="btn btn-primary" type="button">Buscar Pet</button>
+    </div>
+
+</div>
+
+
    
-
-
-
 
   <main>
     <!-- Titulos pre cards pets -->
@@ -248,6 +151,7 @@
   <footer></footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="js/menu.js"></script>
 </body>
 
 </html>

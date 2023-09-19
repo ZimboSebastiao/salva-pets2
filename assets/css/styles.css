@@ -415,6 +415,8 @@ h1 {
     background-color: #fff1eb;
 }
 
+.menu-color {background-color: #fff1eb !important;}
+
 .form-control, ::placeholder{
     /* background-color: #FFF1EB; */
     background-color: #ffffff;
