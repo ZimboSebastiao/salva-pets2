@@ -42,6 +42,7 @@ h1 {
     font-size: 2rem;
     color: #1E266D;
     padding: 8px;
+    font-weight: bold;
 }
 
 .estilo-p {
@@ -455,3 +456,24 @@ header nav div ul, li {
     padding-left:50px;
 
 }
+
+.personalizar {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.limitador {
+    width: 95%;
+}
+
+.complemento-numero {
+    display: flex;
+    justify-content: space-evenly;
+    
+    
+}
+
+/* .grid {
+    position: relative;
+    padding-left: 50px;
+} */
