@@ -98,96 +98,6 @@
     </div>
 </header>
 
-
-
-  <!-- <header>
-
-   
-    <nav class="navbar navbar-expand-lg  bg-dark static-top">
-      <div class="container w-100">
-        <a class="navbar-brand" href="#">
-          <img src="icones/pet1.png" alt="..." height="46">
-          Salva Pets
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Nossos Pets
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Cachorros</a></li>
-                <li><a class="dropdown-item" href="#">Gatos</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Serviços</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Quem Somos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contato</a>
-            </li>
-            <a href="login.php" class="btn btn-primary px-5" tabindex="-1" role="button" aria-disabled="true">Entrar</a>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-
-    <div class="cabecalho ">
-      <h1 class="me-5 ">Encontre e adote <br>
-        um pet para você.</h1>
-
-      <p>
-        Você não pode comprar amor,
-        mas você pode adotar ele.
-        Adote um pet para fazer companhia🐾
-      </p>
-
- 
-      <div class="input-group mb-2  bg-dark">
-        <img src="icones/pata (1).png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
-      </div>
-
-      
-
-
-
-
-      <div class="input-group mb-2  bg-dark">
-        <img src="icones/pet-house.png" alt="" width="10%"> 
-        <input type="text" class="form-control cont input-icon" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
-      </div>
-
-
-      <div class="input-group mb-2  bg-dark">
-        <img src="icones/bola-de-cachorro (1).png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
-      </div>
-
-      <div class="input-group mb-2  bg-dark">
-        <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%">
-        <input type="text" class="form-control cont" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
-      </div>
-
-    
-      <div class="d-grid gap-2 p-5">
-        <button class="btn btn-primary" type="button">Buscar Pet</button>
-      </div>
-
-    </div>
-  </header> -->
-   
-
-
-
-
   <main>
     <!-- Titulos pre cards pets -->
     <article class="pet-ideal text-center p-5">
@@ -204,40 +114,43 @@
     </section>
 
     <!-- cards de processo de adoção -->
-    <div>
-      <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="d-flex w-100 align justify-content-around flex-wrap px-2 h-75 ">
+
+      <div class="col-sm-3">
         <div class="card">
           <div class="card-body">
             <img src="icones/pesquisa.png" alt="">
+            <br><br>
             <h5 class="card-title">Enconte o pet ideal</h5>
             <p class="card-text">Aqui é onde tudo começa,
-              escolha um pet disponives e o favorite.</p>
+              escolha o pet que combina com você e o favorite.</p>
           </div>
         </div>
-      </div>
+      </div><br>
 
-      <div class="col-sm-6">
+      <div class="col-sm-3">
         <div class="card">
           <div class="card-body">
             <img src="icones/cuidado-animal.png" alt="">
-            <h5 class="card-title">Crie seu cadastro</h5>
-            <p class="card-text">Crie seu cadastro para poder solicitar a adoção do seu pet.</p>
+            <br><br>
+            <h5 class="card-title">Faça o cadastro</h5>
+            <p class="card-text">Para poder prosseguir com o processo de adoção você deve fazer o cadastro.</p>
           </div>
         </div>
-      </div>
+      </div><br>
 
-      <div>
-        <div class="col-sm-6 mb-3 mb-sm-0">
+      
+        <div class="col-sm-3">
           <div class="card">
             <div class="card-body">
               <img src="icones/seguro-pet.png" alt="">
+              <br><br>
               <h5 class="card-title">Aguarde a Aprovação para ir buscá-lo</h5>
-              <p class="card-text">Após solicitar a adoção, basta aguardar 24 horas para poder buscar o seu pet e levá-lo até sua nova casa. </p>
+              <p class="card-text">Após solicitar a adoção, basta aguardar 24 horas para poder buscar o seu pet. </p>
             </div>
           </div>
         </div>
-      </div>
-
+    </div>
       
 
 
