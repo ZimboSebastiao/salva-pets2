@@ -7,8 +7,6 @@ html { font-size: 14px;}
 --------------------------------------------------------------*/
 .container {
     width: 65%;
-    /* padding-right: 50px;
-    padding-left: 60px; */
     margin-right: auto;
     margin-left: auto;
 }
@@ -43,7 +41,7 @@ a {text-decoration: none;}
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: #1E266D;
     padding: 8px;
     font-weight: bold;
@@ -232,9 +230,9 @@ h1 {
         width: 350px;
     }
 
-    h1 {
+    /* h1 {
         font-size: 2rem;
-    }
+    } */
 
 }
 
@@ -418,12 +416,16 @@ h1 {
     background-color: #fff1eb;
 }
 
+.menu-color {background-color: #fff1eb !important;}
+
 .form-control, ::placeholder{
-    background-color: #FFF1EB;
+    /* background-color: #FFF1EB; */
+    background-color: #ffffff;
 }
 
 .form-floating>.form-control, .form-floating>.form-control-plaintext{
-    background-color: #FFF1EB;
+    /* background-color: #FFF1EB; */
+    background-color: #ffffff;
 }
 
 .floatingInput{
@@ -444,17 +446,16 @@ h1 {
 .customize {font-weight: bold;}
 a {text-decoration: none;}
 
-.espaco {
-    width: 60%;
+
+
+body {
+    background-color: white;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
-
-/* header nav div ul, li {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: start;
-} */
+main {flex: 1;}
 
 .limitador {
     width: 97vw;
@@ -462,11 +463,10 @@ a {text-decoration: none;}
 }
 
 header {
-    /* Tornando o cabeçalho fixo ao rolar a pagina */
     z-index: 100;
     position: sticky;
     top: 0;
-
+    background-color: rgb(255, 255, 255);
 }
 
 header div {
@@ -485,9 +485,9 @@ nav h2 a {
 
 
 
-nav  a:hover, nav a:focus{
-    background-color: #FFF1EB;
-}
+/* nav  a:hover, nav a:focus{
+    background-color: #ffe9e0;
+} */
 
 .menu {
     list-style: none;
@@ -495,13 +495,11 @@ nav  a:hover, nav a:focus{
 }
 
 .menu a {
-
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
-   
 }
 
 .menu.aberto{
@@ -515,7 +513,7 @@ nav  a:hover, nav a:focus{
 
 @media screen and (min-width: 530px) {
     nav h2 {display: none;}
-
+    html { font-size: 0.9rem;}
     .menu {
         display: flex;
         text-transform: uppercase; 
@@ -523,28 +521,13 @@ nav  a:hover, nav a:focus{
         align-items: center;   
     }
     
-
+    
     nav {width: 70%;}
 
-    /* Ao devolver o tamanho de 100% para cada <li> na pratica isso criará um espaçamento no texto/link */
     .menu li { width: 100%;}
-
-
-
-
 }
 
 
-/* @media screen and (min-width: 1000px) {
-    html { font-size: 16px;}
-    .limitador {max-width: 1000px;}
-} */
-
-
-/* .cor {
-    color: #1E266D;
-    font-weight: bold;
-} */
 
 
 .dividir {
@@ -553,13 +536,38 @@ nav  a:hover, nav a:focus{
 }
 
 .container-2 {
-    width: 85%;
+    width: 90%;
     margin-right: auto;
     margin-left: auto;
 }
 
 .cor-padrao {
     background-color: #db4712;
+}
+
+.progress-text {
+    display: flex;  
+    justify-content: space-between;
+}
+
+.Beetle-letters {color: #C3C7E5;}
+.negrito {font-weight: bold;}
+.decrease-letters {font-size: 10px;}
+
+.decrease {
+    font-weight: bold;
+    color: #070b35;
+}
+
+.divide {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.entry {width: 255px;}
+
+.form-floating {
+    margin-right: 6px; /* Adicione a margem desejada entre os elementos */
 }
 
 .icon-city {
@@ -582,83 +590,20 @@ nav  a:hover, nav a:focus{
     padding-left:50px;
 }
 
-
-
 .personalizar {
     text-align: center;
-    padding-top: 25px;
+    padding-top: 20px;
+    padding: 9px;
 }
 
+/*--------------------------------------------------------------
+# Estilização do Footer
+--------------------------------------------------------------*/
 
-.complemento-numero {
-    display: flex;
-    justify-content: space-evenly;
-    
-    
+.footer-color {
+    margin-top: 40px;
+    background-color: #040726;
+    color: white !important;
 }
 
-/* .grid {
-    position: relative;
-    padding-left: 50px;
-} */
-
-
-
-
-
-
-
-
-
-.form {
-    display: flex;
-    width: 550px;
-    background-color: black;
-    color: #CCC;
-  }
-  
-  .form .section {
-    flex-grow: 1;
-    flex-direction: column;
-    padding: 30px;
-  }
-  
-  .form .section .control-group {
-    margin-top: 10px;
-  }
-  
-  .form .section .control-group .control {
-    width: 100%;
-  }
-  
-  
-  .form .section .control-group .control-label {
-    display: block;
-    width: 100%;
-    margin-bottom: 4px;
-  }
-
-  footer ul {
-    list-style: none;
-    text-decoration:none ;
-  }
-
-  .lis{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .copyright{
-   position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-footer{
-    height: 480px;
-    border: 1px solid black;
-    position: relative;
-}
+/* teste */
