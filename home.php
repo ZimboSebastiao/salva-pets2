@@ -109,40 +109,43 @@
     </section>
 
     <!-- cards de processo de adoção -->
-    <div>
-      <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="d-flex w-100 align justify-content-around flex-wrap px-2 h-75 ">
+
+      <div class="col-sm-3">
         <div class="card">
           <div class="card-body">
             <img src="icones/pesquisa.png" alt="">
+            <br><br>
             <h5 class="card-title">Enconte o pet ideal</h5>
             <p class="card-text">Aqui é onde tudo começa,
-              escolha um pet disponives e o favorite.</p>
+              escolha o pet que combina com você e o favorite.</p>
           </div>
         </div>
-      </div>
+      </div><br>
 
-      <div class="col-sm-6">
+      <div class="col-sm-3">
         <div class="card">
           <div class="card-body">
             <img src="icones/cuidado-animal.png" alt="">
-            <h5 class="card-title">Crie seu cadastro</h5>
-            <p class="card-text">Crie seu cadastro para poder solicitar a adoção do seu pet.</p>
+            <br><br>
+            <h5 class="card-title">Faça o cadastro</h5>
+            <p class="card-text">Para poder prosseguir com o processo de adoção você deve fazer o cadastro.</p>
           </div>
         </div>
-      </div>
+      </div><br>
 
-      <div>
-        <div class="col-sm-6 mb-3 mb-sm-0">
+      
+        <div class="col-sm-3">
           <div class="card">
             <div class="card-body">
               <img src="icones/seguro-pet.png" alt="">
+              <br><br>
               <h5 class="card-title">Aguarde a Aprovação para ir buscá-lo</h5>
-              <p class="card-text">Após solicitar a adoção, basta aguardar 24 horas para poder buscar o seu pet e levá-lo até sua nova casa. </p>
+              <p class="card-text">Após solicitar a adoção, basta aguardar 24 horas para poder buscar o seu pet. </p>
             </div>
           </div>
         </div>
-      </div>
-
+    </div>
       
 
 

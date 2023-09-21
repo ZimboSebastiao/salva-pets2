@@ -146,10 +146,11 @@ h1 {
 }
 
 @media screen and (max-width: 991px) {
-    
-    .btn-primary {
-        display: hidden;
+    .row {
+        --bs-gutter-x: 1rem;
     }
+
+  
 }
 
 
