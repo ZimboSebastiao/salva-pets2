@@ -484,7 +484,6 @@ nav h2 a {
 }
 
 
-
 /* nav  a:hover, nav a:focus{
     background-color: #ffe9e0;
 } */
@@ -594,6 +593,50 @@ nav h2 a {
     text-align: center;
     padding-top: 20px;
     padding: 9px;
+}
+
+/* mobile */
+@media (min-width: 481px) and (max-width: 767px){
+    /* .container {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    } */
+    .container-2 {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+
+    
+    .progress-text {
+        display: flex;  
+        justify-content: space-between;
+    }
+    
+    .Beetle-letters {color: #C3C7E5;}
+    .negrito {font-weight: bold;}
+    .decrease-letters {font-size: 10px;}
+    
+ 
+    
+    .divide {
+        display: flex;
+        justify-content: space-between; 
+    }
+    
+    .entry {width: 255px;}
+}
+
+/* Small tablets */
+@media (min-width: 768px) and (max-width: 991px){
+    
+}
+
+/* Desktops */
+@media (min-width: 1200px) and (max-width: 1919px){
+
 }
 
 /*--------------------------------------------------------------

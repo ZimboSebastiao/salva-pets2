@@ -49,7 +49,7 @@
 <main>
 
   <!-- ====== BARRA DE PROGRESSO ====== -->
-  <div class="container-2">
+  <div class="container-2 bg-primary">
     <div class="progress-text decrease-letters">
       <span class="decrease">Dados Básicos</span>
       <span class="Beetle-letters">Te conhecendo</span>
@@ -66,7 +66,7 @@
   </div>
   
   <!-- ====== FORMULÁRIO ====== -->
-  <div class="container">
+  <div class="container bg-success">
     <div class="row">
       <section class="estilo-form">
         <form action=""  method="post">
