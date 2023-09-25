@@ -499,6 +499,7 @@ nav h2 a {
     justify-content: center;
     align-items: center;
     height: 50px;
+    color: #1E266D;
 }
 
 .menu.aberto{
@@ -670,7 +671,7 @@ nav h2 a {
 
     .entry {width: 455px;}
 
-    .decrease-size {font-size: 8px;}
+    .decrease-size {font-size: 9.5px;}
     .footer-color {
         margin-top: 40px;
         background-color: #040726;
@@ -683,13 +684,8 @@ nav h2 a {
     }
 }
 
-/* tablets */
+/* tablets  2 */
 @media (min-width: 540px) and (max-width: 720px){
-    .tamanho-form {
-        width: 80%;
-        margin-right: auto;
-        margin-left: auto;
-    }
 
     .container-2 {
         width: 84%;
@@ -702,30 +698,44 @@ nav h2 a {
         align-items: center; 
         justify-content: center;
         flex-direction: column;
-        background-color: red;
     }
     .input {
-        width: 450px;
+        width: 350px;
     }
 
-    .entry {width: 455px;}
+    .entry {width: 355px;}
 
-    .decrease-size {font-size: 8px;}
-    .footer-color {
-        margin-top: 40px;
-        background-color: #040726;
-        color: white !important;
-        width: 100%; /* Garante que o rodapé ocupe toda a largura da tela */
-    }
-    
-    .container {
-        margin-bottom: 60px; /* Isso dará mais espaço entre o conteúdo acima e o rodapé */
+    .menu a {
+        font-size: 10px;
+        
     }
 }
 
 
 /* Desktops */
 @media (min-width: 1200px) and (max-width: 1919px){
+
+    
+    .container-2 {
+        width: 84%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .dividir-form {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input {
+        width: 450px;
+    }
+
+    .entry {width: 455px;}
+    .decrease-letters {font-size: 17px;}
+
+
 
 }
 
