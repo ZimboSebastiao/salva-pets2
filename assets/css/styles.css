@@ -645,7 +645,7 @@ nav h2 a {
 }
 
 /* tablets */
-@media (min-width: 820px) and (max-width: 1180px){
+@media (min-width: 768px) and (max-width: 1024px){
     .tamanho-form {
         width: 80%;
         margin-right: auto;
@@ -672,6 +672,16 @@ nav h2 a {
     .entry {width: 455px;}
 
     .decrease-size {font-size: 8px;}
+    .footer-color {
+        margin-top: 40px;
+        background-color: #040726;
+        color: white !important;
+        width: 100%; /* Garante que o rodapé ocupe toda a largura da tela */
+    }
+    
+    .container {
+        margin-bottom: 60px; /* Isso dará mais espaço entre o conteúdo acima e o rodapé */
+    }
 }
 
 
@@ -681,13 +691,14 @@ nav h2 a {
 }
 
 /*--------------------------------------------------------------
-# Estilização do Footer
+# Estilização do FOOTER
 --------------------------------------------------------------*/
 
 .footer-color {
     margin-top: 40px;
     background-color: #040726;
     color: white !important;
+    overflow-x: hidden;
 }
 
 /* teste blablabla*/
