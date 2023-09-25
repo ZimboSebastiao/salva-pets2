@@ -527,8 +527,6 @@ nav h2 a {
 }
 
 
-
-
 .dividir {
     display: flex;
     justify-content: space-between;
@@ -561,6 +559,12 @@ nav h2 a {
 .divide {
     display: flex;
     justify-content: space-between; 
+}
+
+.tamanho-form {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
 
 .entry {width: 255px;}
@@ -596,44 +600,80 @@ nav h2 a {
 }
 
 /* mobile */
-@media (min-width: 481px) and (max-width: 767px){
-    /* .container {
-        width: 100%;
+@media (min-width: 375px) and (max-width: 667px){
+
+    .tamanho-form {
+        width: 80%;
         margin-right: auto;
         margin-left: auto;
-    } */
+    }
     
-    .container-2 {
-        width: 90%;
-        margin-right: auto;
-        margin-left: auto;
+    .input {
+        width: 250px;
     }
     
 
-    
-    .progress-text {
-        display: flex;  
-        justify-content: space-between;
-    }
-    
-    .Beetle-letters {color: #C3C7E5;}
-    .negrito {font-weight: bold;}
-    .decrease-letters {font-size: 10px;}
-    
- 
-    
-    .divide {
-        display: flex;
-        justify-content: space-between; 
-    }
-    
-    .entry {width: 255px;}
 }
 
 /* Small tablets */
-@media (min-width: 768px) and (max-width: 991px){
-    
+@media (min-width: 820px) and (max-width: 1180px){
+    .tamanho-form {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .container-2 {
+        width: 84%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .dividir-form {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input {
+        width: 450px;
+    }
+
+    .entry {width: 455px;}
+
+    .decrease-size {font-size: 8px;}
 }
+
+/* tablets */
+@media (min-width: 820px) and (max-width: 1180px){
+    .tamanho-form {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .container-2 {
+        width: 84%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .dividir-form {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+        background-color: red;
+    }
+    .input {
+        width: 450px;
+    }
+
+    .entry {width: 455px;}
+
+    .decrease-size {font-size: 8px;}
+}
+
 
 /* Desktops */
 @media (min-width: 1200px) and (max-width: 1919px){
