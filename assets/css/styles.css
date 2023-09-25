@@ -663,6 +663,45 @@ nav h2 a {
         align-items: center; 
         justify-content: center;
         flex-direction: column;
+    }
+    .input {
+        width: 450px;
+    }
+
+    .entry {width: 455px;}
+
+    .decrease-size {font-size: 8px;}
+    .footer-color {
+        margin-top: 40px;
+        background-color: #040726;
+        color: white !important;
+        width: 100%; /* Garante que o rodapé ocupe toda a largura da tela */
+    }
+    
+    .container {
+        margin-bottom: 60px; /* Isso dará mais espaço entre o conteúdo acima e o rodapé */
+    }
+}
+
+/* tablets */
+@media (min-width: 540px) and (max-width: 720px){
+    .tamanho-form {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .container-2 {
+        width: 84%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .dividir-form {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
         background-color: red;
     }
     .input {
