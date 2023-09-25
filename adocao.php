@@ -49,7 +49,7 @@
 <main>
 
   <!-- ====== BARRA DE PROGRESSO ====== -->
-  <div class="container-2">
+  <div class="container-2 bg-prima">
     <div class="progress-text decrease-letters">
       <span class="decrease">Dados Básicos</span>
       <span class="Beetle-letters">Te conhecendo</span>
@@ -66,10 +66,10 @@
   </div>
   
   <!-- ====== FORMULÁRIO ====== -->
-  <div class="container">
+  <div class="container tamanho-form">
     <div class="row">
       <section class="estilo-form">
-        <form action=""  method="post">
+        <form action=""  method="post" class="dividir-form">
 
             <!-- ====== Nome Completo ====== -->
             <div class="form-floating mb-3">
@@ -117,7 +117,7 @@
             </div>
 
             <div>
-                <button class="btn btn-primary btn-lg botao" name="inserir">Próxima etapa</button>
+                <button class="btn btn-primary btn-lg botao input" name="inserir">Próxima etapa</button>
             </div>
 
         </form>
@@ -148,8 +148,8 @@
             SalvaPets
           </a>
           </h6>
-          <p class="Beetle-letters negrito">Não compre, adote!</p>
-          <p class="negrito">contato.salvapets@gmail.com</p>
+          <p class="Beetle-letters negrito decrease-size">Não compre, adote!</p>
+          <p class="negrito decrease-size">contato.salvapets@gmail.com</p>
         </div>
         <!-- Grid column -->
 

@@ -484,7 +484,6 @@ nav h2 a {
 }
 
 
-
 /* nav  a:hover, nav a:focus{
     background-color: #ffe9e0;
 } */
@@ -500,6 +499,7 @@ nav h2 a {
     justify-content: center;
     align-items: center;
     height: 50px;
+    color: #1E266D;
 }
 
 .menu.aberto{
@@ -526,8 +526,6 @@ nav h2 a {
 
     .menu li { width: 100%;}
 }
-
-
 
 
 .dividir {
@@ -564,6 +562,12 @@ nav h2 a {
     justify-content: space-between; 
 }
 
+.tamanho-form {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
 .entry {width: 255px;}
 
 .form-floating {
@@ -596,14 +600,154 @@ nav h2 a {
     padding: 9px;
 }
 
+/* mobile */
+@media (min-width: 375px) and (max-width: 667px){
+
+    .tamanho-form {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .input {
+        width: 250px;
+    }
+    
+
+}
+
+/* Small tablets */
+@media (min-width: 820px) and (max-width: 1180px){
+    .tamanho-form {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .container-2 {
+        width: 84%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .dividir-form {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input {
+        width: 450px;
+    }
+
+    .entry {width: 455px;}
+
+    .decrease-size {font-size: 8px;}
+}
+
+/* tablets */
+@media (min-width: 768px) and (max-width: 1024px){
+    .tamanho-form {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .container-2 {
+        width: 84%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .dividir-form {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input {
+        width: 450px;
+    }
+
+    .entry {width: 455px;}
+
+    .decrease-size {font-size: 9.5px;}
+    .footer-color {
+        margin-top: 40px;
+        background-color: #040726;
+        color: white !important;
+        width: 100%; /* Garante que o rodapé ocupe toda a largura da tela */
+    }
+    
+    .container {
+        margin-bottom: 60px; /* Isso dará mais espaço entre o conteúdo acima e o rodapé */
+    }
+}
+
+/* tablets  2 */
+@media (min-width: 540px) and (max-width: 720px){
+
+    .container-2 {
+        width: 84%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .dividir-form {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input {
+        width: 350px;
+    }
+
+    .entry {width: 355px;}
+
+    .menu a {
+        font-size: 10px;
+        
+    }
+}
+
+
+/* Desktops */
+@media (min-width: 1200px) and (max-width: 1919px){
+
+    
+    .container-2 {
+        width: 84%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .dividir-form {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input {
+        width: 450px;
+    }
+
+    .entry {width: 455px;}
+    .decrease-letters {font-size: 17px;}
+
+
+
+}
+
 /*--------------------------------------------------------------
-# Estilização do Footer
+# Estilização do FOOTER
 --------------------------------------------------------------*/
 
 .footer-color {
     margin-top: 40px;
     background-color: #040726;
     color: white !important;
+    overflow-x: hidden;
 }
 
 /* teste blablabla*/
