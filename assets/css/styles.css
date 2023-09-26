@@ -770,7 +770,13 @@ nav h2 a {
     margin: auto;
   }
 
-  
+  @media (min-width: 768px) {
+    .modal-dialog {
+      max-width: 600px; /* Ajuste o valor conforme necessário */
+    }
+  }
+
+
   .modal-header {
     padding: 1rem;
     border-bottom: 1px solid #dee2e6;
