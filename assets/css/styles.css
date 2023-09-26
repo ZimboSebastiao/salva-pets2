@@ -760,14 +760,22 @@ nav h2 a {
     overflow: hidden;
   }
   
-  .modal-dialog {
-    position: relative;
-    width: auto;
-    margin: 0.5rem;
-    pointer-events: none;
-  }
+  /* .modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
   
-  .modal-content {
+  .modal-dialog {
+    position: absolute;
+    top: 30vh;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  /* .modal-content {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -779,7 +787,7 @@ nav h2 a {
     border-radius: 0.3rem;
     outline: 0;
     box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.2);
-  }
+  } */
   
   .modal-header {
     padding: 1rem;
