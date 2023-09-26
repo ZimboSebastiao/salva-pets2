@@ -760,27 +760,23 @@ nav h2 a {
     overflow: hidden;
   }
   
+  
   .modal-dialog {
-    position: relative;
-    width: auto;
-    margin: 0.5rem;
-    pointer-events: none;
+    position: absolute;
+    top: 40vh;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
   }
-  
-  .modal-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    pointer-events: auto;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 0.3rem;
-    outline: 0;
-    box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.2);
+
+  @media (min-width: 768px) {
+    .modal-dialog {
+      max-width: 600px; /* Ajuste o valor conforme necessário */
+    }
   }
-  
+
+
   .modal-header {
     padding: 1rem;
     border-bottom: 1px solid #dee2e6;
@@ -821,4 +817,3 @@ nav h2 a {
     overflow-x: hidden;
 }
 
-/* teste blablabla*/
