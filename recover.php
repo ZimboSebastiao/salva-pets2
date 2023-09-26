@@ -35,15 +35,25 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title">Escolha uma nova senha</h5>
+        
       </div>
       <div class="modal-body">
-        <p>Modal body text goes here.</p>
+        <p>
+          Crie uma nova senha que contenha pelo menos 6 caracteres.
+          Uma senha complexa é uma combinação de letras, números, sinais de pontuação e símbolos.
+        </p>
+        <form action="" method="post">
+          <div class="form-floating mb-3">
+              <input class="form-control input" id="floatingInput" placeholder="Nova Senha" required type="password">
+              <label for="floatingInput">Nova Senha</label>
+          </div>
+        </form>
+        
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Continuar</button>
       </div>
     </div>
   </div>
