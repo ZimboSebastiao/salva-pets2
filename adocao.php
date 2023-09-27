@@ -15,7 +15,7 @@
 <!-- ======== CABEÇALHO ======== -->
 <header>
   <div class="limitador">
-    <a class="navbar-brand customize" href="#">
+    <a class="navbar-brand customize" href="home.php">
       <img src="icones/pet1.png" alt="..." height="46">
       SalvaPets
     </a>
