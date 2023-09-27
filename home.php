@@ -61,10 +61,10 @@
         Adote um pet para fazer companhia🐾
       </p>
 
-      <div class="w-75 d-flex m-auto gap-5 p-5 bg-white rounded">
+      <div class="w-75 d-flex m-auto gap-5 p-5 bg-white rounded ">
 
         <!-- INPUT CIDADE -->
-        <div class="input-group mb-2 border rounded border-dark ">
+        <div class="input-group mb-2 border rounded border-dark col-sm-3">
           <!-- <img src="icones/pata (1).png" alt="" width="10%"> -->
           <input type="text" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
         </div>
