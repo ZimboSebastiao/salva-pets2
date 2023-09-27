@@ -88,7 +88,7 @@
         </div>
   
         <!-- BOTÃO BUSCAR PET -->
-        <div class="w-100 m-auto">
+        <div class="w-75 m-auto">
           <button class="btn btn-primary w-100" type="button">Buscar Pet</button>
         </div>
       </div>
