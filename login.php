@@ -14,7 +14,7 @@
 <div class="container">
     <div class="row">
         <!-- =========== Formulário  =========== -->
-        <div class="col-6">
+        <div class="col-6 bg-danger">
             
             <div>
                 <img src="icones/pet1.png" alt="..." height="42">
