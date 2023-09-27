@@ -178,9 +178,9 @@ h1 {
         width: 300px;
     }
 
-    .botao {
+    /* .botao {
         width: 300px;
-    }
+    } */
 
 
     .row {
@@ -617,9 +617,49 @@ nav h2 a {
     .input-login {
         width: 260px;
     }
+
+    .esqueci-senha {
+        position: relative;
+        left: -25px;
+    }
+
+    .botao {
+        width: 260px;
+        height: 41px;
+    }
+
+    .estilo-p {
+        color: #C3C7E5;
+        padding: 8px;
+        font-size: 12.6px;
+    }
     
 
 }
+
+/* Small mobile */
+@media (min-width: 414px) and (max-width: 896px){
+    .esqueci-senha {
+        position: relative;
+        left: 34px;
+    }
+
+    .botao {
+        width: 290px;
+        height: 41px;
+    }
+
+    .input-login {
+        width: 290px;
+    }
+
+    .estilo-p {
+        color: #C3C7E5;
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+
 
 /* Small tablets */
 @media (min-width: 820px) and (max-width: 1180px){
@@ -648,6 +688,20 @@ nav h2 a {
     .entry {width: 455px;}
 
     .decrease-size {font-size: 8px;}
+
+    .esqueci-senha {
+        position: relative;
+        left: -25px;
+    }
+
+    .botao {
+        width: 280px;
+        height: 41px;
+    }
+
+    .input-login {
+        width: 280px;
+    }
 }
 
 /* tablets */
