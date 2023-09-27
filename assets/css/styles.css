@@ -124,185 +124,8 @@ h1 {
     right: -5px;
 }
 
-/* Página Login */
-@media screen and (max-width: 1100px){
-    .row{
-        --bs-gutter-x: 4rem;
-    }
-}
-
-@media screen and (max-width: 982px) {
-
-    .estilo-cadeado {
-        justify-content: right;
-        right: 80px;
-        position: relative;
-    }
-
-    .hero {
-        bottom: -9px;
-
-    }
-}
-
-@media screen and (max-width: 991px) {
-    
-    .btn-primary {
-        display: hidden;
-    }
-}
 
 
-/* Modifição para telas pequenas | Página de Login*/
-
-@media screen and (max-width: 808px) {
-    .row {
-        --bs-gutter-x: 3.7rem;
-
-    }
-
-    .input {
-        width: 350px;
-    }
-
-    .botao {
-        width: 350px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-
-   
-    .input {
-        width: 300px;
-    }
-
-    .botao {
-        width: 300px;
-    }
-
-
-    .row {
-        --bs-gutter-x: 3rem;
-    }
-
-}
-
-@media screen and (max-width:666px) {
-
-    #destaque {
-        background-image: none;
-
-    }
-
-    .row {
-        --bs-gutter-x: -3rem;
-    }
-
-    .container {
-        width: 100%;
-        max-width: 1200px;
-        /* Adjust the maximum width as needed */
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .col-6 {
-        width: 100%;
-    }
-
-    .estilo-cadeado {
-        right: 0px;
-    }
-
-
-    .hero {
-        bottom: -11px;
-    }
-
-   
-    .input {
-        width: 350px;
-    }
-
-    .botao {
-        width: 350px;
-    }
-
-    /* h1 {
-        font-size: 2rem;
-    } */
-
-}
-
-/* Centralizando para telas Menores */
-@media screen and (max-width: 600px) {
-    .row {
-        --bs-gutter-x: -2rem;
-    }
-
-    
-}
-
-@media screen and (max-width: 500px){
-    .row {
-        --bs-gutter-x: -1rem;
-    }
-
-}
-
-/* Fazendo mudanças no Visual  */
-@media screen and (max-width: 458px){
-    .input{
-        width: 300px;
-    }
-
-    .botao{
-        width: 300px;
-    }
-
-    .estilo-cadeado{
-        right: 35px;
-    }
-
-    .estilo-p{
-        padding: 5px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-  .estilo-cadeado{
-    right: -35px;
-  }
-
-  #pata{
-    height: 3.7vh;
-  }
-}
-
-
-@media screen and (max-width: 370px) {
-    .input{
-        width: 250px;
-    }
-    .botao{
-        width: 250px;
-    }
-
-    .estilo-cadeado{
-        right: -9px;
-    }
-}
-
-@media screen and (max-width: 344px) {
-    .row {
-        --bs-gutter-x: none;
-    }
-
-        .estilo-cadeado{
-            right: 50px;
-        }
-}
 /*--------------------------------------------------------------
 # Estilização Página de Cadastro
 --------------------------------------------------------------*/
@@ -483,7 +306,6 @@ nav h2 a {
 }
 
 
-
 /* nav  a:hover, nav a:focus{
     background-color: #ffe9e0;
 } */
@@ -499,6 +321,7 @@ nav h2 a {
     justify-content: center;
     align-items: center;
     height: 50px;
+    color: #1E266D;
 }
 
 .menu.aberto{
@@ -525,8 +348,6 @@ nav h2 a {
 
     .menu li { width: 100%;}
 }
-
-
 
 
 .dividir {
@@ -563,6 +384,12 @@ nav h2 a {
     justify-content: space-between; 
 }
 
+.tamanho-form {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
 .entry {width: 255px;}
 
 .form-floating {
@@ -595,14 +422,379 @@ nav h2 a {
     padding: 9px;
 }
 
+
+@media screen and (max-width:666px) {
+
+    #destaque {
+        background-image: none;
+
+    }
+
+    .row {
+        --bs-gutter-x: -3rem;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .col-6 {
+        width: 100%;
+    }
+
+
+}
+
+
+@media screen and (max-width: 500px){
+    .row {
+        --bs-gutter-x: -1rem;
+    }
+
+}
+
+/* mobile */
+@media (min-width: 375px) and (max-width: 667px){
+
+    .tamanho-form {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    .input {
+        width: 250px;
+    }
+
+    .input-login {
+        width: 260px;
+    }
+
+    .esqueci-senha {
+        position: relative;
+        left: -25px;
+    }
+
+    .botao {
+        width: 260px;
+        height: 41px;
+    }
+
+    .estilo-p {
+        color: #C3C7E5;
+        padding: 8px;
+        font-size: 12.6px;
+    }
+    
+
+}
+
+/* Small mobile */
+@media (min-width: 414px) and (max-width: 896px){
+    .esqueci-senha {
+        position: relative;
+        left: 34px;
+    }
+
+    .botao {
+        width: 290px;
+        height: 41px;
+    }
+
+    .input-login {
+        width: 290px;
+    }
+
+    .estilo-p {
+        color: #C3C7E5;
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+
+/* Iphone 12 Pro */
+/* @media (min-width: 390px) and (max-width: 844px){
+    .esqueci-senha {
+        position: relative;
+        left: -32px;
+    }
+
+    .botao {
+        width: 270px;
+        height: 41px;
+    }
+
+    .input-login {
+        width: 270px;
+    }
+
+    .estilo-p {
+        color: #C3C7E5;
+        padding: 8px;
+        font-size: 13px;
+    }
+} */
+
+
+/* Iphone 12 Pro */
+/* @media (min-width: 360px) and (max-width: 740px){
+    .esqueci-senha {
+        position: relative;
+        left: -1px;
+    }
+
+    .botao {
+        width: 245px;
+        height: 41px;
+    }
+
+    .input-login {
+        width: 245px;
+    }
+
+} */
+
+
+/* Small tablets */
+@media (min-width: 820px) and (max-width: 1180px){
+    .tamanho-form {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .container-2 {
+        width: 84%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .dividir-form {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input {
+        width: 450px;
+    }
+
+    .entry {width: 455px;}
+
+    .decrease-size {font-size: 8px;}
+
+    .esqueci-senha {
+        position: relative;
+        left: -25px;
+    }
+
+    .botao {
+        width: 280px;
+        height: 41px;
+    }
+
+    .input-login {
+        width: 280px;
+    }
+}
+
+/* tablets */
+@media (min-width: 768px) and (max-width: 1024px){
+    .tamanho-form {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .container-2 {
+        width: 84%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .dividir-form {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input {
+        width: 450px;
+    }
+
+    .entry {width: 455px;}
+
+    .decrease-size {font-size: 9.5px;}
+    .footer-color {
+        margin-top: 40px;
+        background-color: #040726;
+        color: white !important;
+        width: 100%; /* Garante que o rodapé ocupe toda a largura da tela */
+    }
+    
+    .container {
+        margin-bottom: 60px; /* Isso dará mais espaço entre o conteúdo acima e o rodapé */
+    }
+}
+
+/* tablets  2 */
+@media (min-width: 540px) and (max-width: 720px){
+
+    .container-2 {
+        width: 84%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .dividir-form {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input {
+        width: 350px;
+    }
+
+    .entry {width: 355px;}
+
+    .menu a {
+        font-size: 10px;
+        
+    }
+}
+
+
+/* Desktops */
+@media (min-width: 1200px) and (max-width: 1919px){
+
+    
+    .container-2 {
+        width: 84%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .dividir-form {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input {
+        width: 450px;
+    }
+
+    .entry {width: 455px;}
+    .decrease-letters {font-size: 17px;}
+
+
+
+}
+
+/* Desktops */
+@media (min-width: 1181px) {
+
+    
+    .container-2 {
+        width: 84%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .dividir-form {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input {width: 450px;}
+
+    .entry {width: 455px;}
+    .decrease-letters {font-size: 17px;}
+
+
+
+}
+
+
 /*--------------------------------------------------------------
-# Estilização do Footer
+# Página RECOVER  
+--------------------------------------------------------------*/
+.modal {
+    display: block;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+  
+  .modal-open {
+    overflow: hidden;
+  }
+  
+  
+  .modal-dialog {
+    position: absolute;
+    top: 40vh;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  @media (min-width: 768px) {
+    .modal-dialog {
+      max-width: 600px; /* Ajuste o valor conforme necessário */
+    }
+  }
+
+
+  .modal-header {
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .modal-title {
+    margin-bottom: 0;
+  }
+  
+  .modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+  }
+  
+  .modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .modal-footer > * {
+    margin: 0.125rem;
+  }
+  
+
+
+/*--------------------------------------------------------------
+# Estilização do FOOTER
 --------------------------------------------------------------*/
 
 .footer-color {
     margin-top: 40px;
     background-color: #040726;
     color: white !important;
+    overflow-x: hidden;
 }
 
-/* teste */
