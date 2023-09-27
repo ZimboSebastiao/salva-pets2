@@ -124,7 +124,186 @@ h1 {
     right: -5px;
 }
 
+/* Página Login */
+@media screen and (max-width: 1100px){
+    .row{
+        --bs-gutter-x: 4rem;
+    }
+}
 
+@media screen and (max-width: 982px) {
+
+    .estilo-cadeado {
+        justify-content: right;
+        right: 80px;
+        position: relative;
+    }
+
+    .hero {
+        bottom: -9px;
+
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .row {
+        --bs-gutter-x: 1rem;
+    }
+
+  
+}
+
+
+/* Modifição para telas pequenas | Página de Login*/
+
+@media screen and (max-width: 808px) {
+    .row {
+        --bs-gutter-x: 3.7rem;
+
+    }
+
+    .input {
+        width: 350px;
+    }
+
+    .botao {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+   
+    .input {
+        width: 300px;
+    }
+
+    /* .botao {
+        width: 300px;
+    } */
+
+
+    .row {
+        --bs-gutter-x: 3rem;
+    }
+
+}
+
+@media screen and (max-width:666px) {
+
+    #destaque {
+        background-image: none;
+
+    }
+
+    .row {
+        --bs-gutter-x: -3rem;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        /* Adjust the maximum width as needed */
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .col-6 {
+        width: 100%;
+    }
+
+    .estilo-cadeado {
+        right: 0px;
+    }
+
+
+    .hero {
+        bottom: -11px;
+    }
+
+   
+    .input {
+        width: 350px;
+    }
+
+    .botao {
+        width: 350px;
+    }
+
+    /* h1 {
+        font-size: 2rem;
+    } */
+
+}
+
+/* Centralizando para telas Menores */
+@media screen and (max-width: 600px) {
+    .row {
+        --bs-gutter-x: -2rem;
+    }
+
+    
+}
+
+@media screen and (max-width: 500px){
+    .row {
+        --bs-gutter-x: -1rem;
+    }
+
+}
+
+/* Fazendo mudanças no Visual  */
+@media screen and (max-width: 458px){
+    .input{
+        width: 300px;
+    }
+
+    .botao{
+        width: 300px;
+    }
+
+    .estilo-cadeado{
+        right: 35px;
+    }
+
+    .estilo-p{
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+  .estilo-cadeado{
+    right: -35px;
+  }
+
+  #pata{
+    height: 3.7vh;
+  }
+}
+
+
+@media screen and (max-width: 370px) {
+    .input{
+        width: 250px;
+    }
+    .botao{
+        width: 250px;
+    }
+
+    .estilo-cadeado{
+        right: -9px;
+    }
+}
+
+@media screen and (max-width: 344px) {
+    .row {
+        --bs-gutter-x: none;
+    }
+
+        .estilo-cadeado{
+            right: 50px;
+        }
+}
 
 /*--------------------------------------------------------------
 # Estilização Página de Cadastro
@@ -422,40 +601,6 @@ nav h2 a {
     padding: 9px;
 }
 
-
-@media screen and (max-width:666px) {
-
-    #destaque {
-        background-image: none;
-
-    }
-
-    .row {
-        --bs-gutter-x: -3rem;
-    }
-
-    .container {
-        width: 100%;
-        max-width: 1200px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .col-6 {
-        width: 100%;
-    }
-
-
-}
-
-
-@media screen and (max-width: 500px){
-    .row {
-        --bs-gutter-x: -1rem;
-    }
-
-}
-
 /* mobile */
 @media (min-width: 375px) and (max-width: 667px){
 
@@ -475,88 +620,16 @@ nav h2 a {
 
     .esqueci-senha {
         position: relative;
-        left: 77px;
+        left: -25px;
     }
 
     .botao {
         width: 260px;
         height: 41px;
     }
-
-    .estilo-p {
-        color: #C3C7E5;
-        padding: 8px;
-        font-size: 12.6px;
-    }
     
 
 }
-
-/* Small mobile */
-@media (min-width: 414px) and (max-width: 896px){
-    .esqueci-senha {
-        position: relative;
-        left: 34px;
-    }
-
-    .botao {
-        width: 290px;
-        height: 41px;
-    }
-
-    .input-login {
-        width: 290px;
-    }
-
-    .estilo-p {
-        color: #C3C7E5;
-        padding: 8px;
-        font-size: 13px;
-    }
-}
-
-/* Iphone 12 Pro */
-/* @media (min-width: 390px) and (max-width: 844px){
-    .esqueci-senha {
-        position: relative;
-        left: -32px;
-    }
-
-    .botao {
-        width: 270px;
-        height: 41px;
-    }
-
-    .input-login {
-        width: 270px;
-    }
-
-    .estilo-p {
-        color: #C3C7E5;
-        padding: 8px;
-        font-size: 13px;
-    }
-} */
-
-
-/* Iphone 12 Pro */
-/* @media (min-width: 360px) and (max-width: 740px){
-    .esqueci-senha {
-        position: relative;
-        left: -1px;
-    }
-
-    .botao {
-        width: 245px;
-        height: 41px;
-    }
-
-    .input-login {
-        width: 245px;
-    }
-
-} */
-
 
 /* Small tablets */
 @media (min-width: 820px) and (max-width: 1180px){
@@ -592,13 +665,10 @@ nav h2 a {
     }
 
     .botao {
-        width: 280px;
+        width: 260px;
         height: 41px;
     }
-
-    .input-login {
-        width: 280px;
-    }
+    
 }
 
 /* tablets */
