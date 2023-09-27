@@ -739,6 +739,31 @@ nav h2 a {
 
 }
 
+/* Desktops */
+@media (min-width: 1181px) {
+
+    
+    .container-2 {
+        width: 84%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .dividir-form {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        flex-direction: column;
+    }
+    .input {width: 450px;}
+
+    .entry {width: 455px;}
+    .decrease-letters {font-size: 17px;}
+
+
+
+}
+
 
 /*--------------------------------------------------------------
 # Página RECOVER  
