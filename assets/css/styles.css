@@ -660,6 +660,29 @@ nav h2 a {
     }
 }
 
+/* Iphone 12 Pro */
+@media (min-width: 390px) and (max-width: 844px){
+    .esqueci-senha {
+        position: relative;
+        left: -32px;
+    }
+
+    .botao {
+        width: 270px;
+        height: 41px;
+    }
+
+    .input-login {
+        width: 270px;
+    }
+
+    .estilo-p {
+        color: #C3C7E5;
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+
 
 /* Small tablets */
 @media (min-width: 820px) and (max-width: 1180px){
