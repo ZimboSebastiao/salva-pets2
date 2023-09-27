@@ -14,7 +14,7 @@
 <div class="container">
     <div class="row">
         <!-- =========== Formulário  =========== -->
-        <div class="col-6">
+        <div class="col-6 bg-danger">
             
             <div>
                 <img src="icones/pet1.png" alt="..." height="42">
@@ -26,13 +26,13 @@
             <section class="estilo-form">
                 <form action="" >
                     <div class="form-floating mb-3">
-                        <input class="form-control input" id="floatingInput" placeholder="name@example.com" required type="email">
+                        <input class="form-control input-login" id="floatingInput" placeholder="name@example.com" required type="email">
                         <label for="floatingInput">E-mail</label>
                     </div>
                     <br>
 
                     <div class="form-floating">
-                        <input  class="form-control input" id="floatingPassword" placeholder="Password" required type="password">
+                        <input  class="form-control input-login" id="floatingPassword" placeholder="Password" required type="password">
                         <label for="floatingPassword">Senha</label>
                     </div>
 
