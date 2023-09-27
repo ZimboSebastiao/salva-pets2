@@ -618,15 +618,14 @@ nav h2 a {
         width: 260px;
     }
 
+
+
     .esqueci-senha {
+        background-color: #FF7F50;
         position: relative;
         left: -25px;
     }
-
-    .botao {
-        width: 260px;
-        height: 41px;
-    }
+    
     
 
 }
@@ -658,17 +657,6 @@ nav h2 a {
     .entry {width: 455px;}
 
     .decrease-size {font-size: 8px;}
-
-    .esqueci-senha {
-        position: relative;
-        left: -25px;
-    }
-
-    .botao {
-        width: 260px;
-        height: 41px;
-    }
-    
 }
 
 /* tablets */
