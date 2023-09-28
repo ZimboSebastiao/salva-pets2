@@ -12,8 +12,39 @@
 
 <body>
 
-
-  <!-- ======== CABEÇALHO ======== -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary w-100" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="icones/pet1.png" alt="..." height="46">
+      SalvaPets</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse px-5" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll d-flex justify-content-around w-75 m-auto" style="--bs-scroll-height: 200px;">
+       
+      <li class="nav-item">
+        <a class="nav-link" href="#">Cachorros</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Gatos</a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Serviços</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Quem somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contato</a>
+        </li>
+      </ul>
+      <form class="d-flex justify-content-center" role="search">
+        <a  href="login.php" class="btn btn-primary border px-5"  tabindex="-1" role="button" aria-disabled="true">Entrar</a>
+      </form>
+    </div>
+  </div>
+</nav>
+  <!-- ======== CABEÇALHO ========
    <header class="menu-color">
   <div class="limitador">
     <a class="navbar-brand customize" href="#">
@@ -47,7 +78,7 @@
     </nav>
   </div>
 
-</header>
+</header> -->
 
   <main>
 
@@ -89,7 +120,7 @@
   
         <!-- BOTÃO BUSCAR PET -->
         <div class="w-75 m-auto">
-          <button class="btn btn-primary w-100" type="button">Buscar Pet</button>
+          <button class="btn btn-primary w-75" type="button">Buscar Pet</button>
         </div>
       </div>
     </div>

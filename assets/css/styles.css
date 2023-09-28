@@ -2,6 +2,7 @@
 img {max-width: 100%;}
 html { font-size: 14px;}
 
+
 /*--------------------------------------------------------------
 # Estilização Página de Login
 --------------------------------------------------------------*/
@@ -9,11 +10,17 @@ html { font-size: 14px;}
     width: 65%;
     margin-right: auto;
     margin-left: auto;
+
 }
 
-#pesquisa{
-    border: 1px solid red;
+.nav-link{
+    color:#1E266D;
+    font-weight: bold;
+    font-size:larger;
 }
+
+.container-fluid{background-color: #FFF1EB;}
+
 
 a {text-decoration: none;}
 
