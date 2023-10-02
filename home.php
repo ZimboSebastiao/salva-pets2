@@ -11,8 +11,6 @@
 </head>
 
 <body>
-
-
   <!-- ======== CABEÇALHO ======== -->
    <header class="menu-color">
   <div class="limitador">
@@ -26,32 +24,21 @@
             <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
           </svg>
         </a></h2>
-
-      
           <ul class="menu menu-color">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Nossos Pets
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end menu-color" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Cachorros</a></li>
-                <li><a class="dropdown-item" href="#">Gatos</a></li>
-              </ul>
             </li>
+            <li><a href="#">Cachorros</a></li>
+            <li><a href="#">Gatos</a></li>
             <li><a href="#">Quem Somos</a></li>
             <li><a href="#">Ajuda</a></li>
             <li><a href="#">Contato</a></li>
-            <li><a  href="login.php" class="btn btn-primary"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
+            <li><a  href="login.php" class="btn btn-primary w-50 m-auto"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
           </ul>
-  
     </nav>
   </div>
-
 </header>
 
   <main>
-
-    <div class="cabecalho">
+    <div class="cabecalho pb-3">
       <h1 class="me-5 ">Encontre e adote <br>
         um pet para você.</h1>
 
@@ -61,7 +48,8 @@
         Adote um pet para fazer companhia🐾
       </p>
 
-      <div class="w-75 d-flex align-items-center m-auto gap-5 p-5 bg-white rounded flex-wrap flex-xl-nowrap">
+      <!-- <div class="w-75 d-flex align-items-center m-auto gap-5 p-5 bg-white rounded flex-wrap flex-xl-nowrap">   -->
+      <div class="container-fluid d-flex gap-5 flex-wrap m-auto flex-xl-nowrap w-75">
 
         <!-- INPUT CIDADE -->
         <div class="input-group border rounded border-dark d-flex align-items-center">
@@ -146,9 +134,6 @@
         </div>
       </div>
     </div>
-
-
-
 
     <!-- card adotar pet -->
     <img src="/images/mulher-cacholo.PNG" alt="" class="">
