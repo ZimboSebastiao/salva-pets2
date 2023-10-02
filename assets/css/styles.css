@@ -606,3 +606,39 @@ nav h2 a {
 }
 
 /* teste blablabla*/
+
+
+/* pets.login */
+
+.pets{
+   align-self: center;
+   font-size: 2rem;
+}
+
+.pesquisa{
+    padding: 10px;
+    margin: 5px;
+    background-color: #fff;
+}
+
+
+.card-title{
+    color: #A3A7CC;
+}
+
+.favorite{
+    /* background-color: white; */
+    border-radius: 50%;
+
+}
+
+.heart-spacing{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.heart-spacing-2{
+    display: flex;
+    justify-content: space-between;
+}
