@@ -11,6 +11,9 @@
 </head>
 
 <body>
+  <header>
+    
+  </header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary w-100">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"><img src="icones/pet1.png" alt="..." height="46">
