@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SalvaPets - Pets</title>
+    <!-- ======== CSS Bootstrap ======== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+
+<!-- ======== CABEÇALHO ======== -->
+<header class="menu-color">
+    <div class="limitador">
+        <a class="navbar-brand customize" href="#">
+            <img src="icones/pet1.png" alt="..." height="46">
+            SalvaPets
+        </a>
+        <nav>
+            <h2><a href="" class="icone">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-nested" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </a></h2>
+
+            <ul class="menu menu-color">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Nossos Pets
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end menu-color" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Cachorros</a></li>
+                        <li><a class="dropdown-item" href="#">Gatos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="login.php" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
+            </ul>
+
+        </nav>
+    </div>
+
+</header>
+
+<body>
+    <div class="container">
+    <h1 class="pets">80 Pets disponíveis para Você</h1>
+    <div class="pesquisa">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Busque por raça,nome..." aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <img src="images/mulher-cacholo.PNG" class="card-img-top" alt="...">
+
+        <div class="card-body">
+            
+            <div class="heart-spacing">
+            <h5 class="card-title">Pipoca</h5>
+            <a href="#" class="btn btn-primary  favorite"><img src="icones/coracao (1).png" style="height:1rem" alt=""></a>
+            </div>
+            <p class="card-text"> <img src="icones/009-location.png" style="height:1rem" alt=""> Alphaville, São paulo</p>
+            <div class="heart-spacing-2">
+            <p class="card-text"> <img src="icones/001-sexo-masculino.png" style="height:1rem" alt=""> Macho</p>
+            <p class="card-text"> <img src="icones/003-data-de-nascimento.png" style="height:1rem" alt=""> 1 Ano e 5 Meses</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
