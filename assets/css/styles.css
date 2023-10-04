@@ -6,7 +6,6 @@ html { font-size: 14px;}
 # Estilização Página de Login
 --------------------------------------------------------------*/
 
-
 .img-responsivo {
     display: flex;
     justify-content: space-around;
@@ -18,15 +17,6 @@ html { font-size: 14px;}
 }
 
 a {text-decoration: none;}
-
-.row {
-    --bs-gutter-x: 1.6rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: calc(var(--bs-gutter-x) * -3);
-    margin-left: calc(var(--bs-gutter-x) * -3);
-}
 
 #destaque {
     width: 50%;
@@ -43,7 +33,6 @@ a {text-decoration: none;}
     background: url("../../icones/pet1.png") top center;
     background-size: cover;
     margin: 10px;
-    
 }
 
 h1 {
@@ -63,6 +52,10 @@ h1 {
     padding: 10px;
 }
 
+.input-login {
+    width: 395px;
+}
+
 .input {
     width: 395px;
 }
@@ -71,9 +64,6 @@ h1 {
     position: relative;
     top: 100px;
 }
-
-
-
 
 .estilo-cadeado {
     width: 96%;
@@ -85,7 +75,6 @@ h1 {
     position: relative;
     bottom: -9px;
 }
-
 
 .botao {
     width: 395px;
@@ -137,6 +126,24 @@ h1 {
     right: -5px;
 }
 
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
+
+    #destaque {
+        display: none;
+    }
+
+    .input-login {
+        width: 100%;
+    }
+
+    .center-form {
+        position: relative;
+        top: 6%;
+    }
+
+}
+
 
 /*--------------------------------------------------------------
 # Estilização Página de Cadastro
@@ -156,7 +163,7 @@ h1 {
 
 #destaque-cadastro {
     width: 50%;
-    height: 100vh;
+    height: 120vh;
     background: url(../../images/destaque-cadastro.jpg);
     background-size: cover;
     border-radius: 0;
@@ -182,29 +189,55 @@ h1 {
     border-color: #FF7F50;
 }
 
-@media screen and (max-width: 767px) {
 
-    .estilo-l{
-     right: -3px;
-    }}
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
 
-    @media screen and (max-width: 700px) {
-        .estilo-l{
-            right: -20px;
-            padding: 3px;
-        }
-    }
-@media screen and (max-width: 666px) {
-    #teste{
+    #destaque-cadastro {
         display: none;
     }
-    
-    #pata{
-        height: 3.5vh;
-        margin: 3px;
-    }
-}
 
+    .input-cadastro {
+        background-color: #1E266D;
+        width: 100%;
+    }
+
+    .img-responsivo-cadastro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .center-form-cadastro {
+        position: relative;
+        top: 6%;
+    }
+
+    .estilo-p-cadastro {
+        color: #C3C7E5;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .estilo-l {
+        display: flex;
+        justify-content: center;
+        font-size: 11px;
+        color: #C3C7E5;
+        position: relative;
+        right: -1px;
+        text-align: center;
+    }
+
+    .tag-style-c {
+        color: #C3C7E5;
+        position: relative;
+        padding: 6px;
+        right: -58px;
+        width: 60%;
+    }
+ 
+}
 
 
 /*--------------------------------------------------------------
