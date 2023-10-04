@@ -24,26 +24,17 @@
               <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
             </svg>
           </a></h2>
-
         <ul class="menu menu-color">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Nossos Pets
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end menu-color" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Cachorros</a></li>
-              <li><a class="dropdown-item" href="#">Gatos</a></li>
-            </ul>
           </li>
+          <li><a href="#">Cachorros</a></li>
+          <li><a href="#">Gatos</a></li>
           <li><a href="#">Quem Somos</a></li>
           <li><a href="#">Ajuda</a></li>
           <li><a href="#">Contato</a></li>
-          <li><a href="login.php" class="btn btn-primary" tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
+          <li><a href="login.php" class="btn btn-primary w-50 m-auto" tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
         </ul>
-
       </nav>
     </div>
-
   </header>
   <main>
     <div class="cabecalho">
@@ -57,25 +48,25 @@
       </p>
 
       <!-- INPUT CIDADE -->
-      <div class="input-group mb-2  bg-dark">
+      <div class="input-group mb-2 mx-5 bg-dark">
         <!-- <img src="icones/pata (1).png" alt="" width="10%"> -->
         <input type="text" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
       </div>
 
 
       <!-- INPUT REGIÃO -->
-      <div class="input-group mb-2  bg-dark">
+      <div class="input-group mb-2 mx-5 bg-dark">
         <input type="text" class="form-control cont icon-house" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
       </div>
 
       <!-- INPUT ANIMAL -->
-      <div class="input-group mb-2  bg-dark">
+      <div class="input-group mb-2 mx-5 bg-dark">
         <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
         <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
       </div>
 
       <!-- INPUT RAÇA -->
-      <div class="input-group mb-2  bg-dark">
+      <div class="input-group mb-2 mx-5 bg-dark">
         <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
         <input type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
       </div>
@@ -143,16 +134,16 @@
     <img src="/images/mulher-cacholo.PNG" alt="" class="">
 
     <!-- Área FAQ -->
-    <article class="d-flex col-md-11 pt-5 m-auto">
+    <article class="d-flex flex-wrap col-md-7 pt-2 m-auto">
       <!-- Texto -->
-      <div class="flex-column">
+      <div class="text-center m-auto">
         <h2>FAQ</h2>
         <h3>Dúvidas frequentes</h3>
-        <p>Entre em contato com nossa central de ajuda contato@adotapet.com.br</p>
+        <p class="text-center">Entre em contato conosco contato@adotapet.com.br</p>
       </div>
 
       <!-- FAQ -->
-      <div class="accordion col-md-6" id="accordionExample">
+      <div class="accordion col-md-6 m-auto" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -168,7 +159,7 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              <strong>E se eu não me adaptar ao pet? O que eu faço?</strong>
+              <strong>E se eu não me adaptar?</strong>
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
