@@ -49,7 +49,7 @@
 <main>
 
   <!-- ====== BARRA DE PROGRESSO ====== -->
-  <div class="container-2 bg-prima">
+  <div class="container-adocao bg-prima">
     <div class="progress-text decrease-letters">
       <span class="decrease">Dados Básicos</span>
       <span class="Beetle-letters">Te conhecendo</span>

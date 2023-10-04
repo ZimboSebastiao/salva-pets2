@@ -210,6 +210,34 @@ h1 {
     }
 }
 
+
+
+/*--------------------------------------------------------------
+# Estilização Página HOME
+--------------------------------------------------------------*/
+
+.icon-city {
+    background: url(../../icones/pata.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-house {
+    background: url(../../icones/pet-house4.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-animal {
+    background: url(../../icones/bola-de-cachorro.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-race {
+    background: url(../../icones/bicho-de-estimacao.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+
+
 /*--------------------------------------------------------------
 # Estilização Página de Processo de adoção
 <<<<<<< Updated upstream
@@ -335,7 +363,6 @@ nav h2 a {
 }
 
 
-
 /* nav  a:hover, nav a:focus{
     background-color: #ffe9e0;
 } */
@@ -351,6 +378,7 @@ nav h2 a {
     justify-content: center;
     align-items: center;
     height: 50px;
+    color: #1E266D;
 }
 
 .menu.aberto{
@@ -377,8 +405,6 @@ nav h2 a {
 
     .menu li { width: 100%;}
 }
-
-
 
 
 .dividir {
@@ -415,37 +441,47 @@ nav h2 a {
     justify-content: space-between; 
 }
 
+.tamanho-form {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
 .entry {width: 255px;}
 
 .form-floating {
     margin-right: 6px; /* Adicione a margem desejada entre os elementos */
 }
 
-.icon-city {
-    background: url(../../icones/pata.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
 
-.icon-house {
-    background: url(../../icones/pet-house4.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
-
-.icon-animal {
-    background: url(../../icones/bola-de-cachorro.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
-
-.icon-race {
-    background: url(../../icones/bicho-de-estimacao.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
 
 .personalizar {
     text-align: center;
     padding-top: 20px;
     padding: 9px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # Estilização do Footer
