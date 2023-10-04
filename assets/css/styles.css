@@ -6,7 +6,6 @@ html { font-size: 14px;}
 # Estilização Página de Login
 --------------------------------------------------------------*/
 
-
 .img-responsivo {
     display: flex;
     justify-content: space-around;
@@ -18,7 +17,6 @@ html { font-size: 14px;}
 }
 
 a {text-decoration: none;}
-
 
 #destaque {
     width: 50%;
@@ -35,7 +33,6 @@ a {text-decoration: none;}
     background: url("../../icones/pet1.png") top center;
     background-size: cover;
     margin: 10px;
-    
 }
 
 h1 {
@@ -68,9 +65,6 @@ h1 {
     top: 100px;
 }
 
-
-
-
 .estilo-cadeado {
     width: 96%;
     display: flex;
@@ -81,7 +75,6 @@ h1 {
     position: relative;
     bottom: -9px;
 }
-
 
 .botao {
     width: 395px;
@@ -133,7 +126,6 @@ h1 {
     right: -5px;
 }
 
-
 /* mobile and tablet */
 @media (min-width: 200px) and (max-width: 991px){
 
@@ -150,7 +142,6 @@ h1 {
         top: 6%;
     }
 
- 
 }
 
 
