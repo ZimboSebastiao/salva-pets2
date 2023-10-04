@@ -82,8 +82,10 @@ h1 {
 
 
 .estilo-cadeado {
+    width: 96%;
+    /* background-color: #db4712; */
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
 
 .hero {
