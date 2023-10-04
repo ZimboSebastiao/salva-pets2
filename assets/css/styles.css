@@ -5,14 +5,9 @@ html { font-size: 14px;}
 /*--------------------------------------------------------------
 # Estilização Página de Login
 --------------------------------------------------------------*/
-/* .container {
-    width: 65%;
-    margin-right: auto;
-    margin-left: auto;
-} */
+
 
 .img-responsivo {
-    /* background-color: chartreuse; */
     display: flex;
     justify-content: space-around;
     gap: 50px;
