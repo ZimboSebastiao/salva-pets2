@@ -15,7 +15,7 @@
 <!-- ======== CABEÇALHO ======== -->
 <header>
   <div class="limitador">
-    <a class="navbar-brand customize" href="#">
+    <a class="navbar-brand customize" href="home.php">
       <img src="icones/pet1.png" alt="..." height="46">
       SalvaPets
     </a>
@@ -49,7 +49,7 @@
 <main>
 
   <!-- ====== BARRA DE PROGRESSO ====== -->
-  <div class="container-2 bg-prima">
+  <div class="container-adocao">
     <div class="progress-text decrease-letters">
       <span class="decrease">Dados Básicos</span>
       <span class="Beetle-letters">Te conhecendo</span>
@@ -73,31 +73,31 @@
 
             <!-- ====== Nome Completo ====== -->
             <div class="form-floating mb-3">
-                <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" required name="nome">
+                <input type="text" class="form-control input-adocao" id="floatingInputGroup2" placeholder="Username" required name="nome">
                 <label for="floatingInputGroup2">Nome completo</label>
             </div>
             
             <!-- ====== E-mail ====== -->
             <div class="form-floating mb-3">
-                <input class="form-control input" id="floatingInput" name="email" placeholder="name@example.com" required type="email">
+                <input class="form-control input-adocao" id="floatingInput" name="email" placeholder="name@example.com" required type="email">
                 <label for="floatingInput">E-mail</label>
             </div>
             
             <!-- ====== Estado ====== -->
             <div class="form-floating mb-3">
-                <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="estado" required>
+                <input type="text" class="form-control input-adocao" id="floatingInputGroup2" placeholder="Username" name="estado" required>
                 <label for="floatingInputGroup2">Estado</label>
             </div>
 
             <!-- ====== Cidade ====== -->
             <div class="form-floating mb-3">
-                <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="cidade" required>
+                <input type="text" class="form-control input-adocao" id="floatingInputGroup2" placeholder="Username" name="cidade" required>
                 <label for="floatingInputGroup2">Cidade</label>
             </div>
 
             <!-- ====== Endereço ====== -->
             <div class="form-floating mb-3">
-                <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="endereco" required>
+                <input type="text" class="form-control input-adocao" id="floatingInputGroup2" placeholder="Username" name="endereco" required>
                 <label for="floatingInputGroup2">Endereço</label>
             </div>
 
@@ -105,19 +105,19 @@
 
               <!-- ====== Número ====== -->
               <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingInputGroup2" placeholder="Username" name="numero" required>
+                  <input type="text" class="form-control inputs-adocao" id="floatingInputGroup2" placeholder="Username" name="numero" required>
                   <label for="floatingInputGroup2">Número</label>
               </div>
 
               <!-- ====== Complemento ====== -->
               <div class="form-floating mb-3">
-                  <input type="text" class="form-control" id="floatingInputGroup2" placeholder="Username" name="completo" required>
+                  <input type="text" class="form-control inputs-adocao" id="floatingInputGroup2" placeholder="Username" name="completo" required>
                   <label for="floatingInputGroup2">Completo</label>
               </div>
             </div>
 
             <div>
-                <button class="btn btn-primary btn-lg botao input" name="inserir">Próxima etapa</button>
+                <button class="btn btn-primary btn-lg botao input-adocao" name="inserir">Próxima etapa</button>
             </div>
 
         </form>

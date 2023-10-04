@@ -5,10 +5,16 @@ html { font-size: 14px;}
 /*--------------------------------------------------------------
 # Estilização Página de Login
 --------------------------------------------------------------*/
-.container {
-    width: 65%;
-    margin-right: auto;
-    margin-left: auto;
+
+
+.img-responsivo {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+#pesquisa{
+    border: 1px solid red;
 }
 
 a {text-decoration: none;}
@@ -41,7 +47,7 @@ a {text-decoration: none;}
 }
 
 h1 {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: #1E266D;
     padding: 8px;
     font-weight: bold;
@@ -50,6 +56,7 @@ h1 {
 .estilo-p {
     color: #C3C7E5;
     padding: 10px;
+    font-size: 20px;
 }
 
 .estilo-form {
@@ -60,12 +67,18 @@ h1 {
     width: 395px;
 }
 
+.center-form {
+    position: relative;
+    top: 100px;
+}
+
 
 
 
 .estilo-cadeado {
+    width: 96%;
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
 
 .hero {
@@ -125,14 +138,25 @@ h1 {
 }
 
 
-
 /*--------------------------------------------------------------
 # Estilização Página de Cadastro
 --------------------------------------------------------------*/
 
-#teste {
+.img-responsivo-cadastro {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+}
+
+.center-form-cadastro {
+    position: relative;
+    top: 30px;
+}
+
+#destaque-cadastro {
     width: 50%;
-    height: 125vh;
+    height: 100vh;
     background: url(../../images/destaque-cadastro.jpg);
     background-size: cover;
     border-radius: 0;
@@ -180,6 +204,113 @@ h1 {
         margin: 3px;
     }
 }
+
+
+
+/*--------------------------------------------------------------
+# Estilização Página HOME
+--------------------------------------------------------------*/
+
+body {
+    background-color: white;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {flex: 1;}
+
+.limitador {
+    width: 97vw;
+    margin: auto;
+}
+
+header {
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+nav h2 a {
+    color: black;
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: inline-block;
+}
+
+
+nav  a:hover, nav a:focus{
+    background-color: #ffe9e0;
+}
+
+.menu {
+    list-style: none;
+    display: none;
+}
+
+.menu a {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: #1E266D;
+}
+
+.menu.aberto{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+@media screen and (min-width: 530px) {
+    nav h2 {display: none;}
+    html { font-size: 0.9rem;}
+    .menu {
+        display: flex;
+        text-transform: uppercase; 
+        justify-content: space-between;
+        align-items: center;   
+    }
+    
+    
+    nav {width: 70%;}
+
+    .menu li { width: 100%;}
+}
+
+
+.icon-city {
+    background: url(../../icones/pata.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-house {
+    background: url(../../icones/pet-house4.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-animal {
+    background: url(../../icones/bola-de-cachorro.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-race {
+    background: url(../../icones/bicho-de-estimacao.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
 
 /*--------------------------------------------------------------
 # Estilização Página de Processo de adoção
@@ -269,94 +400,13 @@ h1 {
 a {text-decoration: none;}
 
 
-
-body {
-    background-color: white;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-main {flex: 1;}
-
-.limitador {
-    width: 97vw;
-    margin: auto;
-}
-
-header {
-    z-index: 100;
-    position: sticky;
-    top: 0;
-    background-color: rgb(255, 255, 255);
-}
-
-header div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-}
-
-nav h2 a {
-    color: black;
-    font-size: 1.2rem;
-    padding: 1rem;
-    display: inline-block;
-}
-
-
-/* nav  a:hover, nav a:focus{
-    background-color: #ffe9e0;
-} */
-
-.menu {
-    list-style: none;
-    display: none;
-}
-
-.menu a {
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    color: #1E266D;
-}
-
-.menu.aberto{
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
-@media screen and (min-width: 530px) {
-    nav h2 {display: none;}
-    html { font-size: 0.9rem;}
-    .menu {
-        display: flex;
-        text-transform: uppercase; 
-        justify-content: space-between;
-        align-items: center;   
-    }
-    
-    
-    nav {width: 70%;}
-
-    .menu li { width: 100%;}
-}
-
-
 .dividir {
     display: flex;
     justify-content: space-between;
 }
 
-.container-2 {
-    width: 90%;
+.container-adocao {
+    width: 95%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -372,11 +422,12 @@ nav h2 a {
 
 .Beetle-letters {color: #C3C7E5;}
 .negrito {font-weight: bold;}
-.decrease-letters {font-size: 10px;}
+.decrease-letters {font-size: 14px;}
 
 .decrease {
     font-weight: bold;
     color: #070b35;
+    font-size: 14px;
 }
 
 .divide {
@@ -390,31 +441,20 @@ nav h2 a {
     align-items: center; 
 }
 
-.entry {width: 255px;}
+.input-adocao {
+    width: 455px;
+}
+
+.inputs-adocao {
+    width: 225px;
+}
+.entry {width: 459px;}
 
 .form-floating {
     margin-right: 6px; /* Adicione a margem desejada entre os elementos */
 }
 
-.icon-city {
-    background: url(../../icones/pata.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
 
-.icon-house {
-    background: url(../../icones/pet-house4.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
-
-.icon-animal {
-    background: url(../../icones/bola-de-cachorro.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
-
-.icon-race {
-    background: url(../../icones/bicho-de-estimacao.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
 
 .personalizar {
     text-align: center;
@@ -423,378 +463,14 @@ nav h2 a {
 }
 
 
-@media screen and (max-width:666px) {
-
-    #destaque {
-        background-image: none;
-
-    }
-
-    .row {
-        --bs-gutter-x: -3rem;
-    }
-
-    .container {
-        width: 100%;
-        max-width: 1200px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .col-6 {
-        width: 100%;
-    }
-
-
-}
-
-
-@media screen and (max-width: 500px){
-    .row {
-        --bs-gutter-x: -1rem;
-    }
-
-}
-
-/* mobile */
-@media (min-width: 375px) and (max-width: 667px){
-
-    .tamanho-form {
-        width: 80%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    
-    .input {
-        width: 250px;
-    }
-
-    .input-login {
-        width: 260px;
-    }
-
-    .esqueci-senha {
-        position: relative;
-        left: -25px;
-    }
-
-    .botao {
-        width: 260px;
-        height: 41px;
-    }
-
-    .estilo-p {
-        color: #C3C7E5;
-        padding: 8px;
-        font-size: 12.6px;
-    }
-    
-
-}
-
-/* Small mobile */
-@media (min-width: 414px) and (max-width: 896px){
-    .esqueci-senha {
-        position: relative;
-        left: 34px;
-    }
-
-    .botao {
-        width: 290px;
-        height: 41px;
-    }
-
-    .input-login {
-        width: 290px;
-    }
-
-    .estilo-p {
-        color: #C3C7E5;
-        padding: 8px;
-        font-size: 13px;
-    }
-}
-
-/* Iphone 12 Pro */
-/* @media (min-width: 390px) and (max-width: 844px){
-    .esqueci-senha {
-        position: relative;
-        left: -32px;
-    }
-
-    .botao {
-        width: 270px;
-        height: 41px;
-    }
-
-    .input-login {
-        width: 270px;
-    }
-
-    .estilo-p {
-        color: #C3C7E5;
-        padding: 8px;
-        font-size: 13px;
-    }
-} */
-
-
-/* Iphone 12 Pro */
-/* @media (min-width: 360px) and (max-width: 740px){
-    .esqueci-senha {
-        position: relative;
-        left: -1px;
-    }
-
-    .botao {
-        width: 245px;
-        height: 41px;
-    }
-
-    .input-login {
-        width: 245px;
-    }
-
-} */
-
-
-/* Small tablets */
-@media (min-width: 820px) and (max-width: 1180px){
-    .tamanho-form {
-        width: 80%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .container-2 {
-        width: 84%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .dividir-form {
-        display: flex;
-        align-items: center; 
-        justify-content: center;
-        flex-direction: column;
-    }
-    .input {
-        width: 450px;
-    }
-
-    .entry {width: 455px;}
-
-    .decrease-size {font-size: 8px;}
-
-    .esqueci-senha {
-        position: relative;
-        left: -25px;
-    }
-
-    .botao {
-        width: 280px;
-        height: 41px;
-    }
-
-    .input-login {
-        width: 280px;
-    }
-}
-
-/* tablets */
-@media (min-width: 768px) and (max-width: 1024px){
-    .tamanho-form {
-        width: 80%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .container-2 {
-        width: 84%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .dividir-form {
-        display: flex;
-        align-items: center; 
-        justify-content: center;
-        flex-direction: column;
-    }
-    .input {
-        width: 450px;
-    }
-
-    .entry {width: 455px;}
-
-    .decrease-size {font-size: 9.5px;}
-    .footer-color {
-        margin-top: 40px;
-        background-color: #040726;
-        color: white !important;
-        width: 100%; /* Garante que o rodapé ocupe toda a largura da tela */
-    }
-    
-    .container {
-        margin-bottom: 60px; /* Isso dará mais espaço entre o conteúdo acima e o rodapé */
-    }
-}
-
-/* tablets  2 */
-@media (min-width: 540px) and (max-width: 720px){
-
-    .container-2 {
-        width: 84%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .dividir-form {
-        display: flex;
-        align-items: center; 
-        justify-content: center;
-        flex-direction: column;
-    }
-    .input {
-        width: 350px;
-    }
-
-    .entry {width: 355px;}
-
-    .menu a {
-        font-size: 10px;
-        
-    }
-}
-
-
-/* Desktops */
-@media (min-width: 1200px) and (max-width: 1919px){
-
-    
-    .container-2 {
-        width: 84%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .dividir-form {
-        display: flex;
-        align-items: center; 
-        justify-content: center;
-        flex-direction: column;
-    }
-    .input {
-        width: 450px;
-    }
-
-    .entry {width: 455px;}
-    .decrease-letters {font-size: 17px;}
-
-
-
-}
-
-/* Desktops */
-@media (min-width: 1181px) {
-
-    
-    .container-2 {
-        width: 84%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .dividir-form {
-        display: flex;
-        align-items: center; 
-        justify-content: center;
-        flex-direction: column;
-    }
-    .input {width: 450px;}
-
-    .entry {width: 455px;}
-    .decrease-letters {font-size: 17px;}
-
-
-
-}
 
 
 /*--------------------------------------------------------------
-# Página RECOVER  
---------------------------------------------------------------*/
-.modal {
-    display: block;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1050;
-    padding-right: 17px;
-    padding-left: 17px;
-  }
-  
-  .modal-open {
-    overflow: hidden;
-  }
-  
-  
-  .modal-dialog {
-    position: absolute;
-    top: 40vh;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
-
-  @media (min-width: 768px) {
-    .modal-dialog {
-      max-width: 600px; /* Ajuste o valor conforme necessário */
-    }
-  }
-
-
-  .modal-header {
-    padding: 1rem;
-    border-bottom: 1px solid #dee2e6;
-  }
-  
-  .modal-title {
-    margin-bottom: 0;
-  }
-  
-  .modal-body {
-    position: relative;
-    flex: 1 1 auto;
-    padding: 1rem;
-  }
-  
-  .modal-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    padding: 0.75rem;
-    border-top: 1px solid #dee2e6;
-  }
-  
-  .modal-footer > * {
-    margin: 0.125rem;
-  }
-  
-
-
-/*--------------------------------------------------------------
-# Estilização do FOOTER
+# Estilização do Footer
 --------------------------------------------------------------*/
 
 .footer-color {
     margin-top: 40px;
     background-color: #040726;
     color: white !important;
-    overflow-x: hidden;
 }
-
