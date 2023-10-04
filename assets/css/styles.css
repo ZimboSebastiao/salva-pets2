@@ -6,21 +6,16 @@ html { font-size: 14px;}
 # Estilização Página de Login
 --------------------------------------------------------------*/
 .container {
-    width: 65%;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
+    display: flex;
+
 }
 
 a {text-decoration: none;}
 
-.row {
-    --bs-gutter-x: 1.6rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: calc(var(--bs-gutter-x) * -3);
-    margin-left: calc(var(--bs-gutter-x) * -3);
-}
+
 
 #destaque {
     width: 50%;
@@ -56,8 +51,8 @@ h1 {
     padding: 10px;
 }
 
-.input {
-    width: 395px;
+.input-login {
+    width: 260px;
 }
 
 
@@ -124,186 +119,6 @@ h1 {
     right: -5px;
 }
 
-/* Página Login */
-@media screen and (max-width: 1100px){
-    .row{
-        --bs-gutter-x: 4rem;
-    }
-}
-
-@media screen and (max-width: 982px) {
-
-    .estilo-cadeado {
-        justify-content: right;
-        right: 80px;
-        position: relative;
-    }
-
-    .hero {
-        bottom: -9px;
-
-    }
-}
-
-@media screen and (max-width: 991px) {
-    .row {
-        --bs-gutter-x: 1rem;
-    }
-
-  
-}
-
-
-/* Modifição para telas pequenas | Página de Login*/
-
-@media screen and (max-width: 808px) {
-    .row {
-        --bs-gutter-x: 3.7rem;
-
-    }
-
-    .input {
-        width: 350px;
-    }
-
-    .botao {
-        width: 350px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-
-   
-    .input {
-        width: 300px;
-    }
-
-    /* .botao {
-        width: 300px;
-    } */
-
-
-    .row {
-        --bs-gutter-x: 3rem;
-    }
-
-}
-
-@media screen and (max-width:666px) {
-
-    #destaque {
-        background-image: none;
-
-    }
-
-    .row {
-        --bs-gutter-x: -3rem;
-    }
-
-    .container {
-        width: 100%;
-        max-width: 1200px;
-        /* Adjust the maximum width as needed */
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .col-6 {
-        width: 100%;
-    }
-
-    .estilo-cadeado {
-        right: 0px;
-    }
-
-
-    .hero {
-        bottom: -11px;
-    }
-
-   
-    .input {
-        width: 350px;
-    }
-
-    .botao {
-        width: 350px;
-    }
-
-    /* h1 {
-        font-size: 2rem;
-    } */
-
-}
-
-/* Centralizando para telas Menores */
-@media screen and (max-width: 600px) {
-    .row {
-        --bs-gutter-x: -2rem;
-    }
-
-    
-}
-
-@media screen and (max-width: 500px){
-    .row {
-        --bs-gutter-x: -1rem;
-    }
-
-}
-
-/* Fazendo mudanças no Visual  */
-@media screen and (max-width: 458px){
-    .input{
-        width: 300px;
-    }
-
-    .botao{
-        width: 300px;
-    }
-
-    .estilo-cadeado{
-        right: 35px;
-    }
-
-    .estilo-p{
-        padding: 5px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-  .estilo-cadeado{
-    right: -35px;
-  }
-
-  #pata{
-    height: 3.7vh;
-  }
-}
-
-
-@media screen and (max-width: 370px) {
-    .input{
-        width: 250px;
-    }
-    .botao{
-        width: 250px;
-    }
-
-    .estilo-cadeado{
-        right: -9px;
-    }
-}
-
-@media screen and (max-width: 344px) {
-    .row {
-        --bs-gutter-x: none;
-    }
-
-        .estilo-cadeado{
-            right: 50px;
-        }
-}
 
 /*--------------------------------------------------------------
 # Estilização Página de Cadastro
@@ -337,28 +152,6 @@ h1 {
     border-color: #FF7F50;
 }
 
-@media screen and (max-width: 767px) {
-
-    .estilo-l{
-     right: -3px;
-    }}
-
-    @media screen and (max-width: 700px) {
-        .estilo-l{
-            right: -20px;
-            padding: 3px;
-        }
-    }
-@media screen and (max-width: 666px) {
-    #teste{
-        display: none;
-    }
-    
-    #pata{
-        height: 3.5vh;
-        margin: 3px;
-    }
-}
 
 /*--------------------------------------------------------------
 # Estilização Página de Processo de adoção
@@ -433,9 +226,7 @@ h1 {
     background-color: #FFF1EB;
 }
 
-/* .cont, ::placeholder{
-    background-color: #FFF1EB;
-} */
+
 
 
 
@@ -481,13 +272,9 @@ nav h2 a {
     color: black;
     font-size: 1.2rem;
     padding: 1rem;
-    display: inline-block;
+    /* display: inline-block; */
 }
 
-
-/* nav  a:hover, nav a:focus{
-    background-color: #ffe9e0;
-} */
 
 .menu {
     list-style: none;
@@ -510,22 +297,6 @@ nav h2 a {
     position: absolute;
     left: 0;
     right: 0;
-}
-
-@media screen and (min-width: 530px) {
-    nav h2 {display: none;}
-    html { font-size: 0.9rem;}
-    .menu {
-        display: flex;
-        text-transform: uppercase; 
-        justify-content: space-between;
-        align-items: center;   
-    }
-    
-    
-    nav {width: 70%;}
-
-    .menu li { width: 100%;}
 }
 
 
@@ -601,9 +372,18 @@ nav h2 a {
     padding: 9px;
 }
 
-/* mobile */
-@media (min-width: 375px) and (max-width: 667px){
+/* mobile Galaxy S8 */
+/* @media (min-width: 360px) and (max-width: 840px){
 
+    .container {
+        background-color: #db4712;
+    }
+    .row {
+        background-color: #040726;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
     .tamanho-form {
         width: 80%;
         margin-right: auto;
@@ -628,10 +408,10 @@ nav h2 a {
     
     
 
-}
+} */
 
 /* Small tablets */
-@media (min-width: 820px) and (max-width: 1180px){
+/* @media (min-width: 820px) and (max-width: 1180px){
     .tamanho-form {
         width: 80%;
         margin-right: auto;
@@ -657,10 +437,12 @@ nav h2 a {
     .entry {width: 455px;}
 
     .decrease-size {font-size: 8px;}
-}
+} */
+
+
 
 /* tablets */
-@media (min-width: 768px) and (max-width: 1024px){
+/* @media (min-width: 768px) and (max-width: 1024px){
     .tamanho-form {
         width: 80%;
         margin-right: auto;
@@ -690,16 +472,16 @@ nav h2 a {
         margin-top: 40px;
         background-color: #040726;
         color: white !important;
-        width: 100%; /* Garante que o rodapé ocupe toda a largura da tela */
+        width: 100%; 
     }
     
     .container {
-        margin-bottom: 60px; /* Isso dará mais espaço entre o conteúdo acima e o rodapé */
+        margin-bottom: 60px; 
     }
-}
+} */
 
 /* tablets  2 */
-@media (min-width: 540px) and (max-width: 720px){
+/* @media (min-width: 540px) and (max-width: 720px){
 
     .container-2 {
         width: 84%;
@@ -723,11 +505,11 @@ nav h2 a {
         font-size: 10px;
         
     }
-}
+} */
 
 
 /* Desktops */
-@media (min-width: 1200px) and (max-width: 1919px){
+/* @media (min-width: 1200px) and (max-width: 1919px){
 
     
     .container-2 {
@@ -751,10 +533,10 @@ nav h2 a {
 
 
 
-}
+} */
 
 /* Desktops */
-@media (min-width: 1181px) {
+/* @media (min-width: 1181px) {
 
     
     .container-2 {
@@ -776,7 +558,7 @@ nav h2 a {
 
 
 
-}
+} */
 
 
 /*--------------------------------------------------------------
@@ -809,11 +591,11 @@ nav h2 a {
     margin: auto;
   }
 
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     .modal-dialog {
-      max-width: 600px; /* Ajuste o valor conforme necessário */
+      max-width: 600px; 
     }
-  }
+  } */
 
 
   .modal-header {
