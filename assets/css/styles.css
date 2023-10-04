@@ -216,6 +216,86 @@ h1 {
 # Estilização Página HOME
 --------------------------------------------------------------*/
 
+body {
+    background-color: white;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {flex: 1;}
+
+.limitador {
+    width: 97vw;
+    margin: auto;
+}
+
+header {
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+nav h2 a {
+    color: black;
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: inline-block;
+}
+
+
+nav  a:hover, nav a:focus{
+    background-color: #ffe9e0;
+}
+
+.menu {
+    list-style: none;
+    display: none;
+}
+
+.menu a {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: #1E266D;
+}
+
+.menu.aberto{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+@media screen and (min-width: 530px) {
+    nav h2 {display: none;}
+    html { font-size: 0.9rem;}
+    .menu {
+        display: flex;
+        text-transform: uppercase; 
+        justify-content: space-between;
+        align-items: center;   
+    }
+    
+    
+    nav {width: 70%;}
+
+    .menu li { width: 100%;}
+}
+
+
 .icon-city {
     background: url(../../icones/pata.png) no-repeat scroll 7px 7px ;
     padding-left:50px;
@@ -235,7 +315,6 @@ h1 {
     background: url(../../icones/bicho-de-estimacao.png) no-repeat scroll 7px 7px ;
     padding-left:50px;
 }
-
 
 
 /*--------------------------------------------------------------
@@ -327,84 +406,6 @@ a {text-decoration: none;}
 
 
 
-body {
-    background-color: white;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-main {flex: 1;}
-
-.limitador {
-    width: 97vw;
-    margin: auto;
-}
-
-header {
-    z-index: 100;
-    position: sticky;
-    top: 0;
-    background-color: rgb(255, 255, 255);
-}
-
-header div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-}
-
-nav h2 a {
-    color: black;
-    font-size: 1.2rem;
-    padding: 1rem;
-    display: inline-block;
-}
-
-
-/* nav  a:hover, nav a:focus{
-    background-color: #ffe9e0;
-} */
-
-.menu {
-    list-style: none;
-    display: none;
-}
-
-.menu a {
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    color: #1E266D;
-}
-
-.menu.aberto{
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
-@media screen and (min-width: 530px) {
-    nav h2 {display: none;}
-    html { font-size: 0.9rem;}
-    .menu {
-        display: flex;
-        text-transform: uppercase; 
-        justify-content: space-between;
-        align-items: center;   
-    }
-    
-    
-    nav {width: 70%;}
-
-    .menu li { width: 100%;}
-}
 
 
 .dividir {
@@ -447,7 +448,7 @@ nav h2 a {
     align-items: center; 
 }
 
-.entry {width: 255px;}
+.entry {width: 399px;}
 
 .form-floating {
     margin-right: 6px; /* Adicione a margem desejada entre os elementos */
