@@ -6,8 +6,9 @@ if(isset($_POST["inserir"])){
     $email = filter_input(INPUT_POST,"email",FILTER_SANITIZE_EMAIL);
     $cep = filter_input(INPUT_POST,"cep",FILTER_SANITIZE_NUMBER_INT);
     $senha = filter_input(INPUT_POST,"senha",FILTER_SANITIZE_SPECIAL_CHARS);
+    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
-    InserirUsuario($conexao, $nome, $email, $cep, $senha);
+    InserirUsuario($conexao, $nome, $email, $cep, $senhaHash);
 
     header("location:home.php");
 }

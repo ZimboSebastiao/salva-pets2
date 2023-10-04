@@ -1,5 +1,5 @@
 <?php
-function InserirUsuario(PDO $conexao,string $nome, string $email,int $cep, string $senha):void{
+function InserirUsuario(PDO $conexao,string $nome, string $email,int $cep, string $senhaHash):void{
     $sql = "INSERT INTO usuarios(nome,email,cep,senha) VALUES (:nome,:email,:cep,:senha)";
 
     try {
@@ -7,7 +7,7 @@ function InserirUsuario(PDO $conexao,string $nome, string $email,int $cep, strin
         $consulta->bindValue(":nome",$nome,PDO::PARAM_STR);
         $consulta->bindValue(":email",$email,PDO::PARAM_STR);
         $consulta->bindValue(":cep",$cep,PDO::PARAM_INT);
-        $consulta->bindValue(":senha",$senha,PDO::PARAM_STR);
+        $consulta->bindValue(":senha",$senhaHash,PDO::PARAM_STR);
         $consulta->execute();
     } catch (Exception $erro) {
         die("Erro ao Inserir: ".$erro->getMessage());
