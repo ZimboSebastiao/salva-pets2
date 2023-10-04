@@ -74,7 +74,6 @@ h1 {
 
 .center-form {
     position: relative;
-    /* background-color: #070b35; */
     top: 100px;
 }
 
@@ -83,7 +82,6 @@ h1 {
 
 .estilo-cadeado {
     width: 96%;
-    /* background-color: #db4712; */
     display: flex;
     justify-content: right;
 }
@@ -149,9 +147,21 @@ h1 {
 # Estilização Página de Cadastro
 --------------------------------------------------------------*/
 
-#teste {
+.img-responsivo-cadastro {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+}
+
+.center-form-cadastro {
+    position: relative;
+    top: 30px;
+}
+
+#destaque-cadastro {
     width: 50%;
-    height: 125vh;
+    height: 100vh;
     background: url(../../images/destaque-cadastro.jpg);
     background-size: cover;
     border-radius: 0;

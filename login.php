@@ -14,7 +14,7 @@
 <div class="container-sm img-responsivo">
 
         <!-- =========== Formulário  =========== -->
-        <div class="">
+        <div>
             
             <div class="center-form">
                 <img src="icones/pet1.png" alt="..." height="58">
@@ -84,6 +84,8 @@
                         </div>
                     </form>
                 </section> 
+
+                
             </div>
 
         </div>
