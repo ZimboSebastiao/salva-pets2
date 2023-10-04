@@ -12,8 +12,10 @@ html { font-size: 14px;}
 } */
 
 .img-responsivo {
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     display: flex;
+    justify-content: space-around;
+    gap: 50px;
 }
 
 #pesquisa{
@@ -32,9 +34,8 @@ a {text-decoration: none;}
 }
 
 #destaque {
-    background-color: #040726;
     width: 50%;
-    height: 90vh;
+    height: 100vh;
     background: url("../../images/destaque-login.jpg");
     background-size: cover;
     border-radius: 0;
@@ -51,7 +52,7 @@ a {text-decoration: none;}
 }
 
 h1 {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: #1E266D;
     padding: 8px;
     font-weight: bold;
@@ -60,6 +61,7 @@ h1 {
 .estilo-p {
     color: #C3C7E5;
     padding: 10px;
+    font-size: 20px;
 }
 
 .estilo-form {
@@ -68,6 +70,12 @@ h1 {
 
 .input {
     width: 395px;
+}
+
+.center-form {
+    position: relative;
+    /* background-color: #070b35; */
+    top: 100px;
 }
 
 

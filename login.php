@@ -11,13 +11,13 @@
 </head>
 <body>
 <main>
-<div class="container-sm bg-danger">
+<div class="container-sm img-responsivo">
 
         <!-- =========== Formulário  =========== -->
-        <div class="img-responsivo">
+        <div class="">
             
-            <div>
-                <img src="icones/pet1.png" alt="..." height="42">
+            <div class="center-form">
+                <img src="icones/pet1.png" alt="..." height="58">
                 <div class="d-flex flex-column justify-content-center align-items-center"></div>
                 <h1>Seja bem <br> vindo de volta</h1>
                 <p class="estilo-p">Coloque seus dados e venha ver os seus pets</p>
@@ -86,10 +86,9 @@
                 </section> 
             </div>
 
-            <div id="destaque"></div>
-
-            
         </div>
+
+        <div id="destaque"></div>
         
 </div>
 
