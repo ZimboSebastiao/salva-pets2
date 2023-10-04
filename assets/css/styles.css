@@ -5,10 +5,15 @@ html { font-size: 14px;}
 /*--------------------------------------------------------------
 # Estilização Página de Login
 --------------------------------------------------------------*/
-.container {
+/* .container {
     width: 65%;
     margin-right: auto;
     margin-left: auto;
+} */
+
+.img-responsivo {
+    background-color: chartreuse;
+    display: flex;
 }
 
 #pesquisa{
@@ -27,8 +32,9 @@ a {text-decoration: none;}
 }
 
 #destaque {
+    background-color: #040726;
     width: 50%;
-    height: 100vh;
+    height: 90vh;
     background: url("../../images/destaque-login.jpg");
     background-size: cover;
     border-radius: 0;
@@ -203,13 +209,12 @@ h1 {
         --bs-gutter-x: -3rem;
     }
 
-    .container {
+    /* .container {
         width: 100%;
         max-width: 1200px;
-        /* Adjust the maximum width as needed */
         margin-right: auto;
         margin-left: auto;
-    }
+    } */
 
     .col-6 {
         width: 100%;
@@ -233,9 +238,6 @@ h1 {
         width: 350px;
     }
 
-    /* h1 {
-        font-size: 2rem;
-    } */
 
 }
 
