@@ -400,16 +400,13 @@ nav  a:hover, nav a:focus{
 a {text-decoration: none;}
 
 
-
-
-
 .dividir {
     display: flex;
     justify-content: space-between;
 }
 
-.container-2 {
-    width: 90%;
+.container-adocao {
+    width: 95%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -425,11 +422,12 @@ a {text-decoration: none;}
 
 .Beetle-letters {color: #C3C7E5;}
 .negrito {font-weight: bold;}
-.decrease-letters {font-size: 10px;}
+.decrease-letters {font-size: 14px;}
 
 .decrease {
     font-weight: bold;
     color: #070b35;
+    font-size: 14px;
 }
 
 .divide {
@@ -443,7 +441,14 @@ a {text-decoration: none;}
     align-items: center; 
 }
 
-.entry {width: 399px;}
+.input-adocao {
+    width: 455px;
+}
+
+.inputs-adocao {
+    width: 225px;
+}
+.entry {width: 459px;}
 
 .form-floating {
     margin-right: 6px; /* Adicione a margem desejada entre os elementos */
