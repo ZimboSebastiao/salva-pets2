@@ -134,8 +134,8 @@ h1 {
 }
 
 
-/* Small mobile */
-@media (min-width: 350px) and (max-width: 991px){
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
 
     #destaque {
         display: none;
@@ -149,6 +149,7 @@ h1 {
         position: relative;
         top: 6%;
     }
+
  
 }
 
@@ -171,7 +172,7 @@ h1 {
 
 #destaque-cadastro {
     width: 50%;
-    height: 100vh;
+    height: 120vh;
     background: url(../../images/destaque-cadastro.jpg);
     background-size: cover;
     border-radius: 0;
@@ -197,29 +198,55 @@ h1 {
     border-color: #FF7F50;
 }
 
-@media screen and (max-width: 767px) {
 
-    .estilo-l{
-     right: -3px;
-    }}
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
 
-    @media screen and (max-width: 700px) {
-        .estilo-l{
-            right: -20px;
-            padding: 3px;
-        }
-    }
-@media screen and (max-width: 666px) {
-    #teste{
+    #destaque-cadastro {
         display: none;
     }
-    
-    #pata{
-        height: 3.5vh;
-        margin: 3px;
-    }
-}
 
+    .input-cadastro {
+        background-color: #1E266D;
+        width: 100%;
+    }
+
+    .img-responsivo-cadastro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .center-form-cadastro {
+        position: relative;
+        top: 6%;
+    }
+
+    .estilo-p-cadastro {
+        color: #C3C7E5;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .estilo-l {
+        display: flex;
+        justify-content: center;
+        font-size: 11px;
+        color: #C3C7E5;
+        position: relative;
+        right: -1px;
+        text-align: center;
+    }
+
+    .tag-style-c {
+        color: #C3C7E5;
+        position: relative;
+        padding: 6px;
+        right: -58px;
+        width: 60%;
+    }
+ 
+}
 
 
 /*--------------------------------------------------------------

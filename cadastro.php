@@ -36,33 +36,33 @@ if(isset($_POST["inserir"])){
             <div class="d-flex flex-column justify-content-center align-items-center"></div>
             <h1>A sua adoção <br> começa aqui</h1>
 
-            <p class="estilo-p">Faça parte de um mundo mais amigável</p>
+            <p class="estilo-p-cadastro">Faça parte de um mundo mais amigável</p>
 
             <section class="estilo-form">
                 <form action=""  method="post">
 
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" required name="nome" >
+                        <input type="text" class="form-control input-cadastro" id="floatingInputGroup2" placeholder="Username" required name="nome" >
                         <label for="floatingInputGroup2">Nome completo</label>
                     </div>
                     
                     <div class="form-floating mb-3">
-                        <input class="form-control input" id="floatingInput" name="email" placeholder="name@example.com" required type="email">
+                        <input class="form-control input-cadastro" id="floatingInput" name="email" placeholder="name@example.com" required type="email">
                         <label for="floatingInput">E-mail</label>
                     </div>
                     
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="cep" required>
+                        <input type="text" class="form-control input-cadastro" id="floatingInputGroup2" placeholder="Username" name="cep" required>
                         <label for="floatingInputGroup2">CEP</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input  class="form-control input" id="floatingPassword" placeholder="Password" required type="password" name="senha">
+                        <input  class="form-control input-cadastro" id="floatingPassword" placeholder="Password" required type="password" name="senha">
                         <label for="floatingPassword">Senha</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input  class="form-control input" id="floatingPassword" placeholder="Password" required type="password">
+                        <input  class="form-control input-cadastro" id="floatingPassword" placeholder="Password" required type="password">
                         <label for="floatingPassword">Confirma senha</label>
                     </div>
 
@@ -75,7 +75,7 @@ if(isset($_POST["inserir"])){
                     </div>
 
                     <div>
-                        <button class="btn btn-primary btn-lg botao" name="inserir">Criar Conta</button>
+                        <button class="btn btn-primary btn-lg botao input-cadastro" name="inserir">Criar Conta</button>
                         <p class="tag-style-c">Já tem uma conta? <a href="login.php">Login</a></p>
                     </div>
 
