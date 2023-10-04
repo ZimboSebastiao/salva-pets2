@@ -19,14 +19,6 @@ html { font-size: 14px;}
 
 a {text-decoration: none;}
 
-.row {
-    --bs-gutter-x: 1.6rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: calc(var(--bs-gutter-x) * -3);
-    margin-left: calc(var(--bs-gutter-x) * -3);
-}
 
 #destaque {
     width: 50%;
@@ -61,6 +53,10 @@ h1 {
 
 .estilo-form {
     padding: 10px;
+}
+
+.input-login {
+    width: 395px;
 }
 
 .input {
@@ -135,6 +131,25 @@ h1 {
     position: relative;
     padding: 6px;
     right: -5px;
+}
+
+
+/* Small mobile */
+@media (min-width: 350px) and (max-width: 991px){
+
+    #destaque {
+        display: none;
+    }
+
+    .input-login {
+        width: 100%;
+    }
+
+    .center-form {
+        position: relative;
+        top: 6%;
+    }
+ 
 }
 
 
