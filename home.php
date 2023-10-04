@@ -130,14 +130,19 @@
         </div>
       </div>
     </div>
-    <!-- card adotar pet -->
-    <img src="/images/mulher-cacholo.PNG" alt="" class="">
+
+    <!-- imagem pre faq (não sei que nome dar) -->
+    <article>
+      <img src="images/mulher-cacholo.PNG" alt="" class="pt-4">
+      <div class="d-grid gap-2 p-5">
+          <button class="btn btn-primary position-relative " type="button">Buscar Pet</button>
+      </div>
+    </article>
 
     <!-- Área FAQ -->
-    <article class="d-flex flex-wrap col-md-7 pt-2 m-auto">
+    <section class="d-flex flex-wrap col-md-7 pt-2 m-auto">
       <!-- Texto -->
       <div class="text-center m-auto">
-        <h2>FAQ</h2>
         <h3>Dúvidas frequentes</h3>
         <p class="text-center">Entre em contato conosco contato@adotapet.com.br</p>
       </div>
@@ -164,27 +169,28 @@
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            "Adotar um pet é um ato de amor, mas e se eu não me adaptar? Lembre-se, a paciência e o tempo podem transformar desafios em laços incríveis de amizade e companheirismo." Porém caso não tenha outra solução entre em contato conosco e encontraremos uma solução favorável.
             </div>
           </div>
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              <strong> Posso adotar mais de um pet?</strong>
+              <strong>Posso adotar mais de um pet?</strong>
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              This is the third item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            Claro! Adotar mais de um pet é uma escolha maravilhosa. Muitos lares abrigam múltiplos animais, proporcionando companheirismo e alegria. Certifique-se de dar amor e atenção a todos eles!
             </div>
           </div>
         </div>
       </div>
-    </article>
+    </section>
 
     <!-- FEEDBACK -->
-    <div id="carouselExampleIndicators" class="carousel slide col-md-6 pt-5 m-auto">
+    <h2 class="text-center pt-4">Feedbacks</h2>
+    <div id="carouselExampleIndicators" class="carousel slide col-md-6 pt-2 m-auto">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -216,7 +222,7 @@
   <footer class=" text-lg-start footer-color text-muted">
 
     <!-- ====== Links ====== -->
-    <section class="">
+    <section>
       <div class="container text-center text-md-start mt-5">
 
         <!-- Grid row -->
