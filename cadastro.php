@@ -7,7 +7,7 @@ if(isset($_POST["inserir"])){
     $cep = filter_input(INPUT_POST,"cep",FILTER_SANITIZE_NUMBER_INT);
     $senha = filter_input(INPUT_POST,"senha",FILTER_SANITIZE_SPECIAL_CHARS);
 
-    InserirUsuario($conexao,$nome,$email,$cep,$senha);
+    InserirUsuario($conexao, $nome, $email, $cep, $senha);
 
     header("location:home.php");
 }
@@ -45,7 +45,7 @@ if(isset($_POST["inserir"])){
                     <form action=""  method="post">
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" required name="nome">
+                            <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" required name="nome" >
                             <label for="floatingInputGroup2">Nome completo</label>
                         </div>
                         

@@ -11,10 +11,10 @@
 </head>
 <body>
 <main>
-<div class="container">
+<div class="container bg-danger">
     <div class="row">
         <!-- =========== Formulário  =========== -->
-        <div class="col-6 bg-danger">
+        <div class="">
             
             <div>
                 <img src="icones/pet1.png" alt="..." height="42">
@@ -80,18 +80,19 @@
                     <br>
 
                     <div>
-                        <button class="btn btn-primary btn-lg botao">Entrar</button>
+                        <button class="btn btn-primary btn-lg botao input-login">Entrar</button>
                         <p class="tag-style">Não tem uma conta? <a href="cadastro.php">Crie uma conta de graça</a></p>
                     </div>
                 </form>
             </section> 
-
+            
         </div>
-   
-        <!-- ========== Destaque ========== -->
-        <div class="col-8" id="destaque"></div>
-
+        
+        
     </div>
+    
+    <!-- ========== Destaque ========== -->
+    <div id="destaque"></div>
 </div>
 
 </main>
