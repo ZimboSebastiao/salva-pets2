@@ -5,10 +5,12 @@ html { font-size: 14px;}
 /*--------------------------------------------------------------
 # Estilização Página de Login
 --------------------------------------------------------------*/
-.container {
-    width: 65%;
-    margin-right: auto;
-    margin-left: auto;
+
+
+.img-responsivo {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
 }
 
 #pesquisa{
@@ -17,14 +19,6 @@ html { font-size: 14px;}
 
 a {text-decoration: none;}
 
-.row {
-    --bs-gutter-x: 1.6rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: calc(var(--bs-gutter-x) * -3);
-    margin-left: calc(var(--bs-gutter-x) * -3);
-}
 
 #destaque {
     width: 50%;
@@ -45,7 +39,7 @@ a {text-decoration: none;}
 }
 
 h1 {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: #1E266D;
     padding: 8px;
     font-weight: bold;
@@ -54,22 +48,33 @@ h1 {
 .estilo-p {
     color: #C3C7E5;
     padding: 10px;
+    font-size: 20px;
 }
 
 .estilo-form {
     padding: 10px;
 }
 
+.input-login {
+    width: 395px;
+}
+
 .input {
     width: 395px;
+}
+
+.center-form {
+    position: relative;
+    top: 100px;
 }
 
 
 
 
 .estilo-cadeado {
+    width: 96%;
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
 
 .hero {
@@ -128,192 +133,46 @@ h1 {
     right: -5px;
 }
 
-/* Página Login */
-@media screen and (max-width: 1100px){
-    .row{
-        --bs-gutter-x: 4rem;
-    }
-}
 
-@media screen and (max-width: 982px) {
-
-    .estilo-cadeado {
-        justify-content: right;
-        right: 80px;
-        position: relative;
-    }
-
-    .hero {
-        bottom: -9px;
-
-    }
-}
-
-@media screen and (max-width: 991px) {
-    .row {
-        --bs-gutter-x: 1rem;
-    }
-
-}
-
-
-/* Modifição para telas pequenas | Página de Login*/
-
-@media screen and (max-width: 808px) {
-    .row {
-        --bs-gutter-x: 3.7rem;
-
-    }
-
-    .input {
-        width: 350px;
-    }
-
-    .botao {
-        width: 350px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-
-   
-    .input {
-        width: 300px;
-    }
-
-    .botao {
-        width: 300px;
-    }
-
-
-    .row {
-        --bs-gutter-x: 3rem;
-    }
-
-}
-
-@media screen and (max-width:666px) {
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
 
     #destaque {
-        background-image: none;
-
+        display: none;
     }
 
-    .row {
-        --bs-gutter-x: -3rem;
-    }
-
-    .container {
-        width: 100%;
-        max-width: 1200px;
-        /* Adjust the maximum width as needed */
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .col-6 {
+    .input-login {
         width: 100%;
     }
 
-    .estilo-cadeado {
-        right: 0px;
+    .center-form {
+        position: relative;
+        top: 6%;
     }
 
-
-    .hero {
-        bottom: -11px;
-    }
-
-   
-    .input {
-        width: 350px;
-    }
-
-    .botao {
-        width: 350px;
-    }
-
-    /* h1 {
-        font-size: 2rem;
-    } */
-
-}
-
-/* Centralizando para telas Menores */
-@media screen and (max-width: 600px) {
-    .row {
-        --bs-gutter-x: -2rem;
-    }
-
-    
-}
-
-@media screen and (max-width: 500px){
-    .row {
-        --bs-gutter-x: -1rem;
-    }
-
-}
-
-/* Fazendo mudanças no Visual  */
-@media screen and (max-width: 458px){
-    .input{
-        width: 300px;
-    }
-
-    .botao{
-        width: 300px;
-    }
-
-    .estilo-cadeado{
-        right: 35px;
-    }
-
-    .estilo-p{
-        padding: 5px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-  .estilo-cadeado{
-    right: -35px;
-  }
-
-  #pata{
-    height: 3.7vh;
-  }
+ 
 }
 
 
-@media screen and (max-width: 370px) {
-    .input{
-        width: 250px;
-    }
-    .botao{
-        width: 250px;
-    }
-
-    .estilo-cadeado{
-        right: -9px;
-    }
-}
-
-@media screen and (max-width: 344px) {
-    .row {
-        --bs-gutter-x: none;
-    }
-
-        .estilo-cadeado{
-            right: 50px;
-        }
-}
 /*--------------------------------------------------------------
 # Estilização Página de Cadastro
 --------------------------------------------------------------*/
 
-#teste {
+.img-responsivo-cadastro {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+}
+
+.center-form-cadastro {
+    position: relative;
+    top: 30px;
+}
+
+#destaque-cadastro {
     width: 50%;
-    height: 125vh;
+    height: 120vh;
     background: url(../../images/destaque-cadastro.jpg);
     background-size: cover;
     border-radius: 0;
@@ -339,28 +198,161 @@ h1 {
     border-color: #FF7F50;
 }
 
-@media screen and (max-width: 767px) {
 
-    .estilo-l{
-     right: -3px;
-    }}
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
 
-    @media screen and (max-width: 700px) {
-        .estilo-l{
-            right: -20px;
-            padding: 3px;
-        }
-    }
-@media screen and (max-width: 666px) {
-    #teste{
+    #destaque-cadastro {
         display: none;
     }
-    
-    #pata{
-        height: 3.5vh;
-        margin: 3px;
+
+    .input-cadastro {
+        background-color: #1E266D;
+        width: 100%;
     }
+
+    .img-responsivo-cadastro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .center-form-cadastro {
+        position: relative;
+        top: 6%;
+    }
+
+    .estilo-p-cadastro {
+        color: #C3C7E5;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .estilo-l {
+        display: flex;
+        justify-content: center;
+        font-size: 11px;
+        color: #C3C7E5;
+        position: relative;
+        right: -1px;
+        text-align: center;
+    }
+
+    .tag-style-c {
+        color: #C3C7E5;
+        position: relative;
+        padding: 6px;
+        right: -58px;
+        width: 60%;
+    }
+ 
 }
+
+
+/*--------------------------------------------------------------
+# Estilização Página HOME
+--------------------------------------------------------------*/
+
+body {
+    background-color: white;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {flex: 1;}
+
+.limitador {
+    width: 97vw;
+    margin: auto;
+}
+
+header {
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+nav h2 a {
+    color: black;
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: inline-block;
+}
+
+
+nav  a:hover, nav a:focus{
+    background-color: #ffe9e0;
+}
+
+.menu {
+    list-style: none;
+    display: none;
+}
+
+.menu a {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: #1E266D;
+}
+
+.menu.aberto{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+@media screen and (min-width: 530px) {
+    nav h2 {display: none;}
+    html { font-size: 0.9rem;}
+    .menu {
+        display: flex;
+        text-transform: uppercase; 
+        justify-content: space-between;
+        align-items: center;   
+    }
+    
+    
+    nav {width: 70%;}
+
+    .menu li { width: 100%;}
+}
+
+
+.icon-city {
+    background: url(../../icones/pata.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-house {
+    background: url(../../icones/pet-house4.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-animal {
+    background: url(../../icones/bola-de-cachorro.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-race {
+    background: url(../../icones/bicho-de-estimacao.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
 
 /*--------------------------------------------------------------
 # Estilização Página de Processo de adoção
@@ -450,96 +442,13 @@ h1 {
 a {text-decoration: none;}
 
 
-
-body {
-    background-color: white;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-main {flex: 1;}
-
-.limitador {
-    width: 97vw;
-    margin: auto;
-}
-
-header {
-    z-index: 100;
-    position: sticky;
-    top: 0;
-    background-color: rgb(255, 255, 255);
-}
-
-header div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-}
-
-nav h2 a {
-    color: black;
-    font-size: 1.2rem;
-    padding: 1rem;
-    display: inline-block;
-}
-
-
-
-/* nav  a:hover, nav a:focus{
-    background-color: #ffe9e0;
-} */
-
-.menu {
-    list-style: none;
-    display: none;
-}
-
-.menu a {
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-}
-
-.menu.aberto{
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
-@media screen and (min-width: 530px) {
-    nav h2 {display: none;}
-    html { font-size: 0.9rem;}
-    .menu {
-        display: flex;
-        text-transform: uppercase; 
-        justify-content: space-between;
-        align-items: center;   
-    }
-    
-    
-    nav {width: 70%;}
-
-    .menu li { width: 100%;}
-}
-
-
-
-
 .dividir {
     display: flex;
     justify-content: space-between;
 }
 
-.container-2 {
-    width: 90%;
+.container-adocao {
+    width: 95%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -555,11 +464,12 @@ nav h2 a {
 
 .Beetle-letters {color: #C3C7E5;}
 .negrito {font-weight: bold;}
-.decrease-letters {font-size: 10px;}
+.decrease-letters {font-size: 14px;}
 
 .decrease {
     font-weight: bold;
     color: #070b35;
+    font-size: 14px;
 }
 
 .divide {
@@ -567,37 +477,35 @@ nav h2 a {
     justify-content: space-between; 
 }
 
-.entry {width: 255px;}
+.tamanho-form {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.input-adocao {
+    width: 455px;
+}
+
+.inputs-adocao {
+    width: 225px;
+}
+.entry {width: 459px;}
 
 .form-floating {
     margin-right: 6px; /* Adicione a margem desejada entre os elementos */
 }
 
-.icon-city {
-    background: url(../../icones/pata.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
 
-.icon-house {
-    background: url(../../icones/pet-house4.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
-
-.icon-animal {
-    background: url(../../icones/bola-de-cachorro.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
-
-.icon-race {
-    background: url(../../icones/bicho-de-estimacao.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
 
 .personalizar {
     text-align: center;
     padding-top: 20px;
     padding: 9px;
 }
+
+
+
 
 /*--------------------------------------------------------------
 # Estilização do Footer
