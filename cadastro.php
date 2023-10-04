@@ -2,7 +2,7 @@
 require_once "conecta.php";
 if(isset($_POST["inserir"])){
     require_once "funcoes.php";
-    $nome = filter_input(INPUT_POST,"nome",FILTER_SANITIZE_SPECIAL_CHARS);
+    $nome = trim(filter_input(INPUT_POST,"nome",FILTER_SANITIZE_SPECIAL_CHARS));
     $email = filter_input(INPUT_POST,"email",FILTER_SANITIZE_EMAIL);
     $cep = filter_input(INPUT_POST,"cep",FILTER_SANITIZE_NUMBER_INT);
     $senha = filter_input(INPUT_POST,"senha",FILTER_SANITIZE_SPECIAL_CHARS);
