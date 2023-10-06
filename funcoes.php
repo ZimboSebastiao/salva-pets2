@@ -1,5 +1,5 @@
 <?php
-function InserirUsuario(PDO $conexao,string $nome, string $email,int $cep, string $senhaHash):void{
+function InserirUsuario(PDO $conexao,string $nome, string $email, int $cep, string $senhaHash):void{
     $sql = "INSERT INTO usuarios(nome,email,cep,senha) VALUES (:nome,:email,:cep,:senha)";
 
     try {

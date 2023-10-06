@@ -3,7 +3,7 @@ require_once "conecta.php";
 if(isset($_POST["inserir"])){
     require_once "funcoes.php";
     $nome = trim(filter_input(INPUT_POST,"nome",FILTER_SANITIZE_SPECIAL_CHARS));
-    $email = filter_input(INPUT_POST,"email",FILTER_SANITIZE_EMAIL);
+    $email = filter_input(INPUT_POST,"email",FILTER_SANITIZE_EMAIL, FILTER_VALIDATE_EMAIL);
     $cep = filter_input(INPUT_POST,"cep",FILTER_SANITIZE_NUMBER_INT);
     $senha = filter_input(INPUT_POST,"senha",FILTER_SANITIZE_SPECIAL_CHARS);
     $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
@@ -11,7 +11,9 @@ if(isset($_POST["inserir"])){
     InserirUsuario($conexao, $nome, $email, $cep, $senhaHash);
 
     header("location:home.php");
+
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -46,7 +48,7 @@ if(isset($_POST["inserir"])){
                     <form action=""  method="post">
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" required name="nome" >
+                            <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="nome" >
                             <label for="floatingInputGroup2">Nome completo</label>
                         </div>
                         
