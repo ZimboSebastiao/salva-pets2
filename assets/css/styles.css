@@ -496,7 +496,44 @@ a {text-decoration: none;}
 }
 
 
+/*--------------------------------------------------------------
+# Estilização Página de Adoção - Te conhecendo
+--------------------------------------------------------------*/
 
+.progress-number {text-align: right;}
+
+.divide-te-conhecendo {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center; 
+    padding: 18px;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.check-botao {
+    width: 190px;
+    height: 55px;
+    background-color: #ffffff;
+    border-color: #C3C7E5;
+    color: #babdd4;
+    font-size: 22px;
+    cursor: pointer;
+
+}
+
+.posicionar-span {
+    width: 100%;
+    font-size: 16px;
+    color: #0a1375;
+    display: flex;
+    font-weight: bold;
+    justify-content: start;
+}
+
+.check-textar {
+    color: #babdd4 ;
+}
 
 /*--------------------------------------------------------------
 # Estilização do Footer
