@@ -140,7 +140,7 @@
             
             <!-- ====== BOTÃO - Adotar Pet ====== -->
             <div>
-                <button class="btn btn-primary btn-lg botao input-adocao" name="inserir">Adotar Pet</button>
+                <button class="btn btn-primary btn-lg botao input-adocao" name="inserir"><a href="adotou.php">Adotar Pet</a></button>
             </div>
 
         </form>
