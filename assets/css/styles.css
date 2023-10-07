@@ -1,10 +1,16 @@
 * {box-sizing: border-box;}   
 img {max-width: 100%;}
 html { font-size: 14px;}
+a { color: inherit;} 
 
 /*--------------------------------------------------------------
 # Estilização Página de Login
 --------------------------------------------------------------*/
+
+/* .cor {
+    color: inherit !important;
+    background-color: #db4712;
+} */
 
 .img-responsivo {
     display: flex;
@@ -78,7 +84,7 @@ h1 {
 
 .botao {
     width: 395px;
-    height: 61px;
+    height: 54px;
     background-color: #FF7F50;
     border-color: #e96d3f;
     cursor: pointer;
@@ -496,7 +502,71 @@ a {text-decoration: none;}
 }
 
 
+/*--------------------------------------------------------------
+# Estilização Página de Adoção - Te conhecendo
+--------------------------------------------------------------*/
 
+.progress-number {text-align: right;}
+
+.divide-te-conhecendo {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center; 
+    padding: 18px;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.check-botao {
+    width: 190px;
+    height: 55px;
+    background-color: #ffffff;
+    border-color: #C3C7E5;
+    color: #babdd4;
+    font-size: 22px;
+    cursor: pointer;
+
+}
+
+.posicionar-span {
+    width: 100%;
+    font-size: 16px;
+    color: #0a1375;
+    display: flex;
+    font-weight: bold;
+    justify-content: start;
+}
+
+.check-textar {
+    color: #babdd4 ;
+}
+
+
+
+/*--------------------------------------------------------------
+# Estilização Página de Adoção - Adotou
+--------------------------------------------------------------*/
+
+
+.adotou-h1 {font-size: 36px;}
+
+.adotou-p {
+    font-size: 20px;
+    color: #C3C7E5;
+  }
+
+.adotou-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.espaco-top {padding-top: 70px;}
+.adotou-botao {
+    padding-top: 40px; 
+    padding-bottom: 40px;
+}
 
 /*--------------------------------------------------------------
 # Estilização do Footer

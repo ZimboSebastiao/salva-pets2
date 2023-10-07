@@ -52,11 +52,11 @@
   <div class="container-adocao">
     <div class="progress-text decrease-letters">
       <span class="decrease">Dados Básicos</span>
-      <span class="Beetle-letters">Te conhecendo</span>
+      <span class="decrease">Te conhecendo</span>
       <span class="Beetle-letters">Adotou!</span>
     </div>
     <div class="progress tes" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-      <div class="progress-bar progress-bar-striped  progress-bar-animated cor-padrao" style="width: 28%">25%</div>
+      <div class="progress-bar progress-bar-striped  progress-bar-animated cor-padrao " style="width: 53%"><span class="progress-number">65%</span> </div>
     </div>
 
     <div class="personalizar">
@@ -71,58 +71,80 @@
       <section class="estilo-form">
         <form action=""  method="post" class="dividir-form">
 
-            <!-- ====== Nome Completo ====== -->
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control input-adocao" id="floatingInputGroup2" placeholder="Username" required name="nome">
-                <label for="floatingInputGroup2">Nome completo</label>
-            </div>
-            
-            <!-- ====== E-mail ====== -->
-            <div class="form-floating mb-3">
-                <input class="form-control input-adocao" id="floatingInput" name="email" placeholder="name@example.com" required type="email">
-                <label for="floatingInput">E-mail</label>
-            </div>
-            
-            <!-- ====== Estado ====== -->
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control input-adocao" id="floatingInputGroup2" placeholder="Username" name="estado" required>
-                <label for="floatingInputGroup2">Estado</label>
-            </div>
-
-            <!-- ====== Cidade ====== -->
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control input-adocao" id="floatingInputGroup2" placeholder="Username" name="cidade" required>
-                <label for="floatingInputGroup2">Cidade</label>
-            </div>
-
-            <!-- ====== Endereço ====== -->
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control input-adocao" id="floatingInputGroup2" placeholder="Username" name="endereco" required>
-                <label for="floatingInputGroup2">Endereço</label>
-            </div>
-
-            <!-- ====== Dois Inputs ====== -->
-            <div class="divide entry">
-
-              <!-- ====== Número ====== -->
-              <div class="form-floating mb-3">
-                  <input type="text" class="form-control inputs-adocao" id="floatingInputGroup2" placeholder="Username" name="numero" required>
-                  <label for="floatingInputGroup2">Número</label>
+            <!-- ====== CHECK - Primeiro ====== -->
+            <p class="posicionar-span">Tem crianças em casa?</p>
+            <div class="divide-te-conhecendo">
+              <div>
+                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="btn-check">Sim</label>
               </div>
 
-              <!-- ====== Complemento ====== -->
-              <div class="form-floating mb-3">
-                  <input type="text" class="form-control inputs-adocao" id="floatingInputGroup2" placeholder="Username" name="completo" required>
-                  <label for="floatingInputGroup2">Complemento</label>
+              <div>
+                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="btn-check">Não</label>
               </div>
             </div>
 
-            <!-- ====== BOTÃO - Próxima etapa ====== -->
+            <!-- ====== CHECK - Segundo ====== -->
+            <p class="posicionar-span">Tem algum pet?</p>
+            <div class="divide-te-conhecendo">
+              <div>
+                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="btn-check">Sim</label>
+              </div>
+
+              <div>
+                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="btn-check">Não</label>
+              </div>
+            </div>
+
+
+            <!-- ====== CHECK - Terceiro ====== -->
+            <p class="posicionar-span">Todos em casa estão cientes?</p>
+            <div class="divide-te-conhecendo">
+              <div>
+                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="btn-check">Sim</label>
+              </div>
+
+              <div>
+                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="btn-check">Não</label>
+              </div>
+            </div>
+
+            <!-- ====== CHECK - Quarto ====== -->
+            <p class="posicionar-span">Alguém tem alergia ou doença com animais?</p>
+            <div class="divide-te-conhecendo">
+              <div>
+                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="btn-check">Sim</label>
+              </div>
+
+              <div>
+                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="btn-check">Não</label>
+              </div>
+            </div>
+
+            <!-- ====== CHECK - Quinto ====== -->
+            <p class="posicionar-span">Nos conte um pouco sobre a sua moradia</p>
+            <div class="divide-te-conhecendo">
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 130px; width: 455px;"></textarea>
+                <label class="check-textar" for="floatingTextarea2Disabled">Escrever mensagem</label>
+              </div>  
+            </div>
+            
+            
+            <!-- ====== BOTÃO - Adotar Pet ====== -->
             <div>
-                <button class="btn btn-primary btn-lg botao input-adocao" name="inserir"> <a href="te-conhecendo.php">Próxima etapa</a></button>
+                <button class="btn btn-primary btn-lg botao input-adocao" name="inserir"><a href="adotou.php">Adotar Pet</a></button>
             </div>
 
         </form>
+
       </section> 
     </div>
   </div>
