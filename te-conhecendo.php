@@ -138,9 +138,6 @@
             </div>
             
             
-            
-            
-            
             <!-- ====== BOTÃO - Adotar Pet ====== -->
             <div>
                 <button class="btn btn-primary btn-lg botao input-adocao" name="inserir">Adotar Pet</button>
