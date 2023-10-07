@@ -101,6 +101,7 @@
                 <label for="floatingInputGroup2">Endereço</label>
             </div>
 
+            <!-- ====== Dois Inputs ====== -->
             <div class="divide entry">
 
               <!-- ====== Número ====== -->
@@ -116,12 +117,12 @@
               </div>
             </div>
 
+            <!-- ====== BOTÃO - Próxima etapa ====== -->
             <div>
-                <button class="btn btn-primary btn-lg botao input-adocao" name="inserir">Próxima etapa</button>
+                <button class="btn btn-primary btn-lg botao input-adocao" name="inserir"> <a href="te-conhecendo.php">Próxima etapa</a></button>
             </div>
 
         </form>
-
       </section> 
     </div>
   </div>
