@@ -1,7 +1,7 @@
 * {box-sizing: border-box;}   
 img {max-width: 100%;}
 html { font-size: 14px;}
-/* a { color: inherit;}  */
+a { color: inherit;} 
 
 /*--------------------------------------------------------------
 # Estilização Página de Login
@@ -84,7 +84,7 @@ h1 {
 
 .botao {
     width: 395px;
-    height: 61px;
+    height: 54px;
     background-color: #FF7F50;
     border-color: #e96d3f;
     cursor: pointer;
@@ -539,6 +539,33 @@ a {text-decoration: none;}
 
 .check-textar {
     color: #babdd4 ;
+}
+
+
+
+/*--------------------------------------------------------------
+# Estilização Página de Adoção - Adotou
+--------------------------------------------------------------*/
+
+
+.adotou-h1 {font-size: 36px;}
+
+.adotou-p {
+    font-size: 20px;
+    color: #C3C7E5;
+  }
+
+.adotou-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.espaco-top {padding-top: 70px;}
+.adotou-botao {
+    padding-top: 40px; 
+    padding-bottom: 40px;
 }
 
 /*--------------------------------------------------------------
