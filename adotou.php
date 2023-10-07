@@ -52,80 +52,40 @@
   <div class="container-adocao">
     <div class="progress-text decrease-letters">
       <span class="decrease">Dados Básicos</span>
-      <span class="Beetle-letters">Te conhecendo</span>
-      <span class="Beetle-letters">Adotou!</span>
+      <span class="decrease">Te conhecendo</span>
+      <span class="decrease">Adotou!</span>
     </div>
     <div class="progress tes" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-      <div class="progress-bar progress-bar-striped  progress-bar-animated cor-padrao" style="width: 28%">25%</div>
+      <div class="progress-bar progress-bar-striped  progress-bar-animated cor-padrao " style="width: 100%"><span class="progress-number">100%</span> </div>
     </div>
 
-    <div class="personalizar">
-      <h1>Vamos Adotar seu <br> pet bem rápido</h1>
+    <div class="personalizar espaco-top">
+      <img src="icones/animal1.png" alt="">
+      <h1 class="adotou-h1">Parabéns seu requerimento <br> foi enviado com sucesso!</h1>
+    </div>
+
+    <div class="adotou-div">
+      <span class="adotou-p">Aguarde apenas 24hrs para a ONG que tem a posse</span>
+      <span class="adotou-p"> do pet entre em contato com você, fique calmo que</span>
+      <span class="adotou-p">seu petzinho ja está quase chegando.</span>
     </div>
     
   </div>
-  
-  <!-- ====== FORMULÁRIO ====== -->
-  <div class="container tamanho-form">
+
+    <!-- ====== CONTAINER BOTAO ====== -->
+    <div class="container tamanho-form">
     <div class="row">
-      <section class="estilo-form">
-        <form action=""  method="post" class="dividir-form">
 
-            <!-- ====== Nome Completo ====== -->
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control input-adocao" id="floatingInputGroup2" placeholder="Username" required name="nome">
-                <label for="floatingInputGroup2">Nome completo</label>
-            </div>
-            
-            <!-- ====== E-mail ====== -->
-            <div class="form-floating mb-3">
-                <input class="form-control input-adocao" id="floatingInput" name="email" placeholder="name@example.com" required type="email">
-                <label for="floatingInput">E-mail</label>
-            </div>
-            
-            <!-- ====== Estado ====== -->
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control input-adocao" id="floatingInputGroup2" placeholder="Username" name="estado" required>
-                <label for="floatingInputGroup2">Estado</label>
-            </div>
+        <!-- ====== BOTÃO - Adotar Pet ====== -->
+        <div class="adotou-botao">
+            <button class="btn btn-primary btn-lg botao input-adocao" name="inserir"><a href="home.php">Voltar para tela inicial</a></button>
+        </div>
 
-            <!-- ====== Cidade ====== -->
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control input-adocao" id="floatingInputGroup2" placeholder="Username" name="cidade" required>
-                <label for="floatingInputGroup2">Cidade</label>
-            </div>
 
-            <!-- ====== Endereço ====== -->
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control input-adocao" id="floatingInputGroup2" placeholder="Username" name="endereco" required>
-                <label for="floatingInputGroup2">Endereço</label>
-            </div>
-
-            <!-- ====== Dois Inputs ====== -->
-            <div class="divide entry">
-
-              <!-- ====== Número ====== -->
-              <div class="form-floating mb-3">
-                  <input type="text" class="form-control inputs-adocao" id="floatingInputGroup2" placeholder="Username" name="numero" required>
-                  <label for="floatingInputGroup2">Número</label>
-              </div>
-
-              <!-- ====== Complemento ====== -->
-              <div class="form-floating mb-3">
-                  <input type="text" class="form-control inputs-adocao" id="floatingInputGroup2" placeholder="Username" name="completo" required>
-                  <label for="floatingInputGroup2">Complemento</label>
-              </div>
-            </div>
-
-            <!-- ====== BOTÃO - Próxima etapa ====== -->
-            <div>
-                <button class="btn btn-primary btn-lg botao input-adocao" name="inserir"> <a href="te-conhecendo.php">Próxima etapa</a></button>
-            </div>
-
-        </form>
-      </section> 
     </div>
   </div>
+  
+
 
 </main> <!-- FIM CONTEÚDO  -->
 
