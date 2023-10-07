@@ -1,11 +1,16 @@
 * {box-sizing: border-box;}   
 img {max-width: 100%;}
 html { font-size: 14px;}
-a { color: inherit;} 
+/* a { color: inherit;}  */
 
 /*--------------------------------------------------------------
 # Estilização Página de Login
 --------------------------------------------------------------*/
+
+/* .cor {
+    color: inherit !important;
+    background-color: #db4712;
+} */
 
 .img-responsivo {
     display: flex;
