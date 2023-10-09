@@ -46,15 +46,14 @@
 
 
 <main>
-  <div class="top-pets pb-3">
-    <div class="container-fluid d-flex gap-5 flex-wrap m-auto flex-xl-nowrap w-75">
+  <!-- FILTROS DE BUSCA -->
+  <div class="top-pets pb-3 limitar-tela">
+    <div class="container-fluid d-flex gap-5 flex-wrap m-auto flex-xl-nowrap">
 
       <!-- INPUT CIDADE -->
       <div class="input-group border rounded border-dark d-flex align-items-center">
-        <!-- <img src="icones/pata (1).png" alt="" width="10%"> -->
         <input type="text" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
       </div>
-
 
       <!-- INPUT REGIÃO -->
       <div class="input-group border rounded border-dark">
@@ -63,13 +62,16 @@
 
       <!-- INPUT ANIMAL -->
       <div class="input-group border rounded border-dark">
-        <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
         <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
+      </div>
+
+      <!-- INPUT IDADE -->
+      <div class="input-group border rounded border-dark">
+        <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Idade">
       </div>
 
       <!-- INPUT RAÇA -->
       <div class="input-group border rounded border-dark">
-        <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
         <input type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
       </div>
 
@@ -77,29 +79,92 @@
       <div class="w-75 m-auto">
         <button class="btn btn-primary w-100" type="button">Buscar Pet</button>
       </div>
+ 
     </div>
   </div>
+  
+  <div class="limitar-tela">
 
-  <h1 class="pets-h1">137 Pets disponíveis para você</h1>
+    <h1 class="pets-h1">
+      <?php
+          $apiUrl = "https://salvapets.onrender.com/pets/";  
+          $apiData = file_get_contents($apiUrl);
+          $data = json_decode($apiData, true);
+      ?> <?=count($data);?> Pets disponíveis para você
+    </h1>
 
-  <div class="imagens-api limitador">
-    <div class="card border" style="width: 18rem;">
-      <img src="images/mulher-cacholo.PNG" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
+    <div class="card-container">
+    <?php
+      $apiUrl = "https://salvapets.onrender.com/pets/";  
+    
+      // Faz a solicitação à API e obtém os dados
+      $apiData = file_get_contents($apiUrl);
+    
+      if ($apiData) {
+          // Converte a resposta JSON em um array PHP
+          $data = json_decode($apiData, true);
+    
+          if ($data) {
+              foreach ($data as $pet) {
+                  $nome = $pet['nome'];
+                  $idade = $pet['idade'];
+                  $sobre = $pet['sobre'];
+                  $localizacao = $pet['localizacao'];
+                  $sexo = $pet['sexo'];
+                  $imagem = $pet['imagem'];
+    
+                  // Corrija a URL da imagem
+                  $imagemUrl = "https://salvapets.onrender.com" . $imagem; ?>
+    
+        <div class="card border card-item" style="width: 25%;">
+          <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290">
+          <div class="card-body">
+            <h5 class="card-title nome-pets"><?=$nome?></h5>
+            <p class="card-text loc-pets"><?=$localizacao?></p>
+            <div class="idade-sexo">
+              <p class="card-text sexo-pets">
+              <?php 
+                if ($sexo === "Fêmea") { ?>
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z"/>
+                </svg>
+                <?php 
+                } else {?>
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+              </svg>
+              <?php
+                } 
+              ?>
+              <?=$sexo?></p>
+              <?php 
+                $dataNascimento = strtotime($idade);
+                $dataAtual = time();
+      
+                if ($dataNascimento !== false) {
+                  $diferencaSegundos = $dataAtual - $dataNascimento;
+          
+                  $anos = floor($diferencaSegundos / (365 * 24 * 60 * 60)); }
+                  $meses = floor(($diferencaSegundos % (365 * 24 * 60 * 60)) / (30 * 24 * 60 * 60));
+                ?>
+              <p class="card-text"><?=$anos?> anos e <?=$meses?> meses</p>
+            </div>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+    
+    <?php 
+            }
+        } else {
+            echo "<p>Ocorreu um erro ao analisar os dados da API.</p>";
+        }
+    } else {
+        echo "<p>Ocorreu um erro ao buscar os dados da API.</p>";
+    }
+    ?>
     </div>
   </div>
-
-
-<?php
-// $client = new Client();
-// $request = new Request('GET', 'https://salvapets.onrender.com/pets/');
-// $res = $client->sendAsync($request)->wait();
-// echo $res->getBody();
-?>
 
     
 
@@ -221,6 +286,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <script src="js/menu.js"></script>
+  <script src="js/nossos-pets.js"></script>
 
 </body>
 

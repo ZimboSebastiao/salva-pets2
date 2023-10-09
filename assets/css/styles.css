@@ -580,6 +580,42 @@ a {text-decoration: none;}
 .pets-h1 {font-size: 36px;}
 
 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-item {
+  flex-basis: calc(25% - 20px); /* Largura desejada para cada card */
+  margin-right: 20px; /* Espaço entre os cards (opcional) */
+  margin-bottom: 25px;
+}
+
+.nome-pets {
+    font-size: 27px;
+    font-weight: bold;
+    color: #0a1375;
+}
+
+.loc-pets {
+    font-size: 22px;
+    color: #6771c4;
+}
+
+.idade-sexo {
+    display: flex;
+    justify-content: space-between;
+    color: #545db3;
+    font-size: 20px;
+}
+
+.limitar-tela {
+    width: 90vw;
+    margin: auto;
+}
+
+
 /*--------------------------------------------------------------
 # Estilização do Footer
 --------------------------------------------------------------*/
