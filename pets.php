@@ -60,6 +60,11 @@
         </nav>
     </div>
 
+    <section class="petsGeral">
+    <?php for($i = 0;$i <= 10; $i++){
+
+    
+    ?>
     <div class="card" style="width: 18rem;">
         <img src="images/mulher-cacholo.PNG" class="card-img-top" alt="...">
         <div class="card-body">
@@ -74,8 +79,9 @@
             </div>
         </div>
     </div>
-
-    </div>
+    <?php } ?>
+  </section>
+  </div>
     <footer class=" text-lg-start footer-color text-muted">
 
         <!-- ====== Links ====== -->

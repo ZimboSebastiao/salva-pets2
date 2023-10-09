@@ -621,13 +621,23 @@ nav h2 a {
     background-color: #fff;
 }
 
+.petsGeral{
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .card-title{
     color: #A3A7CC;
 }
 
+.card{
+    margin: 10px;
+    margin-right: 20px;
+}
+
 .favorite{
-    /* background-color: white; */
     border-radius: 50%;
 
 }
