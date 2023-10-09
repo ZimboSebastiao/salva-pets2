@@ -23,15 +23,15 @@
                 <p class="estilo-p">Coloque seus dados e venha ver os seus pets</p>
 
                 <section class="estilo-form">
-                    <form action="" >
+                    <form action="" method="$_POST">
                         <div class="form-floating mb-3">
-                            <input class="form-control input" id="floatingInput" placeholder="name@example.com" required type="email">
+                            <input class="form-control input" id="floatingInput" placeholder="name@example.com" required type="email" name="email">
                             <label for="floatingInput">E-mail</label>
                         </div>
                         <br>
     
                         <div class="form-floating">
-                            <input  class="form-control input" id="floatingPassword" placeholder="Password" required type="password">
+                            <input  class="form-control input" id="floatingPassword" placeholder="Password" required type="password" name="senha">
                             <label for="floatingPassword">Senha</label>
                         </div>
     
@@ -79,7 +79,7 @@
                         <br>
     
                         <div>
-                            <button class="btn btn-primary btn-lg botao input">Entrar</button>
+                            <button class="btn btn-primary btn-lg botao input" type="button" name="entrar">Entrar</button>
                             <p class="tag-style">Não tem uma conta? <a href="cadastro.php">Crie uma conta de graça</a></p>
                         </div>
                     </form>

@@ -1,5 +1,6 @@
 <?php
 require_once "conecta.php";
+
 if(isset($_POST["inserir"])){
     require_once "funcoes.php";
     $nome = trim(filter_input(INPUT_POST,"nome",FILTER_SANITIZE_SPECIAL_CHARS));
@@ -48,7 +49,7 @@ if(isset($_POST["inserir"])){
                     <form action=""  method="post">
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" name="nome" >
+                            <input type="text" class="form-control input" id="floatingInputGroup2" placeholder="Username" required name="nome" >
                             <label for="floatingInputGroup2">Nome completo</label>
                         </div>
                         
