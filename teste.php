@@ -56,7 +56,7 @@
                 <div class="sl-img-1 sl-bkg-img"></div>
                 <div class="sl--content-wrapper sl--content-wrapper-inactive">
                   <div class="sl--content-container sl--card-hide">
-                    <p class="sl--sub-text">Powerful Women</p>
+                    <p class="sl--sub-text">Fêmea</p>
                     <h2>Wonder Woman</h2>
                     <p class="sl--card-content">Diana Prince is the most recognizable female superhero in the world. Her debut film Wonder Woman is the highest grossing superhero origin film of all time. Created in 1941 and beloved for over 76 years, Diana Prince is a strong, compassionate
                       role model for men and women everywhere.</p>

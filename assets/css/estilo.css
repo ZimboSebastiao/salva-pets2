@@ -54,8 +54,8 @@ body {
 .sl-img-1 {
   background-image: url("../../images/cachorro1.jpg");
 }
-.sl-img-2 {
-  background-image: url("../../images/pet-destaque2.avif");
+.sl-img-2 { 
+  background-image: url("../../images/gato-destaque3.webp");
 }
 .sl-img-3 {
   background-image: url("../../images/pet-destaque3.webp");
@@ -64,7 +64,7 @@ body {
   background-image: url("../../images/gato-destaque1.jpg");
 }
 .sl-img-5 {
-  background-image: url("../../images/gato-destaque2.jpg");
+  background-image: url("../../images/pet-destaque2.avif");
 }
 .sl-img-6 {
   background-image: url("../../images/gato-destaque2.jpg");
