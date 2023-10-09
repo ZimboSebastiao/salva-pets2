@@ -49,41 +49,45 @@
   <main>
     <div class="">
 
-      <div class="cabecalho col-md-12 px-lg-5">
-        <div class="px-3">
-          <h1>Encontre e adote <br>
-            um pet para você.</h1>
-  
-          <p>
-            Você não pode comprar amor,
-            mas você pode adotar ele.
-            Adote um pet para fazer companhia🐾
-          </p>
+      <div class="cabecalho col-md-12 px-xl-5">
 
+        <div class="d-flex align-items-center">
+          <div class="px-3">
+            <h1>Encontre e adote <br>
+              um pet para você.</h1>
+    
+            <p>
+              Você não pode comprar amor,
+              mas você pode adotar ele.
+              Adote um pet para fazer companhia🐾
+            </p>
+          </div>
+
+          <figure class="">
+            <img class="w-75" src="images/mina.png" alt="">
+          </figure>
         </div>
 
-        <!-- <div class=""> -->
-        <div class="p-3 d-flex gap-lg-5 gap-md-3 gap-2 flex-wrap flex-xl-nowrap bg-white pt-5">
-
+        <div class="p-3 d-flex gap-lg-3 gap-md-3 gap-xl-1 gap-2 flex-wrap flex-xl-nowrap bg-white pt-5">
           <!-- INPUT CIDADE -->
-          <div class="input-group rounded border-dark p-1 px-md-5">
+          <div class="input-group rounded border-dark p-1 px-md-1">
             <!-- <img src="icones/pata (1).png" alt="" width="10%"> -->
             <input type="text" class="form-control cont icon-city custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
           </div>
 
           <!-- INPUT REGIÃO -->
-          <div class="input-group rounded border-dark p-1 px-md-5">
+          <div class="input-group rounded border-dark p-1 px-md-1">
             <input type="text" class="form-control cont icon-house custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
           </div>
 
           <!-- INPUT ANIMAL -->
-          <div class="input-group rounded border-dark p-1 px-md-5">
+          <div class="input-group rounded border-dark p-1 px-md-1">
             <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
             <input type="text" class="form-control cont icon-animal custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
           </div>
 
           <!-- INPUT RAÇA -->
-          <div class="input-group rounded border-dark p-1 px-md-5">
+          <div class="input-group rounded border-dark p-1 px-md-1">
             <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
             <input type="text" class="form-control cont icon-race custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
           </div>
@@ -93,6 +97,8 @@
           </div>
           <!-- </div> -->
         </div>
+
+        <!-- <div class=""> -->
       </div>
 
       <!-- Titulos pre cards pets -->
