@@ -590,6 +590,7 @@ a {text-decoration: none;}
   flex-basis: calc(25% - 20px); /* Largura desejada para cada card */
   margin-right: 20px; /* Espaço entre os cards (opcional) */
   margin-bottom: 25px;
+  background-color: #fff8f6;
 }
 
 .nome-pets {
@@ -608,6 +609,12 @@ a {text-decoration: none;}
     justify-content: space-between;
     color: #545db3;
     font-size: 20px;
+}
+
+.favoritar-nome {
+    display: flex;
+    justify-content: space-between;
+    color: #db4712;
 }
 
 .limitar-tela {
