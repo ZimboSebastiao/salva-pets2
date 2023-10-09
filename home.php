@@ -12,10 +12,8 @@
 
 <body>
   <header>
-    
-  </header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary w-100">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg w-100 menu">
+      <div class="container-fluid m-none">
         <a class="navbar-brand" href="#"><img src="icones/pet1.png" alt="..." height="46">
           SalvaPets</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,48 +44,52 @@
         </div>
       </div>
     </nav>
+    </header>
+    
   <main>
-    <div class="container-fluid">
+    <div class="">
 
-      <div class="cabecalho">
-        <h1 class="me-5 ">Encontre e adote <br>
-          um pet para você.</h1>
+      <div class="cabecalho col-md-12 px-lg-5">
+        <div class="px-3">
+          <h1>Encontre e adote <br>
+            um pet para você.</h1>
+  
+          <p>
+            Você não pode comprar amor,
+            mas você pode adotar ele.
+            Adote um pet para fazer companhia🐾
+          </p>
 
-        <p>
-          Você não pode comprar amor,
-          mas você pode adotar ele.
-          Adote um pet para fazer companhia🐾
-        </p>
+        </div>
 
         <!-- <div class=""> -->
-        <div class="container-fluid d-flex gap-5 flex-wrap m-auto flex-xl-nowrap">
+        <div class="p-3 d-flex gap-lg-5 gap-md-3 gap-2 flex-wrap flex-xl-nowrap bg-white pt-5">
 
           <!-- INPUT CIDADE -->
-          <div class="input-group border rounded border-dark d-flex align-items-center">
+          <div class="input-group rounded border-dark p-1 px-md-5">
             <!-- <img src="icones/pata (1).png" alt="" width="10%"> -->
-            <input type="text" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
+            <input type="text" class="form-control cont icon-city custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
           </div>
 
           <!-- INPUT REGIÃO -->
-          <div class="input-group border rounded border-dark">
-            <input type="text" class="form-control cont icon-house " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
+          <div class="input-group rounded border-dark p-1 px-md-5">
+            <input type="text" class="form-control cont icon-house custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
           </div>
 
           <!-- INPUT ANIMAL -->
-          <div class="input-group border rounded border-dark">
+          <div class="input-group rounded border-dark p-1 px-md-5">
             <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
-            <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
+            <input type="text" class="form-control cont icon-animal custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
           </div>
 
           <!-- INPUT RAÇA -->
-          <div class="input-group border rounded border-dark">
+          <div class="input-group rounded border-dark p-1 px-md-5">
             <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
-            <input type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
+            <input type="text" class="form-control cont icon-race custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
           </div>
 
-          <!-- BOTÃO BUSCAR PET -->
-          <div class="w-75 m-auto">
-            <button class="btn btn-primary w-75" type="button">Buscar Pet</button>
+           <div class="w-75 d-flex m-auto p-1">
+            <button class="btn btn-primary text-white m-auto w-75 p-1 border"  type="button">Buscar Pet</button>
           </div>
           <!-- </div> -->
         </div>

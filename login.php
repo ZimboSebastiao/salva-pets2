@@ -10,6 +10,7 @@
 
 </head>
 <body>
+
 <main>
 <div class="container">
     <div class="row">
@@ -92,8 +93,8 @@
         <div class="col-8" id="destaque"></div>
 
     </div>
+    
 </div>
-
 </main>
 
 <!-- ======== JS Bootstrap ======== -->
