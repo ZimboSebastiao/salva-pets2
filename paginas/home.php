@@ -8,6 +8,10 @@
   <!-- ======== CSS Bootstrap ======== -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700,900" rel="stylesheet">
+  <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/614007/f2-common.css'>
+  <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/614007/swiper.min.css'>
+  <link rel="stylesheet" href="assets/css/estilo.css" />
 </head>
 
 <body>
@@ -84,6 +88,11 @@
       <h3>Descubra o pet que mais faz sentido para você</h3>
       <p class="text-primary">Encontre o pet ideal para o seu convívio</p>
     </article>
+
+    <section>
+      <?
+      require_once "carrosel.php";
+      ?>
 
     <!-- Titulos pre cards como adotar  -->
     <section class="processo-adocao text-center">
@@ -329,6 +338,13 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <script src="js/menu.js"></script>
+
+  <!-- Scripts do carrosel -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/614007/swiper.jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js'></script>
+  <script src="script.js"></script>
+  <script src="js/carrosel.js"></script>
 
 </body>
 
