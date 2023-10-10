@@ -46,45 +46,10 @@
 
 
 <main>
-  <!-- FILTROS DE BUSCA -->
-  <div class="top-pets pb-3 limitar-tela">
-    <div class="container-fluid d-flex gap-5 flex-wrap m-auto flex-xl-nowrap">
 
-      <!-- INPUT CIDADE -->
-      <div class="input-group border rounded border-dark d-flex align-items-center">
-        <input type="text" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
-      </div>
-
-      <!-- INPUT REGIÃO -->
-      <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-house " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
-      </div>
-
-      <!-- INPUT ANIMAL -->
-      <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
-      </div>
-
-      <!-- INPUT IDADE -->
-      <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Idade">
-      </div>
-
-      <!-- INPUT RAÇA -->
-      <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
-      </div>
-
-      <!-- BOTÃO BUSCAR PET -->
-      <div class="w-75 m-auto">
-        <button class="btn btn-primary w-100" type="button">Buscar Pet</button>
-      </div>
- 
-    </div>
-  </div>
+  
   
   <div class="limitar-tela">
-
     <h1 class="pets-h1">
       <?php
           $apiUrl = "https://salvapets.onrender.com/pets/";  
@@ -112,20 +77,20 @@
                   $localizacao = $pet['localizacao'];
                   $sexo = $pet['sexo'];
                   $imagem = $pet['imagem'];
-    
-                  
+
                   $imagemUrl = "https://salvapets.onrender.com" . $imagem; ?>
     
         <div class="card border card-item" style="width: 25%;">
           <a href="#"><img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
-          
           <div class="card-body">
             <div class="favoritar-nome">
               <h5 class="card-title nome-pets"><?=$nome?></h5>
               <p>
-              <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
                 <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-              </svg>
+                </svg>
+              </a> 
               </p>
             </div>
             <p class="card-text loc-pets"><?=$localizacao?></p>
