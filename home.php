@@ -47,8 +47,6 @@
     </header>
     
   <main>
-    <div class="">
-
       <div class="cabecalho col-md-12 px-lg-5">
         <div class="px-3">
           <h1>Encontre e adote <br>
@@ -63,12 +61,11 @@
         </div>
 
         <!-- <div class=""> -->
-        <div class="p-3 d-flex gap-lg-1 gap-md-3 gap-2 flex-wrap flex-xl-nowrap bg-white pt-5">
+        <!-- <div class="p-3 d-flex gap-lg-1 gap-md-3 gap-2 flex-wrap flex-xl-nowrap bg-white"> -->
 
-        <div class="pesquisa p-3 d-flex gap-lg-3 gap-md-3 gap-xl-1 gap-2 flex-wrap flex-xl-nowrap bg-white pt-5">
+        <div class="pesquisa p-3 d-flex gap-lg-3 gap-md-3 gap-xl-1 gap-2 flex-wrap flex-xl-nowrap bg-white pt-5 col-md-12">
           <!-- INPUT CIDADE -->
           <div class="input-group rounded border-dark p-1 px-md-1">
-            <!-- <img src="icones/pata (1).png" alt="" width="10%"> -->
             <input type="text" class="form-control cont icon-city custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
           </div>
 
