@@ -5,11 +5,8 @@ html { font-size: 14px;}
 /*--------------------------------------------------------------
 # Estilização Página de Login
 --------------------------------------------------------------*/
-/* .container {
-    width: 65%;
-    margin-right: auto;
-    margin-left: auto;
-} */
+
+.input-group input{background-color: #fff;}
 
 .img-responsivo {
     /* background-color: chartreuse; */
