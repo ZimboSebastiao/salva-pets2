@@ -17,6 +17,8 @@
     font-weight: bold;
 }
 
+.input-group input{background-color: #fff;}
+
 .icon-city {
     background: url(../../icones/pata.png) no-repeat scroll 7px 7px ;
     padding-left:50px;
@@ -35,4 +37,8 @@
 .icon-race {
     background: url(../../icones/bicho-de-estimacao.png) no-repeat scroll 7px 7px ;
     padding-left:50px;
+}
+
+footer{
+    background-color:#040726;
 }
