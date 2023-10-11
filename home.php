@@ -14,7 +14,7 @@
   <header>
     <nav class="navbar navbar-expand-lg w-100 menu">
       <div class="container-fluid m-none">
-        <a class="navbar-brand" href="#"><img src="icones/pet1.png" alt="..." height="46">
+        <a class="navbar-brand px-xl-5" href="#"><img src="icones/pet1.png" alt="..." height="46">
           SalvaPets</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -63,27 +63,28 @@
         </div>
 
         <!-- <div class=""> -->
-        <div class="p-3 d-flex gap-lg-5 gap-md-3 gap-2 flex-wrap flex-xl-nowrap bg-white pt-5">
+        <div class="p-3 d-flex gap-lg-1 gap-md-3 gap-2 flex-wrap flex-xl-nowrap bg-white pt-5">
 
+        <div class="pesquisa p-3 d-flex gap-lg-3 gap-md-3 gap-xl-1 gap-2 flex-wrap flex-xl-nowrap bg-white pt-5">
           <!-- INPUT CIDADE -->
-          <div class="input-group rounded border-dark p-1 px-md-5">
+          <div class="input-group rounded border-dark p-1 px-md-1">
             <!-- <img src="icones/pata (1).png" alt="" width="10%"> -->
             <input type="text" class="form-control cont icon-city custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
           </div>
 
           <!-- INPUT REGIÃO -->
-          <div class="input-group rounded border-dark p-1 px-md-5">
+          <div class="input-group rounded border-dark p-1 px-md-1">
             <input type="text" class="form-control cont icon-house custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
           </div>
 
           <!-- INPUT ANIMAL -->
-          <div class="input-group rounded border-dark p-1 px-md-5">
+          <div class="input-group rounded border-dark p-1 px-md-1">
             <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
             <input type="text" class="form-control cont icon-animal custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
           </div>
 
           <!-- INPUT RAÇA -->
-          <div class="input-group rounded border-dark p-1 px-md-5">
+          <div class="input-group rounded border-dark p-1 px-md-1">
             <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
             <input type="text" class="form-control cont icon-race custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
           </div>
@@ -93,6 +94,8 @@
           </div>
           <!-- </div> -->
         </div>
+
+        <!-- <div class=""> -->
       </div>
 
       <!-- Titulos pre cards pets -->
@@ -246,7 +249,7 @@
           </svg>
         </a>
 
-        <atarget="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
+        <a target="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
             <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
           </svg>
