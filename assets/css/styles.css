@@ -656,7 +656,9 @@ a {text-decoration: none;}
     flex: 6;
 }
 
-
+.loc-detalhes {
+    font-size: 30px;
+}
 
 
 
