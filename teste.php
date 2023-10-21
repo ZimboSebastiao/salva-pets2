@@ -87,7 +87,7 @@
 
     <h1 class="pets-h1">
       <?php
-          $apiUrl = "https://salvapets.onrender.com/pets/";  
+          $apiUrl = "http://localhost:8080/pets/";  
           $apiData = file_get_contents($apiUrl);
           $data = json_decode($apiData, true);
       ?> <?=count($data);?> Pets disponíveis para você
@@ -95,7 +95,7 @@
 
     <div class="card-container">
 <?php
-$apiUrl = "https://salvapets.onrender.com/pets/";
+$apiUrl = "http://localhost:8080/pets/";
 
 // Faz a solicitação à API e obtém os dados
 $apiData = file_get_contents($apiUrl);
@@ -113,7 +113,7 @@ if ($apiData) {
             $sexo = $pet['sexo'];
             $imagem = $pet['imagem'];
 
-            $imagemUrl = "https://salvapets.onrender.com" . $imagem;
+            $imagemUrl = "http://localhost:8080/" . $imagem; 
             ?>
 
             <div class="card border card-item" style="width: 25%;">
