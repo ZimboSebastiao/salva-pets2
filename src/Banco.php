@@ -1,5 +1,5 @@
 <?php
-namespace SalvaPets;
+namespace Salvapets;
 use PDO, Exception;
 
 abstract class Banco {
