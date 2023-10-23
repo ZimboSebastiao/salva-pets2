@@ -1,6 +1,7 @@
 <?php 
 namespace Salvapets;
 use PDO, Exception;
+require_once "Banco.php";
 
 class Usuario {
     private int $id;

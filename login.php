@@ -11,7 +11,7 @@ require_once "src/Usuarios.php";
 if( isset($_GET["campos_obrigatorios"]) ){
 	$feedback = "Preencha e-mail e senha!";
 } elseif( isset($_GET['dados_incorretos']) ){
-	$feedback = "Algo de errado não está certo!";
+	$feedback = "E-mail ou senha incorretas!";
 } elseif( isset($_GET['logout']) ){
 	$feedback = "Você saiu do sistema!";
 } elseif( isset($_GET['acesso_proibido']) ){
@@ -55,13 +55,13 @@ if( isset($_GET["campos_obrigatorios"]) ){
                         <?php } ?>
 
                         <div class="form-floating mb-3">
-                            <input class="form-control input-login" id="floatingInput" placeholder="name@example.com" type="email">
+                            <input class="form-control input-login" id="floatingInput" placeholder="name@example.com" type="email" name="email">
                             <label for="floatingInput">E-mail</label>
                         </div>
                         <br>
     
                         <div class="form-floating">
-                            <input  class="form-control input-login" id="floatingPassword" placeholder="Password"  type="password">
+                            <input  class="form-control input-login" id="floatingPassword" placeholder="Password"  type="password" name="senha">
                             <label for="floatingPassword">Senha</label>
                         </div>
     
