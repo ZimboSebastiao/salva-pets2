@@ -107,99 +107,102 @@
 
   
 <!-- CARDS com as Imagens dos PETS -->
-<div class="card-container-detalhe">
+<div class="limitar-detalhe">
 
-  <div class="card-grande">
-  <?php
-    // Verifica se o ID do pet foi passado pela URL
-    if (isset($_GET['id'])) {
-      $petId = $_GET['id'];
+  <div class="card-container-detalhe">
   
-
-    $apiUrl = "http://localhost:8080/pets/" . $petId;  
-    $apiData = file_get_contents($apiUrl);
+    <div class="card-grande">
+    <?php
+      // Verifica se o ID do pet foi passado pela URL
+      if (isset($_GET['id'])) {
+        $petId = $_GET['id'];
+    
   
-    $petData = json_decode($apiData, true);
-
-    if ($petData) {
-        $nome = $petData['nome'];
-        $idade = $petData['idade'];
-        $sobre = $petData['sobre'];
-        $localizacao = $petData['localizacao'];
-        $sexo = $petData['sexo'];
-        $imagem = $petData['imagem'];
-        $raca = $petData['raca'];
-        $imagemUrl = "http://localhost:8080/" . $imagem; ?>
-
-                <?php 
-                $dataNascimento = strtotime($idade);
-                $dataAtual = time();
+      $apiUrl = "http://localhost:8080/pets/" . $petId;  
+      $apiData = file_get_contents($apiUrl);
+    
+      $petData = json_decode($apiData, true);
+  
+      if ($petData) {
+          $nome = $petData['nome'];
+          $idade = $petData['idade'];
+          $sobre = $petData['sobre'];
+          $localizacao = $petData['localizacao'];
+          $sexo = $petData['sexo'];
+          $imagem = $petData['imagem'];
+          $raca = $petData['raca'];
+          $imagemUrl = "http://localhost:8080/" . $imagem; ?>
+  
+                  <?php 
+                  $dataNascimento = strtotime($idade);
+                  $dataAtual = time();
+        
+                  if ($dataNascimento !== false) {
+                    $diferencaSegundos = $dataAtual - $dataNascimento;
+            
+                    $anos = floor($diferencaSegundos / (365 * 24 * 60 * 60)); }
+                    $meses = floor(($diferencaSegundos % (365 * 24 * 60 * 60)) / (30 * 24 * 60 * 60));
+                  ?>
+    
+        <div class="card border card-item-1" style="width: 100%;">
+          <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="422" >
+        </div>
+        <?php } } ?>
+    </div>
+  
+    <!-- CONJUNTO DE CARDS -->
+    <div class="cards-direita">
+  
+      <!-- CARDS Pequenos -->
+      <div class="cards-pequenos">
+        <div class="card border card-item-2" style="width: 90%;">
+              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
+        </div>
       
-                if ($dataNascimento !== false) {
-                  $diferencaSegundos = $dataAtual - $dataNascimento;
-          
-                  $anos = floor($diferencaSegundos / (365 * 24 * 60 * 60)); }
-                  $meses = floor(($diferencaSegundos % (365 * 24 * 60 * 60)) / (30 * 24 * 60 * 60));
-                ?>
-  
-      <div class="card border card-item-1" style="width: 100%;">
-        <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="422" >
-      </div>
-      <?php } } ?>
-  </div>
-
-  <!-- CONJUNTO DE CARDS -->
-  <div class="cards-direita">
-
-    <!-- CARDS Pequenos -->
-    <div class="cards-pequenos">
-      <div class="card border card-item-2" style="width: 90%;">
-            <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
+        <div class="card border card-item-2" style="width: 90%;">
+              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
+        </div>
       </div>
     
-      <div class="card border card-item-2" style="width: 90%;">
-            <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
-      </div>
-    </div>
-  
-    <!-- CARDS Médios -->
-    <div class="cards-medios">
-      <div class="card border card-item-3" style="width: 100%;">
-            <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
-      </div>
-    
-      <div class="card border card-item-3" style="width: 100%;">
-            <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
+      <!-- CARDS Médios -->
+      <div class="cards-medios">
+        <div class="card border card-item-3" style="width: 100%;">
+              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
+        </div>
+      
+        <div class="card border card-item-3" style="width: 100%;">
+              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
+        </div>
       </div>
     </div>
   </div>
+  
+  <!-- DETALHES DO PET -->
+  <h1 class="loc-detalhes">
+    <?=$localizacao?>
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+      <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+      <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+    </svg>
+  </h1>
+  
+  <h2>Detalhes do Pet</h2>
+  
+  <h3 class="icon-race">Raça</h3>
+  <span><?=$raca?></span>
+  
+  <h3>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+    </svg>
+    Idade
+  </h3>
+  <span><?=$anos?> anos e <?=$meses?> meses</span>
+  <hr>
+  
+  <h3>Sobre o Pet</h3>
+  <p><?=$sobre?></p>
 </div>
-
-<!-- DETALHES DO PET -->
-<h1 class="loc-detalhes">
-  <?=$localizacao?>
-  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-  </svg>
-</h1>
-
-<h2>Detalhes do Pet</h2>
-
-<h3 class="icon-race">Raça</h3>
-<span><?=$raca?></span>
-
-<h3>
-  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-  </svg>
-  Idade
-</h3>
-<span><?=$anos?> anos e <?=$meses?> meses</span>
-<hr>
-
-<h3>Sobre o Pet</h3>
-<p><?=$sobre?></p>
 
 
 
