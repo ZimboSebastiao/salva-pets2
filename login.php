@@ -5,17 +5,18 @@ use Salvapets\ControleDeAcesso;
 require_once "src/ControleDeAcesso.php";
 require_once "src/Usuarios.php";
 
+$sessao = new ControleDeAcesso;
+// $sessao->verificaAcesso();
 
-// Programação das mensagens de feedback
 
-if (isset($_GET["campos_obrigatorios"])) {
+if( isset($_GET["campos_obrigatorios"]) ){
 	$feedback = "Preencha e-mail e senha!";
-} elseif(isset($_GET['dados_incorretos'])){
-	$feedback = "Email ou senha incorreta!";
-} elseif(isset($_GET['logout'])){
+} elseif( isset($_GET['dados_incorretos']) ){
+	$feedback = "Algo de errado não está certo!";
+} elseif( isset($_GET['logout']) ){
 	$feedback = "Você saiu do sistema!";
-}elseif(isset($_GET['acesso_proibido'])){
-	$feedback = "Você deve logar primeiro!";
+} elseif( isset($_GET['acesso_proibido']) ){
+	$feedback = "Você deve logar primeiro";
 }
 ?>
 
@@ -52,11 +53,10 @@ if (isset($_GET["campos_obrigatorios"])) {
                         if (isset($feedback)) { ?>
 
                             <p class="my-2 alert alert-warning text-center"><?=$feedback?></p>
-                        <?php
-                        }
-				    ?>
+                        <?php } ?>
+
                         <div class="form-floating mb-3">
-                            <input class="form-control input-login" id="floatingInput" placeholder="name@example.com" required type="email">
+                            <input class="form-control input-login" id="floatingInput" placeholder="name@example.com" type="email">
                             <label for="floatingInput">E-mail</label>
                         </div>
                         <br>
@@ -76,34 +76,7 @@ if (isset($_GET["campos_obrigatorios"])) {
                                     Esqueci a senha</a>
                                 </div>
                             
-                            <div class="hero">
-                                
-                                <!-- Modal -->
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Recupere sua conta</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Insira seu email para recuperar a sua senha.
-    
-                                        <!-- <form action="" method="post">
-                                            <div class="form-floating mb-3">
-                                                <input class="form-control input-login" id="floatingInput" placeholder="name@example.com" required type="email">
-                                                <label for="floatingInput">Email</label>
-                                            </div>
-                                        </form> -->
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                        <button type="button" class="btn btn-primary enviar">Enviar</button>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
+                        
                         </div>
                 
     
@@ -114,52 +87,41 @@ if (isset($_GET["campos_obrigatorios"])) {
                             <p class="tag-style">Não tem uma conta? <a href="cadastro.php">Crie uma conta de graça</a></p>
                         </div>
                     </form>
-
                     <?php
+                        if(isset($_POST['entrar'])){
+                            
+                            if( empty($_POST['email']) || empty($_POST['senha']) ){
+                                header("location:login.php?campos_obrigatorios");
+                            } else {
+                                $usuario = new Usuario;
+                                $usuario->setEmail($_POST['email']);
+                                $dados = $usuario->buscar();
 
-                    if(isset($_POST['entrar'])){
-
-                        if(empty($_POST['email']) || empty($_POST['senha'])){
-                            header("location:login.php?campos_obrigatorios");
-                        } else {
-                        
-                            $usuario = new Usuario;
-                            $usuario->setEmail($_POST['email']);
-
-                            $dados = $usuario->buscar();
-                            if (!$dados) { // ou if($dados === false)
-                                header("location:login.php?dados_incorretos");
-                            }  else {
-                                
-
-                                    if(password_verify($_POST['senha'], $dados['senha'])){
+                                if(!$dados){ 
+                                    header("location:login.php?dados_incorretos");
+                                } else {
+                                    if(password_verify($_POST['senha'], $dados['senha'])){	
                                         $sessao = new ControleDeAcesso;
                                         $sessao->login($dados['id'], $dados['nome'], $dados['tipo']);
-                                        header("location:home.php");
+                                        header("location:admin/index.php");
                                     } else {
                                         header("location:login.php?dados_incorretos");
-                                        // - não está? continuará em login.php
-                                        
                                     }
+                                }
                             }
                         }
-
-
-
-
-                    }
-
                     ?>
+
                 </section> 
 
-                
             </div>
-
+            
         </div>
-
+        
         <div id="destaque"></div>
         
-</div>
+    </div>
+    
 
 </main>
 
