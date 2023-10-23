@@ -5,8 +5,7 @@ use Salvapets\ControleDeAcesso;
 require_once "src/ControleDeAcesso.php";
 require_once "src/Usuarios.php";
 
-$sessao = new ControleDeAcesso;
-// $sessao->verificaAcesso();
+
 
 
 if( isset($_GET["campos_obrigatorios"]) ){
@@ -62,7 +61,7 @@ if( isset($_GET["campos_obrigatorios"]) ){
                         <br>
     
                         <div class="form-floating">
-                            <input  class="form-control input-login" id="floatingPassword" placeholder="Password" required type="password">
+                            <input  class="form-control input-login" id="floatingPassword" placeholder="Password"  type="password">
                             <label for="floatingPassword">Senha</label>
                         </div>
     
@@ -102,8 +101,8 @@ if( isset($_GET["campos_obrigatorios"]) ){
                                 } else {
                                     if(password_verify($_POST['senha'], $dados['senha'])){	
                                         $sessao = new ControleDeAcesso;
-                                        $sessao->login($dados['id'], $dados['nome'], $dados['tipo']);
-                                        header("location:admin/index.php");
+                                        $sessao->login($dados['id'], $dados['nome']);
+                                        header("location:home.php");
                                     } else {
                                         header("location:login.php?dados_incorretos");
                                     }
