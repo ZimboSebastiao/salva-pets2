@@ -15,15 +15,18 @@
   <div class="main-wrapper">
     <div class="sl-main-container">
       <div class="sl-header-wrapper">
-        <h3>Alguns pets</h3>
-        <p>Confira os principais dados dos pets para ver qual o nível de compátibilidade entre vocês !</p>
-        <!-- If we need navigation buttons -->
+        
+      <h3>Novos pets</h3>
+        
+      <p>Confira os principais dados dos pets para ver qual o nível de compátibilidade entre vocês !</p>
+      
+      <!-- Botões de navegação -->
         <div class="sl-nav">
           <div class="swiper-button-next">
             <svg id="nextBtn" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65">
               <style>
                 #nextBtn {
-                  fill: #04b7ac;
+                  fill: #ffa500;
                 }
               </style>
               <path d="M32.5 0A32.5 32.5 0 1 0 65 32.5 32.5 32.5 0 0 0 32.5 0zm0 62A29.5 29.5 0 1 1 62 32.5 29.53 29.53 0 0 1 32.5 62zm-5.22-40.28L38.06 32.5 27.28 43.28l2.12 2.12 12.9-12.9-12.9-12.9z" />
@@ -33,7 +36,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" id="prevBtn" data-name="Layer 1" viewBox="0 0 65 65">
               <style>
                 #prevBtn {
-                  fill: #04b7ac;
+                  fill: #ffa500;
                 }
               </style>
               <path d="M0 32.5A32.5 32.5 0 1 0 32.5 0 32.5 32.5 0 0 0 0 32.5zm3 0A29.5 29.5 0 1 1 32.5 62 29.53 29.53 0 0 1 3 32.5zm32.6-12.9L22.7 32.5l12.9 12.9 2.12-2.12L26.94 32.5l10.78-10.78z" />
@@ -47,20 +50,32 @@
         <div class="swiper-container">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
-            <!-- Slides -->
-
+            
+          
+          
+            <!-- SLIDE 01 -->
             <div class="swiper-slide sl--slide">
               <div class="slide-cover"></div>
+
               <div class="sl-card-wrapper">
                 <div class="sl-gradient"></div>
                 <div class="sl-img-1 sl-bkg-img"></div>
                 <div class="sl--content-wrapper sl--content-wrapper-inactive">
                   <div class="sl--content-container sl--card-hide">
-                    <p class="sl--sub-text">Fêmea</p>
-                    <h2>Wonder Woman</h2>
-                    <p class="sl--card-content">Diana Prince is the most recognizable female superhero in the world. Her debut film Wonder Woman is the highest grossing superhero origin film of all time. Created in 1941 and beloved for over 76 years, Diana Prince is a strong, compassionate
-                      role model for men and women everywhere.</p>
-                    <div class="sl--link">LINK</div>
+                    <p class="sl--sub-text">
+
+                      <!-- Gênero do pet -->
+                      <img src="icones/001-sexo-masculino.png" alt="icone genero" width="20px"> Macho
+                    </p>
+
+                    <!-- Nome do pet -->
+                    <h2>Bolinha</h2>
+
+                    <!-- Descrição do bicho -->
+                    <p class="sl--card-content">Bolinha é um adorável cão macho, com um pelo macio e um olhar cheio de alegria. Ele é um vira-lata resgatado, com uma personalidade única que conquista o coração de todos. Ele adora brincar de esconde-esconde, de correr pelo jardim e perseguir borboletas é outra paixão, nunca perde a oportunidade de caçar insetos em um dia de sol. Seu prato preferido é uma ração de alta qualidade, mas ele nunca recusaria um pedaço suculento de carne ou um petisco saboroso.</p>
+                    
+                    <!-- idade -->
+                    <p>Idade: 1 ano e 3 mêses.</p>
                   </div>
 
                   <!-- Card Nav GRP -->
@@ -77,6 +92,7 @@
               </div>
             </div>
 
+            <!-- SLIDE 02 -->
             <div class="swiper-slide">
               <div class="slide-cover"></div>
               <div class="sl-card-wrapper">
@@ -84,10 +100,16 @@
                 <div class="sl-img-2 sl-bkg-img"></div>
                 <div class="sl--content-wrapper sl--content-wrapper-inactive">
                   <div class="sl--content-container sl--card-hide">
-                    <p class="sl--sub-text">Powerful Women</p>
-                    <h2>General Leia Organa</h2>
-                    <p class="sl--card-content">Leia is the most powerful female figurehead in the Star Wars franchise. This year she will take her final bow in Star Wars: The Last Jedi, as fans celebrate actress Carrie Fisher’s legacy one last time.</p>
-                    <div class="sl--link">LINK</div>
+
+                    <!-- Gênero do pet -->
+                    <p class="sl--sub-text"><img src="icones/002-fmea.png" alt="icone genero" width="20px"> Femêa</p>
+
+                    <!-- Nome do pet -->
+                    <h2>General Leia</h2>
+
+                    <!-- Descrição do bicho -->
+                    <p class="sl--card-content">Leia é uma gata graciosa e elegante, com um pelagem longa e macia. Ela é uma verdadeira dama, sua personalidade tranquila e independente cativa a todos que a conhecem. Leia adora brincar de caçar com brinquedos de penas e sinos. Ela é ágil e adora saltar para pegar suas presas de brinquedo, mostrando suas habilidades de caçadora. Quanto à comida, Leia tem um paladar exigente. Ela prefere uma ração de peixe fresco e ocasionalmente, se seus donos permitirem, ela saboreia pedaços de atum fresco ou frango.</p>
+                    <p>Idade: 5 anos </p>
                   </div>
 
                   <!-- Card Nav GRP -->
@@ -104,6 +126,7 @@
               </div>
             </div>
 
+            <!-- SLIDE 03-->
             <div class="swiper-slide">
               <div class="slide-cover"></div>
               <div class="sl-card-wrapper">
@@ -112,10 +135,20 @@
 
                 <div class="sl--content-wrapper sl--content-wrapper-inactive">
                   <div class="sl--content-container sl--card-hide">
-                    <p class="sl--sub-text">Powerful Women</p>
+
+                    <!-- Gênero do pet -->
+                    <p class="sl--sub-text">
+                    <p class="sl--sub-text"><img src="icones/002-fmea.png" alt="icone genero" width="20px"> Femêa</p>
+
+                    <!-- Nome do pet -->
                     <h2>Lara Croft</h2>
-                    <p class="sl--card-content">This powerhouse of strength, smarts, and beauty is not to be trifled with. After the recent reboot of her 20-year-old video game franchise Tomb Raider, Lara is headed to the big screen next year for even greater adventures.</p>
-                    <div class="sl--link">LINK</div>
+
+                    <!-- Descrição do bicho -->
+                    <p class="sl--card-content">Lara é uma adorável cadela de olhos expressivos que fazem dela uma verdadeira encantadora de corações. Ela é um exemplo de doçura e lealdade, e seu entusiasmo contagiante traz muita alegria a todos ao seu redor. Lara é uma amante de brincadeiras ao ar livre. Ela adora correr e saltar, especialmente quando está perseguindo uma bola. Além disso, Lara também gosta de brincar de pega-pega e adora correr atrás de pássaros e borboletas no jardim. Lara é uma cadela com um apetite saudável. Sua ração de alta qualidade é a base de sua alimentação, mas ela fica extremamente feliz quando há adições como pedaços de frango cozido ou um biscoito canino especial. </p>
+
+                    <p>Idade: 6 anos</p>
+                    
+
                   </div>
 
                   <!-- Card Nav GRP -->
@@ -132,7 +165,8 @@
                 </div>
               </div>
             </div>
-            <!-- Card slide 01 Nicolas -->
+
+            <!-- SLIDE 04 -->
             <div class="swiper-slide">
               <div class="slide-cover"></div>
               <div class="sl-card-wrapper">
@@ -141,10 +175,18 @@
 
                 <div class="sl--content-wrapper sl--content-wrapper-inactive">
                   <div class="sl--content-container sl--card-hide">
-                    <p class="sl--sub-text">Powerful Women</p>
-                    <h2>Lara Croft</h2>
-                    <p class="sl--card-content">This powerhouse of strength, smarts, and beauty is not to be trifled with. After the recent reboot of her 20-year-old video game franchise Tomb Raider, Lara is headed to the big screen next year for even greater adventures.</p>
-                    <div class="sl--link">LINK</div>
+
+                    <!-- Gênero do pet -->
+                    <p class="sl--sub-text"><img src="icones/001-sexo-masculino.png" alt="icone genero" width="20px"> Macho </p>
+
+                    <!-- Nome do pet -->
+                    <h2>Oliver</h2>
+
+                    <!-- Descrição do bicho -->
+                    <p class="sl--card-content">Oliver é um gato de pelo sedoso e olhos penetrantes. Ele tem uma elegância natural e uma personalidade misteriosa, mas ele também possui um lado brincalhão.
+                    Oliver adora brincar com bolinhas de pelo e, ocasionalmente, gosta de caçar pequenos brinquedos de pelúcia. Ele é um exímio caçador, pulando e se esgueirando como um verdadeiro predador e adora morar no sofá. Oliver tem um paladar requintado. Ele prefere uma ração de alta qualidade, mas não resiste a um pedaço suculento de peixe, como salmão ou um belo ovo cozinhado.
+                    </p>
+                    <p>Idade: 3 anos</p>
                   </div>
 
                   <!-- Card Nav GRP -->
@@ -163,7 +205,7 @@
             </div>
             <!-- END: Card Nav GRP -->
 
-            <!-- Card slide 02 Nicolas -->
+            <!-- SLIDE 05 -->
             <div class="swiper-slide">
               <div class="slide-cover"></div>
               <div class="sl-card-wrapper">
@@ -172,10 +214,17 @@
 
                 <div class="sl--content-wrapper sl--content-wrapper-inactive">
                   <div class="sl--content-container sl--card-hide">
-                    <p class="sl--sub-text">Powerful Women</p>
-                    <h2>Lara Croft</h2>
-                    <p class="sl--card-content">This powerhouse of strength, smarts, and beauty is not to be trifled with. After the recent reboot of her 20-year-old video game franchise Tomb Raider, Lara is headed to the big screen next year for even greater adventures.</p>
-                    <div class="sl--link">LINK</div>
+
+                    <!-- Gênero do pet -->
+                    <p class="sl--sub-text"><img src="icones/001-sexo-masculino.png" alt="icone genero" width="20px"> Macho </p>
+
+                    <!-- Nome do pet -->
+                    <h2>Max</h2>
+
+                    <!-- Descrição do bicho -->
+                    <p class="sl--card-content">Max é um cão de raça Golden Retriever, com um pelo dourado e é conhecido por sua natureza amigável e entusiasmo contagioso. Max é o companheiro perfeito para aventuras ao ar livre. Max adora brincar de pega-pega e corre que nem um raio no jardim, Além de puxar grandes galhos quando vê um. Max tem um apetite insaciável. Ele adora sua ração de alta qualidade, mas fica especialmente feliz quando recebe pedaços de carne como um agrado. Max é um grande fã de biscoitos caninos e guloseimas, e nunca recusa um.</p>
+                    
+                    <p>Idade: 4 anos e 2 meses</p>
                   </div>
 
                   <!-- Card Nav GRP -->
@@ -194,7 +243,7 @@
             </div>
             <!-- END: Card Nav GRP -->
 
-            <!-- Card slide 03 Nicolas -->
+            <!-- SLIDE 06 -->
             <div class="swiper-slide">
               <div class="slide-cover"></div>
               <div class="sl-card-wrapper">
@@ -203,10 +252,18 @@
 
                 <div class="sl--content-wrapper sl--content-wrapper-inactive">
                   <div class="sl--content-container sl--card-hide">
-                    <p class="sl--sub-text">Powerful Women</p>
-                    <h2>Lara Croft</h2>
-                    <p class="sl--card-content">This powerhouse of strength, smarts, and beauty is not to be trifled with. After the recent reboot of her 20-year-old video game franchise Tomb Raider, Lara is headed to the big screen next year for even greater adventures.</p>
-                    <div class="sl--link">LINK</div>
+                    <p class="sl--sub-text">
+
+                      <!-- Gênero do pet -->
+                    <p class="sl--sub-text"><img src="icones/002-fmea.png" alt="icone genero" width="20px"> Femêa</p>
+
+                    <!-- Nome do pet -->
+                    <h2>Luna</h2>
+
+                    <!-- Descrição do bicho -->
+                    <p class="sl--card-content">Luna, é uma gata de pelo curto com um espírito aventureiro. Ela é uma exploradora nata, sempre atenta e pronta para se aventurar em qualquer lugar. Luna é uma aficionada por brincadeiras com bolinhas de brinquedo e fios, e ela pode passar horas perseguindo esses objetos pela casa. Ela também adora brincar de esconde-esconde e pular de lugares altos para surpreender seus donos. Quando se trata de comida, Luna é uma gata de gostos simples. Ela aprecia uma ração de alta qualidade, mas o que realmente a faz ronronar de alegria é um pouco de patê de frango.</p>
+                    
+                    <p>Idade: 2 anos</p>
                   </div>
 
                   <!-- Card Nav GRP -->
