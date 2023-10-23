@@ -9,6 +9,7 @@
   <!-- ======== CSS Bootstrap ======== -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -94,7 +95,7 @@
       ?> <?=count($data);?> Pets disponíveis para você
     </h1>
 
-    <div class="card-container">
+    <div class="card-container gap-5 shadow border">
     <?php
       $apiUrl = "http://localhost:8080/pets/";  
     
@@ -117,17 +118,13 @@
                   
                   $imagemUrl = "http://localhost:8080/" . $imagem; ?>
     
-        <div class="card border card-item" style="width: 25%;">
-          <a href="#"><img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
+        <div class="card border card-item shadow-lg rounded-5">
+          <a href="#"><img class="rounded-top-4 w-100" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
           <div class="card-body">
             <div class="favoritar-nome">
               <h5 class="card-title nome-pets"><?=$nome?></h5>
-              <p>
-              <a href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-                </svg>
-              </a> 
+              <p class="favorito">
+                <a class="bi bi-heart" href="#"></a>
               </p>
             </div>
             <p class="card-text loc-pets"><?=$localizacao?></p>

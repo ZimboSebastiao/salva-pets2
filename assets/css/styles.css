@@ -351,6 +351,7 @@ nav  a:hover, nav a:focus{
 }
 
 
+
 /*--------------------------------------------------------------
 # Estilização Página de Processo de adoção
 <<<<<<< Updated upstream
@@ -585,10 +586,39 @@ a {text-decoration: none;}
     flex-wrap: wrap;
 }
 
+.favorito{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+} 
+
+.favorito a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f0f0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: orange;
+}
+
+.favorito a:hover{
+    background-color: #e96d3f;
+    color: white;
+}
+
+
+
+
 .card-item {
     flex-basis: calc(25% - 20px); /* Largura desejada para cada card */
-    margin-right: 20px; /* Espaço entre os cards (opcional) */
-    margin-bottom: 25px;
+    
+   
     background-color: #fff8f6;
   }
 
