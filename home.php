@@ -26,11 +26,19 @@
         </a></h2>
           <ul class="menu menu-color">
             </li>
-            <li><a href="#">Cachorros</a></li>
-            <li><a href="#">Gatos</a></li>
+                <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Nossos Pets
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Cachorros</a></li>
+                <li><a class="dropdown-item" href="#">Gatos</a></li>
+              </ul>
+            </li>
             <li><a href="#">Quem Somos</a></li>
             <li><a href="#">Ajuda</a></li>
             <li><a href="#">Contato</a></li>
+
             <li><a  href="login.php" class="btn btn-primary w-50 m-auto"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
           </ul>
     </nav>

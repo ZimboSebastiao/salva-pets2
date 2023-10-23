@@ -17,10 +17,9 @@ final class ControleDeAcesso {
         }
     }
 
-    public function verificaAcessoAdmin():void {
-        if( $_SESSION["tipo"] !== "admin" ){
-            header("location:nao-autorizado.php");
-            die();
+    public function verificaAcessoUser():void {
+        if (isset($_SESSION['nome'])){
+            
         } 
     }
 
