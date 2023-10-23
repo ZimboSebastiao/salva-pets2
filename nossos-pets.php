@@ -1,3 +1,8 @@
+<?php
+use SalvaPets\Utilitarios;
+require_once "vendor/autoload.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
