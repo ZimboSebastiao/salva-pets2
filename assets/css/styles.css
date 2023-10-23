@@ -1,7 +1,7 @@
 * {box-sizing: border-box;}   
 img {max-width: 100%;}
 html { font-size: 14px;}
-a { color: inherit;} 
+/* a { color: inherit;}  */
 
 /*--------------------------------------------------------------
 # Estilização Página de Login
@@ -350,6 +350,16 @@ nav  a:hover, nav a:focus{
     padding-left:50px;
 }
 
+.espacamento-icon {
+    padding-left: 10px;
+    /* background-color: #070b35; */
+}
+.espacamento-user {
+    padding-left: 10px;
+    /* padding-top: -1px; */
+    /* border-bottom: 100; */
+    /* background-color: #070b35; */
+}
 
 /*--------------------------------------------------------------
 # Estilização Página de Processo de adoção
@@ -567,6 +577,103 @@ a {text-decoration: none;}
     padding-top: 40px; 
     padding-bottom: 40px;
 }
+
+
+/*--------------------------------------------------------------
+# Estilização Página de Adoção - Nossos Pets
+--------------------------------------------------------------*/
+
+.top-pets {
+    padding-top: 55px;
+}
+
+.pets-h1 {font-size: 36px;}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-item {
+    flex-basis: calc(25% - 20px); /* Largura desejada para cada card */
+    margin-right: 20px; /* Espaço entre os cards (opcional) */
+    margin-bottom: 25px;
+    background-color: #fff8f6;
+  }
+
+.nome-pets {
+    font-size: 27px;
+    font-weight: bold;
+    color: #0a1375;
+}
+
+.loc-pets {
+    font-size: 22px;
+    color: #6771c4;
+}
+
+.idade-sexo {
+    display: flex;
+    justify-content: space-between;
+    color: #545db3;
+    font-size: 20px;
+}
+
+.favoritar-nome {
+    display: flex;
+    justify-content: space-between;
+    color: #db4712;
+}
+
+.limitar-tela {
+    width: 90vw;
+    margin: auto;
+}
+
+
+/*--------------------------------------------------------------
+# Estilização Página de Adoção - Detalhes Pets
+--------------------------------------------------------------*/
+
+.card-container-detalhe {
+    display: flex;
+}
+.card-grande {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.cards-direita {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.card-item-2 {
+    margin-bottom: 20px ; 
+}
+
+.card-item-3 {
+    margin-bottom: 20px ; 
+}
+
+.cards-pequenos {
+    flex: 4;
+}
+
+.cards-medios {
+    flex: 6;
+}
+
+.loc-detalhes {
+    font-size: 30px;
+}
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # Estilização do Footer
