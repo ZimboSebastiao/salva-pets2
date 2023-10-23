@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -94,95 +95,86 @@
     </h1>
 
     <div class="card-container">
-<?php
-$apiUrl = "http://localhost:8080/pets/";
-
-// Faz a solicitação à API e obtém os dados
-$apiData = file_get_contents($apiUrl);
-
-if ($apiData) {
-    // Converte a resposta JSON em um array PHP
-    $data = json_decode($apiData, true);
-
-    if ($data) {
-        foreach ($data as $pet) {
-            $nome = $pet['nome'];
-            $idade = $pet['idade'];
-            $sobre = $pet['sobre'];
-            $localizacao = $pet['localizacao'];
-            $sexo = $pet['sexo'];
-            $imagem = $pet['imagem'];
-
-            $imagemUrl = "http://localhost:8080/" . $imagem; 
-            ?>
-
-            <div class="card border card-item" style="width: 25%;">
-                <a href="#"><img src='<?= $imagemUrl ?>' class="card-img-top" alt='<?= $nome ?>' height="290"></a>
-                <div class="card-body">
-                    <div class="favoritar-nome">
-                        <h5 class="card-title nome-pets"><?= $nome ?></h5>
-                        <p>
-                            <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
-                                     class="bi bi-heart" viewBox="0 0 16 16">
-                                    <path
-                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.920 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-                                </svg>
-                            </a>
-                        </p>
-                    </div>
-                    <p class="card-text loc-pets"><?= $localizacao ?></p>
-                    <div class="idade-sexo">
-                        <p class="card-text sexo-pets">
-                            <?php
-                            if ($sexo === "Fêmea") { ?>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
-                                     class="bi bi-gender-female" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                          d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z"/>
-                                </svg>
-                            <?php
-                            } else { ?>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
-                                     class="bi bi-gender-male" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                          d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
-                                </svg>
-                            <?php
-                            }
-                            ?>
-                            <?= $sexo ?>
-                        </p>
-                        <?php
-                        $dataNascimento = strtotime($idade);
-                        $dataAtual = time();
-
-                        if ($dataNascimento !== false) {
-                            $diferencaSegundos = $dataAtual - $dataNascimento;
-                            $anos = floor($diferencaSegundos / (365 * 24 * 60 * 60));
-                            $meses = floor(($diferencaSegundos % (365 * 24 * 60 * 60)) / (30 * 24 * 60 * 60));
-                            ?>
-                            <p class="card-text"><?= $anos ?> anos e <?= $meses ?> meses</p>
-                        <?php
-                        }
-                        ?>
-                    </div>
-                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                </div>
+    <?php
+      $apiUrl = "http://localhost:8080/pets/";  
+    
+      // Faz a solicitação à API e obtém os dados
+      $apiData = file_get_contents($apiUrl);
+    
+      if ($apiData) {
+          // Converte a resposta JSON em um array PHP
+          $data = json_decode($apiData, true);
+    
+          if ($data) {
+              foreach ($data as $pet) {
+                  $nome = $pet['nome'];
+                  $idade = $pet['idade'];
+                  $sobre = $pet['sobre'];
+                  $localizacao = $pet['localizacao'];
+                  $sexo = $pet['sexo'];
+                  $imagem = $pet['imagem'];
+    
+                  
+                  $imagemUrl = "http://localhost:8080/" . $imagem; ?>
+    
+        <div class="card border card-item" style="width: 25%;">
+          <a href="#"><img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
+          <div class="card-body">
+            <div class="favoritar-nome">
+              <h5 class="card-title nome-pets"><?=$nome?></h5>
+              <p>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                </svg>
+              </a> 
+              </p>
             </div>
-
-            <?php
+            <p class="card-text loc-pets"><?=$localizacao?></p>
+            <div class="idade-sexo">
+              <p class="card-text sexo-pets">
+              <?php 
+                if ($sexo === "Fêmea") { ?>
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z"/>
+                </svg>
+                <?php 
+                } else {?>
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+              </svg>
+              <?php
+                } 
+              ?>
+              <?=$sexo?></p>
+              <?php 
+                $dataNascimento = strtotime($idade);
+                $dataAtual = time();
+      
+                if ($dataNascimento !== false) {
+                  $diferencaSegundos = $dataAtual - $dataNascimento;
+          
+                  $anos = floor($diferencaSegundos / (365 * 24 * 60 * 60)); }
+                  $meses = floor(($diferencaSegundos % (365 * 24 * 60 * 60)) / (30 * 24 * 60 * 60));
+                ?>
+              <p class="card-text"><?=$anos?> anos e <?=$meses?> meses</p>
+            </div>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+          </div>
+        </div>
+    
+    <?php 
+            }
+        } else {
+            echo "<p>Ocorreu um erro ao analisar os dados da API.</p>";
         }
     } else {
-        echo "<p>Ocorreu um erro ao analisar os dados da API.</p>";
+        echo "<p>Ocorreu um erro ao buscar os dados da API.</p>";
     }
-} else {
-    echo "<p>Ocorreu um erro ao buscar os dados da API.</p>";
-}
-?>
-</div>
-
+    ?>
+    </div>
+  </div>
 
     
 

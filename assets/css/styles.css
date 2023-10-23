@@ -1,15 +1,18 @@
 * {box-sizing: border-box;}   
 img {max-width: 100%;}
 html { font-size: 14px;}
+/* a { color: inherit;}  */
 
 /*--------------------------------------------------------------
 # Estilização Página de Login
 --------------------------------------------------------------*/
-
-.input-group input{background-color: #fff;}
+/* .container {
+    width: 65%;
+    margin-right: auto;
+    margin-left: auto;
+} */
 
 .img-responsivo {
-    /* background-color: chartreuse; */
     display: flex;
     justify-content: space-around;
     gap: 50px;
@@ -20,15 +23,6 @@ html { font-size: 14px;}
 }
 
 a {text-decoration: none;}
-
-.row {
-    --bs-gutter-x: 1.6rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: calc(var(--bs-gutter-x) * -3);
-    margin-left: calc(var(--bs-gutter-x) * -3);
-}
 
 #destaque {
     width: 50%;
@@ -45,7 +39,6 @@ a {text-decoration: none;}
     background: url("../../icones/pet1.png") top center;
     background-size: cover;
     margin: 10px;
-    
 }
 
 h1 {
@@ -65,22 +58,23 @@ h1 {
     padding: 10px;
 }
 
+.input-login {
+    width: 395px;
+}
+
 .input {
     width: 395px;
 }
 
 .center-form {
     position: relative;
-    /* background-color: #070b35; */
     top: 100px;
 }
 
-
-
-
 .estilo-cadeado {
+    width: 96%;
     display: flex;
-    justify-content: center;
+    justify-content: right;
 }
 
 .hero {
@@ -88,10 +82,9 @@ h1 {
     bottom: -9px;
 }
 
-
 .botao {
     width: 395px;
-    height: 61px;
+    height: 54px;
     background-color: #FF7F50;
     border-color: #e96d3f;
     cursor: pointer;
@@ -139,14 +132,44 @@ h1 {
     right: -5px;
 }
 
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
+
+    #destaque {
+        display: none;
+    }
+
+    .input-login {
+        width: 100%;
+    }
+
+    .center-form {
+        position: relative;
+        top: 6%;
+    }
+
+}
+
 
 /*--------------------------------------------------------------
 # Estilização Página de Cadastro
 --------------------------------------------------------------*/
 
-#teste {
+.img-responsivo-cadastro {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+}
+
+.center-form-cadastro {
+    position: relative;
+    top: 30px;
+}
+
+#destaque-cadastro {
     width: 50%;
-    height: 125vh;
+    height: 120vh;
     background: url(../../images/destaque-cadastro.jpg);
     background-size: cover;
     border-radius: 0;
@@ -172,28 +195,161 @@ h1 {
     border-color: #FF7F50;
 }
 
-@media screen and (max-width: 767px) {
 
-    .estilo-l{
-     right: -3px;
-    }}
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
 
-    @media screen and (max-width: 700px) {
-        .estilo-l{
-            right: -20px;
-            padding: 3px;
-        }
-    }
-@media screen and (max-width: 666px) {
-    #teste{
+    #destaque-cadastro {
         display: none;
     }
-    
-    #pata{
-        height: 3.5vh;
-        margin: 3px;
+
+    .input-cadastro {
+        background-color: #1E266D;
+        width: 100%;
     }
+
+    .img-responsivo-cadastro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .center-form-cadastro {
+        position: relative;
+        top: 6%;
+    }
+
+    .estilo-p-cadastro {
+        color: #C3C7E5;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .estilo-l {
+        display: flex;
+        justify-content: center;
+        font-size: 11px;
+        color: #C3C7E5;
+        position: relative;
+        right: -1px;
+        text-align: center;
+    }
+
+    .tag-style-c {
+        color: #C3C7E5;
+        position: relative;
+        padding: 6px;
+        right: -58px;
+        width: 60%;
+    }
+ 
 }
+
+
+/*--------------------------------------------------------------
+# Estilização Página HOME
+--------------------------------------------------------------*/
+
+body {
+    background-color: white;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {flex: 1;}
+
+.limitador {
+    width: 97vw;
+    margin: auto;
+}
+
+header {
+    z-index: 100;
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+nav h2 a {
+    color: black;
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: inline-block;
+}
+
+
+nav  a:hover, nav a:focus{
+    background-color: #ffe9e0;
+}
+
+.menu {
+    list-style: none;
+    display: none;
+}
+
+.menu a {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: #1E266D;
+}
+
+.menu.aberto{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+@media screen and (min-width: 530px) {
+    nav h2 {display: none;}
+    html { font-size: 0.9rem;}
+    .menu {
+        display: flex;
+        text-transform: uppercase; 
+        justify-content: space-between;
+        align-items: center;   
+    }
+    
+    
+    nav {width: 70%;}
+
+    .menu li { width: 100%;}
+}
+
+
+.icon-city {
+    background: url(../../icones/pata.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-house {
+    background: url(../../icones/pet-house4.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-animal {
+    background: url(../../icones/bola-de-cachorro.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-race {
+    background: url(../../icones/bicho-de-estimacao.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
 
 /*--------------------------------------------------------------
 # Estilização Página de Processo de adoção
@@ -283,96 +439,13 @@ h1 {
 a {text-decoration: none;}
 
 
-
-body {
-    background-color: white;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-main {flex: 1;}
-
-.limitador {
-    width: 97vw;
-    margin: auto;
-}
-
-header {
-    z-index: 100;
-    position: sticky;
-    top: 0;
-    background-color: rgb(255, 255, 255);
-}
-
-header div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-}
-
-nav h2 a {
-    color: black;
-    font-size: 1.2rem;
-    padding: 1rem;
-    display: inline-block;
-}
-
-
-
-/* nav  a:hover, nav a:focus{
-    background-color: #ffe9e0;
-} */
-
-.menu {
-    list-style: none;
-    display: none;
-}
-
-.menu a {
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-}
-
-.menu.aberto{
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
-@media screen and (min-width: 530px) {
-    nav h2 {display: none;}
-    html { font-size: 0.9rem;}
-    .menu {
-        display: flex;
-        text-transform: uppercase; 
-        justify-content: space-between;
-        align-items: center;   
-    }
-    
-    
-    nav {width: 70%;}
-
-    .menu li { width: 100%;}
-}
-
-
-
-
 .dividir {
     display: flex;
     justify-content: space-between;
 }
 
-.container-2 {
-    width: 90%;
+.container-adocao {
+    width: 95%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -388,11 +461,12 @@ nav h2 a {
 
 .Beetle-letters {color: #C3C7E5;}
 .negrito {font-weight: bold;}
-.decrease-letters {font-size: 10px;}
+.decrease-letters {font-size: 14px;}
 
 .decrease {
     font-weight: bold;
     color: #070b35;
+    font-size: 14px;
 }
 
 .divide {
@@ -400,37 +474,196 @@ nav h2 a {
     justify-content: space-between; 
 }
 
-.entry {width: 255px;}
+.tamanho-form {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.input-adocao {
+    width: 455px;
+}
+
+.inputs-adocao {
+    width: 225px;
+}
+.entry {width: 459px;}
 
 .form-floating {
     margin-right: 6px; /* Adicione a margem desejada entre os elementos */
 }
 
-.icon-city {
-    background: url(../../icones/pata.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
 
-.icon-house {
-    background: url(../../icones/pet-house4.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
-
-.icon-animal {
-    background: url(../../icones/bola-de-cachorro.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
-
-.icon-race {
-    background: url(../../icones/bicho-de-estimacao.png) no-repeat scroll 7px 7px ;
-    padding-left:50px;
-}
 
 .personalizar {
     text-align: center;
     padding-top: 20px;
     padding: 9px;
 }
+
+
+/*--------------------------------------------------------------
+# Estilização Página de Adoção - Te conhecendo
+--------------------------------------------------------------*/
+
+.progress-number {text-align: right;}
+
+.divide-te-conhecendo {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center; 
+    padding: 18px;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.check-botao {
+    width: 190px;
+    height: 55px;
+    background-color: #ffffff;
+    border-color: #C3C7E5;
+    color: #babdd4;
+    font-size: 22px;
+    cursor: pointer;
+
+}
+
+.posicionar-span {
+    width: 100%;
+    font-size: 16px;
+    color: #0a1375;
+    display: flex;
+    font-weight: bold;
+    justify-content: start;
+}
+
+.check-textar {
+    color: #babdd4 ;
+}
+
+
+
+/*--------------------------------------------------------------
+# Estilização Página de Adoção - Adotou
+--------------------------------------------------------------*/
+
+
+.adotou-h1 {font-size: 36px;}
+
+.adotou-p {
+    font-size: 20px;
+    color: #C3C7E5;
+  }
+
+.adotou-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.espaco-top {padding-top: 70px;}
+.adotou-botao {
+    padding-top: 40px; 
+    padding-bottom: 40px;
+}
+
+
+/*--------------------------------------------------------------
+# Estilização Página de Adoção - Nossos Pets
+--------------------------------------------------------------*/
+
+.top-pets {
+    padding-top: 55px;
+}
+
+.pets-h1 {font-size: 36px;}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-item {
+    flex-basis: calc(25% - 20px); /* Largura desejada para cada card */
+    margin-right: 20px; /* Espaço entre os cards (opcional) */
+    margin-bottom: 25px;
+    background-color: #fff8f6;
+  }
+
+.nome-pets {
+    font-size: 27px;
+    font-weight: bold;
+    color: #0a1375;
+}
+
+.loc-pets {
+    font-size: 22px;
+    color: #6771c4;
+}
+
+.idade-sexo {
+    display: flex;
+    justify-content: space-between;
+    color: #545db3;
+    font-size: 20px;
+}
+
+.favoritar-nome {
+    display: flex;
+    justify-content: space-between;
+    color: #db4712;
+}
+
+.limitar-tela {
+    width: 90vw;
+    margin: auto;
+}
+
+
+/*--------------------------------------------------------------
+# Estilização Página de Adoção - Detalhes Pets
+--------------------------------------------------------------*/
+
+.card-container-detalhe {
+    display: flex;
+}
+.card-grande {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.cards-direita {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.card-item-2 {
+    margin-bottom: 20px ; 
+}
+
+.card-item-3 {
+    margin-bottom: 20px ; 
+}
+
+.cards-pequenos {
+    flex: 4;
+}
+
+.cards-medios {
+    flex: 6;
+}
+
+.loc-detalhes {
+    font-size: 30px;
+}
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # Estilização do Footer
