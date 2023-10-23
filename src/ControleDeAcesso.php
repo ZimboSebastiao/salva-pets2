@@ -17,11 +17,6 @@ final class ControleDeAcesso {
         }
     }
 
-    public function verificaAcessoUser():void {
-        if (isset($_SESSION['id'])){
-
-        } 
-    }
 
 
     public function login(int $id, string $nome):void {
