@@ -50,6 +50,7 @@ if (isset($_GET['sair'])) $sessao->logout();
                 Nossos Pets
               </a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Todos pets</a></li>
                 <li><a class="dropdown-item" href="#">Cachorros</a></li>
                 <li><a class="dropdown-item" href="#">Gatos</a></li>
               </ul>
