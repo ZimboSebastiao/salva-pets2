@@ -14,6 +14,7 @@ $usuario->setId($_SESSION['id']);
 $dados = $usuario->listarUm();
 Utilitarios::dump($dados);
 
+if (isset($_GET['sair'])) $sessao->logout();
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +76,7 @@ Utilitarios::dump($dados);
               </a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#">Meu Perfil</a></li>
-                <li><a class="dropdown-item" href="#">Sair</a></li>
+                <li><a class="dropdown-item" href="?sair">Sair</a></li>
               </ul>
             </li>
             <?php } ?>
