@@ -130,7 +130,7 @@ if (isset($_GET['sair'])) $sessao->logout();
   
         <!-- INPUT REGIÃO -->
         <div class="input-group border rounded border-dark">
-          <input type="text" class="form-control cont icon-house " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
+          <input type="text" class="form-control cont icon-house" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
         </div>
   
         <!-- INPUT ANIMAL -->
