@@ -42,3 +42,11 @@
 footer{
     background-color:#040726;
 }
+
+.img-fixa img{
+    position: fixed;
+    top: -10px;
+    left: 500px;
+    width: 25%;
+    
+}

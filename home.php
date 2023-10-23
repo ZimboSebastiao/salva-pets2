@@ -47,7 +47,7 @@
     </header>
     
   <main>
-      <div class="cabecalho col-md-12 px-lg-5">
+      <div class="cabecalho col-md-12 px-lg-5 bg-primary pt-5">
         <div class="px-3">
           <h1>Encontre e adote <br>
             um pet para você.</h1>
@@ -60,10 +60,11 @@
 
         </div>
 
-        <!-- <div class=""> -->
-        <!-- <div class="p-3 d-flex gap-lg-1 gap-md-3 gap-2 flex-wrap flex-xl-nowrap bg-white"> -->
+        <figure class="img-fixa">
+          <img src="images/mina.png" alt="">
+        </figure>
 
-        <div class="pesquisa p-3 d-flex gap-lg-3 gap-md-3 gap-xl-1 gap-2 flex-wrap flex-xl-nowrap pt-5 col-md-8 m-auto">
+        <div class="pesquisa p-3 d-flex gap-lg-3 gap-md-3 gap-xl-1 gap-2 flex-wrap flex-xl-nowrap pt-5 mt-5 col-md-10 m-auto bg-danger">
           <!-- INPUT CIDADE -->
           <div class="input-group rounded border-dark p-1 px-md-1">
             <input type="text" class="form-control cont icon-city custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
