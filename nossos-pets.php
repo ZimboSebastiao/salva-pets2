@@ -1,7 +1,3 @@
-<?php
-use SalvaPets\Utilitarios;
-require_once "vendor/autoload.php";
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -92,7 +88,7 @@ require_once "vendor/autoload.php";
 
     <h1 class="pets-h1">
       <?php
-          $apiUrl = "https://salvapets.onrender.com/pets/";  
+          $apiUrl = "http://localhost:8080/pets/";  
           $apiData = file_get_contents($apiUrl);
           $data = json_decode($apiData, true);
       ?> <?=count($data);?> Pets disponíveis para você
@@ -100,7 +96,7 @@ require_once "vendor/autoload.php";
 
     <div class="card-container">
     <?php
-      $apiUrl = "https://salvapets.onrender.com/pets/";  
+      $apiUrl = "http://localhost:8080/pets/";  
     
       // Faz a solicitação à API e obtém os dados
       $apiData = file_get_contents($apiUrl);
@@ -119,7 +115,7 @@ require_once "vendor/autoload.php";
                   $imagem = $pet['imagem'];
     
                   
-                  $imagemUrl = "https://salvapets.onrender.com" . $imagem; ?>
+                  $imagemUrl = "http://localhost:8080/" . $imagem; ?>
     
         <div class="card border card-item" style="width: 25%;">
           <a href="#"><img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>

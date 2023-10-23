@@ -23,7 +23,7 @@
                 <p class="estilo-p">Coloque seus dados e venha ver os seus pets</p>
 
                 <section class="estilo-form">
-                    <form action="" >
+                    <form action="" method="post" id="form-login" name="form-login">
                         <div class="form-floating mb-3">
                             <input class="form-control input-login" id="floatingInput" placeholder="name@example.com" required type="email">
                             <label for="floatingInput">E-mail</label>

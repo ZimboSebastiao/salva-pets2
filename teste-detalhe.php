@@ -53,7 +53,7 @@
 
   <div class="card-grande">
   <?php
-    $apiUrl = "https://salvapets.onrender.com/pets/";  
+    $apiUrl = "http://localhost:8080/pets/";  
     $apiData = file_get_contents($apiUrl);
   
     if ($apiData) {
@@ -67,7 +67,7 @@
                 $sexo = $pet['sexo'];
                 $raca = $pet['raca'];
                 $imagem = $pet['imagem'];
-                $imagemUrl = "https://salvapets.onrender.com" . $imagem; ?>
+                $imagemUrl = "http://localhost:8080/" . $imagem; ?>
 
                 <?php 
                 $dataNascimento = strtotime($idade);
