@@ -177,7 +177,8 @@
                   $imagemUrl = "http://localhost:8080/" . $imagem; ?>
     
         <div class="card border card-item shadow-lg rounded-5">
-          <a href="#"><img class="rounded-top-4 w-100" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
+        
+          <a href="detalhe.php?id=<?=$pet['id']?>"><img class="rounded-top-4 w-100" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
           <div class="card-body">
             <div class="favoritar-nome">
               <h5 class="card-title nome-pets"><?=$nome?></h5>
