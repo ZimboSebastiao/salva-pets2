@@ -1,3 +1,21 @@
+<?php 
+use Salvapets\Utilitarios;
+use Salvapets\Usuario;
+use Salvapets\ControleDeAcesso;
+require_once "src/ControleDeAcesso.php";
+require_once "src/Usuarios.php";
+require_once "src/Utilitarios.php";
+
+$sessao = new ControleDeAcesso;
+
+$usuario = new Usuario;
+// Atribuimos ao objeto o ID  do usuario logado na sessão
+$usuario->setId($_SESSION['id']);
+$dados = $usuario->listarUm();
+Utilitarios::dump($dados);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

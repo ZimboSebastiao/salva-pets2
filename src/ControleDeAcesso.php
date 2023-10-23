@@ -18,8 +18,8 @@ final class ControleDeAcesso {
     }
 
     public function verificaAcessoUser():void {
-        if (isset($_SESSION['nome'])){
-            
+        if (isset($_SESSION['id'])){
+
         } 
     }
 
