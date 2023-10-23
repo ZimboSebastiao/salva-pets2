@@ -1,21 +1,8 @@
 <?php 
 use Salvapets\Usuario;
-use Salvapets\Banco;
 // require_once "vendor/autoload.php";
 require_once "src/Usuarios.php";
-require_once "src/Banco.php";
 
-$usuario = new Usuario;
-
-if (isset($_POST['inserir'])) {
-	$usuario = new Usuario;
-	$usuario->setNome($_POST['nome']);
-	$usuario->setCep($_POST['cep']);
-	$usuario->setEmail($_POST['email']);
-	$usuario->setSenha($usuario->codificaSenha($_POST['senha']));
-
-	$usuario->inserir();
-}
 ?>
 
 
