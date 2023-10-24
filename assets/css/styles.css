@@ -17,3 +17,36 @@
     font-weight: bold;
 }
 
+.input-group input{background-color: #fff;}
+
+.icon-city {
+    background: url(../../icones/pata.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-house {
+    background: url(../../icones/pet-house4.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-animal {
+    background: url(../../icones/bola-de-cachorro.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+.icon-race {
+    background: url(../../icones/bicho-de-estimacao.png) no-repeat scroll 7px 7px ;
+    padding-left:50px;
+}
+
+footer{
+    background-color:#040726;
+}
+
+.img-fixa img{
+    position: fixed;
+    top: -10px;
+    left: 500px;
+    width: 25%;
+    
+}

@@ -47,25 +47,22 @@
     </header>
     
   <main>
-    <div class="">
+      <div class="cabecalho col-md-12 px-lg-5 bg-primary pt-5">
+        <div class="px-3">
+          <h1>Encontre e adote <br>
+            um pet para você.</h1>
+  
+          <p>
+            Você não pode comprar amor,
+            mas você pode adotar ele.
+            Adote um pet para fazer companhia🐾
+          </p>
 
-      <div class="cabecalho col-md-12 px-xl-5">
-      
-          <div class="px-3">
-            <h1>Encontre e adote <br>
-              um pet para você.</h1>
-    
-            <p>
-              Você não pode comprar amor,
-              mas você pode adotar ele.
-              Adote um pet para fazer companhia🐾
-            </p>
-          </div>
+        </div>
 
         <div class="pesquisa p-3 d-flex gap-lg-3 gap-md-3 gap-xl-5 gap-2 flex-wrap flex-xl-nowrap pt-5">
           <!-- INPUT CIDADE -->
           <div class="input-group rounded border-dark p-1 px-md-1">
-            <!-- <img src="icones/pata (1).png" alt="" width="10%"> -->
             <input type="text" class="form-control cont icon-city custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
           </div>
 
@@ -157,7 +154,7 @@
   </main>
 
   <!-- ====== FOOTER ====== -->
-  <footer class=" text-lg-start footer-color text-muted">
+  <footer class=" text-lg-start text-light text-muted">
 
     <!-- ====== Links ====== -->
     <section class="">
@@ -169,7 +166,7 @@
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
             <h6 class="text-uppercase fw-bold mb-4">
-              <a class="navbar-brand customize" href="#">
+              <a class="navbar-brand customize text-white" href="#">
                 <img src="icones/pet1.png" alt="..." height="24">
                 SalvaPets
               </a>
@@ -182,7 +179,7 @@
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
+            <h6 class="text-uppercase fw-bold mb-4 text-white">
               Nossos pets
             </h6>
             <p><a href="#!" class="text-reset">Cachorros</a></p>
@@ -194,7 +191,7 @@
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
+            <h6 class="text-uppercase fw-bold mb-4 text-white">
               Institucional
             </h6>
             <p><a href="#!" class="text-reset">Sobre nós</a></p>
@@ -205,7 +202,7 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Centro de ajuda</h6>
+            <h6 class="text-uppercase fw-bold mb-4 text-white">Centro de ajuda</h6>
             <p><a href="#!" class="text-reset">Política de privacidade</a></p>
             <p><a href="#!" class="text-reset">Ajuda</a></p>
           </div>
@@ -227,7 +224,7 @@
       <!-- Left -->
 
       <!-- Right -->
-      <div>
+      <div class="text-white">
         <a target="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
@@ -262,8 +259,6 @@
 
     </section>
     <!-- REDES SOCIAS -->
-
-
   </footer> <!-- FIM FOOTER  -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
