@@ -1,6 +1,7 @@
 <?php
 namespace Salvapets;
 
+
 final class ControleDeAcesso {
 
     public function __construct() {

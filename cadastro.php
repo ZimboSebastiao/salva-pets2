@@ -1,9 +1,7 @@
 <?php 
 use Salvapets\Usuario;
 use Salvapets\Banco;
-// require_once "vendor/autoload.php";
-require_once "src/Usuarios.php";
-require_once "src/Banco.php";
+require_once "vendor/autoload.php";
 
 
 $usuario = new Usuario;

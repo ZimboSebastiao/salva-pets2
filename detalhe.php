@@ -2,9 +2,8 @@
   use Salvapets\Utilitarios;
   use Salvapets\Usuario;
   use Salvapets\ControleDeAcesso;
-  require_once "src/ControleDeAcesso.php";
-  require_once "src/Usuarios.php";
-  require_once "src/Utilitarios.php";
+  require_once "vendor/autoload.php";
+
 
   $sessao = new ControleDeAcesso;
 
@@ -126,6 +125,7 @@
       if ($petData) {
           $nome = $petData['nome'];
           $idade = $petData['idade'];
+          $data_salvapets = $petData['data_salvapets'];
           $sobre = $petData['sobre'];
           $localizacao = $petData['localizacao'];
           $sexo = $petData['sexo'];
@@ -133,17 +133,23 @@
           $raca = $petData['raca'];
           $imagemUrl = "http://localhost:8080/" . $imagem; ?>
   
-                  <?php 
-                  $dataNascimento = strtotime($idade);
-                  $dataAtual = time();
-        
-                  if ($dataNascimento !== false) {
-                    $diferencaSegundos = $dataAtual - $dataNascimento;
-            
-                    $anos = floor($diferencaSegundos / (365 * 24 * 60 * 60)); }
-                    $meses = floor(($diferencaSegundos % (365 * 24 * 60 * 60)) / (30 * 24 * 60 * 60));
-                  ?>
-    
+          <?php 
+            $dataNascimento = strtotime($idade);
+            $dataAtual = time();
+
+            if ($dataNascimento !== false) {
+              $diferencaSegundos = $dataAtual - $dataNascimento;
+      
+              $anos = floor($diferencaSegundos / (365 * 24 * 60 * 60)); }
+              $meses = floor(($diferencaSegundos % (365 * 24 * 60 * 60)) / (30 * 24 * 60 * 60));
+
+              
+              $data_salvapets = new DateTime($data_salvapets);
+              $data_atual = new DateTime();
+              $diferenca = $data_atual->diff($data_salvapets);
+              $num_dias = $diferenca->days;
+          ?>
+
         <div class="card border card-item-1" style="width: 100%;">
           <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="422" >
         </div>
@@ -151,7 +157,7 @@
     </div>
   
     <!-- CONJUNTO DE CARDS -->
-    <div class="cards-direita">
+    <div class="cards-direita  ">
   
       <!-- CARDS Pequenos -->
       <div class="cards-pequenos">
@@ -198,6 +204,14 @@
     Idade
   </h3>
   <span><?=$anos?> anos e <?=$meses?> meses</span>
+
+  <h3>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+    </svg>
+    Dias no Salva pets
+  </h3>
+  <span><?=$num_dias?> </span>
   <hr>
   
   <h3>Sobre o Pet</h3>

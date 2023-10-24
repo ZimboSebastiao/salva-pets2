@@ -2,9 +2,7 @@
   use Salvapets\Utilitarios;
   use Salvapets\Usuario;
   use Salvapets\ControleDeAcesso;
-  require_once "src/ControleDeAcesso.php";
-  require_once "src/Usuarios.php";
-  require_once "src/Utilitarios.php";
+  require_once "vendor/autoload.php";
 
   $sessao = new ControleDeAcesso;
 
