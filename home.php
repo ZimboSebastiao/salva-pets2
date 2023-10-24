@@ -62,7 +62,7 @@
             </p>
           </div>
 
-        <div class="pesquisa p-3 d-flex gap-lg-3 gap-md-3 gap-xl-1 gap-2 flex-wrap flex-xl-nowrap bg-white pt-5">
+        <div class="pesquisa p-3 d-flex gap-lg-3 gap-md-3 gap-xl-5 gap-2 flex-wrap flex-xl-nowrap pt-5">
           <!-- INPUT CIDADE -->
           <div class="input-group rounded border-dark p-1 px-md-1">
             <!-- <img src="icones/pata (1).png" alt="" width="10%"> -->
