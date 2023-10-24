@@ -9,7 +9,8 @@
   $sessao = new ControleDeAcesso;
   $usuario = new Usuario;
   $pets = new Pets;
-  // Utilitarios::dump($pet);
+  $dados = $pets->listarpets();
+  Utilitarios::dump($dados);
 
 
   if (isset($_GET['sair'])) $sessao->logout();

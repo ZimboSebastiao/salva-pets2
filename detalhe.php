@@ -2,6 +2,7 @@
   use Salvapets\Utilitarios;
   use Salvapets\Usuario;
   use Salvapets\ControleDeAcesso;
+  use Salvapets\Pets;
   require_once "vendor/autoload.php";
 
 
@@ -9,7 +10,9 @@
 
   $usuario = new Usuario;
 
-
+  $pets = new Pets;
+  $dados = $pets->lerUmPet();
+  Utilitarios::dump($dados);
 
 
   if (isset($_GET['sair'])) $sessao->logout();
