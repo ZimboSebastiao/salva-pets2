@@ -12,15 +12,15 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg w-100 menu">
+    <nav class="navbar navbar-expand-lg w-100">
       <div class="container-fluid m-none">
-        <a class="navbar-brand px-xl-5" href="#"><img src="icones/pet1.png" alt="..." height="46">
+        <a class="navbar-brand px-lg-5 px-xl-5" href="#"><img src="icones/pet1.png" alt="..." height="46">
           SalvaPets</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse px-5" id="navbarScroll">
-          <ul class="navbar-nav me-auto my-lg-0 navbar-nav-scroll d-flex justify-content-around w-75 m-auto" style="--bs-scroll-height: 200px;">
+          <ul class="navbar-nav me-auto my-5 my-lg-0 navbar-nav-scroll d-flex justify-content-around w-75 text-center m-auto" style="--bs-scroll-height: 200px; ">
 
             <li class="nav-item">
               <a class="nav-link" href="#">Cachorros</a>
@@ -47,20 +47,26 @@
     </header>
     
   <main>
-      <div class="cabecalho col-md-12 px-lg-5 bg-primary pt-5">
-        <div class="px-3">
-          <h1>Encontre e adote <br>
-            um pet para você.</h1>
-  
-          <p>
-            Você não pode comprar amor,
-            mas você pode adotar ele.
-            Adote um pet para fazer companhia🐾
-          </p>
-
+      <div class="cabecalho col-md-12 px-lg-5 pt-5 mb-5">
+        <div class="px-3 px-md-5 pb-md-5">
+          <div class="mt-md-5">
+            <h1 class="fs-1 fw-bold">Encontre e adote <br>
+              um pet para você.</h1>
+    
+            <p class="texto fs-3 fw-bold  col-md-4 d-flex flex-nowrap ">
+              Você não pode comprar amor,
+              mas você pode adotar ele.
+              Adote um pet para fazer companhia🐾
+            </p>
+          </div>
+          
+          <img src="images/mina.png" alt="">
         </div>
+       
+  
 
-        <div class="pesquisa p-3 d-flex gap-lg-3 gap-md-3 gap-xl-5 gap-2 flex-wrap flex-xl-nowrap pt-5">
+        <div class="pesquisa p-3 d-flex gap-lg-3 gap-md-3 gap-xl-5 flex-wrap flex-lg-nowrap pt-5 col-md-12 col-lg-11 col-xl-11 col-xxl-11 mx-lg-5 bg-white position-relative">
+
           <!-- INPUT CIDADE -->
           <div class="input-group rounded border-dark p-1 px-md-1">
             <input type="text" class="form-control cont icon-city custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
@@ -88,7 +94,9 @@
           </div>
           <!-- </div> -->
         </div>
-
+        
+       
+        
         <!-- <div class=""> -->
       </div>
 

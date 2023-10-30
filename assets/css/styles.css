@@ -1,4 +1,4 @@
-.cabecalho, .menu{
+.cabecalho, header{
     background-color: #FFF1EB;
 }   
 
@@ -15,6 +15,28 @@
 .nav-link{
     color: #1E266D;
     font-weight: bold;
+}
+
+.cabecalho{
+    height: 542px;
+}
+
+.pesquisa{
+    z-index: 2;
+    margin-top: 50px;
+}
+
+
+.cabecalho img{
+    position:absolute;
+    width: 700px;
+    right: 2%;
+    top: -15px;
+    
+}
+
+.texto{
+   color: #5C6299;
 }
 
 .input-group input{background-color: #fff;}
@@ -43,10 +65,3 @@ footer{
     background-color:#040726;
 }
 
-.img-fixa img{
-    position: fixed;
-    top: -10px;
-    left: 500px;
-    width: 25%;
-    
-}
