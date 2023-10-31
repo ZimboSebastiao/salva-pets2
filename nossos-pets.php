@@ -58,7 +58,7 @@
         <li ><a href="#">Ajuda</a></li>
         <li ><a href="#">Contato</a></li>
         <?php if (!isset($_SESSION['id'])){ ?>
-            <li><a  href="login.php" class="btn btn-primary w-50 m-auto"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
+            <li><a  href="login.php" class="btn btn-primary w-50 m-auto botaoH"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
             <?php }?>
 
             <?php if (isset($_SESSION['id'])){ ?>
@@ -110,7 +110,7 @@
     </nav>
   </div>
 </header>
-<hr> <!-- FIM CABEÇALHO  -->
+<hr class="my-2"> <!-- FIM CABEÇALHO  -->
 
 
 <main>

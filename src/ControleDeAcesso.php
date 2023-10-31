@@ -13,7 +13,7 @@ final class ControleDeAcesso {
     public function verificaAcesso():void {
         if( !isset($_SESSION['id']) ){
             session_destroy();
-            header("location:../login.php?acesso_proibido");
+            header("location:login.php?acesso_proibido");
             die(); 
         }
     }

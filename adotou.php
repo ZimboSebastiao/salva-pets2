@@ -101,7 +101,7 @@ if (isset($_GET['sair'])) $sessao->logout();
     </nav>
   </div>
 </header>
-<hr> <!-- FIM CABEÇALHO  -->
+<hr class="my-4"> FIM CABEÇALHO 
 
 
 <!-- ======== CONTEÚDO ======== -->
