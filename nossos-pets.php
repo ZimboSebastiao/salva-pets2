@@ -114,38 +114,47 @@
 
 
 <main>
+  <?php
+    if (isset($_GET['cidade'])) {
+      $city = $_GET['cidade'];
+      $apiUrl = "http://localhost:8080/cidade/{$city}";
+      $apiData = file_get_contents($apiUrl);
+      $data = json_decode($apiData, true); 
+    }
+  
+  ?>
   <!-- FILTROS DE BUSCA -->
   <div class="top-pets pb-3 limitar-tela">
     <div class="container-fluid d-flex gap-5 flex-wrap m-auto flex-xl-nowrap">
 
       <!-- INPUT CIDADE -->
       <div class="input-group border rounded border-dark d-flex align-items-center">
-        <input type="text" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
+        <input  type="text" id="cidade" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
       </div>
 
       <!-- INPUT REGIÃO -->
       <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-house " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
+        <input id="regiao" type="text" class="form-control cont icon-house " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
       </div>
 
       <!-- INPUT ANIMAL -->
       <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
+        <input id="animal" type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
       </div>
 
       <!-- INPUT IDADE -->
       <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Idade">
+        <input id="idade" type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Idade">
       </div>
 
       <!-- INPUT RAÇA -->
       <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
+        <input id="raca" type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
       </div>
 
       <!-- BOTÃO BUSCAR PET -->
       <div class="w-75 m-auto">
-        <button class="btn btn-primary w-100" type="button">Buscar Pet</button>
+        <button class="btn btn-primary w-100" type="button" id="buscar">Buscar Pet</button>
       </div>
  
     </div>
@@ -181,8 +190,7 @@
 
     <div class="card-container gap-5 shadow border">
     <?php
-      // $apiUrl = "http://localhost:8080/pets/";  
-    
+       
       // Faz a solicitação à API e obtém os dados
       $apiData = file_get_contents($apiUrl);
     
@@ -373,6 +381,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <script src="js/menu.js"></script>
+  <script src="js/filtros.js"></script>
 
 
 </body>
