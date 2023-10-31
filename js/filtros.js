@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 document.getElementById('buscar').addEventListener('click', function () {
     var cidade = document.getElementById('cidade').value;
     // Faça uma solicitação para o servidor passando o valor da cidade
