@@ -67,25 +67,6 @@
             <label class="entry-label" for="message">Deixe aqui sua mensagem</label>
             <textarea class="entry" name="" id="message" cols="30" rows="10"></textarea>
 
-            <div class="div-entry">
-                <p class="entry-label"> Como prefere nosso contato?</p>
-                <label class="entry-label" for="email-choice"><input type="radio" name="contact-choice"
-                        id="email-choice">Email</label>
-
-                <label class="entry-label" for="phone-choice"><input type="radio" name="contact-choice"
-                        id="phone-choice">Telefone</label>
-
-                <label class="entry-label" for="whatsapp-choice" lang="en"><input type="radio" name="contact-choice"
-                        id="whatsapp-choice">Whatsapp</label>
-            </div>
-            <label class="entry-label" for="day-period">Em qual horário prefere ser atendido?</label>
-            <select class="entry" name="day-period" id="">
-                <option value="none">---Selecione aqui</option>
-                <option value="morning">Manhã</option>
-                <option value="afternoon">Tarde</option>
-                <option value="evening">Noite</option>
-            </select>
-
             <label for="check-mailing" class="entry-label" id="checkbox">Gostaria de receber nossas novidades por email?
                 <input type="checkbox" name="" id="check-mailing"></label>
 
