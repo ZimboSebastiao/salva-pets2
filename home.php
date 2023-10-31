@@ -49,15 +49,15 @@ if (isset($_GET['sair'])) $sessao->logout();
               </a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="nossos-pets.php">Todos pets</a></li>
-                <li><a class="dropdown-item" href="#">Cachorros</a></li>
-                <li><a class="dropdown-item" href="#">Gatos</a></li>
+                <li><a class="dropdown-item" href="nossos-pets.php?dogs">Cachorros</a></li>
+                <li><a class="dropdown-item" href="nossos-pets.php?cats">Gatos</a></li>
               </ul>
             </li>
             <li><a href="#">Quem Somos</a></li>
             <li><a href="#">Ajuda</a></li>
             <li><a href="#">Contato</a></li>
             <?php if (!isset($_SESSION['id'])){ ?>
-            <li><a  href="login.php" class="btn btn-primary w-50 m-auto"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
+            <li><a  href="login.php" class="btn btn-primary w-50 m-auto botaoH"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
             <?php }?>
 
           </li>

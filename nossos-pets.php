@@ -10,7 +10,7 @@
   $usuario = new Usuario;
   $pets = new Pets;
   $dados = $pets->listarpets();
-  Utilitarios::dump($dados);
+  // Utilitarios::dump($dados);
 
 
   if (isset($_GET['sair'])) $sessao->logout();
@@ -50,8 +50,8 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="nossos-pets.php">Todos pets</a></li>
-            <li><a class="dropdown-item" href="#">Cachorros</a></li>
-            <li><a class="dropdown-item" href="#">Gatos</a></li>
+            <li><a class="dropdown-item" href="nossos-pets.php?dogs">Cachorros</a></li>
+            <li><a class="dropdown-item" href="nossos-pets.php?cats">Gatos</a></li>
           </ul>
         </li>
         <li><a  href="#">Quem Somos</a></li>
@@ -155,15 +155,33 @@
 
     <h1 class="pets-h1">
       <?php
-          $apiUrl = "http://localhost:8080/pets/";  
-          $apiData = file_get_contents($apiUrl);
-          $data = json_decode($apiData, true);
+
+          if (isset($_GET['dogs'])) {
+            $apiUrl = "http://localhost:8080/cachorros/";  
+            $apiData = file_get_contents($apiUrl);
+            $data = json_decode($apiData, true);
+            
+          } elseif (isset($_GET['cats'])) {
+            $apiUrl = "http://localhost:8080/gatos/";  
+            $apiData = file_get_contents($apiUrl);
+            $data = json_decode($apiData, true);
+          } else {
+
+            $apiUrl = "http://localhost:8080/pets/";  
+            $apiData = file_get_contents($apiUrl);
+            $data = json_decode($apiData, true);
+          }
+          
+
+          
+
+          
       ?> <?=count($data);?> Pets disponíveis para você
     </h1>
 
     <div class="card-container gap-5 shadow border">
     <?php
-      $apiUrl = "http://localhost:8080/pets/";  
+      // $apiUrl = "http://localhost:8080/pets/";  
     
       // Faz a solicitação à API e obtém os dados
       $apiData = file_get_contents($apiUrl);
@@ -239,11 +257,6 @@
     ?>
     </div>
   </div>
-
-    
-
-
-
 
 
 </main>

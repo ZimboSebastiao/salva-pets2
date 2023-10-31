@@ -377,9 +377,10 @@ nav  a:hover, nav a:focus{
 }
 
 .btn-primary {
-    color: #fff;
+    color: #fff !important; 
     background-color: #e96d3f;
     border-color: #e96d3f;
+
 }
 
 
