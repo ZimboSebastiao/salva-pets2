@@ -264,7 +264,7 @@ main {flex: 1;}
     margin: auto;
 }
 
-header {
+/* header {
     z-index: 100;
     position: sticky;
     top: 0;
@@ -288,9 +288,9 @@ nav h2 a {
 
 nav  a:hover, nav a:focus{
     background-color: #ffe9e0;
-}
+} */
 
-.menu {
+/* .menu {
     list-style: none;
     display: none;
 }
@@ -311,7 +311,7 @@ nav  a:hover, nav a:focus{
     position: absolute;
     left: 0;
     right: 0;
-}
+} */
 
 @media screen and (min-width: 530px) {
     nav h2 {display: none;}
