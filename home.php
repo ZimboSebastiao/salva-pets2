@@ -92,7 +92,58 @@
     
                 <!-- ======================================= -->
 
- 
+                <div class="cabecalho col-md-12 px-lg-5 pt-5 mb-5">
+        <div class="px-3 px-md-5 pb-md-5">
+          <div class="mt-md-5">
+            <h1 class="fs-1 fw-bold">Encontre e adote <br>
+              um pet para você.</h1>
+    
+            <p class="texto fs-3 fw-bold  col-md-4 d-flex flex-nowrap ">
+              Você não pode comprar amor,
+              mas você pode adotar ele.
+              Adote um pet para fazer companhia🐾
+            </p>
+          </div>
+          
+          <img src="images/mina.png" alt="">
+        </div>
+       
+  
+
+        <div class="pesquisa p-3 d-flex gap-lg-3 gap-md-3 gap-xl-5 flex-wrap flex-lg-nowrap pt-5 col-md-12 col-lg-11 col-xl-11 col-xxl-11 mx-lg-5 bg-white position-relative">
+
+          <!-- INPUT CIDADE -->
+          <div class="input-group rounded border-dark p-1 px-md-1">
+            <input type="text" class="form-control cont icon-city custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
+          </div>
+
+          <!-- INPUT REGIÃO -->
+          <div class="input-group rounded border-dark p-1 px-md-1">
+            <input type="text" class="form-control cont icon-house custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
+          </div>
+
+          <!-- INPUT ANIMAL -->
+          <div class="input-group rounded border-dark p-1 px-md-1">
+            <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
+            <input type="text" class="form-control cont icon-animal custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
+          </div>
+
+          <!-- INPUT RAÇA -->
+          <div class="input-group rounded border-dark p-1 px-md-1">
+            <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
+            <input type="text" class="form-control cont icon-race custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
+          </div>
+
+           <div class="w-75 d-flex m-auto p-1">
+            <button class="btn btn-primary text-white m-auto w-75 p-1 border"  type="button">Buscar Pet</button>
+          </div>
+          <!-- </div> -->
+        </div>
+        
+       
+        
+        <!-- <div class=""> -->
+      </div>
 
                 <!-- ========================================== -->
 
