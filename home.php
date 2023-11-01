@@ -11,32 +11,6 @@
 </head>
 
 <body>
-  <!-- ======== CABEÇALHO ======== -->
-   <!-- <header class="menu-color">
-  <div class="limitador">
-    <a class="navbar-brand customize" href="#">
-      <img src="icones/pet1.png" alt="..." height="46">
-      SalvaPets
-    </a>
-    <nav>
-        <h2><a href="" class="icone">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-nested" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
-          </svg>
-        </a></h2>
-          <ul class="menu menu-color">
-            </li>
-            <li><a href="#">Cachorros</a></li>
-            <li><a href="#">Gatos</a></li>
-            <li><a href="#">Quem Somos</a></li>
-            <li><a href="#">Ajuda</a></li>
-            <li><a href="#">Contato</a></li>
-            <li><a  href="login.php" class="btn btn-primary w-50 m-auto"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
-          </ul>
-    </nav>
-  </div>
-</header> -->
-
 <header>
     <nav class="navbar navbar-expand-lg w-100">
       <div class="container-fluid m-none">
@@ -83,7 +57,6 @@
         Adote um pet para fazer companhia🐾
       </p>
 
-      <!-- <div class="w-75 d-flex align-items-center m-auto gap-5 p-5 bg-white rounded flex-wrap flex-xl-nowrap">   -->
       <div class="container-fluid d-flex gap-5 flex-wrap m-auto flex-xl-nowrap w-75">
 
         <!-- INPUT CIDADE -->
@@ -116,6 +89,13 @@
         </div>
       </div>
     </div>
+    
+                <!-- ======================================= -->
+
+ 
+
+                <!-- ========================================== -->
+
 
     <!-- Titulos pre cards pets -->
     <article class="pet-ideal text-center p-5">
