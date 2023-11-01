@@ -25,13 +25,17 @@
 
 .pesquisa{
     z-index: 2;
-    /* height: 150px; */
+    height: 100px;
     background-color: #fff;
+    top:  498px;
+    position: absolute;
 }
 
  @media (max-width: 991px) {
     .pesquisa{
         background-color: #FFF1EB;
+        position: relative;
+        top: 10px;
     }
 }
 

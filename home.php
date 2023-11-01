@@ -19,7 +19,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse px-5" id="navbarScroll">
+        <div class="collapse navbar-collapse " id="navbarScroll">
           <ul class="link-menu navbar-nav me-auto my-3 my-lg-0 navbar-nav-scroll d-flex justify-content-around w-75 text-center m-auto" style="--bs-scroll-height: 250px; ">
 
             <li class="nav-item">
@@ -32,13 +32,13 @@
             </li>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold z-1 position-relative" href="#">Quem somos</a>
+              <a class="nav-link fs-5 fw-bold px-0 z-1 position-relative" href="#">Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold z-1 position-relative" href="#">Contato</a>
+              <a class="nav-link fs-5 fw-bold z-1 position-relative" href="#">Quem somos</a>
             </li>
           </ul>
-          <form class="d-flex justify-content-center" role="search">
+          <form class="d-flex justify-content-center me-sm-5" role="search">
             <a href="login.php" class="btn btn-primary border px-5 z-1 position-relative" tabindex="-1" role="button" aria-disabled="true">Entrar</a>
           </form><hr class="">
         </div>
@@ -47,9 +47,9 @@
   </header>
 
   <main class="meio">
-    <div class="cabecalho px-md-5 col-md-12  pt-5 mb-5">
-      <div class="px-3 px-md-0 pb-md-5">
-        <div class="mt-lg-5 px-lg-3">
+    <div class="cabecalho px-3 px-lg-5 col-md-12  pt-5 mb-5">
+      <div class="px-3 px-sm-3">
+        <div class=" px-md-3">
           <h1 class="fs-1 fw-bold">Encontre e adote <br>
             um pet para você.</h1>
 
@@ -63,7 +63,8 @@
         <img class="d-none d-sm-none d-lg-block" src="images/mina.png" alt="">
       </div>
 
-      <div class="pesquisa d-flex align-items-center h-25 gap-lg-3 gap-xl-5 flex-wrap flex-lg-nowrap col-11 m-auto col-md-11 col-lg-11 col-xl-11 col-xxl-12 mx-lg-3 position-relative">
+      <div class="pesquisa d-flex align-items-center gap-lg-3 gap-xl-5 flex-wrap flex-lg-nowrap col-11 m-auto col-xxl-11 mx-lg-3 rounded-4">
+
         <!-- INPUT CIDADE -->
         <div class="input-group rounded border-dark p-1 px-md-1 ms-lg-3">
           <input type="text" class="form-control cont icon-city custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
@@ -77,7 +78,7 @@
         <!-- INPUT ANIMAL -->
         <div class="input-group rounded border-dark p-1 px-md-1">
           <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
-          <input type="text" class="form-control cont icon-animal custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
+          <input type="text" class="form-control cont icon-animal custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Tipo">
         </div>
 
         <!-- INPUT RAÇA -->
