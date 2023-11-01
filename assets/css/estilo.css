@@ -88,7 +88,7 @@ body {
   font-weight: 300;
 }
 .content-reveal-btn {
-  background-color: #04b7ac;
+  background-color: #ffa500;
 }
 .sl--show-card-info,
 .sl--close-card-info {
@@ -474,4 +474,8 @@ body {
   .swiper-container {
     width: 920px;
   }
+}
+
+.slide-idade{
+  color: #ffa500;
 }

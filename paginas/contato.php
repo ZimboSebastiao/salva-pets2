@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
+
 <body>
   <!-- ======== CABEÇALHO ======== -->
   <header class="menu-color">
@@ -89,25 +91,61 @@
       </nav>
     </div>
   </header>
-  <main class="main-contact d-flex align-items-center">
-    <div>
-      <img src="../images/pets.png" alt="" width="100%">
+  <main class="main-contact d-flex align-items-center m-auto">
+
+    <div class="container-sm img-responsivo-cadastro">
+
+    <h1 class="fs-1 text-center">Entre em <b>contato</b> com a gente!!</h1>
+      <!-- =========== Formulário  =========== -->
+     
+      <div>
+
+        <div class="center-form-cadastro m-auto">
+          <div class="d-flex flex-column justify-content-center align-items-center"></div>
+
+          <section class="estilo-form col-6 m-auto d-flex  align-items-center">
+            <img src="../images/cat-dog-removebg-preview.png" alt="" width="100%">
+
+            <form action="https://formspree.io/f/xbjvbldj" method="post" >
+
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control input-cadastro" id="floatingInputGroup2" placeholder="Username" required name="nome">
+                <label for="floatingInputGroup2">Nome completo</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <input class="form-control input-cadastro" id="email" name="Email" placeholder="name@example.com" required type="email">
+                <label for="email">E-mail</label>
+              </div>
+
+              <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Digite sua mensagem!</label>
+              </div>
+
+
+              <div class="form-check estilo-l">
+                <input class="form-check-input" type="checkbox" value="" id="">
+                <label class="form-check-label" for="">
+                  Aceita receber as novidades do site
+                </label>
+              </div>
+
+              <div>
+                <button class="btn btn-primary btn-lg botao input-cadastro" type="submit">Enviar</button>
+              </div>
+            </form>
+            </section>
+        </div>
+
+      </div>
+
+      <!-- ========== Destaque ========== -->
+      <div id="destaque-cadastro"></div>
+
     </div>
-    <form class="form-contact">
-      <label class="entry-label" for="name">Nome Completo</label>
-      <input class="entry" type="text" name="" id="name" required>
 
-      <label class="entry-label" for="email">Email</label>
-      <input class="entry" type="email" name="" id="email" required>
-
-      <label class="entry-label" for="phone">Número para contato</label>
-      <input class="entry" type="tel" name="" id="phone" required>
-
-      <label class="entry-label" for="message">Deixe aqui sua mensagem</label>
-      <textarea class="entry" name="" id="message" cols="30" rows="10"></textarea>
-
-      <input class="entry" type="submit" value="Enviar formulário">
-    </form>
+    </div>
   </main>
   <!-- ====== FOOTER ====== -->
   <footer class=" text-lg-start footer-color text-muted">
@@ -221,4 +259,5 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
+
 </html>
