@@ -32,14 +32,14 @@
             </li>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold" href="#">Quem somos</a>
+              <a class="nav-link fs-5 fw-bold z-1 position-relative" href="#">Quem somos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold" href="#">Contato</a>
+              <a class="nav-link fs-5 fw-bold z-1 position-relative" href="#">Contato</a>
             </li>
           </ul>
           <form class="d-flex justify-content-center" role="search">
-            <a href="login.php" class="btn btn-primary border px-5" tabindex="-1" role="button" aria-disabled="true">Entrar</a>
+            <a href="login.php" class="btn btn-primary border px-5 z-1 position-relative" tabindex="-1" role="button" aria-disabled="true">Entrar</a>
           </form>
         </div>
       </div>
@@ -60,7 +60,7 @@
           </p>
         </div>
 
-        <img src="images/mina.png" alt="">
+        <img class="d-none d-sm-none d-lg-block" src="images/mina.png" alt="">
       </div>
 
       <div class="pesquisa p-3 d-flex gap-lg-3 gap-md-3 gap-xl-5 flex-wrap flex-lg-nowrap pt-5 col-md-12 col-lg-11 col-xl-11 col-xxl-11 mx-lg-5 bg-white position-relative">
