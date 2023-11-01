@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<header>
+  <header>
     <nav class="navbar navbar-expand-lg w-100">
       <div class="container-fluid m-none">
         <a class="navbar-brand px-lg-5 px-xl-5 fw-bold" href="#"><img src="icones/pet1.png" alt="..." height="46">
@@ -47,106 +47,51 @@
   </header>
 
   <main>
-    <div class="cabecalho pb-3">
-      <h1 class="me-5 ">Encontre e adote <br>
-        um pet para você.</h1>
-        
-      <p>
-        Você não pode comprar amor,
-        mas você pode adotar ele.
-        Adote um pet para fazer companhia🐾
-      </p>
+    <div class="cabecalho col-md-12 px-lg-5 pt-5 mb-5">
+      <div class="px-3 px-md-5 pb-md-5">
+        <div class="mt-md-5">
+          <h1 class="fs-1 fw-bold">Encontre e adote <br>
+            um pet para você.</h1>
 
-      <div class="container-fluid d-flex gap-5 flex-wrap m-auto flex-xl-nowrap w-75">
+          <p class="texto fs-3 fw-bold  col-md-4 d-flex flex-nowrap ">
+            Você não pode comprar amor,
+            mas você pode adotar ele.
+            Adote um pet para fazer companhia🐾
+          </p>
+        </div>
+
+        <img src="images/mina.png" alt="">
+      </div>
+
+      <div class="pesquisa p-3 d-flex gap-lg-3 gap-md-3 gap-xl-5 flex-wrap flex-lg-nowrap pt-5 col-md-12 col-lg-11 col-xl-11 col-xxl-11 mx-lg-5 bg-white position-relative">
 
         <!-- INPUT CIDADE -->
-        <div class="input-group border rounded border-dark d-flex align-items-center">
-          <!-- <img src="icones/pata (1).png" alt="" width="10%"> -->
-          <input type="text" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
+        <div class="input-group rounded border-dark p-1 px-md-1">
+          <input type="text" class="form-control cont icon-city custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
         </div>
-  
-  
+
         <!-- INPUT REGIÃO -->
-        <div class="input-group border rounded border-dark">
-          <input type="text" class="form-control cont icon-house" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
+        <div class="input-group rounded border-dark p-1 px-md-1">
+          <input type="text" class="form-control cont icon-house custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
         </div>
-  
+
         <!-- INPUT ANIMAL -->
-        <div class="input-group border rounded border-dark">
+        <div class="input-group rounded border-dark p-1 px-md-1">
           <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
-          <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
+          <input type="text" class="form-control cont icon-animal custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
         </div>
-  
+
         <!-- INPUT RAÇA -->
-        <div class="input-group border rounded border-dark">
+        <div class="input-group rounded border-dark p-1 px-md-1">
           <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
-          <input type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
+          <input type="text" class="form-control cont icon-race custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
         </div>
-  
-        <!-- BOTÃO BUSCAR PET -->
-        <div class="w-75 m-auto">
-          <button class="btn btn-primary w-100" type="button">Buscar Pet</button>
+
+        <div class="w-75 d-flex m-auto p-1">
+          <button class="btn btn-primary text-white m-auto w-75 p-1 border" type="button">Buscar Pet</button>
         </div>
       </div>
     </div>
-    
-                <!-- ======================================= -->
-
-                <div class="cabecalho col-md-12 px-lg-5 pt-5 mb-5">
-        <div class="px-3 px-md-5 pb-md-5">
-          <div class="mt-md-5">
-            <h1 class="fs-1 fw-bold">Encontre e adote <br>
-              um pet para você.</h1>
-    
-            <p class="texto fs-3 fw-bold  col-md-4 d-flex flex-nowrap ">
-              Você não pode comprar amor,
-              mas você pode adotar ele.
-              Adote um pet para fazer companhia🐾
-            </p>
-          </div>
-          
-          <img src="images/mina.png" alt="">
-        </div>
-       
-  
-
-        <div class="pesquisa p-3 d-flex gap-lg-3 gap-md-3 gap-xl-5 flex-wrap flex-lg-nowrap pt-5 col-md-12 col-lg-11 col-xl-11 col-xxl-11 mx-lg-5 bg-white position-relative">
-
-          <!-- INPUT CIDADE -->
-          <div class="input-group rounded border-dark p-1 px-md-1">
-            <input type="text" class="form-control cont icon-city custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
-          </div>
-
-          <!-- INPUT REGIÃO -->
-          <div class="input-group rounded border-dark p-1 px-md-1">
-            <input type="text" class="form-control cont icon-house custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
-          </div>
-
-          <!-- INPUT ANIMAL -->
-          <div class="input-group rounded border-dark p-1 px-md-1">
-            <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
-            <input type="text" class="form-control cont icon-animal custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
-          </div>
-
-          <!-- INPUT RAÇA -->
-          <div class="input-group rounded border-dark p-1 px-md-1">
-            <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
-            <input type="text" class="form-control cont icon-race custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
-          </div>
-
-           <div class="w-75 d-flex m-auto p-1">
-            <button class="btn btn-primary text-white m-auto w-75 p-1 border"  type="button">Buscar Pet</button>
-          </div>
-          <!-- </div> -->
-        </div>
-        
-       
-        
-        <!-- <div class=""> -->
-      </div>
-
-                <!-- ========================================== -->
-
 
     <!-- Titulos pre cards pets -->
     <article class="pet-ideal text-center p-5">
@@ -295,11 +240,11 @@
           </svg>
         </a>
 
-      <atarget="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-        </svg>
-      </a>
+        <atarget="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+          </svg>
+          </a>
 
           <a target="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
