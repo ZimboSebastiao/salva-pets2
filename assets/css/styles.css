@@ -20,12 +20,19 @@
 }
 
 .cabecalho{
-    height: 542px;
+    height: 526px;
 }
 
 .pesquisa{
     z-index: 2;
-    margin-top: 50px;
+    /* height: 150px; */
+    background-color: #fff;
+}
+
+ @media (max-width: 991px) {
+    .pesquisa{
+        background-color: #FFF1EB;
+    }
 }
 
 
@@ -77,9 +84,6 @@ footer{
     gap: 50px;
 }
 
-#pesquisa{
-    border: 1px solid red;
-}
 
 a {text-decoration: none;}
 
@@ -98,13 +102,6 @@ a {text-decoration: none;}
     background: url("../../icones/pet1.png") top center;
     background-size: cover;
     margin: 10px;
-}
-
-h1 {
-    font-size: 1.6rem;
-    color: #1E266D;
-    padding: 8px;
-    font-weight: bold;
 }
 
 .estilo-p {
@@ -324,7 +321,7 @@ main {flex: 1;}
 }
 
 
-@media screen and (min-width: 530px) {
+/* @media screen and (min-width: 530px) {
     nav h2 {display: none;}
     html { font-size: 0.9rem;}
     .menu {
@@ -338,7 +335,7 @@ main {flex: 1;}
     nav {width: 70%;}
 
     .menu li { width: 100%;}
-}
+} */
 
 
 .icon-city {

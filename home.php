@@ -20,7 +20,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse px-5" id="navbarScroll">
-          <ul class="link-menu navbar-nav me-auto my-5 my-lg-0 navbar-nav-scroll d-flex justify-content-around w-75 text-center m-auto" style="--bs-scroll-height: 200px; ">
+          <ul class="link-menu navbar-nav me-auto my-3 my-lg-0 navbar-nav-scroll d-flex justify-content-around w-75 text-center m-auto" style="--bs-scroll-height: 250px; ">
 
             <li class="nav-item">
               <a class="nav-link fs-5 fw-bold" href="#">Cachorros</a>
@@ -40,16 +40,16 @@
           </ul>
           <form class="d-flex justify-content-center" role="search">
             <a href="login.php" class="btn btn-primary border px-5 z-1 position-relative" tabindex="-1" role="button" aria-disabled="true">Entrar</a>
-          </form>
+          </form><hr class="">
         </div>
       </div>
     </nav>
   </header>
 
-  <main>
-    <div class="cabecalho col-md-12 px-lg-5 pt-5 mb-5">
-      <div class="px-3 px-md-5 pb-md-5">
-        <div class="mt-md-5">
+  <main class="meio">
+    <div class="cabecalho px-md-5 col-md-12  pt-5 mb-5">
+      <div class="px-3 px-md-0 pb-md-5">
+        <div class="mt-lg-5 px-lg-3">
           <h1 class="fs-1 fw-bold">Encontre e adote <br>
             um pet para você.</h1>
 
@@ -63,10 +63,9 @@
         <img class="d-none d-sm-none d-lg-block" src="images/mina.png" alt="">
       </div>
 
-      <div class="pesquisa p-3 d-flex gap-lg-3 gap-md-3 gap-xl-5 flex-wrap flex-lg-nowrap pt-5 col-md-12 col-lg-11 col-xl-11 col-xxl-11 mx-lg-5 bg-white position-relative">
-
+      <div class="pesquisa d-flex align-items-center h-25 gap-lg-3 gap-xl-5 flex-wrap flex-lg-nowrap col-11 m-auto col-md-11 col-lg-11 col-xl-11 col-xxl-12 mx-lg-3 position-relative">
         <!-- INPUT CIDADE -->
-        <div class="input-group rounded border-dark p-1 px-md-1">
+        <div class="input-group rounded border-dark p-1 px-md-1 ms-lg-3">
           <input type="text" class="form-control cont icon-city custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
         </div>
 
@@ -86,7 +85,6 @@
           <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
           <input type="text" class="form-control cont icon-race custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
         </div>
-
         <div class="w-75 d-flex m-auto p-1">
           <button class="btn btn-primary text-white m-auto w-75 p-1 border" type="button">Buscar Pet</button>
         </div>
