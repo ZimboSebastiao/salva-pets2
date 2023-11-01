@@ -53,7 +53,7 @@
           <h1 class="fs-1 fw-bold">Encontre e adote <br>
             um pet para você.</h1>
 
-          <p class="texto fs-3 fw-bold  col-md-4 d-flex flex-nowrap ">
+          <p class="texto fs-3 fw-bold  col-md-12 col-lg-4 d-flex flex-nowrap ">
             Você não pode comprar amor,
             mas você pode adotar ele.
             Adote um pet para fazer companhia🐾
