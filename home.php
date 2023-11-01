@@ -40,28 +40,28 @@
 <header>
     <nav class="navbar navbar-expand-lg w-100">
       <div class="container-fluid m-none">
-        <a class="navbar-brand px-lg-5 px-xl-5" href="#"><img src="icones/pet1.png" alt="..." height="46">
+        <a class="navbar-brand px-lg-5 px-xl-5 fw-bold" href="#"><img src="icones/pet1.png" alt="..." height="46">
           SalvaPets</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse px-5" id="navbarScroll">
-          <ul class="navbar-nav me-auto my-5 my-lg-0 navbar-nav-scroll d-flex justify-content-around w-75 text-center m-auto" style="--bs-scroll-height: 200px; ">
+          <ul class="link-menu navbar-nav me-auto my-5 my-lg-0 navbar-nav-scroll d-flex justify-content-around w-75 text-center m-auto" style="--bs-scroll-height: 200px; ">
 
             <li class="nav-item">
-              <a class="nav-link" href="#">Cachorros</a>
+              <a class="nav-link fs-5 fw-bold" href="#">Cachorros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Gatos</a>
+              <a class="nav-link fs-5 fw-bold" href="#">Gatos</a>
             <li class="nav-item">
-              <a class="nav-link" href="#">Serviços</a>
+              <a class="nav-link fs-5 fw-bold" href="#">Serviços</a>
             </li>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Quem somos</a>
+              <a class="nav-link fs-5 fw-bold" href="#">Quem somos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contato</a>
+              <a class="nav-link fs-5 fw-bold" href="#">Contato</a>
             </li>
           </ul>
           <form class="d-flex justify-content-center" role="search">

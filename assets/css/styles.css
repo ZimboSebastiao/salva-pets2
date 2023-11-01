@@ -12,6 +12,15 @@ html { font-size: 14px;}
     margin-left: auto;
 } */
 
+
+header{
+    background-color: #FFF1EB;
+}
+
+.nav-link{
+    color: #1E266D;
+}
+
 .img-responsivo {
     display: flex;
     justify-content: space-around;
@@ -378,7 +387,7 @@ nav  a:hover, nav a:focus{
 
 
 .navbar-dark .navbar-brand,
-.navbar-dark .navbar-nav .nav-link {
+.navbar-dark .navbar-nav {
     color: #1E266D;
     /* Cor do texto na barra de navegação */
     font-weight: bold;
