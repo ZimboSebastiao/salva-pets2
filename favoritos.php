@@ -7,9 +7,10 @@
 
 
   $sessao = new ControleDeAcesso;
-
   $usuario = new Usuario;
-
+  $pets = new Pets;
+  $listaFavoritos = $pets->listarpets();
+  Utilitarios::dump($listaFavoritos);
 
 
   if (isset($_GET['sair'])) $sessao->logout();
@@ -25,6 +26,7 @@
   <!-- ======== CSS Bootstrap ======== -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -84,6 +86,15 @@
                     </a>
                 </li>
 
+                <li><a class="dropdown-item" href="#">Favorito
+                  <span class="espacamento-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                  </svg>
+                  </span>
+                    </a>
+                </li>
+
                 <li><a class="dropdown-item" href="?sair" >Sair 
                 <span class="espacamento-icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
@@ -103,120 +114,57 @@
 
 
 <main>
+  <!-- FILTROS DE BUSCA -->
+  <div class="top-pets pb-3 limitar-tela">
+    <div class="container-fluid d-flex gap-5 flex-wrap m-auto flex-xl-nowrap">
 
-  
-<!-- CARDS com as Imagens dos PETS -->
-<div class="limitar-detalhe">
-
-  <div class="card-container-detalhe">
-  
-    <div class="card-grande">
-    <?php
-      // Verifica se o ID do pet foi passado pela URL
-      if (isset($_GET['id'])) {
-        $petId = $_GET['id'];
-    
-  
-      $apiUrl = "http://localhost:8080/pets/" . $petId;  
-      $apiData = file_get_contents($apiUrl);
-    
-      $petData = json_decode($apiData, true);
-  
-      if ($petData) {
-          $nome = $petData['nome'];
-          $idade = $petData['idade'];
-          $data_salvapets = $petData['data_salvapets'];
-          $sobre = $petData['sobre'];
-          $localizacao = $petData['localizacao'];
-          $sexo = $petData['sexo'];
-          $imagem = $petData['imagem'];
-          $raca = $petData['raca'];
-          $imagemUrl = "http://localhost:8080/" . $imagem; ?>
-  
-          <?php 
-            $dataNascimento = strtotime($idade);
-            $dataAtual = time();
-
-            if ($dataNascimento !== false) {
-              $diferencaSegundos = $dataAtual - $dataNascimento;
-      
-              $anos = floor($diferencaSegundos / (365 * 24 * 60 * 60)); }
-              $meses = floor(($diferencaSegundos % (365 * 24 * 60 * 60)) / (30 * 24 * 60 * 60));
-
-              
-              $data_salvapets = new DateTime($data_salvapets);
-              $data_atual = new DateTime();
-              $diferenca = $data_atual->diff($data_salvapets);
-              $num_dias = $diferenca->days;
-          ?>
-
-        <div class="card border card-item-1" style="width: 100%;">
-          <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="422" >
-        </div>
-        <?php } } ?>
-    </div>
-  
-    <!-- CONJUNTO DE CARDS -->
-    <div class="cards-direita  ">
-  
-      <!-- CARDS Pequenos -->
-      <div class="cards-pequenos">
-        <div class="card border card-item-2" style="width: 90%;">
-              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
-        </div>
-      
-        <div class="card border card-item-2" style="width: 90%;">
-              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
-        </div>
+      <!-- INPUT CIDADE -->
+      <div class="input-group border rounded border-dark d-flex align-items-center">
+        <input type="text" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
       </div>
-    
-      <!-- CARDS Médios -->
-      <div class="cards-medios">
-        <div class="card border card-item-3" style="width: 100%;">
-              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
-        </div>
-      
-        <div class="card border card-item-3" style="width: 100%;">
-              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
-        </div>
+
+      <!-- INPUT REGIÃO -->
+      <div class="input-group border rounded border-dark">
+        <input type="text" class="form-control cont icon-house " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
       </div>
+
+      <!-- INPUT ANIMAL -->
+      <div class="input-group border rounded border-dark">
+        <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
+      </div>
+
+      <!-- INPUT IDADE -->
+      <div class="input-group border rounded border-dark">
+        <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Idade">
+      </div>
+
+      <!-- INPUT RAÇA -->
+      <div class="input-group border rounded border-dark">
+        <input type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
+      </div>
+
+      <!-- BOTÃO BUSCAR PET -->
+      <div class="w-75 m-auto">
+        <button class="btn btn-primary w-100" type="button">Buscar Pet</button>
+      </div>
+ 
     </div>
   </div>
   
-  <!-- DETALHES DO PET -->
-  <h1 class="loc-detalhes">
-    <?=$localizacao?>
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-      <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-      <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-    </svg>
-  </h1>
-  
-  <h2>Detalhes do Pet</h2>
-  
-  <h3 class="icon-race">Raça</h3>
-  <span><?=$raca?></span>
-  
-  <h3>
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-    </svg>
-    Idade
-  </h3>
-  <span><?=$anos?> anos e <?=$meses?> meses</span>
+  <div class="limitar-tela">
 
-  <h3>
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-    </svg>
-    Dias no Salva pets
-  </h3>
-  <span><?=$num_dias?> </span>
-  <hr>
-  
-  <h3>Sobre o Pet</h3>
-  <p><?=$sobre?></p>
-</div>
+    <h1 class="pets-h1"></h1>
+
+    <div class="card-container gap-5 shadow border">
+    <?php  foreach( $listaFavoritos as $petsSalvos ){ }?>
+        
+
+    </div>
+  </div>
+
+    
+
+
 
 
 
@@ -334,7 +282,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <script src="js/menu.js"></script>
-  <script src="js/nossos-pets.js"></script>
+
 
 </body>
 

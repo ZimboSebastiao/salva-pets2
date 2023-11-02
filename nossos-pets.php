@@ -8,9 +8,34 @@
 
   $sessao = new ControleDeAcesso;
   $usuario = new Usuario;
-  $pets = new Pets;
-  $dados = $pets->listarpets();
-  Utilitarios::dump($dados);
+  // $dados = $pets->listarpets();
+  // Utilitarios::dump($dados);
+
+
+  
+  
+  
+  if(isset($_GET['favoritar'])){
+    $pets = new Pets;
+    $petId = $_GET['favoritar'];
+    
+    // $pets->setNome($_GET['nome']);
+    // $pets->setTipo($_POST['tipo']);
+    // $pets->setImagem($_POST['imagem']);
+    // $pets->setIdade($_POST['idade']);
+    // $pets->setLocalizacao($_POST['localizacao']);
+    // $pets->setSexo($_POST['sexo']);
+    // $pets->setSobre($_POST['sobre']);
+    // $pets->setId_usuario($_POST['id_usuario']);
+
+    // $pets->inserirPets();
+
+    echo var_dump($petId);
+    header("location:nossos-pets.php");
+  }
+
+
+
 
 
   if (isset($_GET['sair'])) $sessao->logout();
@@ -191,7 +216,7 @@
             <div class="favoritar-nome">
               <h5 class="card-title nome-pets"><?=$nome?></h5>
               <p class="favorito">
-                <a class="bi bi-heart" href="#" ></a>
+                <a class="bi bi-heart" href="?favoritar=<?=$pet['id']?>" ></a>
               </p>
             </div>
             <p class="card-text loc-pets"><?=$localizacao?></p>

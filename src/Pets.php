@@ -22,26 +22,36 @@ class Pets {
     }
     
 
-    // INSERT de usuarios
-    // public function inserir():void {
-    //     $sql = "INSERT usuario(nome, cep, email, senha)
-    //             VALUES(:nome, :cep, :email, :senha)";
+    public function inserirPets():void {
+      
+        
+        $sql = "INSERT INTO favoritos(
+            nome, tipo, imagem, idade, localizacao, sexo, descricao, sobre, id_usuario
+        ) VALUES(
+            :nome, :tipo, :imagem, :idade, :localizacao, :sexo, :descricao, :sobre, :id_usuario
+        )";
+        
+    
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindValue(":nome", $this->nome, PDO::PARAM_STR);
+            $consulta->bindValue(":tipo", $this->tipo, PDO::PARAM_STR);
+            $consulta->bindValue(":imagem", $this->imagem, PDO::PARAM_STR);
+            $consulta->bindValue(":idade", $this->idade, PDO::PARAM_STR);
+            $consulta->bindValue(":localizacao", $this->localizacao, PDO::PARAM_STR);
+            $consulta->bindValue(":sexo", $this->sexo, PDO::PARAM_STR);
+            $consulta->bindValue(":descricao", $this->descricao, PDO::PARAM_STR);
+            $consulta->bindValue(":sobre", $this->sobre, PDO::PARAM_STR);
+            $consulta->bindValue(":id_usuario", $this->id_usuario, PDO::PARAM_INT);
+            $consulta->execute();
+        } catch (Exception $erro) {
+            die("Erro ao inserir: ".$erro->getMessage());
+        }
+    }
 
-    //     try {
-    //         $consulta = $this->conexao->prepare($sql);
-    //         $consulta->bindValue(":nome", $this->nome, PDO::PARAM_STR);
-    //         $consulta->bindValue(":cep", $this->cep, PDO::PARAM_STR);
-    //         $consulta->bindValue(":email", $this->email, PDO::PARAM_STR);
-    //         $consulta->bindValue(":senha", $this->senha, PDO::PARAM_STR);
-    //         $consulta->execute();
-           
-    //     } catch (Exception $erro) {
-    //        die("Erro ao inserir usuário: ".$erro->getMessage());
-    //     }
-    // }
 
     public function listarpets():array {
-        $sql = "SELECT * FROM pets ORDER BY nome";
+        $sql = "SELECT * FROM favoritos ORDER BY nome";
         
         try {
             $consulta = $this->conexao->prepare($sql);
@@ -55,18 +65,18 @@ class Pets {
     } 
 
 
-    public function lerUmPet():array {
-        $sql = "SELECT * FROM pets WHERE id = :id";
-        try {
-            $consulta = $this->conexao->prepare($sql);
-            $consulta->bindValue(":id", $this->id, PDO::PARAM_INT);
-            $consulta->execute();
-            $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
-        } catch (Exception $erro) {
-            die("Erro ao carregar dados: ".$erro->getMessage());
-        }    
-        return $resultado;
-    }
+    // public function lerUmPet():array {
+    //     $sql = "SELECT * FROM pets WHERE id = :id";
+    //     try {
+    //         $consulta = $this->conexao->prepare($sql);
+    //         $consulta->bindValue(":id", $this->id, PDO::PARAM_INT);
+    //         $consulta->execute();
+    //         $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+    //     } catch (Exception $erro) {
+    //         die("Erro ao carregar dados: ".$erro->getMessage());
+    //     }    
+    //     return $resultado;
+    // }
 
 
 
@@ -247,6 +257,8 @@ class Pets {
 
         return $this;
     }
+
+
 
     /**
      * Get the value of id_usuario
