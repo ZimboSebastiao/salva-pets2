@@ -8,34 +8,9 @@
 
   $sessao = new ControleDeAcesso;
   $usuario = new Usuario;
-  // $dados = $pets->listarpets();
+  $pets = new Pets;
+  $dados = $pets->listarpets();
   // Utilitarios::dump($dados);
-
-
-  
-  
-  
-  if(isset($_GET['favoritar'])){
-    $pets = new Pets;
-    $petId = $_GET['favoritar'];
-    
-    // $pets->setNome($_GET['nome']);
-    // $pets->setTipo($_POST['tipo']);
-    // $pets->setImagem($_POST['imagem']);
-    // $pets->setIdade($_POST['idade']);
-    // $pets->setLocalizacao($_POST['localizacao']);
-    // $pets->setSexo($_POST['sexo']);
-    // $pets->setSobre($_POST['sobre']);
-    // $pets->setId_usuario($_POST['id_usuario']);
-
-    // $pets->inserirPets();
-
-    echo var_dump($petId);
-    header("location:nossos-pets.php");
-  }
-
-
-
 
 
   if (isset($_GET['sair'])) $sessao->logout();
@@ -75,15 +50,15 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="nossos-pets.php">Todos pets</a></li>
-            <li><a class="dropdown-item" href="#">Cachorros</a></li>
-            <li><a class="dropdown-item" href="#">Gatos</a></li>
+            <li><a class="dropdown-item" href="nossos-pets.php?dogs">Cachorros</a></li>
+            <li><a class="dropdown-item" href="nossos-pets.php?cats">Gatos</a></li>
           </ul>
         </li>
         <li><a  href="#">Quem Somos</a></li>
         <li ><a href="#">Ajuda</a></li>
         <li ><a href="#">Contato</a></li>
         <?php if (!isset($_SESSION['id'])){ ?>
-            <li><a  href="login.php" class="btn btn-primary w-50 m-auto"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
+            <li><a  href="login.php" class="btn btn-primary w-50 m-auto botaoH"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
             <?php }?>
 
             <?php if (isset($_SESSION['id'])){ ?>
@@ -135,42 +110,51 @@
     </nav>
   </div>
 </header>
-<hr> <!-- FIM CABEÇALHO  -->
+<hr class="my-2"> <!-- FIM CABEÇALHO  -->
 
 
 <main>
+  <?php
+    if (isset($_GET['cidade'])) {
+      $city = $_GET['cidade'];
+      $apiUrl = "http://localhost:8080/cidade/{$city}";
+      $apiData = file_get_contents($apiUrl);
+      $data = json_decode($apiData, true); 
+    }
+  
+  ?>
   <!-- FILTROS DE BUSCA -->
   <div class="top-pets pb-3 limitar-tela">
     <div class="container-fluid d-flex gap-5 flex-wrap m-auto flex-xl-nowrap">
 
       <!-- INPUT CIDADE -->
       <div class="input-group border rounded border-dark d-flex align-items-center">
-        <input type="text" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
+        <input  type="text" id="cidade" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
       </div>
 
       <!-- INPUT REGIÃO -->
       <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-house " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
+        <input id="regiao" type="text" class="form-control cont icon-house " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
       </div>
 
       <!-- INPUT ANIMAL -->
       <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
+        <input id="animal" type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
       </div>
 
       <!-- INPUT IDADE -->
       <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Idade">
+        <input id="idade" type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Idade">
       </div>
 
       <!-- INPUT RAÇA -->
       <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
+        <input id="raca" type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
       </div>
 
       <!-- BOTÃO BUSCAR PET -->
       <div class="w-75 m-auto">
-        <button class="btn btn-primary w-100" type="button">Buscar Pet</button>
+        <button class="btn btn-primary w-100" type="button" id="buscar">Buscar Pet</button>
       </div>
  
     </div>
@@ -180,16 +164,33 @@
 
     <h1 class="pets-h1">
       <?php
-          $apiUrl = "http://localhost:8080/pets/";  
-          $apiData = file_get_contents($apiUrl);
-          $data = json_decode($apiData, true);
+
+          if (isset($_GET['dogs'])) {
+            $apiUrl = "http://localhost:8080/cachorros/";  
+            $apiData = file_get_contents($apiUrl);
+            $data = json_decode($apiData, true);
+            
+          } elseif (isset($_GET['cats'])) {
+            $apiUrl = "http://localhost:8080/gatos/";  
+            $apiData = file_get_contents($apiUrl);
+            $data = json_decode($apiData, true);
+          } else {
+
+            $apiUrl = "http://localhost:8080/pets/";  
+            $apiData = file_get_contents($apiUrl);
+            $data = json_decode($apiData, true);
+          }
+          
+
+          
+
+          
       ?> <?=count($data);?> Pets disponíveis para você
     </h1>
 
     <div class="card-container gap-5 shadow border">
     <?php
-      $apiUrl = "http://localhost:8080/pets/";  
-    
+       
       // Faz a solicitação à API e obtém os dados
       $apiData = file_get_contents($apiUrl);
     
@@ -264,11 +265,6 @@
     ?>
     </div>
   </div>
-
-    
-
-
-
 
 
 </main>
@@ -385,6 +381,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <script src="js/menu.js"></script>
+  <script src="js/filtros.js"></script>
 
 
 </body>

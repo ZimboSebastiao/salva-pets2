@@ -10,6 +10,9 @@
 
   $usuario = new Usuario;
 
+  // $pets = new Pets;
+  // $dados = $pets->lerUmPet();
+  // Utilitarios::dump($dados);
 
 
   if (isset($_GET['sair'])) $sessao->logout();
@@ -48,8 +51,8 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="nossos-pets.php">Todos pets</a></li>
-            <li><a class="dropdown-item" href="#">Cachorros</a></li>
-            <li><a class="dropdown-item" href="#">Gatos</a></li>
+            <li><a class="dropdown-item" href="nossos-pets.php?dogs">Cachorros</a></li>
+            <li><a class="dropdown-item" href="nossos-pets.php?cats">Gatos</a></li>
           </ul>
         </li>
         <li><a  href="#">Quem Somos</a></li>
