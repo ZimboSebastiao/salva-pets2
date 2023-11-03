@@ -101,7 +101,7 @@ if (isset($_GET['sair'])) $sessao->logout();
     </nav>
   </div>
 </header>
-<hr class="my-4"> FIM CABEÇALHO 
+<hr class="my-4"> <!-- FIM CABEÇALHO  -->
 
 
 <!-- ======== CONTEÚDO ======== -->
@@ -137,7 +137,7 @@ if (isset($_GET['sair'])) $sessao->logout();
 
         <!-- ====== BOTÃO - Adotar Pet ====== -->
         <div class="adotou-botao">
-            <button class="btn btn-primary btn-lg botao input-adocao" name="inserir"><a href="home.php">Voltar para tela inicial</a></button>
+            <button class="btn btn-primary btn-lg botao input-adocao" name="inserir"><a class="text-color" href="home.php">Voltar para tela inicial</a></button>
         </div>
 
 

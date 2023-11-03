@@ -430,11 +430,6 @@ nav  a:hover, nav a:focus{
     color: #fff; 
   }
 
-  
-  
-  
-  
-  
 
 .navbar-dark .navbar-brand,
 .navbar-dark .navbar-nav .nav-link {
@@ -685,6 +680,20 @@ a {text-decoration: none;}
     padding-top: 40px; 
     padding-bottom: 40px;
 }
+
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
+
+    .adotou-h1 {font-size: 20px;}
+    .adotou-p {
+        font-size: 14px;
+        color: #C3C7E5;
+      }
+    
+
+    
+}
+
 
 
 /*--------------------------------------------------------------

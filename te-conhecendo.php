@@ -174,7 +174,7 @@
             </div>
 
             <!-- ====== CHECK - Quarto ====== -->
-            <p class="posicionar-span">Alguém tem alergia ou doença com animais?</p>
+            <p class="posicionar-span">Alguém tem alergia à animais?</p>
             <div class="divide-te-conhecendo">
               <div>
                   <input name="quarto" type="radio" class="btn-check" id="quarto-sim" autocomplete="off">
