@@ -372,53 +372,48 @@ nav  a:hover, nav a:focus{
 .botaoH {
     height: 35px;
     width: 120px;
-
 }
-
-.btn-primary {
-    color: #fff !important; 
-    background-color: #e96d3f;
-    border-color: #e96d3f;
-
-}
-
-
-
 .botaoH:hover {
     color: #fff;
     background-color: #e96d3f;
     border-color: #e96d3f;
 }
 
-.btn-primary:hover {
-    /* color: #fff;                   */
-    background-color: #e96d3f;
-    border-color: #e96d3f;        
+
+.btn-primary {
+    color: #fff !important; 
+    background-color: #e96d3f ;
+    border-color: #e96d3f;
+
 }
+
+
+  .btn-primary:focus,
+  .btn-primary:checked,
+  .btn-primary:active,
+  .btn-primary:hover  {
+    background-color: #e96d3f !important;
+    border-color: #e96d3f !important;
+    
+  }
+
 
 .btn-check {                   
     background-color: #e96d3f !important;
     border-color: #e96d3f !important;        
 }
 
-.btn-check:hover {                   
-    background-color: #e96d3f !important;
-    border-color: #e96d3f !important;        
-}
-.btn-primary:hover {                   
+
+.btn-check:active, 
+.btn-check:hover,
+.btn-check:focus,
+.btn-check:checked {                   
     background-color: #e96d3f !important;
     border-color: #e96d3f !important;        
 }
 
-.btn-primary:hover {                   
-    background-color: #e96d3f !important;
-    border-color: #e96d3f !important;        
-}
 
-.btn-check{                  
-    background-color: #e96d3f;
-    border-color: #e96d3f;        
-}
+
 
 .btn {
     background-color: #e96d3f; 
@@ -429,7 +424,11 @@ nav  a:hover, nav a:focus{
     border-color: #e96d3f; ;
   }
   
-  
+  .btn-check:checked + .btn-primary.check-botao {
+    background-color: #e96d3f; 
+    border-color: #e96d3f; 
+    color: #fff; 
+  }
 
   
   
