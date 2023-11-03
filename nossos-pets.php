@@ -13,6 +13,8 @@
   // Utilitarios::dump($dados);
 
 
+
+
   if (isset($_GET['sair'])) $sessao->logout();
 ?>
 
@@ -44,14 +46,14 @@
         </svg>
       </a></h2>
       <ul class="menu">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown text-end">
+          <a class="nav-link dropdown-toggle text-end" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Nossos Pets
           </a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="nossos-pets.php">Todos pets</a></li>
-            <li><a class="dropdown-item" href="nossos-pets.php?dogs">Cachorros</a></li>
-            <li><a class="dropdown-item" href="nossos-pets.php?cats">Gatos</a></li>
+          <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item text-end" href="nossos-pets.php">Todos pets</a></li>
+            <li><a class="dropdown-item text-end" href="nossos-pets.php?dogs">Cachorros</a></li>
+            <li><a class="dropdown-item text-end" href="nossos-pets.php?cats">Gatos</a></li>
           </ul>
         </li>
         <li><a  href="#">Quem Somos</a></li>
@@ -110,55 +112,50 @@
     </nav>
   </div>
 </header>
-<hr class="my-2"> <!-- FIM CABEÇALHO  -->
+<hr class="my-4> <!-- FIM CABEÇALHO  -->
 
 
 <main>
-  <?php
-    if (isset($_GET['cidade'])) {
-      $city = $_GET['cidade'];
-      $apiUrl = "http://localhost:8080/cidade/{$city}";
-      $apiData = file_get_contents($apiUrl);
-      $data = json_decode($apiData, true); 
-    }
-  
-  ?>
+
   <!-- FILTROS DE BUSCA -->
-  <div class="top-pets pb-3 limitar-tela">
-    <div class="container-fluid d-flex gap-5 flex-wrap m-auto flex-xl-nowrap">
 
-      <!-- INPUT CIDADE -->
-      <div class="input-group border rounded border-dark d-flex align-items-center">
-        <input  type="text" id="cidade" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
-      </div>
 
-      <!-- INPUT REGIÃO -->
-      <div class="input-group border rounded border-dark">
-        <input id="regiao" type="text" class="form-control cont icon-house " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
+    <div class="top-pets pb-3 limitar-tela">
+      <div class="container-fluid d-flex gap-5 flex-wrap m-auto flex-xl-nowrap">
+  
+        <!-- INPUT CIDADE -->
+        <div class="input-group border rounded border-dark d-flex align-items-center">
+          <input  type="text" id="cidade" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
+        </div>
+  
+        <!-- INPUT REGIÃO -->
+        <div class="input-group border rounded border-dark">
+          <input id="regiao" type="text" class="form-control cont icon-house " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
+        </div>
+  
+        <!-- INPUT ANIMAL -->
+        <div class="input-group border rounded border-dark">
+          <input id="animal" type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
+        </div>
+  
+        <!-- INPUT IDADE -->
+        <div class="input-group border rounded border-dark">
+          <input id="idade" type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Idade">
+        </div>
+  
+        <!-- INPUT RAÇA -->
+        <div class="input-group border rounded border-dark">
+          <input id="raca" type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
+        </div>
+  
+        <!-- BOTÃO BUSCAR PET -->
+        <div class="w-75 m-auto">
+          <button class="btn btn-primary w-100" type="button" id="buscar">Buscar Pet</button>
+        </div>
+   
       </div>
-
-      <!-- INPUT ANIMAL -->
-      <div class="input-group border rounded border-dark">
-        <input id="animal" type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
-      </div>
-
-      <!-- INPUT IDADE -->
-      <div class="input-group border rounded border-dark">
-        <input id="idade" type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Idade">
-      </div>
-
-      <!-- INPUT RAÇA -->
-      <div class="input-group border rounded border-dark">
-        <input id="raca" type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
-      </div>
-
-      <!-- BOTÃO BUSCAR PET -->
-      <div class="w-75 m-auto">
-        <button class="btn btn-primary w-100" type="button" id="buscar">Buscar Pet</button>
-      </div>
- 
     </div>
-  </div>
+
   
   <div class="limitar-tela">
 
@@ -182,13 +179,17 @@
           }
           
 
-          
-
+          if (isset($_GET['regiao'])) {
+            $regiao = $_GET['regiao'];
+            $apiUrl = "http://localhost:8080/regiao/{$regiao}";
+            $apiData = file_get_contents($apiUrl);
+            $data = json_decode($apiData, true);
+        }
           
       ?> <?=count($data);?> Pets disponíveis para você
     </h1>
 
-    <div class="card-container gap-5 shadow border">
+    <div class="card-container gap-5 shadow border data-pets='<?= json_encode($data); ?>">
     <?php
        
       // Faz a solicitação à API e obtém os dados
@@ -204,6 +205,8 @@
                   $idade = $pet['idade'];
                   $sobre = $pet['sobre'];
                   $localizacao = $pet['localizacao'];
+                  $cidade = $pet['cidade'];
+                  $regiao = $pet['regiao'];
                   $sexo = $pet['sexo'];
                   $imagem = $pet['imagem'];
     
@@ -268,6 +271,12 @@
 
 
 </main>
+
+
+
+
+
+
 
   <!-- ====== FOOTER ====== -->
 <footer class=" text-lg-start footer-color text-muted">
@@ -381,7 +390,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <script src="js/menu.js"></script>
-  <script src="js/filtros.js"></script>
+  <!-- <script src="js/filtros.js"></script> -->
 
 
 </body>

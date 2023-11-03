@@ -204,7 +204,6 @@ h1 {
     }
 
     .input-cadastro {
-        background-color: #1E266D;
         width: 100%;
     }
 
@@ -313,7 +312,7 @@ nav  a:hover, nav a:focus{
     right: 0;
 }
 
-@media screen and (min-width: 530px) {
+@media screen and (min-width: 900px) {
     nav h2 {display: none;}
     html { font-size: 0.9rem;}
     .menu {
@@ -351,7 +350,7 @@ nav  a:hover, nav a:focus{
 }
 
 .espacamento-icon {
-    padding-left: 10px;
+    padding-right: 10px;
 }
 .espacamento-user {
     padding-left: 7px;
@@ -462,6 +461,9 @@ nav  a:hover, nav a:focus{
 
 
 
+
+
+
 /*--------------------------------------------------------------
 # Estilização Página de Adoção
 --------------------------------------------------------------*/
@@ -530,6 +532,28 @@ a {text-decoration: none;}
     text-align: center;
     padding-top: 20px;
     padding: 9px;
+}
+
+.text-color {
+    color: white;
+}
+
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
+
+    .input-adocao {
+        width: 285px;
+    }
+    
+    .inputs-adocao {
+        width: 135px;
+    }
+    .entry {width: 289px;}
+    
+    .form-floating {
+        margin-right: 2px; /* Adicione a margem desejada entre os elementos */
+    }
+
 }
 
 
