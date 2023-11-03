@@ -134,13 +134,13 @@
             <p class="posicionar-span">Tem crianças em casa?</p>
             <div class="divide-te-conhecendo">
               <div>
-                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-                  <label class="btn btn-primary check-botao" for="btn-check">Sim</label>
+                  <input name="first" type="radio" class="btn-check" id="first-sim" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="first-sim">Sim</label>
               </div>
 
               <div>
-                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-                  <label class="btn btn-primary check-botao" for="btn-check">Não</label>
+                  <input name="first" type="radio" class="btn-check" id="first-nao" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="first-nao">Não</label>
               </div>
             </div>
 
@@ -148,13 +148,13 @@
             <p class="posicionar-span">Tem algum pet?</p>
             <div class="divide-te-conhecendo">
               <div>
-                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-                  <label class="btn btn-primary check-botao" for="btn-check">Sim</label>
+                  <input name="segundo" type="radio" class="btn-check" id="segundo-sim" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="segundo-sim">Sim</label>
               </div>
 
               <div>
-                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-                  <label class="btn btn-primary check-botao" for="btn-check">Não</label>
+                  <input name="segundo" type="radio" class="btn-check" id="segundo-nao" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="segundo-nao">Não</label>
               </div>
             </div>
 
@@ -163,13 +163,13 @@
             <p class="posicionar-span">Todos em casa estão cientes?</p>
             <div class="divide-te-conhecendo">
               <div>
-                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-                  <label class="btn btn-primary check-botao" for="btn-check">Sim</label>
+                  <input name="terceiro" type="radio" class="btn-check" id="terceiro-sim" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="terceiro-sim">Sim</label>
               </div>
 
               <div>
-                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-                  <label class="btn btn-primary check-botao" for="btn-check">Não</label>
+                  <input name="terceiro" type="radio" class="btn-check" id="terceiro-nao" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="terceiro-nao">Não</label>
               </div>
             </div>
 
@@ -177,13 +177,13 @@
             <p class="posicionar-span">Alguém tem alergia ou doença com animais?</p>
             <div class="divide-te-conhecendo">
               <div>
-                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-                  <label class="btn btn-primary check-botao" for="btn-check">Sim</label>
+                  <input name="quarto" type="radio" class="btn-check" id="quarto-sim" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="quarto-sim">Sim</label>
               </div>
 
               <div>
-                  <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-                  <label class="btn btn-primary check-botao" for="btn-check">Não</label>
+                  <input name="quarto" type="radio" class="btn-check" id="quarto-nao" autocomplete="off">
+                  <label class="btn btn-primary check-botao" for="quarto-nao">Não</label>
               </div>
             </div>
 

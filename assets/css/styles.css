@@ -396,15 +396,46 @@ nav  a:hover, nav a:focus{
     border-color: #e96d3f;        
 }
 
+.btn-check {                   
+    background-color: #e96d3f !important;
+    border-color: #e96d3f !important;        
+}
+
 .btn-check:hover {                   
-    background-color: #e96d3f;
-    border-color: #e96d3f;        
+    background-color: #e96d3f !important;
+    border-color: #e96d3f !important;        
+}
+.btn-primary:hover {                   
+    background-color: #e96d3f !important;
+    border-color: #e96d3f !important;        
+}
+
+.btn-primary:hover {                   
+    background-color: #e96d3f !important;
+    border-color: #e96d3f !important;        
 }
 
 .btn-check{                  
     background-color: #e96d3f;
     border-color: #e96d3f;        
 }
+
+.btn {
+    background-color: #e96d3f; 
+  }
+  
+  .btn:hover {
+    background-color: #e96d3f; ;
+    border-color: #e96d3f; ;
+  }
+  
+  
+
+  
+  
+  
+  
+  
 
 .navbar-dark .navbar-brand,
 .navbar-dark .navbar-nav .nav-link {
@@ -599,7 +630,7 @@ a {text-decoration: none;}
 
 .textearea-form {
     height: 134px !important; 
-    width: 455px ;
+    width: 459px ;
 }
 
 @media (min-width: 200px) and (max-width: 991px){
@@ -614,9 +645,7 @@ a {text-decoration: none;}
         align-items: center;
     }
 
-    .botao-adotou-tamanho {
-        width: 80%;
-    }
+
     
     .check-botao {
         width: 95px;
