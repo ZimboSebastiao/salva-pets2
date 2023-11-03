@@ -570,6 +570,7 @@ a {text-decoration: none;}
     padding: 18px;
     padding-left: 0;
     padding-top: 0;
+    padding-right: 0;
 }
 
 .check-botao {
@@ -596,6 +597,40 @@ a {text-decoration: none;}
     color: #babdd4 ;
 }
 
+.textearea-form {
+    height: 134px !important; 
+    width: 455px ;
+}
+
+@media (min-width: 200px) and (max-width: 991px){
+    
+    .textearea-form {
+        height: 134px !important; 
+        width: 333px ;
+    }
+    .botao-adotou {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .botao-adotou-tamanho {
+        width: 80%;
+    }
+    
+    .check-botao {
+        width: 95px;
+        height: 55px;
+        border-color: #C3C7E5;
+        color: rgb(78, 72, 72) !important; 
+        font-size: 22px;
+        cursor: pointer;
+    
+    }
+
+
+
+}
 
 
 /*--------------------------------------------------------------

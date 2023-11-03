@@ -127,8 +127,8 @@
   <!-- ====== FORMULÁRIO ====== -->
   <div class="container tamanho-form">
     <div class="row">
-      <section class="estilo-form">
-        <form action=""  method="post" class="dividir-form">
+      <section class="estilo-form form-te-conhecendo">
+        <form action=""  method="post" class="dividir-form-conhencendo">
 
             <!-- ====== CHECK - Primeiro ====== -->
             <p class="posicionar-span">Tem crianças em casa?</p>
@@ -191,15 +191,15 @@
             <p class="posicionar-span">Nos conte um pouco sobre a sua moradia</p>
             <div class="divide-te-conhecendo">
               <div class="form-floating mb-3">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2Disabled" style="height: 130px; width: 455px;"></textarea>
+                <textarea class="form-control textearea-form" placeholder="Leave a comment here" id="floatingTextarea2Disabled" ></textarea>
                 <label class="check-textar" for="floatingTextarea2Disabled">Escrever mensagem</label>
               </div>  
             </div>
             
             
             <!-- ====== BOTÃO - Adotar Pet ====== -->
-            <div>
-                <button class="btn btn-primary btn-lg botao input-adocao" name="inserir"><a class="text-color" href="adotou.php">Adotar Pet</a></button>
+            <div class="botao-adotou">
+                <button class="btn btn-primary btn-lg botao input-adocao botao-adotou-tamanho" name="inserir"><a class="text-color" href="adotou.php">Adotar Pet</a></button>
             </div>
 
         </form>
