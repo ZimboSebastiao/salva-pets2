@@ -830,3 +830,23 @@ a {text-decoration: none;}
     background-color: #040726;
     color: white !important;
 }
+
+
+/*--------------------------------------------------------------
+# Estilização do Perfil
+--------------------------------------------------------------*/
+
+.custom-circle {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+  }
+
+.alinhar-text {
+    text-align: center;
+}
+
+.alinha-cards {
+    display: flex;
+    justify-content: space-between;
+}
