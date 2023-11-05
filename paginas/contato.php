@@ -35,7 +35,7 @@
               <li><a class="dropdown-item" href="#">Gatos</a></li>
             </ul>
           </li>
-          <li><a href="#">Quem Somos</a></li>
+          <li><a href="quem-somos.php">Quem Somos</a></li>
           <li><a href="#">Ajuda</a></li>
           <li><a href="#">Contato</a></li>
           <?php if (!isset($_SESSION['id'])) { ?>
@@ -103,8 +103,8 @@
         <div class="center-form-cadastro m-auto">
           <div class="d-flex flex-column justify-content-center align-items-center"></div>
 
-          <section class="estilo-form col-6 m-auto d-flex  align-items-center">
-            <img src="../images/cat-dog-removebg-preview.png" alt="" width="100%">
+          <section class="estilo-form  m-auto d-flex align-items-center w-75">
+            <img src="../images/cat-dog-removebg-preview.png" alt="">
 
             <form action="https://formspree.io/f/xbjvbldj" method="post" >
 
