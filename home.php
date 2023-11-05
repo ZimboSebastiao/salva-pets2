@@ -38,7 +38,7 @@
               <a class="nav-link fs-5 fw-bold z-1 position-relative" href="#">Quem somos</a>
             </li>
           </ul>
-          <form class="d-flex justify-content-center me-sm-5" role="search">
+          <form class="d-flex justify-content-center me-lg-5" role="search">
             <a href="login.php" class="btn btn-primary border px-5 z-1 position-relative" tabindex="-1" role="button" aria-disabled="true">Entrar</a>
           </form><hr class="">
         </div>
