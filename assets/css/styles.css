@@ -850,3 +850,18 @@ a {text-decoration: none;}
     display: flex;
     justify-content: space-between;
 }
+
+@media (min-width: 200px) and (max-width: 991px){
+    
+    .alinha-cards {
+        
+     
+        padding: 20px;
+    }
+
+
+    
+    
+
+    
+}

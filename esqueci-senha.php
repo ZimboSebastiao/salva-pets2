@@ -1,50 +1,17 @@
 <?php 
-  use Salvapets\Utilitarios;
-  use Salvapets\Usuario;
-  use Salvapets\ControleDeAcesso;
-  require_once "vendor/autoload.php";
-
-  $sessao = new ControleDeAcesso;
-  $sessao->verificaAcesso();
-
-  date_default_timezone_set('America/Sao_Paulo');
-  $agora = date('d/m/Y'); 
-  $hora = date('H:i');
-
-  $usuario = new Usuario;
-  $usuario->setId($_SESSION['id']);
-  $dados = $usuario->listarUm();
-  // Utilitarios::dump($dados);
+use Salvapets\Usuario;
+require_once "vendor/autoload.php";
+$usuario = new Usuario;
 
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $usuario->setEmail($_POST['email']);
+  $email = $_POST['email'];
+  $usuario->verificarEmail();
+ 
+}
 
-  if(isset($_POST["atualizar"])){
-    $usuario->setNome($_POST['nome']);
-    $usuario->setEmail($_POST['email']);
-    $usuario->setCep($_POST['cep']);
-  
-  
-    if(empty($_POST['senha'])){
-      $usuario->setSenha($dados['senha']);
-    } else {
-      $usuario->setSenha(
-  
-        $usuario->verificaSenha($_POST['senha'], $dados['senha'])
-      );
-      
-    }
-    
-  
-    $usuario->atualizar(); 
-      header("location:nossos-pets.php?status=sucesso");
-  }
-  
-
-
-
-  if (isset($_GET['sair'])) $sessao->logout();
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -52,10 +19,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SalvaPets - Adote o seu Pet</title>
+  <title>SalvaPets</title>
   <!-- ======== CSS Bootstrap ======== -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    body {background-color: #fff6f1;}
+  </style>
 </head>
 
 <body>
@@ -63,150 +33,41 @@
 <!-- ======== CABEÇALHO ======== -->
 <header>
   <div class="limitador">
-    <a class="navbar-brand customize" href="home.php">
+    <a class="navbar-brand customize" href="#">
       <img src="icones/pet1.png" alt="..." height="46">
       SalvaPets
     </a>
-    <nav>
-      <h2><a href="" class="icone">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list-nested" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
-        </svg>
-      </a></h2>
-      <ul class="menu">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Nossos Pets
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="nossos-pets.php">Todos pets</a></li>
-            <li><a class="dropdown-item" href="nossos-pets.php?dogs">Cachorros</a></li>
-            <li><a class="dropdown-item" href="nossos-pets.php?cats">Gatos</a></li>
-          </ul>
-        </li>
-        <li><a  href="#">Quem Somos</a></li>
-        <li ><a href="#">Ajuda</a></li>
-        <li ><a href="#">Contato</a></li>
-        <?php if (!isset($_SESSION['id'])){ ?>
-            <li><a  href="login.php" class="btn btn-primary w-50 m-auto"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
-            <?php }?>
-
-            <?php if (isset($_SESSION['id'])){ ?>
-              </li>
-                <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <?= $_SESSION["nome"]?> 
-
-                <span class="espacamento-user">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                  </svg>
-                </span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Perfil
-                  <span class="espacamento-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
-                        <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5zm0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78h4.723zM5.048 3.967c-.03.021-.058.043-.087.065l.087-.065zm-.431.355A4.984 4.984 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8 4.617 4.322zm.344 7.646.087.065-.087-.065z"/>
-                      
-                      
-                    </svg>
-                  </span>
-                    </a>
-                </li>
-
-                <li><a class="dropdown-item" href="?sair" >Sair 
-                <span class="espacamento-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
-                    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
-                  </svg>
-                </span>
-                </a></li>
-              </ul>
-            </li>
-            <?php } ?>
-      </ul>
-    </nav>
+   
   </div>
-</header> <!-- FIM CABEÇALHO  -->
-<hr class="my-4 bg-primary">
+</header>
+<!-- FIM CABEÇALHO  -->
+
 
 <!-- ======== CONTEÚDO ======== -->
-<main class="limitador">
-
-<!-- ========== IMAGEM ========= -->
-<!-- <div class="card mb-3">
-  <img src="images/design.png" class="card-img-top" alt="...">
-</div> -->
-
-
-
+<main>
 
 
   
+  <!-- ====== FORMULÁRIO ====== -->
 
+  <div class="container">
 
-
-<div class="container">
-  
-  <h1> Bem Vindo(a), <?=$dados['nome']?> </h1>
-  
-
-<div class="alinha-cards">
-
-  <div class="card" style="width: 18rem; height: 50%;">
-    <div class="d-flex justify-content-center align-items-center">
-      <img src="images/destaque-cadastro.jpg" class=" custom-circle" alt="...">
-    </div>
-    <div class="card-body alinhar-text">
-      <h3><?=$dados["nome"]?></h3>
-      <p class="Beetle-letters alinhar-text">Configurações da conta</p>
-      <span class="Beetle-letters alinhar-text">Data: <?= $agora?><span> <br>
-      <span class="Beetle-letters alinhar-text">Hora: <?= $hora?><span>
-    </div>
-  </div>
-
-
-  
-  <div class="card w-75 mb-3">
-      <br>
-
-      
-      <form class="mx-auto w-75" action="" method="post" id="form-atualizar" name="form-atualizar">
-    
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" id="nome" name="nome" value="<?=$dados['nome']?>">
-        <label for="floatingInput">Nome</label>
-      </div>
-      
-      <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" id="email" name="email" value="<?=$dados['email']?>">
-        <label for="floatingInput">Email address</label>
-      </div>
-    
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" id="cep" name="cep" value="<?=$dados['cep']?>">
-        <label for="floatingInput">Cep</label>
-      </div>
-    
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" id="senha" name="senha">
-        <label for="floatingPassword">Password</label>
-    </div>
-    
-    
-      <div class="card-body">
-        <button class="btn btn-primary" name="atualizar"><i class="bi bi-arrow-clockwise"></i> Atualizar</button>
-        </div>
-      </div>
-    
+    <p style="padding-top: 30px;">
+      Preencha o campo abaixo para recuperar o seu acesso.
+    </p>
+    <form action="" method="post">
+    <div class="form-floating mb-3">
+                <input class="form-control input-adocao" id="floatingInput" name="email" placeholder="name@example.com" required type="email">
+                <label for="floatingInput">E-mail</label>
+            </div>
+      <button type="button" class="btn btn-primary" >Cancelar</button>
+      <button type="submit" class="btn btn-primary">Continuar</button>
     </form>
   </div>
+        
 
 
-</div>
+
 
 
 
@@ -325,8 +186,15 @@
 </footer> <!-- FIM FOOTER  -->
 
 
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+        $("#exampleModal").modal("show");
+    });
+  </script>
   <script src="js/menu.js"></script>
 </body>
 
