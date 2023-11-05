@@ -132,8 +132,7 @@ class Usuario {
     }
     
 
-    // Função verifica email
-
+    // Verifica email
     public function verificarEmail() {
         $sql = "SELECT id FROM usuario WHERE email = :email LIMIT 1";
 
@@ -166,9 +165,9 @@ class Usuario {
             // Configuração do PHPMailer
             $mail = new PHPMailer(true);
             $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com'; // Servidor SMTP
+            $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'suporte.salvapets@gmail.com'; // Seu endereço de e-mail
+            $mail->Username = 'suporte.salvapets@gmail.com';
             $mail->Password = 'vnwc sesk kvyn lumg';
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
@@ -187,9 +186,9 @@ class Usuario {
             $mail->setFrom('suporte.salvapets@gmail.com', 'Salva Pets');
             $mail->addAddress($this->email); // Destinatário a partir do email do usuário
             $mail->isHTML(true);
-            $mail->Subject = 'Recuperação de Senha';
-            $mail->Body = 'Você solicitou a recuperação de senha. Clique no link a seguir para redefinir sua senha: ' .
-                '<a href="https://salva-pets.com/redefinir_senha.php?codigo=' . $codigoRedefinicao . '">Clique aqui</a>';
+            $mail->Subject = 'Recuperacao de Senha';
+            $mail->Body = 'Voce solicitou a recuperacao de senha. Clique no link a seguir para redefinir sua senha: ' .
+                '<a href="http://localhost/salva-pets2/recover.php?codigo=' . $codigoRedefinicao . '">Clique aqui</a>';
 
                 $mail->SMTPDebug = 2;
             if ($mail->send()) {
@@ -209,6 +208,8 @@ class Usuario {
             header('location:login.php');
             exit;
     }
+
+    
 
     public function getId(): int
     {

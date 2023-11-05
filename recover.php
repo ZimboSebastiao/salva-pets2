@@ -1,3 +1,37 @@
+<?php
+use Salvapets\Usuario;
+require_once "vendor/autoload.php";
+
+// Verifique se o token foi passado na URL
+if (isset($_GET['codigo'])) {
+    $codigoRedefinicao = $_GET['codigo'];
+    $usuario = new Usuario;
+
+    // Verifique o token no banco de dados
+    $idUsuario = $usuario->verificarTokenRedefinicao($codigoRedefinicao);
+
+    if ($idUsuario) {
+        // Token válido, permita que o usuário redefina a senha
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $novaSenha = $_POST['novaSenha'];
+            $confirmaSenha = $_POST['confirmaSenha'];
+
+            if ($novaSenha === $confirmaSenha && strlen($novaSenha) >= 6) {
+                // Atualize a senha do usuário no banco de dados
+                $usuario->redefinirSenha($idUsuario, $novaSenha);
+                echo "Senha redefinida com sucesso!";
+            } else {
+                echo "As senhas inseridas são diferentes ou têm menos de 6 caracteres.";
+            }
+        }
+    } else {
+        echo "Token inválido ou expirado.";
+    }
+} else {
+    echo "Token não encontrado na URL.";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -43,15 +77,15 @@
     </p>
     <form action="" method="post">
       <div class="form-floating mb-3">
-          <input class="form-control input" id="floatingInput" placeholder="Nova Senha" required type="password">
-          <label for="floatingInput">Nova Senha</label>
+          <input class="form-control input" id="novaSenha" name="novaSenha" placeholder="Nova Senha" required type="password">
+          <label for="novaSenha">Nova Senha</label>
       </div>
       <div class="form-floating mb-3">
-          <input class="form-control input" id="floatingInput" placeholder="Nova Senha" required type="password">
-          <label for="floatingInput">Repita a Senha</label>
+          <input class="form-control input" id="confirmaSenha" name="confirmaSenha" placeholder="Confirme a Senha" required type="password">
+          <label for="confirmaSenha">Confirme a Senha</label>
       </div>
       <button type="button" class="btn btn-primary" >Cancelar</button>
-      <button type="button" class="btn btn-primary">Continuar</button>
+      <button type="submit" class="btn btn-primary">Continuar</button>
     </form>
   </div>
         
