@@ -1,0 +1,15 @@
+{
+    "name": "kaues/salva-pets2",
+    "autoload": {
+        "psr-4": {
+            "Kaues\\SalvaPets2\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kaue-S",
+            "email": "kauesilva38@hotmail.com"
+        }
+    ],
+    "require": {}
+}
