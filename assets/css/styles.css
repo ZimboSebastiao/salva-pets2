@@ -24,6 +24,9 @@
     height: 526px;
 }
 
+
+
+
 .pesquisa{
     z-index: 2;
     height: 100px;
@@ -834,7 +837,6 @@ a {text-decoration: none;}
 --------------------------------------------------------------*/
 
 .footer-color {
-    margin-top: 40px;
     background-color: #040726;
     color: white !important;
 }
