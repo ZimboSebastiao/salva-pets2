@@ -163,17 +163,17 @@
       <?php
 
           if (isset($_GET['dogs'])) {
-            $apiUrl = "http://localhost:8080/cachorros/";  
+            $apiUrl = "https://salvapets.onrender.com/cachorros/";  
             $apiData = file_get_contents($apiUrl);
             $data = json_decode($apiData, true);
             
           } elseif (isset($_GET['cats'])) {
-            $apiUrl = "http://localhost:8080/gatos/";  
+            $apiUrl = "https://salvapets.onrender.com/gatos/";  
             $apiData = file_get_contents($apiUrl);
             $data = json_decode($apiData, true);
           } else {
 
-            $apiUrl = "http://localhost:8080/pets/";  
+            $apiUrl = "https://salvapets.onrender.com/pets/";  
             $apiData = file_get_contents($apiUrl);
             $data = json_decode($apiData, true);
           }
@@ -181,7 +181,7 @@
 
           if (isset($_GET['regiao'])) {
             $regiao = $_GET['regiao'];
-            $apiUrl = "http://localhost:8080/regiao/{$regiao}";
+            $apiUrl = "https://salvapets.onrender.com/regiao/{$regiao}";
             $apiData = file_get_contents($apiUrl);
             $data = json_decode($apiData, true);
         }
@@ -212,7 +212,7 @@
                   $imagem = $pet['imagem'];
     
                   
-                  $imagemUrl = "http://localhost:8080/" . $imagem; ?>
+                  $imagemUrl = "https://salvapets.onrender.com/" . $imagem; ?>
     
         <div class="card border card-item shadow-lg rounded-5">
         

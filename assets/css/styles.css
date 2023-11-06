@@ -828,7 +828,7 @@ a {text-decoration: none;}
 }
 
 .formatar-loc {
-    width: 270%;
+    width: 190%;
     display: flex;
     justify-content: space-between;
     padding: 0;
@@ -836,8 +836,8 @@ a {text-decoration: none;}
 }
 
 .espacamento-p { 
-    width: 71.5%;
-    text-align: right;
+    width: 90%;
+    text-align: center;
 }
 
 .formartar-botao {
@@ -847,15 +847,15 @@ a {text-decoration: none;}
 }
 
 
-.formatar-sections {
+.formatar-sections { 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .formatar-detalhes {
-    width: 270%;
     display: flex;
+    width: 190%;
     justify-content: space-between;
     padding-bottom: 30px;
     padding-top: 30px;
@@ -867,8 +867,17 @@ a {text-decoration: none;}
 }
 
 hr.my-2 { 
-    width: 80%; 
+    width: 60%; 
     padding: 10px;
+}
+
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
+
+
+    
+
+    
 }
 
 
