@@ -877,7 +877,8 @@ hr.my-2 {
     .cards-direita {display: none;}
     .formatar-h1 {font-size: 16px;}
     .rua-detalhes {font-size: 12px;}
-    .formatar-card {display: none;}
+    .card-title {display: none;}
+    .card-text{display: none;}
 
     .formatar-loc {
         width: 100%;
@@ -894,6 +895,11 @@ hr.my-2 {
     }
 
     .formatar-span {padding-top: 20px;}
+    .formartar-botao {width: 140% !important;}
+    .formatar-card {
+        width: 100% !important;
+        border: none;
+    }
     
 }
 

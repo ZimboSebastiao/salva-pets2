@@ -255,8 +255,8 @@
   </section>
   
   <!-- Card adoção -->
-  <section class="formatar-card">
-    <div class="card" style="width: 22rem;">
+  <section>
+    <div class="card formatar-card" style="width: 22rem;">
       <div class="card-body">
         <h5 class="card-title espacamento-h">Adote seu pet aqui!</h5>
         <div class="formatar-p">
