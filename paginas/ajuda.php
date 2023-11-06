@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="pt-br">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
-
 <body>
     <!-- ======== CABEÇALHO ======== -->
     <header class="menu-color">
@@ -92,49 +90,63 @@
         </div>
     </header>
     <main class="main-contact d-flex align-items-center m-auto">
-
         <div class="container-sm img-responsivo-cadastro">
 
-            <h1 class="fs-1 text-center">Leia as <b> duvidas Frequêntes!!!</b></h1>
+            <h1 class="fs-1 text-center">Leia as <b> duvidas </b> Frequêntes!!!</h1>
             <!-- =========== Formulário  =========== -->
 
-            <section class="estilo-form  m-auto d-flex align-items-center w-100">
+            <section class="estilo-form m-auto d-flex align-items-center w-100">
                 <img src="../images/dúvidas-removebg-preview.png" alt="">
 
                 <div class="accordion w-100" id="accordionPanelsStayOpenExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                Accordion Item #1
+                                Como escolher o pet perfeito para minha família?
                             </button>
                         </h2>
                         <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                             <div class="accordion-body">
-                                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                <strong>Resposta:</strong> Para encontrar o pet ideal, considere fatores como tamanho, personalidade, nível de atividade e requisitos de cuidados. Visite abrigos de animais, converse com os funcionários e considere a adoção responsável.
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item ">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                Accordion Item #2
+                                Como preparar minha casa para a chegada de um pet recém adotado?
                             </button>
                         </h2>
                         <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                             <div class="accordion-body">
-                                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                <strong>Resposta:</strong> Antes de trazer seu novo amigo para casa, certifique-se de que sua casa seja segura e pet-friendly. Isso envolve a remoção de objetos perigosos, fornecimento de abrigo adequado, comida, água e treinamento básico.
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                Accordion Item #3
+                                Qual é a melhor maneira de acolher um pet recém adotado?
                             </button>
                         </h2>
                         <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
                             <div class="accordion-body">
-                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                <strong>Resposta:</strong> A recepção apropriada de um pet recém adotado envolve paciência e carinho. Dê tempo ao animal para se adaptar ao novo ambiente, estabeleça uma rotina consistente e ofereça afeto gradualmente. Consulte um veterinário para garantir que o pet esteja saudável.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                Como lidar com problemas de comportamento em pets adotados?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <strong>Resposta:</strong> Muitos pets adotados podem ter problemas de comportamento devido a experiências passadas. A melhor abordagem é a paciência e o treinamento positivo. Se os problemas persistirem, considere a consulta a um treinador de animais ou a um especialista em comportamento animal.
+
+                                <p class="p-2">em caso de dúvidas: </p>
+                                <p><a href="">Entre em contato</a></p>
                             </div>
                         </div>
                     </div>
@@ -143,10 +155,9 @@
 
             <!-- ========== Destaque ========== -->
             <div id="destaque-cadastro"></div>
-
         </div>
 
-        </div>
+
     </main>
     <!-- ====== FOOTER ====== -->
     <footer class=" text-lg-start footer-color text-muted">

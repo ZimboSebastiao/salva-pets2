@@ -103,10 +103,10 @@
         <div class="center-form-cadastro m-auto">
           <div class="d-flex flex-column justify-content-center align-items-center"></div>
 
-          <section class="estilo-form  m-auto d-flex align-items-center w-75">
-            <img src="../images/cat-dog-removebg-preview.png" alt="">
+          <section class="estilo-form  m-auto d-flex align-items-center w-75 gap-5">
+            <img src="../images/cat-dog-removebg-preview.png" alt="pets-paginaContato">
 
-            <form action="https://formspree.io/f/xbjvbldj" method="post" >
+            <form action="https://formspree.io/f/xbjvbldj" method="post" class="b-2">
 
               <div class="form-floating mb-3">
                 <input type="text" class="form-control input-cadastro" id="floatingInputGroup2" placeholder="Username" required name="nome">
