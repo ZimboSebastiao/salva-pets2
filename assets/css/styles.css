@@ -86,6 +86,23 @@ footer{
 /* ============================================================= */
 
 
+
+/* pagina perfil */
+
+.card-atualizacao{
+    background-color: #4d59db;
+}
+
+/* .formulario{
+    background-image: url("../../images/Design\ sem\ nome.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+
+
+/* =============== */
+
 .img-responsivo {
     display: flex;
     justify-content: space-around;
@@ -908,22 +925,3 @@ hr.my-2 {
     text-align: center;
 }
 
-.alinha-cards {
-    display: flex;
-    justify-content: space-between;
-}
-
-@media (min-width: 200px) and (max-width: 991px){
-    
-    .alinha-cards {
-        
-     
-        padding: 20px;
-    }
-
-
-    
-    
-
-    
-}

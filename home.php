@@ -24,6 +24,7 @@ if (isset($_GET['sair'])) $sessao->logout();
   <title>SalvaPets - Adote o seu pet</title>
   <!-- ======== CSS Bootstrap ======== -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -62,7 +63,7 @@ if (isset($_GET['sair'])) $sessao->logout();
           <?php }?>
           
           <?php if (isset($_SESSION['id'])){ ?>
-              <li class="nav-item menu-perfil dropdown list-unstyled me-lg-5 z-1 position-relative text-center">
+              <li class="nav-item menu-perfil dropdown list-unstyled me-lg-5 z-1 position-relative text-center pt-3">
               <a class="nav-link dropdown-toggle d-flex justify-content-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
                 <p class="text-center">Olá, <?= $_SESSION["nome"]?></p>
@@ -215,7 +216,7 @@ if (isset($_GET['sair'])) $sessao->logout();
   </main>
 
   <!-- ====== FOOTER ====== -->
-  <footer class=" text-lg-start footer-color text-muted">
+  <footer class=" text-lg-start footer-color text-muted pt-2">
 
     <!-- ====== Links ====== -->
     <section class="">
