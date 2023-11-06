@@ -201,6 +201,7 @@
     
           if ($data) {
               foreach ($data as $pet) {
+                  $id = $pet['id'];
                   $nome = $pet['nome'];
                   $idade = $pet['idade'];
                   $sobre = $pet['sobre'];
