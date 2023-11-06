@@ -14,6 +14,7 @@
     background-color: #FF7F50;
 }
 
+
 .nav-link{
     color: #1E266D;
     font-weight: bold;
@@ -142,7 +143,7 @@ a {text-decoration: none;}
     bottom: -9px;
 }
 
-.botao {
+/* .botao {
     width: 395px;
     height: 54px;
     background-color: #FF7F50;
@@ -156,9 +157,9 @@ a {text-decoration: none;}
     border-color: #e96d3f;
     cursor: pointer;
     background-color: #e96d3f;
-}
+} */
 
-.enviar {
+/* .enviar {
     background-color: #FF7F50;
     cursor: pointer;
     border-color: #e96d3f;
@@ -170,9 +171,9 @@ a {text-decoration: none;}
     border-color: #e96d3f;
     cursor: pointer;
     background-color: #e96d3f;
-}
+} */
 
-.btn-primary:not(:disabled):not(.disabled):active,
+/* .btn-primary:not(:disabled):not(.disabled):active,
 .btn-primary:not(:disabled):not(.disabled).active,
 .show>.btn-primary.dropdown-toggle {
     color: #fff;
@@ -184,7 +185,7 @@ a {text-decoration: none;}
 .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show>.btn-primary.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.25rem rgb(219, 106, 65);
-}
+} */
 
 .tag-style {
     position: relative;
@@ -309,7 +310,7 @@ a {text-decoration: none;}
 # Estilização Página HOME
 --------------------------------------------------------------*/
 
-body {
+/* body {
     background-color: white;
     display: flex;
     min-height: 100vh;
@@ -321,7 +322,7 @@ main {flex: 1;}
 .limitador {
     width: 97vw;
     margin: auto;
-}
+} */
 
 
 /* @media screen and (min-width: 900px) {
@@ -392,19 +393,19 @@ main {flex: 1;}
 }
 
 
-.btn-primary {
+/* .btn-primary {
     color: #fff !important; 
     background-color: #e96d3f ;
     border-color: #e96d3f;
 
-}
+} */
 
-
+/* 
   .btn-primary:focus,
   .btn-primary:checked,
   .btn-primary:active,
   .btn-primary:hover  {
-    background-color: #e96d3f !important;
+    background-color: #3f4cc2 !important;
     border-color: #e96d3f !important;
     
   }
@@ -440,7 +441,7 @@ main {flex: 1;}
     background-color: #e96d3f; 
     border-color: #e96d3f; 
     color: #fff; 
-  }
+  } */
 
 
 .navbar-dark .navbar-brand,

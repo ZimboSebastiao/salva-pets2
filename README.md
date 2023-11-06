@@ -7,6 +7,7 @@ Bem-vindo ao projeto SalvaPets! Este é um site fictício desenvolvido com o obj
 
 ## Descrição
 
+composer require phpmailer/phpmailer
 O SalvaPets é um projeto didático que simula uma plataforma online para a doação responsável de animais. O site permite que os usuários cadastrem animais que estão disponíveis para adoção, bem como permitindo que interessados encontrem e adotem esses animais.
 
 ## Funcionalidades
