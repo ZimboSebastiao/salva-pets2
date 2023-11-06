@@ -813,11 +813,60 @@ a {text-decoration: none;}
 }
 
 .loc-detalhes {
-    font-size: 30px;
+    font-size: 28px;
+}
+
+.rua-detalhes {
+    color: #091adb;
+    font-weight: bold;
+}
+
+.espacamento-h {
+    width: 69%;
+    text-align: right;
+    padding-bottom: 8px;
+}
+
+.formatar-p {
+    display: flex;
+    justify-content: space-around;
+}
+
+.espacamento-p { 
+    width: 71.5%;
+    text-align: right;
+}
+
+.formartar-botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
+.formatar-sections {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.formatar-detalhes {
+    width: 270%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    
+}
+
+.defin-cor {
+    color: #091adb;
+}
+
+hr.my-2 { 
+    width: 80%; 
+    padding: 10px;
+}
 
 
 
