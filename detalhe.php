@@ -15,6 +15,7 @@
   // Utilitarios::dump($dados);
 
 
+
   if (isset($_GET['sair'])) $sessao->logout();
 ?>
 
@@ -131,6 +132,7 @@
           $data_salvapets = $petData['data_salvapets'];
           $sobre = $petData['sobre'];
           $localizacao = $petData['localizacao'];
+          $rua = $petData['rua'];
           $sexo = $petData['sexo'];
           $imagem = $petData['imagem'];
           $raca = $petData['raca'];
@@ -186,38 +188,114 @@
     </div>
   </div>
   
-  <!-- DETALHES DO PET -->
-  <h1 class="loc-detalhes">
-    <?=$localizacao?>
-    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-      <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-      <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-    </svg>
-  </h1>
-  
-  <h2>Detalhes do Pet</h2>
-  
-  <h3 class="icon-race">Raça</h3>
-  <span><?=$raca?></span>
-  
-  <h3>
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-    </svg>
-    Idade
-  </h3>
-  <span><?=$anos?> anos e <?=$meses?> meses</span>
+<!-- DETALHES E CARD -->
+<div class="formatar-sections">
 
-  <h3>
-    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-    </svg>
-    Dias no Salva pets
-  </h3>
-  <span><?=$num_dias?> </span>
-  <hr>
+  <!-- DETALHES DO PET -->
+  <section>
   
-  <h3>Sobre o Pet</h3>
+    <div class="formatar-loc">
+
+      <h1>
+        <?=$localizacao?>
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+          <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+          <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg>
+      </h1>
+
+      <p class="favorito">
+        <a class="bi bi-heart" href="#" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+          <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+        </svg>
+        </a>
+      </p>
+    </div>
+
+
+    <span class="rua-detalhes"><?=$rua?></span>
+    
+    <h2 style=" color: #1E266D; padding-top: 40px; padding-bottom: 5px;">Detalhes do Pet</h2>
+    
+    <div class="formatar-detalhes">
+      
+      <!-- RAÇA -->
+      <div>
+        <h3 class="icon-race">Raça</h3>
+        <span><?=$raca?></span>
+      </div>
+
+      <!-- Idade -->
+      <div>
+        <h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+            <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+          </svg>
+          Idade
+        </h3>
+        <span><?=$anos?> anos e <?=$meses?> meses</span>
+      </div>
+      
+      <!-- Dias no Salva Pets -->
+      <div>
+        
+        <h3>
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
+            <path d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z"/>
+          </svg>
+            Dias no Salva pets
+        </h3>
+        <span><?=$num_dias?> dias</span>
+      </div>
+    
+    </div>
+    
+
+  </section>
+  
+  <!-- Card adoção -->
+  <section>
+    <div class="card" style="width: 22rem;">
+      <div class="card-body">
+        <h5 class="card-title espacamento-h">Adote seu pet aqui!</h5>
+        <div class="formatar-p">
+          <p class="card-text"> <img src="icones/coleira.png" alt=""> <?= $nome?></p>
+          <p class="card-text">
+            <?php 
+              if ($sexo === "Fêmea") { ?>
+              
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z"/>
+              </svg>
+              <?php 
+              } else {?>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+            </svg>
+            <?php
+              } 
+            ?>
+            <?= $sexo?>
+          </p>
+        </div>
+        <?php
+        $palavras = explode(',', $localizacao);
+        $ultimaPalavra = trim(end($palavras));
+        ?>
+        <p class="card-text espacamento-p"> <?= $raca?>, <?=$ultimaPalavra?> </p>
+  
+        <a href="adocao.php" class="btn btn-primary formartar-botao">Adotar pet</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+
+  <hr class="my-2">
+  
+  <h3 style=" color: #1E266D;">Sobre o Pet</h3>
   <p><?=$sobre?></p>
 </div>
 
