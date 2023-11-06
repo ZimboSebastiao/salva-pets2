@@ -245,7 +245,7 @@
           </svg>
             Dias no Salva pets
         </h3>
-        <span><?=$num_dias?> </span>
+        <span><?=$num_dias?> dias</span>
       </div>
     
     </div>
