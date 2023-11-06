@@ -264,7 +264,6 @@ a {text-decoration: none;}
     }
 
     .input-cadastro {
-        background-color: #1E266D;
         width: 100%;
     }
 
@@ -325,7 +324,7 @@ main {flex: 1;}
 }
 
 
-/* @media screen and (min-width: 530px) {
+/* @media screen and (min-width: 900px) {
     nav h2 {display: none;}
     html { font-size: 0.9rem;}
     .menu {
@@ -362,6 +361,19 @@ main {flex: 1;}
     padding-left:50px;
 }
 
+.espacamento-icon {
+    padding-right: 10px;
+}
+.espacamento-user {
+    padding-left: 7px;
+    padding-bottom: 8px;
+}
+
+.limitar-detalhe {
+    /* background-color: #0a1375; */
+    width: 85vw;
+    margin: auto;
+}
 
 
 /*--------------------------------------------------------------
@@ -372,21 +384,63 @@ main {flex: 1;}
 .botaoH {
     height: 35px;
     width: 120px;
-
 }
-
-.btn-primary {
-    color: #fff;
-    background-color: #e96d3f;
-    border-color: #e96d3f;
-}
-
-
 .botaoH:hover {
     color: #fff;
     background-color: #e96d3f;
     border-color: #e96d3f;
 }
+
+
+.btn-primary {
+    color: #fff !important; 
+    background-color: #e96d3f ;
+    border-color: #e96d3f;
+
+}
+
+
+  .btn-primary:focus,
+  .btn-primary:checked,
+  .btn-primary:active,
+  .btn-primary:hover  {
+    background-color: #e96d3f !important;
+    border-color: #e96d3f !important;
+    
+  }
+
+
+.btn-check {                   
+    background-color: #e96d3f !important;
+    border-color: #e96d3f !important;        
+}
+
+
+.btn-check:active, 
+.btn-check:hover,
+.btn-check:focus,
+.btn-check:checked {                   
+    background-color: #e96d3f !important;
+    border-color: #e96d3f !important;        
+}
+
+
+
+
+.btn {
+    background-color: #e96d3f; 
+  }
+  
+  .btn:hover {
+    background-color: #e96d3f; ;
+    border-color: #e96d3f; ;
+  }
+  
+  .btn-check:checked + .btn-primary.check-botao {
+    background-color: #e96d3f; 
+    border-color: #e96d3f; 
+    color: #fff; 
+  }
 
 
 .navbar-dark .navbar-brand,
@@ -435,6 +489,9 @@ main {flex: 1;}
 /* .cont, ::placeholder{
     background-color: #FFF1EB;
 } */
+
+
+
 
 
 
@@ -509,6 +566,28 @@ a {text-decoration: none;}
     padding: 9px;
 }
 
+.text-color {
+    color: white;
+}
+
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
+
+    .input-adocao {
+        width: 285px;
+    }
+    
+    .inputs-adocao {
+        width: 135px;
+    }
+    .entry {width: 289px;}
+    
+    .form-floating {
+        margin-right: 2px; /* Adicione a margem desejada entre os elementos */
+    }
+
+}
+
 
 /*--------------------------------------------------------------
 # Estilização Página de Adoção - Te conhecendo
@@ -523,6 +602,7 @@ a {text-decoration: none;}
     padding: 18px;
     padding-left: 0;
     padding-top: 0;
+    padding-right: 0;
 }
 
 .check-botao {
@@ -530,7 +610,7 @@ a {text-decoration: none;}
     height: 55px;
     background-color: #ffffff;
     border-color: #C3C7E5;
-    color: #babdd4;
+    color: rgb(78, 72, 72) !important; 
     font-size: 22px;
     cursor: pointer;
 
@@ -549,6 +629,38 @@ a {text-decoration: none;}
     color: #babdd4 ;
 }
 
+.textearea-form {
+    height: 134px !important; 
+    width: 459px ;
+}
+
+@media (min-width: 200px) and (max-width: 991px){
+    
+    .textearea-form {
+        height: 134px !important; 
+        width: 333px ;
+    }
+    .botao-adotou {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    
+    .check-botao {
+        width: 95px;
+        height: 55px;
+        border-color: #C3C7E5;
+        color: rgb(78, 72, 72) !important; 
+        font-size: 22px;
+        cursor: pointer;
+    
+    }
+
+
+
+}
 
 
 /*--------------------------------------------------------------
@@ -575,6 +687,20 @@ a {text-decoration: none;}
     padding-top: 40px; 
     padding-bottom: 40px;
 }
+
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
+
+    .adotou-h1 {font-size: 20px;}
+    .adotou-p {
+        font-size: 14px;
+        color: #C3C7E5;
+      }
+    
+
+    
+}
+
 
 
 /*--------------------------------------------------------------
@@ -710,4 +836,39 @@ a {text-decoration: none;}
     margin-top: 40px;
     background-color: #040726;
     color: white !important;
+}
+
+
+/*--------------------------------------------------------------
+# Estilização do Perfil
+--------------------------------------------------------------*/
+
+.custom-circle {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+  }
+
+.alinhar-text {
+    text-align: center;
+}
+
+.alinha-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 200px) and (max-width: 991px){
+    
+    .alinha-cards {
+        
+     
+        padding: 20px;
+    }
+
+
+    
+    
+
+    
 }

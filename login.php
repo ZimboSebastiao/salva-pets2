@@ -1,21 +1,18 @@
 <?php 
 use Salvapets\Usuario;
 use Salvapets\ControleDeAcesso;
-// require_once "vendor/autoload.php";
-require_once "src/ControleDeAcesso.php";
-require_once "src/Usuarios.php";
+require_once "vendor/autoload.php";
 
 
-// Programação das mensagens de feedback
 
-if (isset($_GET["campos_obrigatorios"])) {
+if( isset($_GET["campos_obrigatorios"]) ){
 	$feedback = "Preencha e-mail e senha!";
-} elseif(isset($_GET['dados_incorretos'])){
-	$feedback = "Email ou senha incorreta!";
-} elseif(isset($_GET['logout'])){
+} elseif( isset($_GET['dados_incorretos']) ){
+	$feedback = "E-mail ou senha incorretas!";
+} elseif( isset($_GET['logout']) ){
 	$feedback = "Você saiu do sistema!";
-}elseif(isset($_GET['acesso_proibido'])){
-	$feedback = "Você deve logar primeiro!";
+} elseif( isset($_GET['acesso_proibido']) ){
+	$feedback = "Você deve logar primeiro";
 }
 ?>
 
@@ -52,58 +49,30 @@ if (isset($_GET["campos_obrigatorios"])) {
                         if (isset($feedback)) { ?>
 
                             <p class="my-2 alert alert-warning text-center"><?=$feedback?></p>
-                        <?php
-                        }
-				    ?>
+                        <?php } ?>
+
                         <div class="form-floating mb-3">
-                            <input class="form-control input-login" id="floatingInput" placeholder="name@example.com" required type="email">
+                            <input class="form-control input-login" id="floatingInput" placeholder="name@example.com" type="email" name="email">
                             <label for="floatingInput">E-mail</label>
                         </div>
                         <br>
     
                         <div class="form-floating">
-                            <input  class="form-control input-login" id="floatingPassword" placeholder="Password" required type="password">
+                            <input  class="form-control input-login" id="floatingPassword" placeholder="Password"  type="password" name="senha">
                             <label for="floatingPassword">Senha</label>
                         </div>
     
                         
                             <div class="estilo-cadeado">
                                 <div class="esqueci-senha">
-                                    <a data-bs-toggle="modal" data-bs-target="#exampleModal" href="" rel="" >
+                                    <a  href="esqueci-senha.php" rel="" >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
                                         <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
                                     </svg>
                                     Esqueci a senha</a>
                                 </div>
                             
-                            <div class="hero">
-                                
-                                <!-- Modal -->
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Recupere sua conta</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Insira seu email para recuperar a sua senha.
-    
-                                        <!-- <form action="" method="post">
-                                            <div class="form-floating mb-3">
-                                                <input class="form-control input-login" id="floatingInput" placeholder="name@example.com" required type="email">
-                                                <label for="floatingInput">Email</label>
-                                            </div>
-                                        </form> -->
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                        <button type="button" class="btn btn-primary enviar">Enviar</button>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
+                        
                         </div>
                 
     
@@ -114,52 +83,41 @@ if (isset($_GET["campos_obrigatorios"])) {
                             <p class="tag-style">Não tem uma conta? <a href="cadastro.php">Crie uma conta de graça</a></p>
                         </div>
                     </form>
-
                     <?php
+                        if(isset($_POST['entrar'])){
+                            
+                            if( empty($_POST['email']) || empty($_POST['senha']) ){
+                                header("location:login.php?campos_obrigatorios");
+                            } else {
+                                $usuario = new Usuario;
+                                $usuario->setEmail($_POST['email']);
+                                $dados = $usuario->buscar();
 
-                    if(isset($_POST['entrar'])){
-
-                        if(empty($_POST['email']) || empty($_POST['senha'])){
-                            header("location:login.php?campos_obrigatorios");
-                        } else {
-                        
-                            $usuario = new Usuario;
-                            $usuario->setEmail($_POST['email']);
-
-                            $dados = $usuario->buscar();
-                            if (!$dados) { // ou if($dados === false)
-                                header("location:login.php?dados_incorretos");
-                            }  else {
-                                
-
-                                    if(password_verify($_POST['senha'], $dados['senha'])){
+                                if(!$dados){ 
+                                    header("location:login.php?dados_incorretos");
+                                } else {
+                                    if(password_verify($_POST['senha'], $dados['senha'])){	
                                         $sessao = new ControleDeAcesso;
-                                        $sessao->login($dados['id'], $dados['nome'], $dados['tipo']);
+                                        $sessao->login($dados['id'], $dados['nome']);
                                         header("location:home.php");
                                     } else {
                                         header("location:login.php?dados_incorretos");
-                                        // - não está? continuará em login.php
-                                        
                                     }
+                                }
                             }
                         }
-
-
-
-
-                    }
-
                     ?>
+
                 </section> 
 
-                
             </div>
-
+            
         </div>
-
+        
         <div id="destaque"></div>
         
-</div>
+    </div>
+    
 
 </main>
 

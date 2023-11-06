@@ -1,3 +1,20 @@
+<?php 
+use Salvapets\Utilitarios;
+use Salvapets\Usuario;
+use Salvapets\ControleDeAcesso;
+require_once "vendor/autoload.php";
+
+$sessao = new ControleDeAcesso;
+
+$usuario = new Usuario;
+// Atribuimos ao objeto o ID  do usuario logado na sessão
+// $usuario->setId($_SESSION['id']);
+// $dados = $usuario->listarUm();
+// Utilitarios::dump($dados);
+
+if (isset($_GET['sair'])) $sessao->logout();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 

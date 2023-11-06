@@ -1,18 +1,48 @@
 <?php 
-use Salvapets\Utilitarios;
-use Salvapets\Usuario;
-use Salvapets\ControleDeAcesso;
-require_once "vendor/autoload.php";
+  use Salvapets\Utilitarios;
+  use Salvapets\Usuario;
+  use Salvapets\ControleDeAcesso;
+  require_once "vendor/autoload.php";
 
-$sessao = new ControleDeAcesso;
+  $sessao = new ControleDeAcesso;
+  $sessao->verificaAcesso();
 
-$usuario = new Usuario;
-// Atribuimos ao objeto o ID  do usuario logado na sessão
-// $usuario->setId($_SESSION['id']);
-// $dados = $usuario->listarUm();
-// Utilitarios::dump($dados);
-$sessao->verificaAcesso();
-if (isset($_GET['sair'])) $sessao->logout();
+  date_default_timezone_set('America/Sao_Paulo');
+  $agora = date('d/m/Y'); 
+  $hora = date('H:i');
+
+  $usuario = new Usuario;
+  $usuario->setId($_SESSION['id']);
+  $dados = $usuario->listarUm();
+  // Utilitarios::dump($dados);
+
+
+
+  if(isset($_POST["atualizar"])){
+    $usuario->setNome($_POST['nome']);
+    $usuario->setEmail($_POST['email']);
+    $usuario->setCep($_POST['cep']);
+  
+  
+    if(empty($_POST['senha'])){
+      $usuario->setSenha($dados['senha']);
+    } else {
+      $usuario->setSenha(
+  
+        $usuario->verificaSenha($_POST['senha'], $dados['senha'])
+      );
+      
+    }
+    
+  
+    $usuario->atualizar(); 
+      header("location:nossos-pets.php?status=sucesso");
+  }
+  
+
+
+
+  if (isset($_GET['sair'])) $sessao->logout();
 ?>
 
 
@@ -100,50 +130,84 @@ if (isset($_GET['sair'])) $sessao->logout();
       </ul>
     </nav>
   </div>
-</header>
-<hr class="my-4"> <!-- FIM CABEÇALHO  -->
-
+</header> <!-- FIM CABEÇALHO  -->
+<hr class="my-4 bg-primary">
 
 <!-- ======== CONTEÚDO ======== -->
-<main>
+<main class="limitador">
 
-  <!-- ====== BARRA DE PROGRESSO ====== -->
-  <div class="container-adocao">
-    <div class="progress-text decrease-letters">
-      <span class="decrease">Dados Básicos</span>
-      <span class="decrease">Te conhecendo</span>
-      <span class="decrease">Adotou!</span>
-    </div>
-    <div class="progress tes" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-      <div class="progress-bar progress-bar-striped  progress-bar-animated cor-padrao " style="width: 100%"><span class="progress-number">100%</span> </div>
-    </div>
+<!-- ========== IMAGEM ========= -->
+<!-- <div class="card mb-3">
+  <img src="images/design.png" class="card-img-top" alt="...">
+</div> -->
 
-    <div class="personalizar espaco-top">
-      <img src="icones/animal1.png" alt="">
-      <h1 class="adotou-h1">Parabéns seu requerimento <br> foi enviado com sucesso!</h1>
-    </div>
 
-    <div class="adotou-div">
-      <span class="adotou-p">Aguarde apenas 24hrs para a ONG que tem a posse</span>
-      <span class="adotou-p"> do pet entre em contato com você, fique calmo que</span>
-      <span class="adotou-p">seu petzinho ja está quase chegando.</span>
+
+
+
+  
+
+
+
+<div class="container">
+  
+  <h1> Bem Vindo(a), <?=$dados['nome']?> </h1>
+  
+
+<div class="alinha-cards">
+
+  <div class="card" style="width: 18rem; height: 50%;">
+    <div class="d-flex justify-content-center align-items-center">
+      <img src="images/destaque-cadastro.jpg" class=" custom-circle" alt="...">
+    </div>
+    <div class="card-body alinhar-text">
+      <h3><?=$dados["nome"]?></h3>
+      <p class="Beetle-letters alinhar-text">Configurações da conta</p>
+      <span class="Beetle-letters alinhar-text">Data: <?= $agora?><span> <br>
+      <span class="Beetle-letters alinhar-text">Hora: <?= $hora?><span>
+    </div>
+  </div>
+
+
+  
+  <div class="card w-75 mb-3">
+      <br>
+
+      
+      <form class="mx-auto w-75" action="" method="post" id="form-atualizar" name="form-atualizar">
+    
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" id="nome" name="nome" value="<?=$dados['nome']?>">
+        <label for="floatingInput">Nome</label>
+      </div>
+      
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" id="email" name="email" value="<?=$dados['email']?>">
+        <label for="floatingInput">Email address</label>
+      </div>
+    
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" id="cep" name="cep" value="<?=$dados['cep']?>">
+        <label for="floatingInput">Cep</label>
+      </div>
+    
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" id="senha" name="senha">
+        <label for="floatingPassword">Password</label>
     </div>
     
-  </div>
-
-    <!-- ====== CONTAINER BOTAO ====== -->
-    <div class="container tamanho-form">
-    <div class="row">
-
-        <!-- ====== BOTÃO - Adotar Pet ====== -->
-        <div class="adotou-botao">
-            <button class="btn btn-primary btn-lg botao input-adocao" name="inserir"><a class="text-color" href="home.php">Voltar para tela inicial</a></button>
+    
+      <div class="card-body">
+        <button class="btn btn-primary" name="atualizar"><i class="bi bi-arrow-clockwise"></i> Atualizar</button>
         </div>
-
-
-    </div>
+      </div>
+    
+    </form>
   </div>
-  
+
+
+</div>
+
 
 
 </main> <!-- FIM CONTEÚDO  -->

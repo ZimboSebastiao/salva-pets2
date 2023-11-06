@@ -1,3 +1,23 @@
+<?php 
+  use Salvapets\Utilitarios;
+  use Salvapets\Usuario;
+  use Salvapets\ControleDeAcesso;
+  use Salvapets\Pets;
+  require_once "vendor/autoload.php";
+
+
+  $sessao = new ControleDeAcesso;
+
+  $usuario = new Usuario;
+
+  // $pets = new Pets;
+  // $dados = $pets->lerUmPet();
+  // Utilitarios::dump($dados);
+
+
+  if (isset($_GET['sair'])) $sessao->logout();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,14 +50,54 @@
             Nossos Pets
           </a>
           <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Cachorros</a></li>
-            <li><a class="dropdown-item" href="#">Gatos</a></li>
+            <li><a class="dropdown-item" href="nossos-pets.php">Todos pets</a></li>
+            <li><a class="dropdown-item" href="nossos-pets.php?dogs">Cachorros</a></li>
+            <li><a class="dropdown-item" href="nossos-pets.php?cats">Gatos</a></li>
           </ul>
         </li>
         <li><a  href="#">Quem Somos</a></li>
         <li ><a href="#">Ajuda</a></li>
         <li ><a href="#">Contato</a></li>
-        <li><a  href="login.php" class="btn btn-primary w-50 m-auto"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
+        <?php if (!isset($_SESSION['id'])){ ?>
+            <li><a  href="login.php" class="btn btn-primary w-50 m-auto"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
+            <?php }?>
+
+            <?php if (isset($_SESSION['id'])){ ?>
+              </li>
+                <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <?= $_SESSION["nome"]?> 
+
+                <span class="espacamento-user">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                  </svg>
+                </span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Perfil
+                  <span class="espacamento-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
+                        <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5zm0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78h4.723zM5.048 3.967c-.03.021-.058.043-.087.065l.087-.065zm-.431.355A4.984 4.984 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8 4.617 4.322zm.344 7.646.087.065-.087-.065z"/>
+                      
+                      
+                    </svg>
+                  </span>
+                    </a>
+                </li>
+
+                <li><a class="dropdown-item" href="?sair" >Sair 
+                <span class="espacamento-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                  </svg>
+                </span>
+                </a></li>
+              </ul>
+            </li>
+            <?php } ?>
       </ul>
     </nav>
   </div>
@@ -46,147 +106,120 @@
 
 
 <main>
-  <!-- FILTROS DE BUSCA -->
-  <div class="top-pets pb-3 limitar-tela">
-    <div class="container-fluid d-flex gap-5 flex-wrap m-auto flex-xl-nowrap">
 
-      <!-- INPUT CIDADE -->
-      <div class="input-group border rounded border-dark d-flex align-items-center">
-        <input type="text" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
-      </div>
+  
+<!-- CARDS com as Imagens dos PETS -->
+<div class="limitar-detalhe">
 
-      <!-- INPUT REGIÃO -->
-      <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-house " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
-      </div>
+  <div class="card-container-detalhe">
+  
+    <div class="card-grande">
+    <?php
+      // Verifica se o ID do pet foi passado pela URL
+      if (isset($_GET['id'])) {
+        $petId = $_GET['id'];
+    
+  
+      $apiUrl = "http://localhost:8080/pets/" . $petId;  
+      $apiData = file_get_contents($apiUrl);
+    
+      $petData = json_decode($apiData, true);
+  
+      if ($petData) {
+          $nome = $petData['nome'];
+          $idade = $petData['idade'];
+          $data_salvapets = $petData['data_salvapets'];
+          $sobre = $petData['sobre'];
+          $localizacao = $petData['localizacao'];
+          $sexo = $petData['sexo'];
+          $imagem = $petData['imagem'];
+          $raca = $petData['raca'];
+          $imagemUrl = "http://localhost:8080/" . $imagem; ?>
+  
+          <?php 
+            $dataNascimento = strtotime($idade);
+            $dataAtual = time();
 
-      <!-- INPUT ANIMAL -->
-      <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
-      </div>
+            if ($dataNascimento !== false) {
+              $diferencaSegundos = $dataAtual - $dataNascimento;
+      
+              $anos = floor($diferencaSegundos / (365 * 24 * 60 * 60)); }
+              $meses = floor(($diferencaSegundos % (365 * 24 * 60 * 60)) / (30 * 24 * 60 * 60));
 
-      <!-- INPUT IDADE -->
-      <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Idade">
-      </div>
+              
+              $data_salvapets = new DateTime($data_salvapets);
+              $data_atual = new DateTime();
+              $diferenca = $data_atual->diff($data_salvapets);
+              $num_dias = $diferenca->days;
+          ?>
 
-      <!-- INPUT RAÇA -->
-      <div class="input-group border rounded border-dark">
-        <input type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
+        <div class="card border card-item-1" style="width: 100%;">
+          <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="422" >
+        </div>
+        <?php } } ?>
+    </div>
+  
+    <!-- CONJUNTO DE CARDS -->
+    <div class="cards-direita  ">
+  
+      <!-- CARDS Pequenos -->
+      <div class="cards-pequenos">
+        <div class="card border card-item-2" style="width: 90%;">
+              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
+        </div>
+      
+        <div class="card border card-item-2" style="width: 90%;">
+              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
+        </div>
       </div>
-
-      <!-- BOTÃO BUSCAR PET -->
-      <div class="w-75 m-auto">
-        <button class="btn btn-primary w-100" type="button">Buscar Pet</button>
+    
+      <!-- CARDS Médios -->
+      <div class="cards-medios">
+        <div class="card border card-item-3" style="width: 100%;">
+              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
+        </div>
+      
+        <div class="card border card-item-3" style="width: 100%;">
+              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
+        </div>
       </div>
- 
     </div>
   </div>
   
-  <div class="limitar-tela">
+  <!-- DETALHES DO PET -->
+  <h1 class="loc-detalhes">
+    <?=$localizacao?>
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+      <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+      <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+    </svg>
+  </h1>
+  
+  <h2>Detalhes do Pet</h2>
+  
+  <h3 class="icon-race">Raça</h3>
+  <span><?=$raca?></span>
+  
+  <h3>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+    </svg>
+    Idade
+  </h3>
+  <span><?=$anos?> anos e <?=$meses?> meses</span>
 
-    <h1 class="pets-h1">
-      <?php
-          $apiUrl = "http://localhost:8080/pets/";  
-          $apiData = file_get_contents($apiUrl);
-          $data = json_decode($apiData, true);
-      ?> <?=count($data);?> Pets disponíveis para você
-    </h1>
-
-    <div class="card-container">
-<?php
-$apiUrl = "http://localhost:8080/pets/";
-
-// Faz a solicitação à API e obtém os dados
-$apiData = file_get_contents($apiUrl);
-
-if ($apiData) {
-    // Converte a resposta JSON em um array PHP
-    $data = json_decode($apiData, true);
-
-    if ($data) {
-        foreach ($data as $pet) {
-            $nome = $pet['nome'];
-            $idade = $pet['idade'];
-            $sobre = $pet['sobre'];
-            $localizacao = $pet['localizacao'];
-            $sexo = $pet['sexo'];
-            $imagem = $pet['imagem'];
-
-            $imagemUrl = "http://localhost:8080/" . $imagem; 
-            ?>
-
-            <div class="card border card-item" style="width: 25%;">
-                <a href="#"><img src='<?= $imagemUrl ?>' class="card-img-top" alt='<?= $nome ?>' height="290"></a>
-                <div class="card-body">
-                    <div class="favoritar-nome">
-                        <h5 class="card-title nome-pets"><?= $nome ?></h5>
-                        <p>
-                            <a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
-                                     class="bi bi-heart" viewBox="0 0 16 16">
-                                    <path
-                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.920 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-                                </svg>
-                            </a>
-                        </p>
-                    </div>
-                    <p class="card-text loc-pets"><?= $localizacao ?></p>
-                    <div class="idade-sexo">
-                        <p class="card-text sexo-pets">
-                            <?php
-                            if ($sexo === "Fêmea") { ?>
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
-                                     class="bi bi-gender-female" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                          d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z"/>
-                                </svg>
-                            <?php
-                            } else { ?>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor"
-                                     class="bi bi-gender-male" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                          d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
-                                </svg>
-                            <?php
-                            }
-                            ?>
-                            <?= $sexo ?>
-                        </p>
-                        <?php
-                        $dataNascimento = strtotime($idade);
-                        $dataAtual = time();
-
-                        if ($dataNascimento !== false) {
-                            $diferencaSegundos = $dataAtual - $dataNascimento;
-                            $anos = floor($diferencaSegundos / (365 * 24 * 60 * 60));
-                            $meses = floor(($diferencaSegundos % (365 * 24 * 60 * 60)) / (30 * 24 * 60 * 60));
-                            ?>
-                            <p class="card-text"><?= $anos ?> anos e <?= $meses ?> meses</p>
-                        <?php
-                        }
-                        ?>
-                    </div>
-                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                </div>
-            </div>
-
-            <?php
-        }
-    } else {
-        echo "<p>Ocorreu um erro ao analisar os dados da API.</p>";
-    }
-} else {
-    echo "<p>Ocorreu um erro ao buscar os dados da API.</p>";
-}
-?>
+  <h3>
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+      <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+    </svg>
+    Dias no Salva pets
+  </h3>
+  <span><?=$num_dias?> </span>
+  <hr>
+  
+  <h3>Sobre o Pet</h3>
+  <p><?=$sobre?></p>
 </div>
-
-
-    
-
-
 
 
 
