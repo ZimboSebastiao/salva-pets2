@@ -812,13 +812,8 @@ a {text-decoration: none;}
     flex: 6;
 }
 
-.loc-detalhes {
-    font-size: 28px;
-}
-
 .rua-detalhes {
-    color: #091adb;
-    font-weight: bold;
+    color: #1E266D;
 }
 
 .espacamento-h {
@@ -830,6 +825,14 @@ a {text-decoration: none;}
 .formatar-p {
     display: flex;
     justify-content: space-around;
+}
+
+.formatar-loc {
+    width: 270%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    padding-bottom: 0;
 }
 
 .espacamento-p { 
