@@ -112,7 +112,7 @@
     </nav>
   </div>
 </header>
-<hr class="my-4> <!-- FIM CABEÇALHO  -->
+<hr class="my-4" > <!-- FIM CABEÇALHO  -->
 
 
 <main>
