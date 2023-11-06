@@ -40,14 +40,17 @@ if (isset($_GET['sair'])) $sessao->logout();
         <div class="collapse navbar-collapse " id="navbarScroll">
           <ul class="link-menu navbar-nav me-auto my-3 my-lg-0 navbar-nav-scroll d-flex justify-content-around w-75 text-center m-auto" style="--bs-scroll-height: 250px; ">
 
-            <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold" href="#">Cachorros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold" href="#">Gatos</a>
+          <li class="nav-item dropdown fs-5 fw-bold">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Nossos pets
+          </a>
+          <ul class="dropdown-menu col-3 m-auto">
+            <li><a class="nav-link text-center" href="#">Cachorros</a></li>
+            <li><a class="nav-link text-center" href="#">Gatos</a></li>
+          </ul>
+        </li>
             <li class="nav-item">
               <a class="nav-link fs-5 fw-bold" href="#">Serviços</a>
-            </li>
             </li>
             <li class="nav-item">
               <a class="nav-link fs-5 fw-bold px-0 z-1 position-relative" href="#">Contato</a>
