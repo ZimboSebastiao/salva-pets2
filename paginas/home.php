@@ -262,13 +262,13 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="images/feedback01.PNG" class="d-block w-100" alt="...">
+          <img src="../images/feedback01.PNG" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="images/feedback02.png" class="d-block w-100" alt="...">
+          <img src="../images/feedback02.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="images/feedback03.PNG" class="d-block w-100" alt="...">
+          <img src="../images/feedback03.PNG" class="d-block w-100" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
