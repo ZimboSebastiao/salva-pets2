@@ -2,7 +2,6 @@
   use Salvapets\Utilitarios;
   use Salvapets\Usuario;
   use Salvapets\ControleDeAcesso;
-  use Salvapets\Pets;
   require_once "vendor/autoload.php";
 
 
@@ -10,6 +9,11 @@
 
   $usuario = new Usuario;
 
+  
+
+  if (isset($_GET['id'])) {
+    $petId = $_GET['id'];
+}
 
 
 
@@ -282,7 +286,7 @@
         ?>
         <p class="card-text espacamento-p"> <?= $raca?>, <?=$ultimaPalavra?> </p>
   
-        <a href="adocao.php" class="btn btn-primary formartar-botao">Adotar pet</a>
+        <a href="adocao.php?id=<?=$petId?>" class="btn btn-primary formartar-botao">Adotar pet</a>
       </div>
     </div>
   </section>
