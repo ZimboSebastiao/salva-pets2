@@ -5,13 +5,43 @@
   require_once "vendor/autoload.php";
 
   $sessao = new ControleDeAcesso;
+  $sessao->verificaAcesso();
+
+  date_default_timezone_set('America/Sao_Paulo');
+  $agora = date('d/m/Y'); 
+  $hora = date('H:i');
 
   $usuario = new Usuario;
-  // Atribuimos ao objeto o ID  do usuario logado na sessão
   $usuario->setId($_SESSION['id']);
   $dados = $usuario->listarUm();
   // Utilitarios::dump($dados);
-  $sessao->verificaAcesso();
+
+
+
+  if(isset($_POST["atualizar"])){
+    $usuario->setNome($_POST['nome']);
+    $usuario->setEmail($_POST['email']);
+    $usuario->setCep($_POST['cep']);
+  
+  
+    if(empty($_POST['senha'])){
+      $usuario->setSenha($dados['senha']);
+    } else {
+      $usuario->setSenha(
+  
+        $usuario->verificaSenha($_POST['senha'], $dados['senha'])
+      );
+      
+    }
+    
+  
+    $usuario->atualizar(); 
+      header("location:nossos-pets.php?status=sucesso");
+  }
+  
+
+
+
   if (isset($_GET['sair'])) $sessao->logout();
 ?>
 
@@ -100,113 +130,85 @@
       </ul>
     </nav>
   </div>
-</header>
-<hr> <!-- FIM CABEÇALHO  -->
-
+</header> <!-- FIM CABEÇALHO  -->
+<hr class="my-4 bg-primary">
 
 <!-- ======== CONTEÚDO ======== -->
-<main>
+<main class="limitador">
 
-  <!-- ====== BARRA DE PROGRESSO ====== -->
-  <div class="container-adocao">
-    <div class="progress-text decrease-letters">
-      <span class="decrease">Dados Básicos</span>
-      <span class="decrease">Te conhecendo</span>
-      <span class="Beetle-letters">Adotou!</span>
-    </div>
-    <div class="progress tes" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-      <div class="progress-bar progress-bar-striped  progress-bar-animated cor-padrao " style="width: 53%"><span class="progress-number">65%</span> </div>
-    </div>
+<!-- ========== IMAGEM ========= -->
+<!-- <div class="card mb-3">
+  <img src="images/design.png" class="card-img-top" alt="...">
+</div> -->
 
-    <div class="personalizar">
-      <h1>Vamos Adotar seu <br> pet bem rápido</h1>
+
+
+
+
+  
+
+
+
+<div class="container">
+  
+  <h1> Bem Vindo(a), <?=$dados['nome']?> </h1>
+  
+
+<div class="alinha-cards">
+
+  <div class="card" style="width: 18rem; height: 50%;">
+    <div class="d-flex justify-content-center align-items-center">
+      <img src="images/destaque-cadastro.jpg" class=" custom-circle" alt="...">
+    </div>
+    <div class="card-body alinhar-text">
+      <h3><?=$dados["nome"]?></h3>
+      <p class="Beetle-letters alinhar-text">Configurações da conta</p>
+      <span class="Beetle-letters alinhar-text">Data: <?= $agora?><span> <br>
+      <span class="Beetle-letters alinhar-text">Hora: <?= $hora?><span>
+    </div>
+  </div>
+
+
+  
+  <div class="card w-75 mb-3">
+      <br>
+
+      
+      <form class="mx-auto w-75" action="" method="post" id="form-atualizar" name="form-atualizar">
+    
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" id="nome" name="nome" value="<?=$dados['nome']?>">
+        <label for="floatingInput">Nome</label>
+      </div>
+      
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" id="email" name="email" value="<?=$dados['email']?>">
+        <label for="floatingInput">Email address</label>
+      </div>
+    
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" id="cep" name="cep" value="<?=$dados['cep']?>">
+        <label for="floatingInput">Cep</label>
+      </div>
+    
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" id="senha" name="senha">
+        <label for="floatingPassword">Password</label>
     </div>
     
+    
+      <div class="card-body">
+        <button class="btn btn-primary" name="atualizar"><i class="bi bi-arrow-clockwise"></i> Atualizar</button>
+        </div>
+      </div>
+    
+    </form>
   </div>
-  
-  <!-- ====== FORMULÁRIO ====== -->
-  <div class="container tamanho-form">
-    <div class="row">
-      <section class="estilo-form form-te-conhecendo">
-        <form action="src/enviar-email-te-conhecendo.php"  method="post" class="dividir-form-conhencendo">
-
-            <!-- ====== CHECK - Primeiro ====== -->
-            <p class="posicionar-span">Tem crianças em casa?</p>
-            <div class="divide-te-conhecendo">
-              <div>
-                  <input name="first" type="radio" class="btn-check" id="first-sim" autocomplete="off" value="SIM">
-                  <label class="btn btn-primary check-botao" for="first-sim">Sim</label>
-              </div>
-
-              <div>
-                  <input name="first" type="radio" class="btn-check" id="first-nao" autocomplete="off" value="NAO">
-                  <label class="btn btn-primary check-botao" for="first-nao">Não</label>
-              </div>
-            </div>
-
-            <!-- ====== CHECK - Segundo ====== -->
-            <p class="posicionar-span">Tem algum pet?</p>
-            <div class="divide-te-conhecendo">
-              <div>
-                  <input name="segundo" type="radio" class="btn-check" id="segundo-sim" autocomplete="off" value="SIM">
-                  <label class="btn btn-primary check-botao" for="segundo-sim">Sim</label>
-              </div>
-
-              <div>
-                  <input name="segundo" type="radio" class="btn-check" id="segundo-nao" autocomplete="off" value="NAO">
-                  <label class="btn btn-primary check-botao" for="segundo-nao">Não</label>
-              </div>
-            </div>
 
 
-            <!-- ====== CHECK - Terceiro ====== -->
-            <p class="posicionar-span">Todos em casa estão cientes?</p>
-            <div class="divide-te-conhecendo">
-              <div>
-                  <input name="terceiro" type="radio" class="btn-check" id="terceiro-sim" autocomplete="off" value="SIM">
-                  <label class="btn btn-primary check-botao" for="terceiro-sim">Sim</label>
-              </div>
+</div>
 
-              <div>
-                  <input name="terceiro" type="radio" class="btn-check" id="terceiro-nao" autocomplete="off" value="NAO">
-                  <label class="btn btn-primary check-botao" for="terceiro-nao">Não</label>
-              </div>
-            </div>
 
-            <!-- ====== CHECK - Quarto ====== -->
-            <p class="posicionar-span">Alguém tem alergia à animais?</p>
-            <div class="divide-te-conhecendo">
-              <div>
-                  <input name="quarto" type="radio" class="btn-check" id="quarto-sim" autocomplete="off" value="SIM">
-                  <label class="btn btn-primary check-botao" for="quarto-sim">Sim</label>
-              </div>
-
-              <div>
-                  <input name="quarto" type="radio" class="btn-check" id="quarto-nao" autocomplete="off" value="NAO">
-                  <label class="btn btn-primary check-botao" for="quarto-nao">Não</label>
-              </div>
-            </div>
-
-            <!-- ====== CHECK - Quinto ====== -->
-            <p class="posicionar-span">Nos conte um pouco sobre a sua moradia</p>
-            <div class="divide-te-conhecendo">
-              <div class="form-floating mb-3">
-                <textarea name="mensagem" class="form-control textearea-form" placeholder="Leave a comment here" id="floatingTextarea2Disabled" ></textarea>
-                <label class="check-textar" for="floatingTextarea2Disabled">Escrever mensagem</label>
-              </div>  
-            </div>
-            
-            
-            <!-- ====== BOTÃO - Adotar Pet ====== -->
-            <div class="botao-adotou">
-                <button class="btn btn-primary btn-lg botao input-adocao botao-adotou-tamanho" name="inserir" type="submit">Adotar Pet</button>
-            </div>
-
-        </form>
-
-      </section> 
-    </div>
-  </div>
 
 </main> <!-- FIM CONTEÚDO  -->
 

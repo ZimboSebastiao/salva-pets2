@@ -1,15 +1,15 @@
 * {box-sizing: border-box;}   
 img {max-width: 100%;}
 html { font-size: 14px;}
-a { color: inherit;} 
+/* a { color: inherit;}  */
 
 /*--------------------------------------------------------------
 # Estilização Página de Login
 --------------------------------------------------------------*/
-
-/* .cor {
-    color: inherit !important;
-    background-color: #db4712;
+/* .container {
+    width: 65%;
+    margin-right: auto;
+    margin-left: auto;
 } */
 
 .img-responsivo {
@@ -204,7 +204,6 @@ h1 {
     }
 
     .input-cadastro {
-        background-color: #1E266D;
         width: 100%;
     }
 
@@ -313,7 +312,7 @@ nav  a:hover, nav a:focus{
     right: 0;
 }
 
-@media screen and (min-width: 530px) {
+@media screen and (min-width: 900px) {
     nav h2 {display: none;}
     html { font-size: 0.9rem;}
     .menu {
@@ -350,6 +349,20 @@ nav  a:hover, nav a:focus{
     padding-left:50px;
 }
 
+.espacamento-icon {
+    padding-right: 10px;
+}
+.espacamento-user {
+    padding-left: 7px;
+    padding-bottom: 8px;
+}
+
+.limitar-detalhe {
+    /* background-color: #0a1375; */
+    width: 85vw;
+    margin: auto;
+}
+
 
 /*--------------------------------------------------------------
 # Estilização Página de Processo de adoção
@@ -359,21 +372,63 @@ nav  a:hover, nav a:focus{
 .botaoH {
     height: 35px;
     width: 120px;
-
 }
-
-.btn-primary {
-    color: #fff;
-    background-color: #e96d3f;
-    border-color: #e96d3f;
-}
-
-
 .botaoH:hover {
     color: #fff;
     background-color: #e96d3f;
     border-color: #e96d3f;
 }
+
+
+.btn-primary {
+    color: #fff !important; 
+    background-color: #e96d3f ;
+    border-color: #e96d3f;
+
+}
+
+
+  .btn-primary:focus,
+  .btn-primary:checked,
+  .btn-primary:active,
+  .btn-primary:hover  {
+    background-color: #e96d3f !important;
+    border-color: #e96d3f !important;
+    
+  }
+
+
+.btn-check {                   
+    background-color: #e96d3f !important;
+    border-color: #e96d3f !important;        
+}
+
+
+.btn-check:active, 
+.btn-check:hover,
+.btn-check:focus,
+.btn-check:checked {                   
+    background-color: #e96d3f !important;
+    border-color: #e96d3f !important;        
+}
+
+
+
+
+.btn {
+    background-color: #e96d3f; 
+  }
+  
+  .btn:hover {
+    background-color: #e96d3f; ;
+    border-color: #e96d3f; ;
+  }
+  
+  .btn-check:checked + .btn-primary.check-botao {
+    background-color: #e96d3f; 
+    border-color: #e96d3f; 
+    color: #fff; 
+  }
 
 
 .navbar-dark .navbar-brand,
@@ -427,6 +482,9 @@ nav  a:hover, nav a:focus{
 /* .cont, ::placeholder{
     background-color: #FFF1EB;
 } */
+
+
+
 
 
 
@@ -501,6 +559,28 @@ a {text-decoration: none;}
     padding: 9px;
 }
 
+.text-color {
+    color: white;
+}
+
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
+
+    .input-adocao {
+        width: 285px;
+    }
+    
+    .inputs-adocao {
+        width: 135px;
+    }
+    .entry {width: 289px;}
+    
+    .form-floating {
+        margin-right: 2px; /* Adicione a margem desejada entre os elementos */
+    }
+
+}
+
 
 /*--------------------------------------------------------------
 # Estilização Página de Adoção - Te conhecendo
@@ -515,6 +595,7 @@ a {text-decoration: none;}
     padding: 18px;
     padding-left: 0;
     padding-top: 0;
+    padding-right: 0;
 }
 
 .check-botao {
@@ -522,7 +603,7 @@ a {text-decoration: none;}
     height: 55px;
     background-color: #ffffff;
     border-color: #C3C7E5;
-    color: #babdd4;
+    color: rgb(78, 72, 72) !important; 
     font-size: 22px;
     cursor: pointer;
 
@@ -541,6 +622,38 @@ a {text-decoration: none;}
     color: #babdd4 ;
 }
 
+.textearea-form {
+    height: 134px !important; 
+    width: 459px ;
+}
+
+@media (min-width: 200px) and (max-width: 991px){
+    
+    .textearea-form {
+        height: 134px !important; 
+        width: 333px ;
+    }
+    .botao-adotou {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    
+    .check-botao {
+        width: 95px;
+        height: 55px;
+        border-color: #C3C7E5;
+        color: rgb(78, 72, 72) !important; 
+        font-size: 22px;
+        cursor: pointer;
+    
+    }
+
+
+
+}
 
 
 /*--------------------------------------------------------------
@@ -568,6 +681,230 @@ a {text-decoration: none;}
     padding-bottom: 40px;
 }
 
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
+
+    .adotou-h1 {font-size: 20px;}
+    .adotou-p {
+        font-size: 14px;
+        color: #C3C7E5;
+      }
+    
+
+    
+}
+
+
+
+/*--------------------------------------------------------------
+# Estilização Página de Adoção - Nossos Pets
+--------------------------------------------------------------*/
+
+.top-pets {
+    padding-top: 55px;
+}
+
+.pets-h1 {font-size: 36px;}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.favorito{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+} 
+
+.favorito a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f0f0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: orange;
+}
+
+.favorito a:hover{
+    background-color: #e96d3f;
+    color: white;
+}
+
+
+
+
+.card-item {
+    flex-basis: calc(25% - 20px); /* Largura desejada para cada card */
+    
+   
+    background-color: #fff8f6;
+  }
+
+.nome-pets {
+    font-size: 27px;
+    font-weight: bold;
+    color: #0a1375;
+}
+
+.loc-pets {
+    font-size: 22px;
+    color: #6771c4;
+}
+
+.idade-sexo {
+    display: flex;
+    justify-content: space-between;
+    color: #545db3;
+    font-size: 20px;
+}
+
+.favoritar-nome {
+    display: flex;
+    justify-content: space-between;
+    color: #db4712;
+}
+
+.limitar-tela {
+    width: 90vw;
+    margin: auto;
+}
+
+
+/*--------------------------------------------------------------
+# Estilização Página de Adoção - Detalhes Pets
+--------------------------------------------------------------*/
+
+.card-container-detalhe {
+    display: flex;
+}
+.card-grande {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.cards-direita {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.card-item-2 {
+    margin-bottom: 20px ; 
+}
+
+.card-item-3 {
+    margin-bottom: 20px ; 
+}
+
+.cards-pequenos {
+    flex: 4;
+}
+
+.cards-medios {
+    flex: 6;
+}
+
+.rua-detalhes {
+    color: #1E266D;
+}
+
+.espacamento-h {
+    width: 69%;
+    text-align: right;
+    padding-bottom: 8px;
+}
+
+.formatar-p {
+    display: flex;
+    justify-content: space-around;
+}
+
+.formatar-loc {
+    width: 190%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    padding-bottom: 0;
+}
+
+.espacamento-p { 
+    width: 90%;
+    text-align: center;
+}
+
+.formartar-botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.formatar-sections { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.formatar-detalhes {
+    display: flex;
+    width: 190%;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    
+}
+
+.defin-cor {
+    color: #091adb;
+}
+
+hr.my-2 { 
+    width: 60%; 
+    padding: 10px;
+}
+
+/* mobile and tablet */
+@media (min-width: 200px) and (max-width: 991px){
+
+    .cards-direita {display: none;}
+    .formatar-h1 {font-size: 16px;}
+    .rua-detalhes {font-size: 12px;}
+    .card-title {display: none;}
+    .card-text{display: none;}
+
+    .formatar-loc {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+        padding-bottom: 0;
+    }
+    
+    .formatar-detalhes {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formatar-span {padding-top: 20px;}
+    .formartar-botao {width: 140% !important;}
+    .formatar-card {
+        width: 100% !important;
+        border: none;
+    }
+    
+}
+
+
+
 /*--------------------------------------------------------------
 # Estilização do Footer
 --------------------------------------------------------------*/
@@ -576,4 +913,39 @@ a {text-decoration: none;}
     margin-top: 40px;
     background-color: #040726;
     color: white !important;
+}
+
+
+/*--------------------------------------------------------------
+# Estilização do Perfil
+--------------------------------------------------------------*/
+
+.custom-circle {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+  }
+
+.alinhar-text {
+    text-align: center;
+}
+
+.alinha-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 200px) and (max-width: 991px){
+    
+    .alinha-cards {
+        
+     
+        padding: 20px;
+    }
+
+
+    
+    
+
+    
 }
