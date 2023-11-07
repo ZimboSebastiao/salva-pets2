@@ -937,15 +937,15 @@ hr.my-2 {
 
 @media (min-width: 200px) and (max-width: 991px){
     
-    .alinha-cards {
-        
-     
-        padding: 20px;
-    }
+    .alinha-cards {padding: 20px;}  
+}
 
 
-    
-    
+/*--------------------------------------------------------------
+# Estilização do Perfil
+--------------------------------------------------------------*/
 
+@media (min-width: 164px) and (max-width: 991px){
     
+    .formatar-img {display: none;} 
 }
