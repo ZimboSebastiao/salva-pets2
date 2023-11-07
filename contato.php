@@ -201,8 +201,8 @@
             <h6 class="text-uppercase fw-bold mb-4">
               Nossos pets
             </h6>
-            <p><a href="#!" class="text-reset">Cachorros</a></p>
-            <p><a href="#!" class="text-reset">Gatos</a></p>
+            <p><a href="nossos-pets.php?dogs" class="text-reset">Cachorros</a></p>
+            <p><a href="nossos-pets.php?cats" class="text-reset">Gatos</a></p>
           </div>
           <!-- Grid column -->
 
@@ -214,7 +214,7 @@
               Institucional
             </h6>
             <p><a href="quem-somos.php" class="text-reset">Sobre nós</a></p>
-            <p><a href="#!" class="text-reset">Contato</a></p>
+            <p><a href="contato.php" class="text-reset">Contato</a></p>
           </div>
           <!-- Grid column -->
 
@@ -223,7 +223,7 @@
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">Centro de ajuda</h6>
             <p><a href="#!" class="text-reset">Política de privacidade</a></p>
-            <p><a href="#!" class="text-reset">Ajuda</a></p>
+            <p><a href="ajuda.php" class="text-reset">Ajuda</a></p>
           </div>
           <!-- Grid column -->
         </div>
