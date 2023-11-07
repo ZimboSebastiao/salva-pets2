@@ -178,7 +178,7 @@ if (isset($_GET['sair'])) $sessao->logout();
 
             <!-- ====== BOTÃO - Próxima etapa ====== -->
             <div>
-                <button class="btn btn-primary btn-lg botao input-adocao" name="inserir" type="submit"> <a class="text-color" href="te-conhecendo.php">Próxima etapa</a></button>
+                <button class="btn btn-primary btn-lg botao input-adocao" name="inserir" type="submit"><a class="text-color" href="te-conhecendo.php">Próxima etapa</a></button>
             </div>
 
         </form>

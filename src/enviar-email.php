@@ -12,7 +12,7 @@ $usuario = new Usuario;
 // Atribuimos ao objeto o ID  do usuario logado na sessão
 $usuario->setId($_SESSION['id']);
 $dados = $usuario->listarUm();
-Utilitarios::dump($dados);
+// Utilitarios::dump($dados);
 $sessao->verificaAcesso();
 
 
@@ -80,9 +80,13 @@ try {
                    <h1>DADOS DO PET SOLICITADO</h1> <br> <hr>
                    
                    ";
-
+    $mail->SMTPDebug = 2;
     $mail->send();
-    header("location:../adotou.php");
+    $mail->send();
+    echo "<p style='color: green;'>E-mail enviado com sucesso! Redirecionando...</p>";
+    echo "<script>setTimeout(function() { window.location.href = '../adotou.php'; }, 3000);</script>";
+
 } catch (Exception $e) {
-    echo 'Erro ao enviar o e-mail: ' . $mail->ErrorInfo;
+    echo "<p style='color: red;'> E-mail Invalido!
+    </p>";
 }
