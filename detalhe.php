@@ -300,7 +300,7 @@
   <p><?=$sobre?></p>
 </div>
 
-
+<h3 style=" color: #1E266D;">Pets relacionados</h3>
 
 </main>
 
