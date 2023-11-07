@@ -10,7 +10,7 @@
   // Atribuimos ao objeto o ID  do usuario logado na sessão
   $usuario->setId($_SESSION['id']);
   $dados = $usuario->listarUm();
-  Utilitarios::dump($dados);
+  // Utilitarios::dump($dados);
   $sessao->verificaAcesso();
   if (isset($_GET['sair'])) $sessao->logout();
 ?>
