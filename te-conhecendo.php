@@ -54,9 +54,9 @@
             <li><a class="dropdown-item" href="nossos-pets.php?cats">Gatos</a></li>
           </ul>
         </li>
-        <li><a  href="#">Quem Somos</a></li>
-        <li ><a href="#">Ajuda</a></li>
-        <li ><a href="#">Contato</a></li>
+        <li><a  href="quem-somos.php">Quem Somos</a></li>
+        <li ><a href="ajuda.php">Ajuda</a></li>
+        <li ><a href="contato.php">Contato</a></li>
         <?php if (!isset($_SESSION['id'])){ ?>
             <li><a  href="login.php" class="btn btn-primary w-50 m-auto"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
             <?php }?>
@@ -231,7 +231,7 @@
           </a>
           </h6>
           <p class="Beetle-letters negrito decrease-size">Não compre, adote!</p>
-          <p class="negrito decrease-size">contato.salvapets@gmail.com</p>
+          <p class="negrito decrease-size">suporte.salvapets@gmail.com</p>
         </div>
         <!-- Grid column -->
 
@@ -253,8 +253,8 @@
           <h6 class="text-uppercase fw-bold mb-4">
             Institucional
           </h6>
-          <p><a href="#!" class="text-reset">Sobre nós</a></p>
-          <p><a href="#!" class="text-reset">Contato</a></p>
+          <p><a href="quem-somos.php" class="text-reset">Sobre nós</a></p>
+          <p><a href="contato.php" class="text-reset">Contato</a></p>
         </div>
         <!-- Grid column -->
 
@@ -263,7 +263,7 @@
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">Centro de ajuda</h6>
           <p><a href="#!" class="text-reset">Política de privacidade</a></p>
-          <p><a href="#!" class="text-reset">Ajuda</a></p>
+          <p><a href="ajuda.php" class="text-reset">Ajuda</a></p>
         </div>
         <!-- Grid column -->
       </div>
