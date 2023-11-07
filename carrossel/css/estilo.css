@@ -429,9 +429,8 @@ body {
 	/*-------------------------------------------------------*/
   .sl-header-wrapper {
     padding: 50px 2% 0 5%;
-    width: 500px;
+    width: 100%;
     display: inline-block;
-    float: left;
   }
   .sl-header-wrapper p {
     width: 100%;
@@ -449,7 +448,7 @@ body {
   .swiper-container {
     position: absolute;
     top: 50%;
-    right: 0;
+    left: 150px;
     transform: translate(0, -50%);
     width: 505px;
     height: 540px;
@@ -479,3 +478,4 @@ body {
 .slide-idade{
   color: #ffa500;
 }
+

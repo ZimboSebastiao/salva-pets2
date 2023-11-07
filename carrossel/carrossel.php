@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title>Carrossel</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/614007/f2-common.css'>
-  <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/614007/swiper.min.css'>
-  <link rel="stylesheet" href="../carrosel/css/estilo.css" />
-</head>
-
-<body>
   <div class="main-wrapper">
     <div class="sl-main-container">
-      <div class="sl-header-wrapper">
+      <!-- <div class="sl-header-wrapper">
 
-        <h3>Novos pets</h3>
-
-        <p>Confira os principais dados dos pets para ver qual o nível de compátibilidade entre vocês !</p>
-
-        <!-- Botões de navegação -->
+         Botões de navegação
         <div class="sl-nav">
           <div class="swiper-button-next">
             <svg id="nextBtn" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65">
@@ -42,7 +25,7 @@
             </svg>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="sl-wrapper">
         <!-- Slider main container -->
