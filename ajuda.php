@@ -112,65 +112,73 @@
 <hr class="my-4" > <!-- FIM CABEÇALHO  -->
 
 
-
+<h1 class="fs-1 text-center">Leia as <b> duvidas </b> Frequêntes!!!</h1>
 <main class="main-contact d-flex align-items-center m-auto">
+        <div class="container-sm img-responsivo-cadastro">
 
-    <div class="container-sm img-responsivo-cadastro">
+            <!-- =========== Formulário  =========== -->
 
-        <!-- =========== Formulário  =========== -->
-        
-        <div>
-            <h1 class="fs-1 text-center">Entre em <b>contato</b> com a gente!!</h1>
-            
-            <div class="center-form-cadastro m-auto formatar-sections">
-                <!-- <div class="d-flex flex-column justify-content-center align-items-center"></div> -->
+            <section class="estilo-form m-auto d-flex align-items-center w-100">
+                <img class="formatar-img" src="images/duvidas-removebg-preview.png" alt="">
 
-                <section>
+                <div class="accordion w-100" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                Como escolher o pet perfeito para minha família?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <strong>Resposta:</strong> Para encontrar o pet ideal, considere fatores como tamanho, personalidade, nível de atividade e requisitos de cuidados. Visite abrigos de animais, converse com os funcionários e considere a adoção responsável.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item ">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                Como preparar minha casa para a chegada de um pet recém adotado?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <strong>Resposta:</strong> Antes de trazer seu novo amigo para casa, certifique-se de que sua casa seja segura e pet-friendly. Isso envolve a remoção de objetos perigosos, fornecimento de abrigo adequado, comida, água e treinamento básico.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                Qual é a melhor maneira de acolher um pet recém adotado?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <strong>Resposta:</strong> A recepção apropriada de um pet recém adotado envolve paciência e carinho. Dê tempo ao animal para se adaptar ao novo ambiente, estabeleça uma rotina consistente e ofereça afeto gradualmente. Consulte um veterinário para garantir que o pet esteja saudável.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                Como lidar com problemas de comportamento em pets adotados?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <strong>Resposta:</strong> Muitos pets adotados podem ter problemas de comportamento devido a experiências passadas. A melhor abordagem é a paciência e o treinamento positivo. Se os problemas persistirem, considere a consulta a um treinador de animais ou a um especialista em comportamento animal.
 
-                    <img class="formatar-img" src="images/cat-dog-removebg-preview.png" alt="pets-paginaContato">
-                </section>
-                
-            <section class="estilo-form  m-auto d-flex align-items-center w-75 gap-5">
-                    
-            <form action="https://formspree.io/f/xbjvbldj" method="post" class="b-2">
-
-              <div class="form-floating mb-3">
-                <input type="text" class="form-control input-cadastro" id="floatingInputGroup2" placeholder="Username" required name="nome">
-                <label for="floatingInputGroup2">Nome completo</label>
-              </div>
-
-              <div class="form-floating mb-3">
-                <input class="form-control input-cadastro" id="email" name="Email" placeholder="name@example.com" required type="email">
-                <label for="email">E-mail</label>
-              </div>
-
-              <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Digite sua mensagem!</label>
-              </div>
-
-
-              <div class="form-check estilo-l">
-                <input class="form-check-input" type="checkbox" value="" id="">
-                <label class="form-check-label" for="">
-                  Aceita receber as novidades do site
-                </label>
-              </div>
-
-              <div>
-                <button class="btn btn-primary btn-lg botao input-cadastro" type="submit">Enviar</button>
-              </div>
-            </form>
+                                <p class="p-2">em caso de dúvidas: </p>
+                                <p><a href="">Entre em contato</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
 
-      </div>
 
-
-    </div>
-
-    </div>
-</main>
+    </main>
 
 
 
@@ -179,11 +187,7 @@
 
 
   <!-- ====== FOOTER ====== -->
-
-
-
-
-  <footer class=" text-lg-start footer-color text-muted">
+<footer class=" text-lg-start footer-color text-muted">
 
     <!-- ====== Links ====== -->
     <section class="">
