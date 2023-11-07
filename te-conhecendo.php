@@ -128,7 +128,7 @@
   <div class="container tamanho-form">
     <div class="row">
       <section class="estilo-form form-te-conhecendo">
-        <form action="src/enviar-email.php"  method="post" class="dividir-form-conhencendo">
+        <form action="src/enviar-email-te-conhecendo.php"  method="post" class="dividir-form-conhencendo">
 
             <!-- ====== CHECK - Primeiro ====== -->
             <p class="posicionar-span">Tem crianças em casa?</p>

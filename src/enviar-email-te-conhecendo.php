@@ -45,14 +45,11 @@ try {
     $mail->isHTML(true);
 
     // Preenche o corpo do e-mail com os dados do formulário
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $estado = $_POST['estado'];
-    $cidade = $_POST['cidade'];
-    $endereco = $_POST['endereco'];
-    $numero = $_POST['numero'];
-    $completo = $_POST['completo'];
-    
+    $first = $_POST['first'];
+    $segundo = $_POST['segundo'];
+    $terceiro = $_POST['terceiro'];
+    $quarto = $_POST['quarto'];
+    $mensagem = $_POST['mensagem'];
     
 
     $mail->Subject = 'Formulario de Adocao';
@@ -61,19 +58,25 @@ try {
                    Nome do Usuário Cadastrado: {$dados['nome']}<br>
                    Id do Usuário Cadastrado: {$dados['id']}<br>
                    <h1>DADOS DO FORMULARIO</h1> <br> <hr>
-                   Nome: $nome<br>
-                   E-mail: $email<br>
-                   Estado: $estado<br>
-                   Cidade: $cidade<br>
-                   Endereco: $endereco<br>
-                   Numero: $numero<br>
-                   Complemento: $completo<br>
+                   Tem criancas em casa?: $first<br>
+                   Tem algum pet?: $segundo<br>
+                   Todos em casa estao cientes?: $terceiro<br>
+                   Alguem tem alergia a animais?: $quarto<br>
+                   Mensagem: $mensagem <br> <hr>
                    <h1>DADOS DO PET SOLICITADO</h1> <br> <hr>
                    
                    ";
     // $mail->SMTPDebug = 2;
     $mail->send();
-    echo "<script>setTimeout(function() { window.location.href = '../te-conhecendo.php'; }, 1000);</script>";
-} catch (Exception $e) {
+    echo "<p style='margin-top: 0.5rem ; margin-bottom: 0.5rem;position: relative; padding: 1rem 1rem; margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem; color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba; text-align: center;'>E-mail enviado com sucesso! Redirecionando...</p>";
+    echo "<script>setTimeout(function() { window.location.href = '../adotou.php'; }, 3000);</script>";
 
+} catch (Exception $e) {
+    echo "<p style='color: red;'> E-mail Invalido, loga com um email valido para concluir o seu processo de adoção!
+    </p>";
+    echo "<script>setTimeout(function() { window.location.href = '../nossos-pets.php'; }, 6000);</script>";
 }
