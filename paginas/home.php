@@ -24,7 +24,7 @@ if (isset($_GET['sair'])) $sessao->logout();
   <title>SalvaPets - Adote o seu pet</title>
   <!-- ======== CSS Bootstrap ======== -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="../assets/css/Css.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
   
   <!-- Css do carrosel -->
   <link rel='stylesheet' href='https://s3-us-west-2.amazonaws.com/s.cdpn.io/614007/f2-common.css'>
