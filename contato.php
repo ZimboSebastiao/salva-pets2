@@ -113,10 +113,9 @@
             <h1 class="fs-1 text-center">Entre em <b>contato</b> com a gente!!</h1>
             
             <div class="center-form-cadastro m-auto formatar-sections">
-                <!-- <div class="d-flex flex-column justify-content-center align-items-center"></div> -->
+
 
                 <section>
-
                     <img class="formatar-img" src="images/cat-dog-removebg-preview.png" alt="pets-paginaContato">
                 </section>
                 
@@ -168,12 +167,8 @@
 
 
 
-  <!-- ====== FOOTER ====== -->
-
-
-
-
-  <footer class=" text-lg-start footer-color text-muted">
+<!-- ====== FOOTER ====== -->
+<footer class=" text-lg-start footer-color text-muted">
 
     <!-- ====== Links ====== -->
     <section class="">

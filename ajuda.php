@@ -159,7 +159,7 @@
                                 <strong>Resposta:</strong> Muitos pets adotados podem ter problemas de comportamento devido a experiências passadas. A melhor abordagem é a paciência e o treinamento positivo. Se os problemas persistirem, considere a consulta a um treinador de animais ou a um especialista em comportamento animal.
 
                                 <p class="p-2">em caso de dúvidas: </p>
-                                <p><a href="">Entre em contato</a></p>
+                                <p><a href="contato.php">Entre em contato</a></p>
                             </div>
                         </div>
                     </div>
