@@ -155,8 +155,8 @@
         </div>
   
         <!-- BOTÃO BUSCAR PET -->
-        <div class="w-75 m-auto">
-          <button class="btn btn-primary w-100" type="button" id="buscar">Buscar Pet</button>
+        <div class="w-75 m-auto border-none">
+          <button class="btn btn-primary border-0 w-100" type="button" id="buscar">Buscar Pet</button>
         </div>
    
       </div>
@@ -195,7 +195,7 @@
       ?> <?=count($data);?> Pets disponíveis para você
     </h1>
 
-    <div class="card-container gap-5 shadow border data-pets='<?= json_encode($data); ?>">
+    <div class="d-flex flex-wrap justify-content-center gap-5 data-pets='<?= json_encode($data); ?>">
     <?php
        
       // Faz a solicitação à API e obtém os dados
@@ -220,9 +220,9 @@
                   
                   $imagemUrl = "https://salvapets.onrender.com/" . $imagem; ?>
     
-        <div class="card border card-item shadow-lg rounded-5 m-auto">
+        <div class="card border card-item shadow-lg rounded-top-4">
         
-          <a href="detalhe.php?id=<?=$pet['id']?>"><img class="rounded-top-4 w-100" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
+          <a href="detalhe.php?id=<?=$pet['id']?>"><img class=" rounded-top-4 w-100" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
           <div class="card-body">
             <div class="favoritar-nome">
               <h5 class="card-title nome-pets"><?=$nome?></h5>
@@ -230,7 +230,8 @@
                 <a class="bi bi-heart" href="?favoritar=<?=$pet['id']?>" ></a>
               </p>
             </div>
-            <p class="card-text loc-pets"><?=$localizacao?></p>
+            
+            <i class="bi bi-geo-alt loc-pets"><?=$localizacao?></i>
             <div class="idade-sexo">
               <p class="card-text sexo-pets">
               <?php 
@@ -258,7 +259,8 @@
                   $anos = floor($diferencaSegundos / (365 * 24 * 60 * 60)); }
                   $meses = floor(($diferencaSegundos % (365 * 24 * 60 * 60)) / (30 * 24 * 60 * 60));
                 ?>
-              <p class="card-text"><?=$anos?> anos e <?=$meses?> meses</p>
+            
+              <i class="bi bi-cake"> <?=$anos?> anos e <?=$meses?> meses</i>
             </div>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
           </div>

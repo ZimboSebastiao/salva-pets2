@@ -735,10 +735,10 @@ a {text-decoration: none;}
 .pets-h1 {font-size: 36px;}
 
 
-.card-container {
+/* .card-container {
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
 .favorito{
     
@@ -767,14 +767,10 @@ a {text-decoration: none;}
 }
 
 
-
-
-.card-item {
-    flex-basis: calc(25% - 20px); /* Largura desejada para cada card */
-    
-   
-    background-color: #fff8f6;
-  }
+ 
+ .card-item {
+    width: 350px;
+} 
 
 .nome-pets {
     font-size: 27px;
