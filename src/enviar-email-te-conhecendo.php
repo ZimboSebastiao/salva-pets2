@@ -62,10 +62,7 @@ try {
                    Tem algum pet?: $segundo<br>
                    Todos em casa estao cientes?: $terceiro<br>
                    Alguem tem alergia a animais?: $quarto<br>
-                   Mensagem: $mensagem <br> <hr>
-                   <h1>DADOS DO PET SOLICITADO</h1> <br> <hr>
-                   
-                   ";
+                   Mensagem: $mensagem <br> <hr>";
     // $mail->SMTPDebug = 2;
     $mail->send();
     echo "<p style='margin-top: 0.5rem ; margin-bottom: 0.5rem;position: relative; padding: 1rem 1rem; margin-bottom: 1rem;
@@ -76,7 +73,11 @@ try {
     echo "<script>setTimeout(function() { window.location.href = '../adotou.php'; }, 3000);</script>";
 
 } catch (Exception $e) {
-    echo "<p style='color: red;'> E-mail Invalido, loga com um email valido para concluir o seu processo de adoção!
+    echo "<p style='margin-top: 0.5rem ; margin-bottom: 0.5rem;position: relative; padding: 1rem 1rem; margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem; color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba; text-align: center;'> E-mail Invalido, loga com um email valido para concluir o seu processo de adoção!
     </p>";
     echo "<script>setTimeout(function() { window.location.href = '../nossos-pets.php'; }, 6000);</script>";
 }

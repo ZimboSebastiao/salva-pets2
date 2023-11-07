@@ -11,6 +11,11 @@ $usuario = new Usuario;
 // $usuario->setId($_SESSION['id']);
 // $dados = $usuario->listarUm();
 // Utilitarios::dump($dados);
+
+if (isset($_GET['id'])) {
+  $petId = $_GET['id'];
+}
+
 $sessao->verificaAcesso();
 
 if (isset($_GET['sair'])) $sessao->logout();
@@ -178,6 +183,7 @@ if (isset($_GET['sair'])) $sessao->logout();
 
             <!-- ====== BOTÃO - Próxima etapa ====== -->
             <div>
+                <input type="hidden" name="pet_id" value="<?=$petId?>">
                 <button class="btn btn-primary btn-lg botao input-adocao" name="inserir" type="submit">Próxima etapa</button>
             </div>
 

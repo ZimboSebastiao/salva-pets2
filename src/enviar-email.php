@@ -13,7 +13,12 @@ $usuario = new Usuario;
 $usuario->setId($_SESSION['id']);
 $dados = $usuario->listarUm();
 // Utilitarios::dump($dados);
+
+$petId = isset($_POST['pet_id']) ? $_POST['pet_id'] : null;
+
+
 $sessao->verificaAcesso();
+
 
 
 $mail = new PHPMailer(true);
@@ -52,7 +57,7 @@ try {
     $endereco = $_POST['endereco'];
     $numero = $_POST['numero'];
     $completo = $_POST['completo'];
-    
+
     
 
     $mail->Subject = 'Formulario de Adocao';
@@ -69,11 +74,13 @@ try {
                    Numero: $numero<br>
                    Complemento: $completo<br>
                    <h1>DADOS DO PET SOLICITADO</h1> <br> <hr>
-                   
+                   Id do Pet selecionado: {$petId}<br>
                    ";
     // $mail->SMTPDebug = 2;
     $mail->send();
     echo "<script>setTimeout(function() { window.location.href = '../te-conhecendo.php'; }, 1000);</script>";
 } catch (Exception $e) {
-
+    echo "<p style='color: red;'> E-mail Invalido, loga com um email valido para concluir o seu processo de adoção!
+    </p>";
+    echo "<script>setTimeout(function() { window.location.href = '../nossos-pets.php'; }, 6000);</script>";
 }
