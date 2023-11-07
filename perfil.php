@@ -156,11 +156,11 @@ if (isset($_GET['sair'])) $sessao->logout();
     <div class="mt-5 shadow-lg d-md-flex justify-content-center col-md-10 col-lg-8 m-auto mb-5">
       
         <div class="p-5 mx-3 card-atualizacao rounded col-md-6">
-          <div class="m-auto text-center">
-            <img src="images/destaque-cadastro.jpg" class=" custom-circle" alt="...">
+          <div class="m-auto text-center foto-perfil">
+            <img src="images/destaque-cadastro.jpg" class="custom-circle" alt="...">
           </div>
           <div class="text-center">
-            <h3 class="text-light fw-bold"><?= $dados["nome"] ?></h3>
+            <h3 class="text-light fw-bold text-capitalize"><?= $dados["nome"] ?></h3>
             <p class="text-light fw-bold">Configurações da conta</p>
             <p class="text-light fw-bold">Data: <?= $agora ?></p>
             <p class="text-light fw-bold">Hora: <?= $hora ?></p>

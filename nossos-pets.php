@@ -220,7 +220,7 @@
                   
                   $imagemUrl = "https://salvapets.onrender.com/" . $imagem; ?>
     
-        <div class="card border card-item shadow-lg rounded-5">
+        <div class="card border card-item shadow-lg rounded-5 m-auto">
         
           <a href="detalhe.php?id=<?=$pet['id']?>"><img class="rounded-top-4 w-100" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
           <div class="card-body">

@@ -928,8 +928,10 @@ hr.my-2 {
     width: 150px; 
     height: 150px; 
     border-radius: 50%; 
+    border: 3px solid #fff;
   }
 
+   
 .alinhar-text {
     text-align: center;
 }
