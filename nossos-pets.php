@@ -118,7 +118,7 @@
       </div>
     </nav>
   </header>
-<hr class="my-4" > <!-- FIM CABEÇALHO  -->
+<hr class="my-4 d-md-none" > <!-- FIM CABEÇALHO  -->
 
 
 <main>
@@ -127,7 +127,7 @@
 
 
     <div class="top-pets pb-3 limitar-tela">
-      <div class="container-fluid d-flex gap-5 flex-wrap m-auto flex-xl-nowrap">
+      <div class="container-fluid d-flex gap-2 gap-md-5 flex-wrap m-auto flex-xl-nowrap">
   
         <!-- INPUT CIDADE -->
         <div class="input-group border rounded border-dark d-flex align-items-center">
@@ -165,7 +165,7 @@
   
   <div class="limitar-tela">
 
-    <h1 class="pets-h1">
+    <h1 class="pets-h1 text-center">
       <?php
 
           if (isset($_GET['dogs'])) {
@@ -195,7 +195,7 @@
       ?> <?=count($data);?> Pets disponíveis para você
     </h1>
 
-    <div class="d-flex flex-wrap justify-content-center gap-5 data-pets='<?= json_encode($data); ?>">
+    <div class="d-flex flex-wrap justify-content-center gap-5 mt-5 data-pets='<?= json_encode($data); ?>">
     <?php
        
       // Faz a solicitação à API e obtém os dados
@@ -220,9 +220,9 @@
                   
                   $imagemUrl = "https://salvapets.onrender.com/" . $imagem; ?>
     
-        <div class="card border card-item shadow-lg rounded-top-4">
+        <div class="card border card-item shadow rounded-4">
         
-          <a href="detalhe.php?id=<?=$pet['id']?>"><img class=" rounded-top-4 w-100" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
+          <a href="detalhe.php?id=<?=$pet['id']?>"><img class=" rounded-4 shadow" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
           <div class="card-body">
             <div class="favoritar-nome">
               <h5 class="card-title nome-pets"><?=$nome?></h5>
@@ -263,6 +263,9 @@
               <i class="bi bi-cake"> <?=$anos?> anos e <?=$meses?> meses</i>
             </div>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            <div class="mt-3 text-start">
+            <button class="btn btn-primary border-0" name="atualizar"><i class="bi bi-arrow-clockwise"></i> Adotar</button>
+          </div>
           </div>
         </div>
     

@@ -189,10 +189,9 @@ if (isset($_GET['sair'])) $sessao->logout();
             <label for="floatingPassword">Password</label>
           </div>
 
-
-          <div class="mt-3 text-center">
-            <button class="btn btn-primary border-0" name="atualizar"><i class="bi bi-arrow-clockwise"></i> Atualizar</button>
-          </div>
+            <div class="mt-3 text-center">
+              <button class="btn btn-primary border-0" name="atualizar"><i class="bi bi-arrow-clockwise"></i> Atualizar</button>
+            </div>
         </form>
     </div>
 <!-- ====================== -->
