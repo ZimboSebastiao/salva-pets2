@@ -241,8 +241,8 @@
           <h6 class="text-uppercase fw-bold mb-4">
             Nossos pets
           </h6>
-          <p><a href="#!" class="text-reset">Cachorros</a></p>
-          <p><a href="#!" class="text-reset">Gatos</a></p>
+          <p><a href="nossos-pets.php?dogs" class="text-reset">Cachorros</a></p>
+          <p><a href="nossos-pets.php?cats" class="text-reset">Gatos</a></p>
         </div>
         <!-- Grid column -->
 
