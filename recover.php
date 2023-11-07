@@ -1,3 +1,11 @@
+<?php
+use Salvapets\Usuario;
+require_once "vendor/autoload.php";
+
+// Verifique se o token foi passado na URL
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -34,33 +42,30 @@
 
   
   <!-- ====== FORMULÁRIO ====== -->
-  <div class="modal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Escolha uma nova senha</h5>
-        
+
+  <div class="container">
+
+    <p style="padding-top: 30px;">
+      Crie uma nova senha que contenha pelo menos 6 caracteres. <br>
+      Uma senha complexa é uma combinação de letras, números, sinais de pontuação e símbolos.
+    </p>
+    <form action="" method="post">
+      <div class="form-floating mb-3">
+          <input class="form-control input" id="novaSenha" name="novaSenha" placeholder="Nova Senha" required type="password">
+          <label for="novaSenha">Nova Senha</label>
       </div>
-      <div class="modal-body">
-        <p>
-          Crie uma nova senha que contenha pelo menos 6 caracteres.
-          Uma senha complexa é uma combinação de letras, números, sinais de pontuação e símbolos.
-        </p>
-        <form action="" method="post">
-          <div class="form-floating mb-3">
-              <input class="form-control input" id="floatingInput" placeholder="Nova Senha" required type="password">
-              <label for="floatingInput">Nova Senha</label>
-          </div>
-        </form>
-        
+      <div class="form-floating mb-3">
+          <input class="form-control input" id="confirmaSenha" name="confirmaSenha" placeholder="Confirme a Senha" required type="password">
+          <label for="confirmaSenha">Confirme a Senha</label>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Continuar</button>
-      </div>
-    </div>
+      <button type="button" class="btn btn-primary" >Cancelar</button>
+      <button type="submit" class="btn btn-primary">Continuar</button>
+    </form>
   </div>
-</div>
+        
+
+
+
 
 
 
