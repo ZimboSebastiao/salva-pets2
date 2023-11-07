@@ -65,12 +65,8 @@ try {
                    Mensagem: $mensagem <br> <hr>";
     // $mail->SMTPDebug = 2;
     $mail->send();
-    echo "<p style='margin-top: 0.5rem ; margin-bottom: 0.5rem;position: relative; padding: 1rem 1rem; margin-bottom: 1rem;
-    border: 1px solid transparent;
-    border-radius: 0.25rem; color: #856404;
-    background-color: #fff3cd;
-    border-color: #ffeeba; text-align: center;'>E-mail enviado com sucesso! Redirecionando...</p>";
-    echo "<script>setTimeout(function() { window.location.href = '../adotou.php'; }, 3000);</script>";
+
+    echo "<script>setTimeout(function() { window.location.href = '../adotou.php'; }, 1000);</script>";
 
 } catch (Exception $e) {
     echo "<p style='margin-top: 0.5rem ; margin-bottom: 0.5rem;position: relative; padding: 1rem 1rem; margin-bottom: 1rem;
