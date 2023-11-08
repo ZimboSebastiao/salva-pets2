@@ -4,11 +4,8 @@
   use Salvapets\ControleDeAcesso;
   require_once "vendor/autoload.php";
 
-
   $sessao = new ControleDeAcesso;
   $usuario = new Usuario;
- 
-
 
 
   if (isset($_GET['sair'])) $sessao->logout();
