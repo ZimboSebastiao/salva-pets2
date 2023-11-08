@@ -205,6 +205,7 @@ a {text-decoration: none;}
     justify-content: space-between;
     gap: 50px;
 
+
 }
 
 .center-form-cadastro {
@@ -213,7 +214,7 @@ a {text-decoration: none;}
 }
 
 #destaque-cadastro {
-    width: 50%;
+    width: 50vw;
     height: 120vh;
     background: url(../../images/destaque-cadastro.jpg);
     background-size: cover;
@@ -222,22 +223,39 @@ a {text-decoration: none;}
 }
 
 .estilo-l {
-    font-size: 14px;
+    font-size: 13.6px;
     color: #C3C7E5;
-    position: relative;
-    right: -38px;
+    text-align: center;
 }
 
 .tag-style-c {
     color: #C3C7E5;
-    position: relative;
     padding: 6px;
-    right: -90px;
+
 }
 
 .form-check-input:checked[type="checkbox"] {
     background-color: #FF7F50;
     border-color: #FF7F50;
+}
+
+.input-cadastro {
+    width: 40vw;
+}
+
+.estilo-p-cadastro {
+    color: #C3C7E5;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.estilo-h1-cadastro {
+    padding: 10px;
+
+}
+
+.input-cd {
+    border: #db4712;
 }
 
 
@@ -281,10 +299,7 @@ a {text-decoration: none;}
 
     .tag-style-c {
         color: #C3C7E5;
-        position: relative;
         padding: 6px;
-        right: -58px;
-        width: 60%;
     }
  
 }
