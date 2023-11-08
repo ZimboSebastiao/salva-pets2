@@ -9,7 +9,6 @@ require_once "../vendor/autoload.php";
 $sessao = new ControleDeAcesso;
 
 $usuario = new Usuario;
-// Atribuimos ao objeto o ID  do usuario logado na sessão
 $usuario->setId($_SESSION['id']);
 $dados = $usuario->listarUm();
 // Utilitarios::dump($dados);
@@ -52,7 +51,7 @@ try {
     $mensagem = $_POST['mensagem'];
     
 
-    $mail->Subject = 'Formulario de Adocao';
+    $mail->Subject = 'Formulario de Adocao - Segunda Parte';
     $mail->Body = "<h1>DADOS DO SITE SALVA PETS</h1> <br> <hr>
                    E-mail Cadastrado: {$dados['email']}<br>
                    Nome do Usuário Cadastrado: {$dados['nome']}<br>

@@ -5,6 +5,17 @@
     font-family: 'Open Sans', sans-serif;
 }   
 
+body {
+    background-color: white;
+    /* Solução Rodapé Etapa 1 */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Solução Rodapé Etapa 2  */
+main {flex: 1;}
+
 .cabecalho, header{
     background-color: #FFF1EB;
 }   
@@ -13,6 +24,8 @@
 .custom-border{
     border: 1px solid #5C6299;
 }
+
+
 
 /* cor dos botões */
 .btn{
@@ -780,12 +793,7 @@ hr.my-2 {
     box-shadow: 0 0 0 0.25rem rgb(219, 106, 65);
 }
 
-.btn-primary {
-    color: #fff !important; 
-    background-color: #e96d3f ;
-    border-color: #e96d3f;
-
-}
+ 
 
 
   .btn-primary:focus,
@@ -798,7 +806,7 @@ hr.my-2 {
   }
 
   .btn-check {                   
-    background-color: #e96d3f !important;
+    background-color: #615753 !important;
     border-color: #e96d3f !important;        
 }
 
@@ -814,9 +822,9 @@ hr.my-2 {
 
 
 
-.btn {
+/* .btn {
     background-color: #e96d3f; 
-  }
+  } */
   
   .btn:hover {
     background-color: #e96d3f; ;
@@ -882,7 +890,9 @@ hr.my-2 {
 .footer-color {
     background-color: #040726;
     color: white !important;
+    overflow-x: hidden;
 }
+
 
 
 /*--------------------------------------------------------------
