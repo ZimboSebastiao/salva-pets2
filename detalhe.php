@@ -298,9 +298,89 @@
   
   <h3 style=" color: #1E266D;">Sobre o Pet</h3>
   <p><?=$sobre?></p>
+  <h3 style=" color: #1E266D;">Pets relacionados</h3>
 </div>
 
-<h3 style=" color: #1E266D;">Pets relacionados</h3>
+
+
+<?php
+// ... Seu código para obter dados da API ...
+$apiUrl = "https://salvapets.onrender.com/pets/";  
+$apiData = file_get_contents($apiUrl);
+$data = json_decode($apiData, true);
+// Embaralhar os dados para exibição aleatória
+shuffle($data);
+
+// Exibir apenas 3 cards aleatórios
+?>
+    
+    <div class="container">
+    <div class="row">
+    <?php
+      for ($i = 0; $i < 3; $i++) {
+          $pet = $data[$i];
+          $id = $pet['id'];
+          $nome = $pet['nome'];
+          $idade = $pet['idade'];
+          $sobre = $pet['sobre'];
+          $localizacao = $pet['localizacao'];
+          $cidade = $pet['cidade'];
+          $regiao = $pet['regiao'];
+          $sexo = $pet['sexo'];
+          $imagem = $pet['imagem'];
+
+          $imagemUrl = "https://salvapets.onrender.com/" . $imagem;
+        ?>
+    <div class="col-md-4 mb-4">
+    <div class="card border card-item shadow-lg rounded-5">
+        
+        <a href="detalhe.php?id=<?=$pet['id']?>"><img class="rounded-top-4 w-100" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
+        <div class="card-body">
+          <div class="favoritar-nome">
+            <h5 class="card-title nome-pets"><?=$nome?></h5>
+            <p class="favorito">
+              <a class="bi bi-heart" href="?favoritar=<?=$pet['id']?>" ></a>
+            </p>
+          </div>
+          <p class="card-text loc-pets"><?=$localizacao?></p>
+          <div class="idade-sexo">
+            <p class="card-text sexo-pets">
+            <?php 
+              if ($sexo === "Fêmea") { ?>
+              
+              <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z"/>
+              </svg>
+              <?php 
+              } else {?>
+              <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+            </svg>
+            <?php
+              } 
+            ?>
+            <?=$sexo?></p>
+            <?php 
+              $dataNascimento = strtotime($idade);
+              $dataAtual = time();
+    
+              if ($dataNascimento !== false) {
+                $diferencaSegundos = $dataAtual - $dataNascimento;
+        
+                $anos = floor($diferencaSegundos / (365 * 24 * 60 * 60)); }
+                $meses = floor(($diferencaSegundos % (365 * 24 * 60 * 60)) / (30 * 24 * 60 * 60));
+              ?>
+            <p class="card-text"><?=$anos?> anos e <?=$meses?> meses</p>
+          </div>
+          
+        </div>
+    </div>
+    </div>
+ <?php } ?>
+    </div>
+    </div>
+
+
 
 </main>
 
