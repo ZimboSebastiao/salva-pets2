@@ -966,3 +966,14 @@ hr.my-2 {
 /*--------------------------------------------------------------
 # Estilização da Página de Ajuda
 --------------------------------------------------------------*/
+.fundo{
+    background-color: #070b35;
+    background-image: url(../../images/1.png);
+    background-size: cover;
+    /* background-attachment: fixed; */
+    /* width: 110vw; */
+    /* height: 120vh; */
+
+    
+
+  }
