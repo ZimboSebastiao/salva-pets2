@@ -39,29 +39,26 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarScroll">
-          <ul class="link-menu navbar-nav me-auto my-3 my-lg-0 navbar-nav-scroll d-flex justify-content-around w-75 text-center m-auto" 
-          style="--bs-scroll-height: 250px; ">
-
-          <!-- teste -->
+          <ul class="link-menu navbar-nav me-auto my-3 my-lg-0 navbar-nav-scroll d-flex justify-content-around w-75 text-center m-auto" style="--bs-scroll-height: 250px; ">
 
           <li class="nav-item dropdown fs-5 fw-bold">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Nossos pets
           </a>
-          <ul class="dropdown-menu col-3 m-auto">
-            <li><a class="nav-link text-center" href="nossos-pets.php">Todos pets</a></li>
-            <li><a class="nav-link text-center" href="nossos-pets.php?dogs">Cachorros</a></li>
-            <li><a class="nav-link text-center" href="nossos-pets.php?cats">Gatos</a></li>
+          <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item text-end" href="nossos-pets.php">Todos pets</a></li>
+            <li><a class="dropdown-item text-end" href="nossos-pets.php?dogs">Cachorros</a></li>
+            <li><a class="dropdown-item text-end" href="nossos-pets.php?cats">Gatos</a></li>
           </ul>
         </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold" href="#">Serviços</a>
+              <a class="nav-link fs-5 fw-bold" href="ajuda.php">Ajuda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold px-0 z-1 position-relative" href="#">Contato</a>
+              <a class="nav-link fs-5 fw-bold px-0 z-1 position-relative" href="contato.php">Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold z-1 position-relative" href="#">Quem somos</a>
+              <a class="nav-link fs-5 fw-bold z-1 position-relative" href="quem-somos.php">Quem somos</a>
             </li>
           </ul><hr>
           <?php if (!isset($_SESSION['id'])){ ?>
@@ -128,7 +125,7 @@
 
 
     <div class="top-pets pb-3 limitar-tela">
-      <div class="container-fluid d-flex gap-2 gap-md-5 flex-wrap m-auto flex-xl-nowrap">
+      <div class="container-fluid d-flex gap-2 gap-xl-5 flex-wrap m-auto flex-xl-nowrap">
   
         <!-- INPUT CIDADE -->
         <div class="input-group border rounded border-dark d-flex align-items-center">
@@ -196,7 +193,7 @@
       ?> <?=count($data);?> Pets disponíveis para você
     </h1>
 
-    <div class="d-flex flex-wrap justify-content-center gap-5 mt-5 data-pets='<?= json_encode($data); ?>">
+    <div class="d-flex flex-wrap justify-content-center gap-5 mt-5 mt-md-5 data-pets='<?= json_encode($data); ?>">
     <?php
        
       // Faz a solicitação à API e obtém os dados
@@ -221,15 +218,13 @@
                   
                   $imagemUrl = "https://salvapets.onrender.com/" . $imagem; ?>
     
-        <div class="card border card-item shadow rounded-4">
+        <div class="card border card-item shadow mt-5 rounded-4">
         
           <a href="detalhe.php?id=<?=$pet['id']?>"><img class=" rounded-4 shadow" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
           <div class="card-body">
             <div class="favoritar-nome">
               <h5 class="card-title nome-pets"><?=$nome?></h5>
-              <p class="favorito">
-                <a class="bi bi-heart" href="?favoritar=<?=$pet['id']?>" ></a>
-              </p>
+              
             </div>
             
             <i class="bi bi-geo-alt loc-pets"><?=$localizacao?></i>
@@ -265,7 +260,8 @@
             </div>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             <div class="mt-3 text-start">
-            <button class="btn btn-primary border-0" name="atualizar"><i class="bi bi-arrow-clockwise"></i> Adotar</button>
+              <a href="detalhe.php?id=<?=$pet['id']?>"><button class="btn btn-primary border-0">Adotar</button></a>
+            <!-- <button class="btn btn-primary border-0" name="atualizar"><i class="bi bi-arrow-clockwise"></i> Adotar</button> -->
           </div>
           </div>
         </div>

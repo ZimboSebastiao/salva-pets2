@@ -44,19 +44,20 @@ if (isset($_GET['sair'])) $sessao->logout();
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Nossos pets
           </a>
-          <ul class="dropdown-menu col-3 m-auto">
-            <li><a class="nav-link text-center" href="#">Cachorros</a></li>
-            <li><a class="nav-link text-center" href="#">Gatos</a></li>
+          <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item text-end" href="nossos-pets.php">Todos pets</a></li>
+            <li><a class="dropdown-item text-end" href="nossos-pets.php?dogs">Cachorros</a></li>
+            <li><a class="dropdown-item text-end" href="nossos-pets.php?cats">Gatos</a></li>
           </ul>
         </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold" href="#">Serviços</a>
+              <a class="nav-link fs-5 fw-bold" href="ajuda.php">Ajuda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold px-0 z-1 position-relative" href="#">Contato</a>
+              <a class="nav-link fs-5 fw-bold px-0 z-1 position-relative" href="contato.php">Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold z-1 position-relative" href="#">Quem somos</a>
+              <a class="nav-link fs-5 fw-bold z-1 position-relative" href="quem-somos.php">Quem somos</a>
             </li>
           </ul><hr>
           <?php if (!isset($_SESSION['id'])){ ?>
@@ -156,7 +157,7 @@ if (isset($_GET['sair'])) $sessao->logout();
           <input type="text" class="form-control cont icon-race custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
         </div>
         <div class="w-75 d-flex m-auto p-1">
-          <button class="btn btn-primary text-white m-auto w-75 p-1 border" type="button">Buscar Pet</button>
+          <button class="btn text-white m-auto w-75 p-1 border" type="button">Buscar Pet</button>
         </div>
       </div>
     </div>

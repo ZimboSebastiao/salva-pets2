@@ -30,8 +30,6 @@
 }
 
 
-
-
 .pesquisa{
     z-index: 2;
     height: 100px;
@@ -98,14 +96,6 @@ footer{
     background-color: #4d59db;
 }
 
-/* .formulario{
-    background-image: url("../../images/Design\ sem\ nome.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
-
-
 /* =============== */
 
 .img-responsivo {
@@ -167,50 +157,6 @@ a {text-decoration: none;}
     position: relative;
     bottom: -9px;
 }
-
-/* .botao {
-    width: 395px;
-    height: 54px;
-    background-color: #FF7F50;
-    border-color: #e96d3f;
-    cursor: pointer;
-}
-
-.botao:hover,
-.botao:focus {
-    border-color: #e96d3f;
-    border-color: #e96d3f;
-    cursor: pointer;
-    background-color: #e96d3f;
-} */
-
-/* .enviar {
-    background-color: #FF7F50;
-    cursor: pointer;
-    border-color: #e96d3f;
-}
-
-.enviar:hover,
-.enviar:focus {
-
-    border-color: #e96d3f;
-    cursor: pointer;
-    background-color: #e96d3f;
-} */
-
-/* .btn-primary:not(:disabled):not(.disabled):active,
-.btn-primary:not(:disabled):not(.disabled).active,
-.show>.btn-primary.dropdown-toggle {
-    color: #fff;
-    background-color: #e96d3f;
-    border-color: #e96d3f;
-}
-
-.btn-primary:not(:disabled):not(.disabled):active:focus,
-.btn-primary:not(:disabled):not(.disabled).active:focus,
-.show>.btn-primary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.25rem rgb(219, 106, 65);
-} */
 
 .tag-style {
     position: relative;
@@ -331,42 +277,6 @@ a {text-decoration: none;}
 }
 
 
-/*--------------------------------------------------------------
-# Estilização Página HOME
---------------------------------------------------------------*/
-
-/* body {
-    background-color: white;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-main {flex: 1;}
-
-.limitador {
-    width: 97vw;
-    margin: auto;
-} */
-
-
-/* @media screen and (min-width: 900px) {
-    nav h2 {display: none;}
-    html { font-size: 0.9rem;}
-    .menu {
-        display: flex;
-        text-transform: uppercase; 
-        justify-content: space-between;
-        align-items: center;   
-    }
-    
-    
-    nav {width: 70%;}
-
-    .menu li { width: 100%;}
-} */
-
-
 .icon-city {
     background: url(../../icones/pata.png) no-repeat scroll 7px 7px ;
     padding-left:50px;
@@ -396,7 +306,6 @@ main {flex: 1;}
 }
 
 .limitar-detalhe {
-    /* background-color: #0a1375; */
     width: 85vw;
     margin: auto;
 }
@@ -416,57 +325,6 @@ main {flex: 1;}
     background-color: #e96d3f;
     border-color: #e96d3f;
 }
-
-
-/* .btn-primary {
-    color: #fff !important; 
-    background-color: #e96d3f ;
-    border-color: #e96d3f;
-
-} */
-
-/* 
-  .btn-primary:focus,
-  .btn-primary:checked,
-  .btn-primary:active,
-  .btn-primary:hover  {
-    background-color: #3f4cc2 !important;
-    border-color: #e96d3f !important;
-    
-  }
-
-
-.btn-check {                   
-    background-color: #e96d3f !important;
-    border-color: #e96d3f !important;        
-}
-
-
-.btn-check:active, 
-.btn-check:hover,
-.btn-check:focus,
-.btn-check:checked {                   
-    background-color: #e96d3f !important;
-    border-color: #e96d3f !important;        
-}
-
-
-
-
-.btn {
-    background-color: #e96d3f; 
-  }
-  
-  .btn:hover {
-    background-color: #e96d3f; ;
-    border-color: #e96d3f; ;
-  }
-  
-  .btn-check:checked + .btn-primary.check-botao {
-    background-color: #e96d3f; 
-    border-color: #e96d3f; 
-    color: #fff; 
-  } */
 
 
 .navbar-dark .navbar-brand,
@@ -511,15 +369,6 @@ main {flex: 1;}
 .floatingInput{
     background-color: #FFF1EB;
 }
-
-/* .cont, ::placeholder{
-    background-color: #FFF1EB;
-} */
-
-
-
-
-
 
 
 /*--------------------------------------------------------------
@@ -739,12 +588,6 @@ a {text-decoration: none;}
 
 .pets-h1 {font-size: 36px;}
 
-
-/* .card-container {
-    display: flex;
-    flex-wrap: wrap;
-} */
-
 .favorito{
     
     display: flex;
@@ -927,7 +770,7 @@ hr.my-2 {
     .cards-direita {display: none;}
     .formatar-h1 {font-size: 16px;}
     .rua-detalhes {font-size: 12px;}
-    .card-title {display: none;}
+    /* .card-title {display: none;} */
     .card-text{display: none;}
 
     .formatar-loc {
