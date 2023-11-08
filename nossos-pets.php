@@ -227,7 +227,8 @@
               
             </div>
             
-            <i class="bi bi-geo-alt loc-pets"><?=$localizacao?></i>
+            <i class="bi bi-geo-alt loc-pets"><?=$regiao?>,</i>
+            <i class=" loc-pets"><?=$cidade?></i>
             <div class="idade-sexo">
               <p class="card-text sexo-pets">
               <?php 
