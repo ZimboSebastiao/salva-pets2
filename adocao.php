@@ -12,6 +12,14 @@ $usuario = new Usuario;
 // $dados = $usuario->listarUm();
 // Utilitarios::dump($dados);
 
+$nome = filter_input(INPUT_POST,"nome",FILTER_SANITIZE_SPECIAL_CHARS);
+$email = filter_input(INPUT_POST,"email",FILTER_SANITIZE_EMAIL);
+$estado = filter_input(INPUT_POST,"estado",FILTER_SANITIZE_SPECIAL_CHARS);
+$cidade = filter_input(INPUT_POST,"cidade",FILTER_SANITIZE_SPECIAL_CHARS);
+$endereco = filter_input(INPUT_POST,"endereco",FILTER_SANITIZE_SPECIAL_CHARS);
+$numero= filter_input(INPUT_POST,"numero",FILTER_SANITIZE_NUMBER_INT);
+$complemento = filter_input(INPUT_POST,"complemento",FILTER_SANITIZE_SPECIAL_CHARS);
+
 if (isset($_GET['id'])) {
   $petId = $_GET['id'];
 }

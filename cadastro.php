@@ -6,6 +6,11 @@ require_once "vendor/autoload.php";
 
 $usuario = new Usuario;
 
+$nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
+$email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+$cep = filter_input(INPUT_POST,"cep",FILTER_SANITIZE_SPECIAL_CHARS);
+$senha = filter_input(INPUT_POST,"senha",FILTER_SANITIZE_SPECIAL_CHARS);
+
 if (isset($_POST['inserir'])) {
 	$usuario = new Usuario;
 	$usuario->setNome($_POST['nome']);
