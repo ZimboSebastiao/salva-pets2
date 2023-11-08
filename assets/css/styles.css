@@ -336,7 +336,7 @@ a {text-decoration: none;}
 .botaoH:hover {
     color: #fff;
     background-color: #e96d3f;
-    border-color: #e96d3f;
+    border-color: #e96d3f ;
 }
 
 
@@ -435,6 +435,9 @@ a {text-decoration: none;}
 
 .input-adocao {
     width: 455px;
+}
+.input-adocao {
+    border-color: #e96d3f ;
 }
 
 .inputs-adocao {
@@ -784,7 +787,7 @@ hr.my-2 {
 .show>.btn-primary.dropdown-toggle {
     color: #fff;
     background-color: #e96d3f;
-    border-color: #e96d3f;
+ 
 }
 
 .btn-primary:not(:disabled):not(.disabled):active:focus,

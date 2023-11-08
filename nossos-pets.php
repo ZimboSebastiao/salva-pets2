@@ -33,9 +33,9 @@
 <header>
     <nav class="navbar navbar-expand-lg w-100">
       <div class="container-fluid m-none">
-        <a class="navbar-brand px-lg-5 px-xl-5 fw-bold" href="#"><img src="icones/pet1.png" alt="..." height="46">
+        <a class="navbar-brand px-lg-5 px-xl-5 fw-bold" href="home.php"><img src="icones/pet1.png" alt="..." height="46">
           SalvaPets</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarScroll">
@@ -258,8 +258,10 @@
             
               <i class="bi bi-cake"> <?=$anos?> anos e <?=$meses?> meses</i>
             </div>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             <div class="mt-3 text-start">
               <a href="detalhe.php?id=<?=$pet['id']?>"><button class="btn btn-primary border-0">Adotar</button></a>
+            <!-- <button class="btn btn-primary border-0" name="atualizar"><i class="bi bi-arrow-clockwise"></i> Adotar</button> -->
           </div>
           </div>
         </div>

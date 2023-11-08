@@ -150,12 +150,12 @@
             <p class="posicionar-span">Tem crianças em casa?</p>
             <div class="divide-te-conhecendo">
               <div>
-                  <input name="first" type="radio" class="btn-check" id="first-sim" autocomplete="off" value="SIM">
+                  <input required name="first" type="radio" class="btn-check" id="first-sim" autocomplete="off" value="SIM">
                   <label class="btn btn-primary check-botao" for="first-sim">Sim</label>
               </div>
 
               <div>
-                  <input name="first" type="radio" class="btn-check" id="first-nao" autocomplete="off" value="NAO">
+                  <input required name="first" type="radio" class="btn-check" id="first-nao" autocomplete="off" value="NAO">
                   <label class="btn btn-primary check-botao" for="first-nao">Não</label>
               </div>
             </div>
@@ -164,12 +164,12 @@
             <p class="posicionar-span">Tem algum pet?</p>
             <div class="divide-te-conhecendo">
               <div>
-                  <input name="segundo" type="radio" class="btn-check" id="segundo-sim" autocomplete="off" value="SIM">
+                  <input required name="segundo" type="radio" class="btn-check" id="segundo-sim" autocomplete="off" value="SIM">
                   <label class="btn btn-primary check-botao" for="segundo-sim">Sim</label>
               </div>
 
               <div>
-                  <input name="segundo" type="radio" class="btn-check" id="segundo-nao" autocomplete="off" value="NAO">
+                  <input required name="segundo" type="radio" class="btn-check" id="segundo-nao" autocomplete="off" value="NAO">
                   <label class="btn btn-primary check-botao" for="segundo-nao">Não</label>
               </div>
             </div>
@@ -179,12 +179,12 @@
             <p class="posicionar-span">Todos em casa estão cientes?</p>
             <div class="divide-te-conhecendo">
               <div>
-                  <input name="terceiro" type="radio" class="btn-check" id="terceiro-sim" autocomplete="off" value="SIM">
+                  <input required name="terceiro" type="radio" class="btn-check" id="terceiro-sim" autocomplete="off" value="SIM">
                   <label class="btn btn-primary check-botao" for="terceiro-sim">Sim</label>
               </div>
 
               <div>
-                  <input name="terceiro" type="radio" class="btn-check" id="terceiro-nao" autocomplete="off" value="NAO">
+                  <input required name="terceiro" type="radio" class="btn-check" id="terceiro-nao" autocomplete="off" value="NAO">
                   <label class="btn btn-primary check-botao" for="terceiro-nao">Não</label>
               </div>
             </div>
@@ -193,12 +193,12 @@
             <p class="posicionar-span">Alguém tem alergia à animais?</p>
             <div class="divide-te-conhecendo">
               <div>
-                  <input name="quarto" type="radio" class="btn-check" id="quarto-sim" autocomplete="off" value="SIM">
+                  <input required name="quarto" type="radio" class="btn-check" id="quarto-sim" autocomplete="off" value="SIM">
                   <label class="btn btn-primary check-botao" for="quarto-sim">Sim</label>
               </div>
 
               <div>
-                  <input name="quarto" type="radio" class="btn-check" id="quarto-nao" autocomplete="off" value="NAO">
+                  <input required name="quarto" type="radio" class="btn-check" id="quarto-nao" autocomplete="off" value="NAO">
                   <label class="btn btn-primary check-botao" for="quarto-nao">Não</label>
               </div>
             </div>

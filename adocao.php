@@ -153,7 +153,7 @@ if (isset($_GET['sair'])) $sessao->logout();
 
             <!-- ====== Nome Completo ====== -->
             <div class="form-floating mb-3">
-                <input type="text" class="form-control input-adocao" id="floatingInputGroup2" placeholder="Username" required name="nome">
+                <input type="text" class="form-control input-adocao input-form" id="floatingInputGroup2" placeholder="Username" required name="nome">
                 <label for="floatingInputGroup2">Nome completo</label>
             </div>
             
