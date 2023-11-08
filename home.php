@@ -32,7 +32,7 @@ if (isset($_GET['sair'])) $sessao->logout();
   <header>
     <nav class="navbar navbar-expand-lg w-100">
       <div class="container-fluid m-none">
-        <a class="navbar-brand px-lg-5 px-xl-5 fw-bold" href="#"><img src="icones/pet1.png" alt="..." height="46">
+        <a class="navbar-brand px-lg-5 px-xl-5 fw-bold" href="home.php"><img src="icones/pet1.png" alt="..." height="46">
           SalvaPets</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
