@@ -2,15 +2,12 @@
   use Salvapets\Utilitarios;
   use Salvapets\Usuario;
   use Salvapets\ControleDeAcesso;
-  use Salvapets\Pets;
   require_once "vendor/autoload.php";
 
 
   $sessao = new ControleDeAcesso;
   $usuario = new Usuario;
-  $pets = new Pets;
-  $dados = $pets->listarpets();
-  // Utilitarios::dump($dados);
+
 
 
 

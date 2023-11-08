@@ -237,7 +237,7 @@ if (isset($_GET['sair'])) $sessao->logout();
               </a>
             </h6>
             <p class="Beetle-letters negrito">Não compre, adote!</p>
-            <p class="negrito">contato.salvapets@gmail.com</p>
+            <p class="negrito">suporte.salvapets@gmail.com</p>
           </div>
           <!-- Grid column -->
 
@@ -247,8 +247,8 @@ if (isset($_GET['sair'])) $sessao->logout();
             <h6 class="text-uppercase fw-bold mb-4">
               Nossos pets
             </h6>
-            <p><a href="#!" class="text-reset">Cachorros</a></p>
-            <p><a href="#!" class="text-reset">Gatos</a></p>
+            <p><a href="nossos-pets.php?dogs" class="text-reset">Cachorros</a></p>
+            <p><a href="nossos-pets.php?cats" class="text-reset">Gatos</a></p>
           </div>
           <!-- Grid column -->
 
@@ -259,8 +259,8 @@ if (isset($_GET['sair'])) $sessao->logout();
             <h6 class="text-uppercase fw-bold mb-4">
               Institucional
             </h6>
-            <p><a href="#!" class="text-reset">Sobre nós</a></p>
-            <p><a href="#!" class="text-reset">Contato</a></p>
+            <p><a href="quem-somos.php" class="text-reset">Sobre nós</a></p>
+            <p><a href="contato.php" class="text-reset">Contato</a></p>
           </div>
           <!-- Grid column -->
 
@@ -269,7 +269,7 @@ if (isset($_GET['sair'])) $sessao->logout();
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">Centro de ajuda</h6>
             <p><a href="#!" class="text-reset">Política de privacidade</a></p>
-            <p><a href="#!" class="text-reset">Ajuda</a></p>
+            <p><a href="ajuda.php" class="text-reset">Ajuda</a></p>
           </div>
           <!-- Grid column -->
         </div>
@@ -308,11 +308,11 @@ if (isset($_GET['sair'])) $sessao->logout();
           </svg>
         </a>
 
-        <a target="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-          </svg>
-          </a>
+      <a target="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+        </svg>
+      </a>
 
           <a target="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
@@ -326,7 +326,7 @@ if (isset($_GET['sair'])) $sessao->logout();
     <!-- REDES SOCIAS -->
 
 
-  </footer> <!-- FIM FOOTER  -->
+</footer> <!-- FIM FOOTER  -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <script src="js/menu.js"></script>

@@ -2,7 +2,6 @@
   use Salvapets\Utilitarios;
   use Salvapets\Usuario;
   use Salvapets\ControleDeAcesso;
-  use Salvapets\Pets;
   require_once "vendor/autoload.php";
 
 
@@ -10,9 +9,11 @@
 
   $usuario = new Usuario;
 
-  // $pets = new Pets;
-  // $dados = $pets->lerUmPet();
-  // Utilitarios::dump($dados);
+  
+
+  if (isset($_GET['id'])) {
+    $petId = $_GET['id'];
+}
 
 
 
@@ -56,9 +57,9 @@
             <li><a class="dropdown-item" href="nossos-pets.php?cats">Gatos</a></li>
           </ul>
         </li>
-        <li><a  href="#">Quem Somos</a></li>
-        <li ><a href="#">Ajuda</a></li>
-        <li ><a href="#">Contato</a></li>
+        <li><a  href="quem-somos.php">Quem Somos</a></li>
+        <li ><a href="ajuda.php">Ajuda</a></li>
+        <li ><a href="contato.php">Contato</a></li>
         <?php if (!isset($_SESSION['id'])){ ?>
             <li><a  href="login.php" class="btn btn-primary w-50 m-auto"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
             <?php }?>
@@ -162,7 +163,7 @@
     </div>
   
     <!-- CONJUNTO DE CARDS -->
-    <div class="cards-direita  ">
+    <div class="cards-direita">
   
       <!-- CARDS Pequenos -->
       <div class="cards-pequenos">
@@ -196,9 +197,9 @@
   
     <div class="formatar-loc">
 
-      <h1>
+      <h1 class="formatar-h1">
         <?=$localizacao?>
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
           <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
           <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
         </svg>
@@ -215,7 +216,8 @@
 
 
     <span class="rua-detalhes"><?=$rua?></span>
-    
+
+    <hr class="my-3">
     <h3 style=" color: #1E266D; padding-top: 40px; padding-bottom: 5px;">Detalhes do Pet</h3>
     
     <div class="formatar-detalhes">
@@ -227,7 +229,7 @@
       </div>
 
       <!-- Idade -->
-      <div>
+      <div class="formatar-span">
         <h5>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
             <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
@@ -238,7 +240,7 @@
       </div>
       
       <!-- Dias no Salva Pets -->
-      <div>
+      <div class="formatar-span">
         
         <h5>
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
@@ -256,7 +258,7 @@
   
   <!-- Card adoção -->
   <section>
-    <div class="card" style="width: 22rem;">
+    <div class="card formatar-card" style="width: 22rem;">
       <div class="card-body">
         <h5 class="card-title espacamento-h">Adote seu pet aqui!</h5>
         <div class="formatar-p">
@@ -285,7 +287,7 @@
         ?>
         <p class="card-text espacamento-p"> <?= $raca?>, <?=$ultimaPalavra?> </p>
   
-        <a href="adocao.php" class="btn btn-primary formartar-botao">Adotar pet</a>
+        <a href="adocao.php?id=<?=$petId?>" class="btn btn-primary formartar-botao">Adotar pet</a>
       </div>
     </div>
   </section>
@@ -297,7 +299,95 @@
   
   <h3 style=" color: #1E266D;">Sobre o Pet</h3>
   <p><?=$sobre?></p>
+  <h3 style=" color: #1E266D; padding-top: 30px; padding-bottom: 16px;">Pets relacionados</h3>
+ 
+
+  
+<?php
+
+$apiUrl = "https://salvapets.onrender.com/pets/";  
+$apiData = file_get_contents($apiUrl);
+$data = json_decode($apiData, true);
+
+shuffle($data);
+
+// Exibir apenas 3 cards aleatórios
+?>
+    
+  <div>
+    <div class="row">
+    <?php
+      for ($i = 0; $i < 3; $i++) {
+          $pet = $data[$i];
+          $id = $pet['id'];
+          $nome = $pet['nome'];
+          $idade = $pet['idade'];
+          $sobre = $pet['sobre'];
+          $localizacao = $pet['localizacao'];
+          $cidade = $pet['cidade'];
+          $regiao = $pet['regiao'];
+          $sexo = $pet['sexo'];
+          $imagem = $pet['imagem'];
+
+          $imagemUrl = "https://salvapets.onrender.com/" . $imagem;
+        ?>
+    <div class="col-md-4 mb-4">
+    <div class="card border card-item shadow-lg rounded-5">
+        
+        <a href="detalhe.php?id=<?=$pet['id']?>"><img class="rounded-top-4 w-100" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
+        <div class="card-body">
+          <div class="favoritar-nome">
+            <h5 class="card-title nome-pets"><?=$nome?></h5>
+            <p class="favorito">
+              <a href="?favoritar=<?=$pet['id']?>" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+              </svg>
+            </a>
+            </p>
+          </div>
+          <p class="card-text loc-pets"><?=$localizacao?></p>
+          <div class="idade-sexo">
+            <p class="card-text sexo-pets">
+            <?php 
+              if ($sexo === "Fêmea") { ?>
+              
+              <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z"/>
+              </svg>
+              <?php 
+              } else {?>
+              <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+            </svg>
+            <?php
+              } 
+            ?>
+            <?=$sexo?></p>
+            <?php 
+              $dataNascimento = strtotime($idade);
+              $dataAtual = time();
+    
+              if ($dataNascimento !== false) {
+                $diferencaSegundos = $dataAtual - $dataNascimento;
+        
+                $anos = floor($diferencaSegundos / (365 * 24 * 60 * 60)); }
+                $meses = floor(($diferencaSegundos % (365 * 24 * 60 * 60)) / (30 * 24 * 60 * 60));
+              ?>
+            <p class="card-text"><?=$anos?> anos e <?=$meses?> meses</p>
+          </div>
+          
+        </div>
+    </div>
+    </div>
+ <?php } ?>
+  </div>
+  </div>
+
 </div>
+
+
+
 
 
 
@@ -322,7 +412,7 @@
               </a>
             </h6>
             <p class="Beetle-letters negrito">Não compre, adote!</p>
-            <p class="negrito">contato.salvapets@gmail.com</p>
+            <p class="negrito">suporte.salvapets@gmail.com</p>
           </div>
           <!-- Grid column -->
 
@@ -332,8 +422,8 @@
             <h6 class="text-uppercase fw-bold mb-4">
               Nossos pets
             </h6>
-            <p><a href="#!" class="text-reset">Cachorros</a></p>
-            <p><a href="#!" class="text-reset">Gatos</a></p>
+            <p><a href="nossos-pets.php?dogs" class="text-reset">Cachorros</a></p>
+            <p><a href="nossos-pets.php?cats" class="text-reset">Gatos</a></p>
           </div>
           <!-- Grid column -->
 
@@ -344,8 +434,8 @@
             <h6 class="text-uppercase fw-bold mb-4">
               Institucional
             </h6>
-            <p><a href="#!" class="text-reset">Sobre nós</a></p>
-            <p><a href="#!" class="text-reset">Contato</a></p>
+            <p><a href="quem-somos.php" class="text-reset">Sobre nós</a></p>
+            <p><a href="contato.php" class="text-reset">Contato</a></p>
           </div>
           <!-- Grid column -->
 
@@ -354,7 +444,7 @@
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">Centro de ajuda</h6>
             <p><a href="#!" class="text-reset">Política de privacidade</a></p>
-            <p><a href="#!" class="text-reset">Ajuda</a></p>
+            <p><a href="ajuda.php" class="text-reset">Ajuda</a></p>
           </div>
           <!-- Grid column -->
         </div>
@@ -393,7 +483,7 @@
           </svg>
         </a>
 
-      <atarget="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
+      <a target="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
           <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
         </svg>
@@ -401,7 +491,7 @@
 
           <a target="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
             </svg>
           </a>
       </div>
@@ -415,7 +505,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <script src="js/menu.js"></script>
-  <script src="js/nossos-pets.js"></script>
 
 </body>
 

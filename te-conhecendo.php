@@ -8,8 +8,8 @@
 
   $usuario = new Usuario;
   // Atribuimos ao objeto o ID  do usuario logado na sessão
-  // $usuario->setId($_SESSION['id']);
-  // $dados = $usuario->listarUm();
+  $usuario->setId($_SESSION['id']);
+  $dados = $usuario->listarUm();
   // Utilitarios::dump($dados);
   $sessao->verificaAcesso();
   if (isset($_GET['sair'])) $sessao->logout();
@@ -54,9 +54,9 @@
             <li><a class="dropdown-item" href="nossos-pets.php?cats">Gatos</a></li>
           </ul>
         </li>
-        <li><a  href="#">Quem Somos</a></li>
-        <li ><a href="#">Ajuda</a></li>
-        <li ><a href="#">Contato</a></li>
+        <li><a  href="quem-somos.php">Quem Somos</a></li>
+        <li ><a href="ajuda.php">Ajuda</a></li>
+        <li ><a href="contato.php">Contato</a></li>
         <?php if (!isset($_SESSION['id'])){ ?>
             <li><a  href="login.php" class="btn btn-primary w-50 m-auto"  tabindex="-1" role="button" aria-disabled="true">Entrar</a></li>
             <?php }?>
@@ -128,18 +128,18 @@
   <div class="container tamanho-form">
     <div class="row">
       <section class="estilo-form form-te-conhecendo">
-        <form action=""  method="post" class="dividir-form-conhencendo">
+        <form action="src/enviar-email-te-conhecendo.php"  method="post" class="dividir-form-conhencendo">
 
             <!-- ====== CHECK - Primeiro ====== -->
             <p class="posicionar-span">Tem crianças em casa?</p>
             <div class="divide-te-conhecendo">
               <div>
-                  <input name="first" type="radio" class="btn-check" id="first-sim" autocomplete="off">
+                  <input name="first" type="radio" class="btn-check" id="first-sim" autocomplete="off" value="SIM">
                   <label class="btn btn-primary check-botao" for="first-sim">Sim</label>
               </div>
 
               <div>
-                  <input name="first" type="radio" class="btn-check" id="first-nao" autocomplete="off">
+                  <input name="first" type="radio" class="btn-check" id="first-nao" autocomplete="off" value="NAO">
                   <label class="btn btn-primary check-botao" for="first-nao">Não</label>
               </div>
             </div>
@@ -148,12 +148,12 @@
             <p class="posicionar-span">Tem algum pet?</p>
             <div class="divide-te-conhecendo">
               <div>
-                  <input name="segundo" type="radio" class="btn-check" id="segundo-sim" autocomplete="off">
+                  <input name="segundo" type="radio" class="btn-check" id="segundo-sim" autocomplete="off" value="SIM">
                   <label class="btn btn-primary check-botao" for="segundo-sim">Sim</label>
               </div>
 
               <div>
-                  <input name="segundo" type="radio" class="btn-check" id="segundo-nao" autocomplete="off">
+                  <input name="segundo" type="radio" class="btn-check" id="segundo-nao" autocomplete="off" value="NAO">
                   <label class="btn btn-primary check-botao" for="segundo-nao">Não</label>
               </div>
             </div>
@@ -163,12 +163,12 @@
             <p class="posicionar-span">Todos em casa estão cientes?</p>
             <div class="divide-te-conhecendo">
               <div>
-                  <input name="terceiro" type="radio" class="btn-check" id="terceiro-sim" autocomplete="off">
+                  <input name="terceiro" type="radio" class="btn-check" id="terceiro-sim" autocomplete="off" value="SIM">
                   <label class="btn btn-primary check-botao" for="terceiro-sim">Sim</label>
               </div>
 
               <div>
-                  <input name="terceiro" type="radio" class="btn-check" id="terceiro-nao" autocomplete="off">
+                  <input name="terceiro" type="radio" class="btn-check" id="terceiro-nao" autocomplete="off" value="NAO">
                   <label class="btn btn-primary check-botao" for="terceiro-nao">Não</label>
               </div>
             </div>
@@ -177,12 +177,12 @@
             <p class="posicionar-span">Alguém tem alergia à animais?</p>
             <div class="divide-te-conhecendo">
               <div>
-                  <input name="quarto" type="radio" class="btn-check" id="quarto-sim" autocomplete="off">
+                  <input name="quarto" type="radio" class="btn-check" id="quarto-sim" autocomplete="off" value="SIM">
                   <label class="btn btn-primary check-botao" for="quarto-sim">Sim</label>
               </div>
 
               <div>
-                  <input name="quarto" type="radio" class="btn-check" id="quarto-nao" autocomplete="off">
+                  <input name="quarto" type="radio" class="btn-check" id="quarto-nao" autocomplete="off" value="NAO">
                   <label class="btn btn-primary check-botao" for="quarto-nao">Não</label>
               </div>
             </div>
@@ -191,7 +191,7 @@
             <p class="posicionar-span">Nos conte um pouco sobre a sua moradia</p>
             <div class="divide-te-conhecendo">
               <div class="form-floating mb-3">
-                <textarea class="form-control textearea-form" placeholder="Leave a comment here" id="floatingTextarea2Disabled" ></textarea>
+                <textarea name="mensagem" class="form-control textearea-form" placeholder="Leave a comment here" id="floatingTextarea2Disabled" ></textarea>
                 <label class="check-textar" for="floatingTextarea2Disabled">Escrever mensagem</label>
               </div>  
             </div>
@@ -199,7 +199,7 @@
             
             <!-- ====== BOTÃO - Adotar Pet ====== -->
             <div class="botao-adotou">
-                <button class="btn btn-primary btn-lg botao input-adocao botao-adotou-tamanho" name="inserir"><a class="text-color" href="adotou.php">Adotar Pet</a></button>
+                <button class="btn btn-primary btn-lg botao input-adocao botao-adotou-tamanho" name="inserir" type="submit">Adotar Pet</button>
             </div>
 
         </form>
@@ -231,7 +231,7 @@
           </a>
           </h6>
           <p class="Beetle-letters negrito decrease-size">Não compre, adote!</p>
-          <p class="negrito decrease-size">contato.salvapets@gmail.com</p>
+          <p class="negrito decrease-size">suporte.salvapets@gmail.com</p>
         </div>
         <!-- Grid column -->
 
@@ -241,8 +241,8 @@
           <h6 class="text-uppercase fw-bold mb-4">
             Nossos pets
           </h6>
-          <p><a href="#!" class="text-reset">Cachorros</a></p>
-          <p><a href="#!" class="text-reset">Gatos</a></p>
+          <p><a href="nossos-pets.php?dogs" class="text-reset">Cachorros</a></p>
+          <p><a href="nossos-pets.php?cats" class="text-reset">Gatos</a></p>
         </div>
         <!-- Grid column -->
 
@@ -253,8 +253,8 @@
           <h6 class="text-uppercase fw-bold mb-4">
             Institucional
           </h6>
-          <p><a href="#!" class="text-reset">Sobre nós</a></p>
-          <p><a href="#!" class="text-reset">Contato</a></p>
+          <p><a href="quem-somos.php" class="text-reset">Sobre nós</a></p>
+          <p><a href="contato.php" class="text-reset">Contato</a></p>
         </div>
         <!-- Grid column -->
 
@@ -263,7 +263,7 @@
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">Centro de ajuda</h6>
           <p><a href="#!" class="text-reset">Política de privacidade</a></p>
-          <p><a href="#!" class="text-reset">Ajuda</a></p>
+          <p><a href="ajuda.php" class="text-reset">Ajuda</a></p>
         </div>
         <!-- Grid column -->
       </div>
