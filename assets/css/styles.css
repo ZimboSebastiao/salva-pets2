@@ -148,8 +148,17 @@ a {text-decoration: none;}
 }
 
 .input-login {
-    width: 395px;
+    width: 45vw;
 }
+
+.formatar-input-login {
+    width: 50vw;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+
 
 .input {
     width: 395px;
@@ -193,6 +202,15 @@ a {text-decoration: none;}
         top: 6%;
     }
 
+
+    .formatar-input-login {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
 }
 
 
@@ -204,8 +222,6 @@ a {text-decoration: none;}
     display: flex;
     justify-content: space-between;
     gap: 50px;
-
-
 }
 
 .center-form-cadastro {
@@ -231,6 +247,7 @@ a {text-decoration: none;}
 .tag-style-c {
     color: #C3C7E5;
     padding: 6px;
+    text-align: center;
 
 }
 
