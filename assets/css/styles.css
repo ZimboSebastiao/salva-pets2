@@ -871,6 +871,12 @@ hr.my-2 {
     padding: 10px;
 }
 
+.pets-relacionados {
+    display: flex;
+    justify-content: space-around;
+    justify-items: flex-start;
+}
+
 /* mobile and tablet */
 @media (min-width: 200px) and (max-width: 991px){
 
