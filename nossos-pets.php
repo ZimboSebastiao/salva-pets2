@@ -39,15 +39,19 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarScroll">
-          <ul class="link-menu navbar-nav me-auto my-3 my-lg-0 navbar-nav-scroll d-flex justify-content-around w-75 text-center m-auto" style="--bs-scroll-height: 250px; ">
+          <ul class="link-menu navbar-nav me-auto my-3 my-lg-0 navbar-nav-scroll d-flex justify-content-around w-75 text-center m-auto" 
+          style="--bs-scroll-height: 250px; ">
+
+          <!-- teste -->
 
           <li class="nav-item dropdown fs-5 fw-bold">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Nossos pets
           </a>
           <ul class="dropdown-menu col-3 m-auto">
-            <li><a class="nav-link text-center" href="#">Cachorros</a></li>
-            <li><a class="nav-link text-center" href="#">Gatos</a></li>
+            <li><a class="nav-link text-center" href="nossos-pets.php">Todos pets</a></li>
+            <li><a class="nav-link text-center" href="nossos-pets.php?dogs">Cachorros</a></li>
+            <li><a class="nav-link text-center" href="nossos-pets.php?cats">Gatos</a></li>
           </ul>
         </li>
             <li class="nav-item">
