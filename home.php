@@ -119,7 +119,7 @@ if (isset($_GET['sair'])) $sessao->logout();
   <main class="meio">
     <div class="cabecalho px-3 px-lg-5 col-md-12  pt-5 mb-5">
       <div class="px-3 px-sm-3">
-        <div class=" px-md-3">
+        <div class=" px-md-3 mt-lg-5">
           <h1 class="fs-1 fw-bold">Encontre e adote <br>
             um pet para você.</h1>
 
@@ -157,7 +157,7 @@ if (isset($_GET['sair'])) $sessao->logout();
           <input type="text" class="form-control cont icon-race custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
         </div>
         <div class="w-75 d-flex m-auto p-1">
-          <button class="btn text-white m-auto w-75 p-1 border" type="button">Buscar Pet</button>
+          <button class="btn btn-primary text-white m-auto w-75 p-1 border" type="button">Buscar Pet</button>
         </div>
       </div>
     </div>
