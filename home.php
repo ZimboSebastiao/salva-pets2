@@ -12,6 +12,7 @@ $usuario = new Usuario;
 // $dados = $usuario->listarUm();
 // Utilitarios::dump($dados);
 
+
 if (isset($_GET['sair'])) $sessao->logout();
 ?>
 
@@ -132,25 +133,25 @@ if (isset($_GET['sair'])) $sessao->logout();
         <!-- INPUT CIDADE -->
         <div class="input-group border rounded border-dark d-flex align-items-center">
           <!-- <img src="icones/pata (1).png" alt="" width="10%"> -->
-          <input type="text" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
+          <input type="text" name="cidade" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
         </div>
   
   
         <!-- INPUT REGIÃO -->
         <div class="input-group border rounded border-dark">
-          <input type="text" class="form-control cont icon-house" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
+          <input type="text" class="form-control cont icon-house" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" name="regiao">
         </div>
   
         <!-- INPUT ANIMAL -->
         <div class="input-group border rounded border-dark">
           <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
-          <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
+          <input type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal" name="animal">
         </div>
   
         <!-- INPUT RAÇA -->
         <div class="input-group border rounded border-dark">
           <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
-          <input type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
+          <input type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça" name="raca">
         </div>
   
         <!-- BOTÃO BUSCAR PET -->
