@@ -2,12 +2,15 @@
   use Salvapets\Utilitarios;
   use Salvapets\Usuario;
   use Salvapets\ControleDeAcesso;
+  use Salvapets\Pets;
   require_once "vendor/autoload.php";
 
-
+  $pets = new Pets;
   $sessao = new ControleDeAcesso;
   $usuario = new Usuario;
- 
+//  Utilitarios::dump($pets->lerPets());
+
+$dadosPets = $pets->lerPets();
 
 
 
@@ -127,34 +130,59 @@
     <div class="top-pets pb-3 limitar-tela">
       <div class="container-fluid d-flex gap-2 gap-xl-5 flex-wrap m-auto flex-xl-nowrap">
   
-        <!-- INPUT CIDADE -->
-        <div class="input-group border rounded border-dark d-flex align-items-center">
+       
+        <!-- <div class="input-group border rounded border-dark d-flex align-items-center">
           <input  type="text" id="cidade" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
-        </div>
+        </div> -->
+       
+        <form method="POST">
+          <select name="cidade" id="cidade">
+            <option value="" disabled selected>Estados</option>
+            <option value=""></option>
+            <?php
+            foreach( $dadosPets as $estados){ ?>
+            <option value=""><?=$estados["cidade"]?></option>
+            
+           <?php }?>
+            <!-- As opções são geradas dinamicamente no PHP -->
+          </select>
+          <button type="submit" name="buscarPets">Buscar</button>
+        </form>
+
+        <select name="cidades" id="cidades">
+          <option value="" disabled selected>Estados</option>
+      
+          <option value=""></option>
+          <?php
+            foreach( $dadosPets as $estados){ ?>
+            <option value=""><?=$estados["cidade"]?></option>
+            
+           <?php }?>
+        </select>
+        
   
-        <!-- INPUT REGIÃO -->
-        <div class="input-group border rounded border-dark">
+        <!-- <div class="input-group border rounded border-dark">
           <input id="regiao" type="text" class="form-control cont icon-house " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
         </div>
   
-        <!-- INPUT ANIMAL -->
+        
         <div class="input-group border rounded border-dark">
           <input id="animal" type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
         </div>
   
-        <!-- INPUT IDADE -->
+        
         <div class="input-group border rounded border-dark">
           <input id="idade" type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Idade">
         </div>
   
-        <!-- INPUT RAÇA -->
+        
         <div class="input-group border rounded border-dark">
           <input id="raca" type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
-        </div>
+        </div> -->
   
-        <!-- BOTÃO BUSCAR PET -->
+       
         <div class="w-75 m-auto border-none">
-          <button class="btn btn-primary border-0 w-100" type="button" id="buscar">Buscar Pet</button>
+          <button class="btn btn-primary border-0 w-100" type="button" id="buscar-pets">Buscar Pet</button>
         </div>
    
       </div>
@@ -192,6 +220,16 @@
           
       ?> <?=count($data);?> Pets disponíveis para você
     </h1>
+
+
+        <?php
+          if(isset($_POST["buscarPets"])){
+            $cidadeSelecionada = $_POST['cidade'];
+          }
+        ?>
+ 
+
+
 
     <div class="d-flex flex-wrap justify-content-center gap-5 mt-5 mt-md-5 data-pets='<?= json_encode($data); ?>">
     <?php
@@ -400,6 +438,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <script src="js/menu.js"></script>
+ 
   <!-- <script src="js/filtros.js"></script> -->
 
 
