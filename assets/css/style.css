@@ -927,3 +927,15 @@ nav h2 a {
   .div-entry {
     margin: 30px auto;
   }
+  img { max-width: 100%; }
+  .fundo{
+    background-color: #070b35;
+    background-image: url(../../images/1.png);
+    background-size: cover;
+    /* background-attachment: fixed; */
+    /* width: 110vw; */
+    /* height: 120vh; */
+
+    
+
+  }
