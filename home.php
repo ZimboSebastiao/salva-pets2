@@ -179,7 +179,7 @@ if (isset($_GET['sair'])) $sessao->logout();
     <!-- cards de processo de adoção -->
     <div class="d-flex w-100 align justify-content-around flex-wrap px-2 h-75 ">
 
-      <div class="col-sm-3">
+      <div class="col-md-3">
         <div class="card">
           <div class="card-body">
             <img src="icones/pesquisa.png" alt="">
@@ -191,7 +191,7 @@ if (isset($_GET['sair'])) $sessao->logout();
         </div>
       </div><br>
 
-      <div class="col-sm-3">
+      <div class="col-md-3">
         <div class="card">
           <div class="card-body">
             <img src="icones/cuidado-animal.png" alt="">
@@ -203,7 +203,7 @@ if (isset($_GET['sair'])) $sessao->logout();
       </div><br>
 
 
-      <div class="col-sm-3">
+      <div class="col-md-3">
         <div class="card">
           <div class="card-body">
             <img src="icones/seguro-pet.png" alt="">
