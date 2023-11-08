@@ -258,10 +258,8 @@
             
               <i class="bi bi-cake"> <?=$anos?> anos e <?=$meses?> meses</i>
             </div>
-            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
             <div class="mt-3 text-start">
               <a href="detalhe.php?id=<?=$pet['id']?>"><button class="btn btn-primary border-0">Adotar</button></a>
-            <!-- <button class="btn btn-primary border-0" name="atualizar"><i class="bi bi-arrow-clockwise"></i> Adotar</button> -->
           </div>
           </div>
         </div>

@@ -172,8 +172,8 @@
               $num_dias = $diferenca->days;
           ?>
 
-        <div class="card border card-item-1" style="width: 100%;">
-          <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="422" >
+        <div class="card border card-item-1 shadow mt-5 rounded-4" style="width: 100%;">
+          <img src='<?=$imagemUrl?>' class="rounded-top-4 rounded-bottom-4" alt='<?=$nome?>' height="452" >
         </div>
         <?php } } ?>
     </div>
@@ -183,23 +183,23 @@
   
       <!-- CARDS Pequenos -->
       <div class="cards-pequenos">
-        <div class="card border card-item-2" style="width: 90%;">
-              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
+        <div class="card  card-item-2 shadow mt-5 rounded-4" style="max-width: 80%;">
+              <img src='<?=$imagemUrl?>' class="rounded-top-4 rounded-bottom-4" alt='<?=$nome?>' height="200">
         </div>
       
-        <div class="card border card-item-2" style="width: 90%;">
-              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
+        <div class="card border card-item-2 shadow mt-5 rounded-4" style="max-width: 80%;">
+              <img src='<?=$imagemUrl?>' class="rounded-top-4 rounded-bottom-4" alt='<?=$nome?>' height="200">
         </div>
       </div>
     
       <!-- CARDS Médios -->
       <div class="cards-medios">
-        <div class="card border card-item-3" style="width: 100%;">
-              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
+        <div class="card border card-item-3 shadow mt-5 rounded-4" style="max-width: 100%;">
+              <img src='<?=$imagemUrl?>' class="rounded-top-4 rounded-bottom-4" alt='<?=$nome?>' height="200">
         </div>
       
-        <div class="card border card-item-3" style="width: 100%;">
-              <img src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="200">
+        <div class="card border card-item-3 shadow mt-5 rounded-4" style="max-width: 100%;">
+              <img src='<?=$imagemUrl?>' class="rounded-top-4 rounded-bottom-4" alt='<?=$nome?>' height="200">
         </div>
       </div>
     </div>
@@ -211,7 +211,7 @@
   <!-- DETALHES DO PET -->
   <section>
   
-    <div class="formatar-loc">
+    <div style="padding-top: 40px;" class="formatar-loc">
 
       <h1 class="formatar-h1">
         <?=$localizacao?>
@@ -278,8 +278,8 @@
       <div class="card-body">
         <h5 class="card-title espacamento-h">Adote seu pet aqui!</h5>
         <div class="formatar-p">
-          <p class="card-text"> <img src="icones/coleira.png" alt=""> <?= $nome?></p>
-          <p class="card-text">
+          <p class="card-text formatar-coleira"> <img src="icones/coleira.png" alt=""> <?= $nome?></p>
+          <p class="card-text formatar-sx">
             <?php 
               if ($sexo === "Fêmea") { ?>
               
@@ -301,9 +301,9 @@
         $palavras = explode(',', $localizacao);
         $ultimaPalavra = trim(end($palavras));
         ?>
-        <p class="card-text espacamento-p"> <?= $raca?>, <?=$ultimaPalavra?> </p>
+        <p class="card-text espacamento-p formatar-rc"> <?= $raca?>, <?=$ultimaPalavra?> </p>
   
-        <a href="adocao.php?id=<?=$petId?>" class="btn btn-primary formartar-botao">Adotar pet</a>
+        <a href="adocao.php?id=<?=$petId?>" class="btn btn-primary formartar-botao ">Adotar pet</a>
       </div>
     </div>
   </section>
@@ -327,7 +327,6 @@ $data = json_decode($apiData, true);
 
 shuffle($data);
 
-// Exibir apenas 3 cards aleatórios
 ?>
     
   <div>
@@ -348,9 +347,9 @@ shuffle($data);
           $imagemUrl = "https://salvapets.onrender.com/" . $imagem;
         ?>
     <div class="col-md-4 mb-4">
-    <div class="card border card-item shadow-lg rounded-5">
+    <div  class="card card-format border card-item shadow mt-5 rounded-4">
         
-        <a href="detalhe.php?id=<?=$pet['id']?>"><img class="rounded-top-4 w-100" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
+        <a href="detalhe.php?id=<?=$pet['id']?>"><img class="rounded-top-4 rounded-bottom-4 " src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
         <div class="card-body">
           <div class="favoritar-nome">
             <h5 class="card-title nome-pets"><?=$nome?></h5>

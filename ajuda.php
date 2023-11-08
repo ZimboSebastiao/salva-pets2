@@ -41,10 +41,10 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Nossos pets
           </a>
-          <ul class="dropdown-menu col-3 m-auto">
-            <li><a class="nav-link text-center" href="nossos-pets.php">Todos pets</a></li>
-            <li><a class="nav-link text-center" href="nossos-pets.php?dogs">Cachorros</a></li>
-            <li><a class="nav-link text-center" href="nossos-pets.php?cats">Gatos</a></li>
+          <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item text-end" href="nossos-pets.php">Todos pets</a></li>
+            <li><a class="dropdown-item text-end" href="nossos-pets.php?dogs">Cachorros</a></li>
+            <li><a class="dropdown-item text-end" href="nossos-pets.php?cats">Gatos</a></li>
           </ul>
         </li>
             <li class="nav-item">
@@ -112,6 +112,7 @@
       </div>
     </nav>
   </header>
+<hr class="my-4 d-md-none" > <!-- FIM CABEÇALHO  -->
 
 
 
