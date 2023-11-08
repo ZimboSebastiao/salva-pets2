@@ -871,6 +871,11 @@ hr.my-2 {
     padding: 10px;
 }
 
+.my-3 { 
+    width: 100%; 
+    padding-top: 10px;
+}
+
 .pets-relacionados {
     display: flex;
     justify-content: space-around;

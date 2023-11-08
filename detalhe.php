@@ -216,7 +216,8 @@
 
 
     <span class="rua-detalhes"><?=$rua?></span>
-    
+
+    <hr class="my-3">
     <h3 style=" color: #1E266D; padding-top: 40px; padding-bottom: 5px;">Detalhes do Pet</h3>
     
     <div class="formatar-detalhes">
