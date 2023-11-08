@@ -218,10 +218,10 @@
                   
                   $imagemUrl = "https://salvapets.onrender.com/" . $imagem; ?>
     
-        <div class="card border card-item shadow mt-5 rounded-4">
+        <div class="card border card-item shadow-lg mt-5 rounded-4">
         
-          <a href="detalhe.php?id=<?=$pet['id']?>"><img class=" rounded-4 shadow" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
-          <div class="card-body">
+          <a href="detalhe.php?id=<?=$pet['id']?>"><img class=" border rounded-4" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
+          <div class="card-body pt-0">
             <div class="favoritar-nome">
               <h5 class="card-title nome-pets"><?=$nome?></h5>
               
@@ -229,8 +229,8 @@
             
             <i class="bi bi-geo-alt loc-pets"><?=$regiao?>,</i>
             <i class=" loc-pets"><?=$cidade?></i>
-            <div class="idade-sexo">
-              <p class="card-text sexo-pets">
+            <div class="idade-sexo mt-1">
+              <p class="m-0">
               <?php 
                 if ($sexo === "Fêmea") { ?>
                 
@@ -260,7 +260,7 @@
               <i class="bi bi-cake"> <?=$anos?> anos e <?=$meses?> meses</i>
             </div>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            <div class="mt-3 text-start">
+            <div class="mt-3 text-center">
               <a href="detalhe.php?id=<?=$pet['id']?>"><button class="btn btn-primary border-0">Adotar</button></a>
             <!-- <button class="btn btn-primary border-0" name="atualizar"><i class="bi bi-arrow-clockwise"></i> Adotar</button> -->
           </div>
