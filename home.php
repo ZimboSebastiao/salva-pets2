@@ -177,8 +177,7 @@ if (isset($_GET['sair'])) $sessao->logout();
     </section>
 
     <!-- cards de processo de adoção -->
-    <div class="d-flex w-100 align justify-content-around flex-wrap px-2 h-75 ">
-
+    <div class="d-flex w-100 align justify-content-around flex-wrap px-2 h-75 gap-3 ">
       <div class="col-md-3">
         <div class="card">
           <div class="card-body">
@@ -189,7 +188,7 @@ if (isset($_GET['sair'])) $sessao->logout();
               escolha o pet que combina com você e o favorite.</p>
           </div>
         </div>
-      </div><br>
+      </div>
 
       <div class="col-md-3">
         <div class="card">
@@ -200,7 +199,7 @@ if (isset($_GET['sair'])) $sessao->logout();
             <p class="card-text">Para poder prosseguir com o processo de adoção você deve fazer o cadastro.</p>
           </div>
         </div>
-      </div><br>
+      </div>
 
 
       <div class="col-md-3">
