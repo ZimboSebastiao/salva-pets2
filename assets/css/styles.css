@@ -972,6 +972,7 @@ hr.my-2 {
     height: 100vh;
 }
 
+.inpt {border: #db4712;}
 
 @media (min-width: 200px) and (max-width: 991px){
     
