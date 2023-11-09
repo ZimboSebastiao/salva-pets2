@@ -29,92 +29,92 @@ if (isset($_GET['sair'])) $sessao->logout();
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg w-100">
-      <div class="container-fluid m-none">
-        <a class="navbar-brand px-lg-5 px-xl-5 fw-bold" href="home.php"><img src="icones/pet1.png" alt="..." height="46">
-          SalvaPets</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarScroll">
-          <ul class="link-menu navbar-nav me-auto my-3 my-lg-0 navbar-nav-scroll d-flex justify-content-around w-75 text-center m-auto" style="--bs-scroll-height: 250px; ">
+<header>
+  <nav class="navbar navbar-expand-lg w-100">
+    <div class="container-fluid m-none">
+      <a class="navbar-brand px-lg-5 px-xl-5 fw-bold" href="home.php"><img src="icones/pet1.png" alt="..." height="46">
+        SalvaPets</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarScroll">
+        <ul class="link-menu navbar-nav me-auto my-3 my-lg-0 navbar-nav-scroll d-flex justify-content-around w-75 text-center m-auto" style="--bs-scroll-height: 250px; ">
 
-          <li class="nav-item dropdown fs-5 fw-bold">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Nossos pets
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item text-center" href="nossos-pets.php">Todos pets</a></li>
-            <li><a class="dropdown-item text-center" href="nossos-pets.php?dogs">Cachorros</a></li>
-            <li><a class="dropdown-item text-center" href="nossos-pets.php?cats">Gatos</a></li>
-          </ul>
-        </li>
-            <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold" href="ajuda.php">Ajuda</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold px-0 z-1 position-relative" href="contato.php">Contato</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold z-1 position-relative" href="quem-somos.php">Quem somos</a>
-            </li>
-          </ul><hr>
-          <?php if (!isset($_SESSION['id'])){ ?>
-          <form class="d-flex justify-content-center me-lg-5" role="search">
-            <a href="login.php" class="btn btn-primary border px-5 z-1 position-relative" tabindex="-1" role="button" aria-disabled="true">Entrar</a>
-          </form><hr class="">
-          <?php }?>
-          
-          <?php if (isset($_SESSION['id'])){ ?>
-              <li class="nav-item menu-perfil dropdown list-unstyled me-lg-5 z-1 position-relative text-center pt-3">
-              <a class="nav-link dropdown-toggle d-flex justify-content-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown fs-5 fw-bold">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Nossos pets
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item text-center" href="nossos-pets.php">Todos pets</a></li>
+          <li><a class="dropdown-item text-center" href="nossos-pets.php?dogs">Cachorros</a></li>
+          <li><a class="dropdown-item text-center" href="nossos-pets.php?cats">Gatos</a></li>
+        </ul>
+      </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5 fw-bold" href="ajuda.php">Ajuda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5 fw-bold px-0 z-1 position-relative" href="contato.php">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-5 fw-bold z-1 position-relative" href="quem-somos.php">Quem somos</a>
+          </li>
+        </ul><hr>
+        <?php if (!isset($_SESSION['id'])){ ?>
+        <form class="d-flex justify-content-center me-lg-5" role="search">
+          <a href="login.php" class="btn btn-primary border px-5 z-1 position-relative" tabindex="-1" role="button" aria-disabled="true">Entrar</a>
+        </form><hr class="">
+        <?php }?>
+        
+        <?php if (isset($_SESSION['id'])){ ?>
+            <li class="nav-item menu-perfil dropdown list-unstyled me-lg-5 z-1 position-relative text-center pt-3">
+            <a class="nav-link dropdown-toggle d-flex justify-content-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
-                <p class="text-center">Olá, <?= $_SESSION["nome"]?></p>
+              <p class="text-center">Olá, <?= $_SESSION["nome"]?></p>
 
-                <span class="espacamento-user">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                  </svg>
-                </span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="perfil.php">
-                  <span class="espacamento-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
-                        <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5zm0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78h4.723zM5.048 3.967c-.03.021-.058.043-.087.065l.087-.065zm-.431.355A4.984 4.984 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8 4.617 4.322zm.344 7.646.087.065-.087-.065z"/>
-                      
-                      
-                    </svg>
-                  </span>
-                  Perfil</a>
-                </li>
-
-                <li><a class="dropdown-item" href="#">
-                  <span class="espacamento-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
-                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-                  </svg>
-                  </span>
-                  Favorito</a>
-                </li>
-
-                <li><a class="dropdown-item" href="?sair" > 
+              <span class="espacamento-user">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                </svg>
+              </span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="perfil.php">
                 <span class="espacamento-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
-                    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gear-wide-connected" viewBox="0 0 16 16">
+                      <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5zm0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78h4.723zM5.048 3.967c-.03.021-.058.043-.087.065l.087-.065zm-.431.355A4.984 4.984 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8 4.617 4.322zm.344 7.646.087.065-.087-.065z"/>
+                    
+                    
                   </svg>
                 </span>
-                Sair</a></li>
-              </ul>
-            </li>
-            <?php } ?>
-        </div>
+                Perfil</a>
+              </li>
+
+              <li><a class="dropdown-item" href="#">
+                <span class="espacamento-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                </svg>
+                </span>
+                Favorito</a>
+              </li>
+
+              <li><a class="dropdown-item" href="?sair" > 
+              <span class="espacamento-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                  <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                </svg>
+              </span>
+              Sair</a></li>
+            </ul>
+          </li>
+          <?php } ?>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
   <main class="meio">
     <div class="cabecalho px-3 px-lg-5 col-md-12  pt-5 mb-5">
@@ -133,47 +133,135 @@ if (isset($_GET['sair'])) $sessao->logout();
         <img class="d-none d-sm-none d-lg-block" src="images/mina.png" alt="">
       </div>
 
-      <div class="pesquisa d-flex align-items-center gap-lg-3 gap-xl-5 flex-wrap flex-lg-nowrap col-11 m-auto col-xxl-11 mx-lg-3 rounded-4">
 
-        <!-- INPUT CIDADE -->
-        <div class="input-group rounded border-dark p-1 px-md-1 ms-lg-3">
-          <input type="text" class="form-control cont icon-city custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
-        </div>
 
-        <!-- INPUT REGIÃO -->
-        <div class="input-group rounded border-dark p-1 px-md-1">
-          <input type="text" class="form-control cont icon-house custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
-        </div>
-
-        <!-- INPUT ANIMAL -->
-        <div class="input-group rounded border-dark p-1 px-md-1">
-          <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
-          <input type="text" class="form-control cont icon-animal custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Tipo">
-        </div>
-
-        <!-- INPUT RAÇA -->
-        <div class="input-group rounded border-dark p-1 px-md-1">
-          <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
-          <input type="text" class="form-control cont icon-race custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
-        </div>
-        <div class="w-75 d-flex m-auto p-1">
-          <button class="btn btn-primary text-white m-auto w-75 p-1 border" type="button">Buscar Pet</button>
-        </div>
+        <div class="pesquisa d-flex align-items-center gap-lg-3 gap-xl-5 flex-wrap flex-lg-nowrap col-11 m-auto col-xxl-11 mx-lg-3 rounded-4">
+  
+          <!-- INPUT CIDADE -->
+          <div class="input-group rounded border-dark p-1 px-md-1 ms-lg-3">
+            <input type="text" class="form-control cont icon-city custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
+          </div>
+  
+          <!-- INPUT REGIÃO -->
+          <div class="input-group rounded border-dark p-1 px-md-1">
+            <input type="text" class="form-control cont icon-house custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região">
+          </div>
+  
+          <!-- INPUT ANIMAL -->
+          <div class="input-group rounded border-dark p-1 px-md-1">
+            <!-- <img src="icones/bola-de-cachorro (1).png" alt="" width="10%"> -->
+            <input type="text" class="form-control cont icon-animal custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Tipo">
+          </div>
+  
+          <!-- INPUT RAÇA -->
+          <div class="input-group rounded border-dark p-1 px-md-1">
+            <!-- <img src="icones/bicho-de-estimacao (1).png" alt="" width="10%"> -->
+            <input type="text" class="form-control cont icon-race custom-border" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
+          </div>
+  
+          <div class="w-75 d-flex m-auto p-1">
+            <button class="btn btn-primary text-white m-auto w-75 p-1 border" type="button">Buscar Pet</button>
+          </div>
+  
       </div>
-    </div>
+      </div>
 
     <!-- Titulos pre cards pets -->
     <article class="pet-ideal text-center p-5">
-      <h2>Pets para você</h2>
-      <h3>Descubra o pet que mais faz sentido para você</h3>
-      <p class="text-primary">Encontre o pet ideal para o seu convívio</p>
+      <h2 style="color: #FF7F50; font-weight: bold;">Pets para você</h2>
+      <h3 style="color: #1E266D; font-weight: bold;">Descubra o pet que mais faz sentido para você</h3>
+      <p style="color: #C3C7E5; font-weight: bold;" >Aproveite as oportunidades abaixo e encontre seu Pet ideal</p>
+
     </article>
+
+  <?php
+
+    $apiUrl = "https://salvapets.onrender.com/pets/";  
+    $apiData = file_get_contents($apiUrl);
+    $data = json_decode($apiData, true);
+
+    shuffle($data);
+
+    ?>
+    
+  <div class="container">
+    <div class="row">
+    <?php
+      for ($i = 0; $i < 3; $i++) {
+          $pet = $data[$i];
+          $id = $pet['id'];
+          $nome = $pet['nome'];
+          $idade = $pet['idade'];
+          $sobre = $pet['sobre'];
+          $localizacao = $pet['localizacao'];
+          $cidade = $pet['cidade'];
+          $regiao = $pet['regiao'];
+          $sexo = $pet['sexo'];
+          $imagem = $pet['imagem'];
+
+          $imagemUrl = "https://salvapets.onrender.com/" . $imagem;
+        ?>
+    <div class="col-md-4 mb-4">
+    <div style="height: 94%;" class="card card-format border card-item shadow mt-5 rounded-4">
+        
+        <a href="detalhe.php?id=<?=$pet['id']?>"><img class="rounded-top-4 rounded-bottom-4" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
+        <div class="card-body">
+          <div class="favoritar-nome">
+            <h5 class="card-title nome-pets"><?=$nome?></h5>
+            <p class="favorito">
+              <a href="?favoritar=<?=$pet['id']?>" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+              </svg>
+            </a>
+            </p>
+          </div>
+          <p class="card-text loc-pets"><?=$localizacao?></p>
+          <div class="idade-sexo">
+            <p class="card-text sexo-pets">
+            <?php 
+              if ($sexo === "Fêmea") { ?>
+              
+              <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z"/>
+              </svg>
+              <?php 
+              } else {?>
+              <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+            </svg>
+            <?php
+              } 
+            ?>
+            <?=$sexo?></p>
+            <?php 
+              $dataNascimento = strtotime($idade);
+              $dataAtual = time();
+    
+              if ($dataNascimento !== false) {
+                $diferencaSegundos = $dataAtual - $dataNascimento;
+        
+                $anos = floor($diferencaSegundos / (365 * 24 * 60 * 60)); }
+                $meses = floor(($diferencaSegundos % (365 * 24 * 60 * 60)) / (30 * 24 * 60 * 60));
+              ?>
+            <p class="card-text"><?=$anos?> anos e <?=$meses?> meses</p>
+          </div>
+          <div class="mt-3 text-start">
+              <a href="detalhe.php?id=<?=$pet['id']?>"><button class="btn btn-primary border-0">Adotar</button></a>
+          </div>
+          
+        </div>
+    </div>
+    </div>
+ <?php } ?>
+  </div>
+  </div>
 
     <!-- Titulos pre cards como adotar  -->
     <section class="processo-adocao text-center">
-      <h2>Como funciona o processo de adoção?</h2>
-      <h3>Veja como é facil Adotar um Pet!</h3>
-      <p class="text-primary">Siga o passo a passo para a chegada do seu pet.</p>
+    <h3 style="color: #FF7F50; font-weight: bold; padding-top: 50px;">Nosso processo de adoção</h3>
+    <h2 style="color: #1E266D; font-weight: bold;">Entenda como é fácil  adotar um Pet</h2>
+    <p style="color: #C3C7E5; font-weight: bold;" >Estamos aqui para simplificar a vinda do seu amiguinho</p>
     </section>
 
     <!-- cards de processo de adoção -->

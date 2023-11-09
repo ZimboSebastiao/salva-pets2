@@ -4,12 +4,8 @@
   use Salvapets\ControleDeAcesso;
   require_once "vendor/autoload.php";
 
-
   $sessao = new ControleDeAcesso;
   $usuario = new Usuario;
- 
-
-
 
 
   if (isset($_GET['sair'])) $sessao->logout();
@@ -28,14 +24,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
-<body>
+<body style="background-color: black; margin: 0; padding: 0;" class="fundo">
+
 <!-- ======== CABEÇALHO ======== -->
 <header>
     <nav class="navbar navbar-expand-lg w-100">
       <div class="container-fluid m-none">
         <a class="navbar-brand px-lg-5 px-xl-5 fw-bold" href="home.php"><img src="icones/pet1.png" alt="..." height="46">
           SalvaPets</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarScroll">
@@ -45,20 +42,20 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Nossos pets
           </a>
-          <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item text-end" href="nossos-pets.php">Todos pets</a></li>
-            <li><a class="dropdown-item text-end" href="nossos-pets.php?dogs">Cachorros</a></li>
-            <li><a class="dropdown-item text-end" href="nossos-pets.php?cats">Gatos</a></li>
+          <ul class="dropdown-menu col-3 m-auto">
+            <li><a class="nav-link text-center" href="nossos-pets.php">Todos pets</a></li>
+            <li><a class="nav-link text-center" href="nossos-pets.php?dogs">Cachorros</a></li>
+            <li><a class="nav-link text-center" href="nossos-pets.php?cats">Gatos</a></li>
           </ul>
         </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold" href="ajuda.php">Ajuda</a>
+              <a class="nav-link fs-5 fw-bold" href="#">Serviços</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold px-0 z-1 position-relative" href="contato.php">Contato</a>
+              <a class="nav-link fs-5 fw-bold px-0 z-1 position-relative" href="#">Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold z-1 position-relative" href="quem-somos.php">Quem somos</a>
+              <a class="nav-link fs-5 fw-bold z-1 position-relative" href="#">Quem somos</a>
             </li>
           </ul><hr>
           <?php if (!isset($_SESSION['id'])){ ?>
@@ -115,170 +112,22 @@
         </div>
       </div>
     </nav>
-</header>
-<!-- FIM CABEÇALHO  -->
+  </header>
+<hr> <!-- FIM CABEÇALHO  -->
 
 
-<main>
+<main >
 
-  <!-- FILTROS DE BUSCA -->
+  <section >
 
-
-    <div class="top-pets pb-3 limitar-tela">
-      <div class="container-fluid d-flex gap-2 gap-xl-5 flex-wrap m-auto flex-xl-nowrap">
+  <article class="d-flex flex-column w-50 ms-5">
+  <h1 class="fs-1 text-center">Conheça um pouco da nossa história</h1>
+      <p class="fs-3 text-wrap lh-lg">Tudo começou com uma iniciativa de um projeto integrador, pelo Senac penha visando ajudar do jeito que podiamos a cuidar de um problema muito grande de SP, que são os cachorros e gatos (pets) sem um lar.</p>
+      <p class="fs-3 text-wrap lh-lg">Desde o inicio do projeto, a principal ideia era ajudar cães e gatos que precisam ser adotados/salvos. Tentamos entrar em contato com diversas ONGS voltados ao público que queríamos mais infelizmente não tivemos retorno, então decidimos ajudar os pets a nossa maneira.</p>
+      <p class="fs-3 text-wrap lh-lg">Criamos um site para relacionar projetos voluntarios com os animais, á pessoas que gostariam de ter pets e além disso tem bastante amor e paciência para dar a eles, bem como um lar.</p>
+  </article>
+  </section>
   
-        <!-- INPUT CIDADE -->
-        <div class="input-group border rounded border-dark d-flex align-items-center">
-          <input  type="text" id="cidade" class="form-control cont icon-city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Cidade">
-        </div>
-  
-        <!-- INPUT REGIÃO -->
-        <div class="input-group border rounded border-dark">
-          <input id="regiao" type="text" class="form-control cont icon-house " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
-        </div>
-  
-        <!-- INPUT ANIMAL -->
-        <div class="input-group border rounded border-dark">
-          <input id="animal" type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Animal">
-        </div>
-  
-        <!-- INPUT IDADE -->
-        <div class="input-group border rounded border-dark">
-          <input id="idade" type="text" class="form-control cont icon-animal" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Idade">
-        </div>
-  
-        <!-- INPUT RAÇA -->
-        <div class="input-group border rounded border-dark">
-          <input id="raca" type="text" class="form-control cont icon-race" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Raça">
-        </div>
-  
-        <!-- BOTÃO BUSCAR PET -->
-        <div class="w-75 m-auto border-none">
-          <button class="btn btn-primary border-0 w-100" type="button" id="buscar">Buscar Pet</button>
-        </div>
-   
-      </div>
-    </div>
-
-  
-  <div class="limitar-tela">
-
-    <h1 class="pets-h1 text-center">
-      <?php
-
-          if (isset($_GET['dogs'])) {
-            $apiUrl = "https://salvapets.onrender.com/cachorros/";  
-            $apiData = file_get_contents($apiUrl);
-            $data = json_decode($apiData, true);
-            
-          } elseif (isset($_GET['cats'])) {
-            $apiUrl = "https://salvapets.onrender.com/gatos/";  
-            $apiData = file_get_contents($apiUrl);
-            $data = json_decode($apiData, true);
-          } else {
-
-            $apiUrl = "https://salvapets.onrender.com/pets/";  
-            $apiData = file_get_contents($apiUrl);
-            $data = json_decode($apiData, true);
-          }
-          
-
-          if (isset($_GET['regiao'])) {
-            $regiao = $_GET['regiao'];
-            $apiUrl = "https://salvapets.onrender.com/regiao/{$regiao}";
-            $apiData = file_get_contents($apiUrl);
-            $data = json_decode($apiData, true);
-        }
-          
-      ?> <?=count($data);?> Pets disponíveis para você
-    </h1>
-
-    <div class="d-flex flex-wrap justify-content-center gap-5 mt-5 mt-md-5 data-pets='<?= json_encode($data); ?>">
-    <?php
-       
-      // Faz a solicitação à API e obtém os dados
-      $apiData = file_get_contents($apiUrl);
-    
-      if ($apiData) {
-          // Converte a resposta JSON em um array PHP
-          $data = json_decode($apiData, true);
-    
-          if ($data) {
-              foreach ($data as $pet) {
-                  $id = $pet['id'];
-                  $nome = $pet['nome'];
-                  $idade = $pet['idade'];
-                  $sobre = $pet['sobre'];
-                  $localizacao = $pet['localizacao'];
-                  $cidade = $pet['cidade'];
-                  $regiao = $pet['regiao'];
-                  $sexo = $pet['sexo'];
-                  $imagem = $pet['imagem'];
-    
-                  
-                  $imagemUrl = "https://salvapets.onrender.com/" . $imagem; ?>
-    
-        <div class="card border card-item shadow mt-5 rounded-4">
-        
-          <a href="detalhe.php?id=<?=$pet['id']?>"><img class=" rounded-4 shadow" src='<?=$imagemUrl?>' class="card-img-top" alt='<?=$nome?>' height="290"></a>
-          <div class="card-body">
-            <div class="favoritar-nome">
-              <h5 class="card-title nome-pets"><?=$nome?></h5>
-              
-            </div>
-            
-            <i class="bi bi-geo-alt loc-pets"><?=$localizacao?></i>
-            <div class="idade-sexo">
-              <p class="card-text sexo-pets">
-              <?php 
-                if ($sexo === "Fêmea") { ?>
-                
-                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z"/>
-                </svg>
-                <?php 
-                } else {?>
-                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
-              </svg>
-              <?php
-                } 
-              ?>
-              <?=$sexo?></p>
-              <?php 
-                $dataNascimento = strtotime($idade);
-                $dataAtual = time();
-      
-                if ($dataNascimento !== false) {
-                  $diferencaSegundos = $dataAtual - $dataNascimento;
-          
-                  $anos = floor($diferencaSegundos / (365 * 24 * 60 * 60)); }
-                  $meses = floor(($diferencaSegundos % (365 * 24 * 60 * 60)) / (30 * 24 * 60 * 60));
-                ?>
-            
-              <i class="bi bi-cake"> <?=$anos?> anos e <?=$meses?> meses</i>
-            </div>
-            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-            <div class="mt-3 text-start">
-              <a href="detalhe.php?id=<?=$pet['id']?>"><button class="btn btn-primary border-0">Adotar</button></a>
-            <!-- <button class="btn btn-primary border-0" name="atualizar"><i class="bi bi-arrow-clockwise"></i> Adotar</button> -->
-          </div>
-          </div>
-        </div>
-    
-    <?php 
-            }
-        } else {
-            echo "<p>Ocorreu um erro ao analisar os dados da API.</p>";
-        }
-    } else {
-        echo "<p>Ocorreu um erro ao buscar os dados da API.</p>";
-    }
-    ?>
-    </div>
-  </div>
-
-
 </main>
 
 
@@ -288,6 +137,10 @@
 
 
   <!-- ====== FOOTER ====== -->
+
+
+
+
 <footer class=" text-lg-start footer-color text-muted">
 
     <!-- ====== Links ====== -->
@@ -395,7 +248,7 @@
     <!-- REDES SOCIAS -->
 
 
-</footer> <!-- FIM FOOTER  -->
+  </footer> <!-- FIM FOOTER  -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <script src="js/menu.js"></script>
