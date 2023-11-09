@@ -297,6 +297,22 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
   <script src="js/menu.js"></script>
   <!-- <script src="js/filtros.js"></script> -->
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Seleciona o formulário pelo ID
+    var formulario = document.getElementById("formulario-contato");
+
+    // Adiciona um ouvinte de evento para o evento de envio do formulário
+    formulario.addEventListener("submit", function (e) {
+        e.preventDefault(); // Impede o envio padrão do formulário
+
+        // Aqui você pode adicionar o código de envio personalizado, se necessário
+
+        // Realiza o redirecionamento personalizado
+        window.location.href = "agradecimento.php";
+    });
+});
+</script>
 
 
 </body>
