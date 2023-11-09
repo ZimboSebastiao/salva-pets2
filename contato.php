@@ -138,8 +138,8 @@
                 
             <section class="estilo-form  m-auto d-flex align-items-center w-75 gap-5">
                     
-            <form action="https://formspree.io/f/xbjvbldj" method="post" class="b-2">
-
+            <form action="https://formspree.io/f/xbjvbldj" method="post" class="b-2" id="formulario-contato">
+            
               <div class="form-floating mb-3">
                 <input type="text" class="form-control input-cadastro" id="floatingInputGroup2" placeholder="Username" required name="nome">
                 <label for="floatingInputGroup2">Nome completo</label>
@@ -151,7 +151,7 @@
               </div>
 
               <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="mensagem"></textarea>
                 <label for="floatingTextarea2">Digite sua mensagem!</label>
               </div>
 
@@ -164,9 +164,9 @@
               </div>
 
               <div>
-                <button class="btn btn-primary btn-lg botao input-cadastro inpt" type="submit">Enviar</button>
+                <button class="btn btn-primary btn-lg botao input-cadastro" type="submit">Enviar</button>
               </div>
-            </form>
+              </form>
             </section>
         </div>
 
