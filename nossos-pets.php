@@ -10,10 +10,7 @@
   $usuario = new Usuario;
 //  Utilitarios::dump($pets->lerPets());
 
-$dadosPets = $pets->lerPets();
-
-
-
+$dadosEstados = $pets->lerEstados();
 
   if (isset($_GET['sair'])) $sessao->logout();
 ?>
@@ -140,8 +137,8 @@ $dadosPets = $pets->lerPets();
             <option value="" disabled selected>Estados</option>
             <option value=""></option>
             <?php
-            foreach( $dadosPets as $estados){ ?>
-            <option value=""><?=$estados["cidade"]?></option>
+            foreach( $dadosEstados as $itemEstados){ ?>
+            <option value="<?=$itemEstados["cidade"]?>"><?=$itemEstados["cidade"]?></option>
             
            <?php }?>
             <!-- As opções são geradas dinamicamente no PHP -->
@@ -149,17 +146,6 @@ $dadosPets = $pets->lerPets();
           <button type="submit" name="buscarPets">Buscar</button>
         </form>
 
-        <select name="cidades" id="cidades">
-          <option value="" disabled selected>Estados</option>
-      
-          <option value=""></option>
-          <?php
-            foreach( $dadosPets as $estados){ ?>
-            <option value=""><?=$estados["cidade"]?></option>
-            
-           <?php }?>
-        </select>
-        
   
         <!-- <div class="input-group border rounded border-dark">
           <input id="regiao" type="text" class="form-control cont icon-house " aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Região" >
@@ -222,14 +208,9 @@ $dadosPets = $pets->lerPets();
     </h1>
 
 
-        <?php
-          if(isset($_POST["buscarPets"])){
-            $cidadeSelecionada = $_POST['cidade'];
-          }
-        ?>
- 
-
-
+<div>
+  
+</div>
 
     <div class="d-flex flex-wrap justify-content-center gap-5 mt-5 mt-md-5 data-pets='<?= json_encode($data); ?>">
     <?php

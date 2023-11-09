@@ -13,7 +13,7 @@
          }
         
 
-         public function lerPets():array{
+         public function lerEstados():array{
              $sql = "SELECT DISTINCT cidade FROM pets";
 
             try {
