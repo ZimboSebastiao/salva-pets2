@@ -35,17 +35,19 @@ if (isset($_POST['inserir'])) {
 </head>
 <body>
 <main>
-<div class="container-sm img-responsivo-cadastro">
+<div class="img-responsivo-cadastro">
 
 <!-- =========== Formulário  =========== -->
 <div>
     
     <div class="center-form-cadastro">
-        <img src="icones/pet1.png" alt="..." height="58">
-        <div class="d-flex flex-column justify-content-center align-items-center"></div>
-        <h1>A sua adoção <br> começa aqui</h1>
+        <div style="padding-left: 10px;">
+            <img src="icones/pet1.png" alt="..." height="58">
 
-        <p class="estilo-p-cadastro">Faça parte de um mundo mais amigável</p>
+            <h1 class="estilo-h1-cadastro">A sua adoção <br> começa aqui</h1>
+    
+            <p class="estilo-p-cadastro">Faça parte de um mundo mais amigável</p>
+        </div>
 
         <section class="estilo-form">
             <form action=""  method="post">
@@ -78,13 +80,13 @@ if (isset($_POST['inserir'])) {
                 <div class="form-check estilo-l">
                     <input class="form-check-input" type="checkbox" value="" id="" >
                     <label class="form-check-label" for="" >
-                        Ao clicar no botão "Criar conta", você aceita <br>
+                        Ao clicar no botão "Criar conta", você aceita 
                         nossos termos de uso e politíca de privacidade
                     </label>
                 </div>
 
                 <div>
-                    <button class="btn btn-primary btn-lg botao input-cadastro" name="inserir">Criar Conta</button>
+                    <button class="btn btn-primary btn-lg botao input-cadastro input-cd" name="inserir">Criar Conta</button>
                     <p class="tag-style-c">Já tem uma conta? <a href="login.php">Login</a></p>
                 </div>
 

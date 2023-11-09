@@ -1,51 +1,15 @@
-<?php
+<?php 
+  use Salvapets\Utilitarios;
+  use Salvapets\Usuario;
+  use Salvapets\ControleDeAcesso;
+  require_once "vendor/autoload.php";
 
-use Salvapets\Utilitarios;
-use Salvapets\Usuario;
-use Salvapets\ControleDeAcesso;
-
-require_once "vendor/autoload.php";
-
-$sessao = new ControleDeAcesso;
-$sessao->verificaAcesso();
-
-date_default_timezone_set('America/Sao_Paulo');
-$agora = date('d/m/Y');
-$hora = date('H:i');
-
-$usuario = new Usuario;
-$usuario->setId($_SESSION['id']);
-$dados = $usuario->listarUm();
-// Utilitarios::dump($dados);
+  $sessao = new ControleDeAcesso;
+  $usuario = new Usuario;
 
 
-
-if (isset($_POST["atualizar"])) {
-  $usuario->setNome($_POST['nome']);
-  $usuario->setEmail($_POST['email']);
-  $usuario->setCep($_POST['cep']);
-
-
-  if (empty($_POST['senha'])) {
-    $usuario->setSenha($dados['senha']);
-  } else {
-    $usuario->setSenha(
-
-      $usuario->verificaSenha($_POST['senha'], $dados['senha'])
-    );
-  }
-
-
-  $usuario->atualizar();
-  header("location:nossos-pets.php?status=sucesso");
-}
-
-
-
-
-if (isset($_GET['sair'])) $sessao->logout();
+  if (isset($_GET['sair'])) $sessao->logout();
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -53,22 +17,22 @@ if (isset($_GET['sair'])) $sessao->logout();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SalvaPets - Adote o seu Pet</title>
+  <title>SalvaPets - Adote o seu pet</title>
   <!-- ======== CSS Bootstrap ======== -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 
-<body>
+<body style="background-color: black; margin: 0; padding: 0;" class="fundo">
 
 <!-- ======== CABEÇALHO ======== -->
 <header>
     <nav class="navbar navbar-expand-lg w-100">
       <div class="container-fluid m-none">
-        <a class="navbar-brand px-lg-5 px-xl-5 fw-bold" href="#"><img src="icones/pet1.png" alt="..." height="46">
+        <a class="navbar-brand px-lg-5 px-xl-5 fw-bold" href="home.php"><img src="icones/pet1.png" alt="..." height="46">
           SalvaPets</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarScroll">
@@ -148,64 +112,36 @@ if (isset($_GET['sair'])) $sessao->logout();
         </div>
       </div>
     </nav>
-  </header>
-<hr class="my-4 d-md-none" > <!-- FIM CABEÇALHO  -->
+</header>
+<!-- FIM CABEÇALHO  -->
 
 
-  <!-- ======== CONTEÚDO ======== -->
-  <main class="limitador mt-5">
-    <h1 class="text-center fs-1">Atualizar dados cadastrais</h1>
+<main >
 
-    <div class="mt-5 shadow-lg d-md-flex justify-content-center col-md-10 col-lg-8 m-auto mb-5">
-      
-        <div class="p-5 mx-3 card-atualizacao rounded col-md-6">
-          <div class="m-auto text-center foto-perfil">
-            <img src="icones/do-utilizador.png" class="custom-circle" alt="...">
-          </div>
-          <div class="text-center">
-            <h3 class="text-light fw-bold text-capitalize"><?= $dados["nome"] ?></h3>
-            <p class="text-light fw-bold">Configurações da conta</p>
-            <p class="text-light fw-bold">Data: <?= $agora ?></p>
-            <p class="text-light fw-bold">Hora: <?= $hora ?></p>
-          </div>
-        </div>
+  <section >
 
-        <form class="p-3 pt-5 bg-white rounded col-md-6" action="" method="post" id="form-atualizar" name="form-atualizar">
-
-          <div class="form-floating mb-3 m-auto">
-            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" id="nome" name="nome" value="<?= $dados['nome'] ?>">
-            <label for="floatingInput">Nome</label>
-          </div>
-
-          <div class="form-floating mb-3 m-auto">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" id="email" name="email" value="<?= $dados['email'] ?>">
-            <label for="floatingInput">Email address</label>
-          </div>
-
-          <div class="form-floating mb-3 m-auto">
-            <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" id="cep" name="cep" value="<?= $dados['cep'] ?>">
-            <label for="floatingInput">Cep</label>
-          </div>
-
-          <div class="form-floating m-auto">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" id="senha" name="senha">
-            <label for="floatingPassword">Password</label>
-          </div>
-
-            <div class="mt-3 text-center">
-              <button class="btn btn-primary border-0" name="atualizar"><i class="bi bi-arrow-clockwise"></i> Atualizar</button>
-            </div>
-        </form>
-    </div>
-<!-- ====================== -->
+  <article class="d-flex flex-column w-50 ms-5">
+  <h1 class="fs-1 text-center">Conheça um pouco da nossa história</h1>
+      <p class="fs-3 text-wrap lh-lg">Tudo começou com uma iniciativa de um projeto integrador, pelo Senac penha visando ajudar do jeito que podiamos a cuidar de um problema muito grande de SP, que são os cachorros e gatos (pets) sem um lar.</p>
+      <p class="fs-3 text-wrap lh-lg">Desde o inicio do projeto, a principal ideia era ajudar cães e gatos que precisam ser adotados/salvos. Tentamos entrar em contato com diversas ONGS voltados ao público que queríamos mais infelizmente não tivemos retorno, então decidimos ajudar os pets a nossa maneira.</p>
+      <p class="fs-3 text-wrap lh-lg">Criamos um site para relacionar projetos voluntarios com os animais, á pessoas que gostariam de ter pets e além disso tem bastante amor e paciência para dar a eles, bem como um lar.</p>
+  </article>
+  </section>
+  
+</main>
 
 
 
-    
-  </main> <!-- FIM CONTEÚDO  -->
+
+
+
 
   <!-- ====== FOOTER ====== -->
-  <footer class=" text-lg-start footer-color text-muted pt-2">
+
+
+
+
+<footer class=" text-lg-start footer-color text-muted">
 
     <!-- ====== Links ====== -->
     <section class="">
@@ -223,7 +159,7 @@ if (isset($_GET['sair'])) $sessao->logout();
               </a>
             </h6>
             <p class="Beetle-letters negrito">Não compre, adote!</p>
-            <p class="negrito">contato.salvapets@gmail.com</p>
+            <p class="negrito">suporte.salvapets@gmail.com</p>
           </div>
           <!-- Grid column -->
 
@@ -233,8 +169,8 @@ if (isset($_GET['sair'])) $sessao->logout();
             <h6 class="text-uppercase fw-bold mb-4">
               Nossos pets
             </h6>
-            <p><a href="#!" class="text-reset">Cachorros</a></p>
-            <p><a href="#!" class="text-reset">Gatos</a></p>
+            <p><a href="nossos-pets.php?dogs" class="text-reset">Cachorros</a></p>
+            <p><a href="nossos-pets.php?cats" class="text-reset">Gatos</a></p>
           </div>
           <!-- Grid column -->
 
@@ -245,8 +181,8 @@ if (isset($_GET['sair'])) $sessao->logout();
             <h6 class="text-uppercase fw-bold mb-4">
               Institucional
             </h6>
-            <p><a href="#!" class="text-reset">Sobre nós</a></p>
-            <p><a href="#!" class="text-reset">Contato</a></p>
+            <p><a href="quem-somos.php" class="text-reset">Sobre nós</a></p>
+            <p><a href="contato.php" class="text-reset">Contato</a></p>
           </div>
           <!-- Grid column -->
 
@@ -255,7 +191,7 @@ if (isset($_GET['sair'])) $sessao->logout();
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">Centro de ajuda</h6>
             <p><a href="#!" class="text-reset">Política de privacidade</a></p>
-            <p><a href="#!" class="text-reset">Ajuda</a></p>
+            <p><a href="ajuda.php" class="text-reset">Ajuda</a></p>
           </div>
           <!-- Grid column -->
         </div>
@@ -275,7 +211,7 @@ if (isset($_GET['sair'])) $sessao->logout();
       <!-- Left -->
 
       <!-- Right -->
-      <div class="text-white">
+      <div>
         <a target="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
@@ -294,11 +230,11 @@ if (isset($_GET['sair'])) $sessao->logout();
           </svg>
         </a>
 
-        <a target="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-          </svg>
-          </a>
+      <a target="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+        </svg>
+      </a>
 
           <a target="_blank" href="https://linktr.ee/salvapets" class="me-4 text-reset">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
@@ -314,10 +250,11 @@ if (isset($_GET['sair'])) $sessao->logout();
 
   </footer> <!-- FIM FOOTER  -->
 
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
   <script src="js/menu.js"></script>
+  <!-- <script src="js/filtros.js"></script> -->
+
+
 </body>
 
 </html>
