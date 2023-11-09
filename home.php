@@ -253,7 +253,7 @@ if (isset($_GET['sair'])) $sessao->logout();
         </div>
     </div>
     </div>
- <?php } ?>
+  <?php } ?>
   </div>
   </div>
 
@@ -264,50 +264,166 @@ if (isset($_GET['sair'])) $sessao->logout();
     <p style="color: #C3C7E5; font-weight: bold;" >Estamos aqui para simplificar a vinda do seu amiguinho</p>
     </section>
 
-    <!-- cards de processo de adoção -->
-    <div class="d-flex w-100 align justify-content-around flex-wrap px-2 h-75 gap-3 ">
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-body">
-            <img src="icones/pesquisa.png" alt="">
-            <br><br>
-            <h5 class="card-title">Enconte o pet ideal</h5>
-            <p class="card-text">Aqui é onde tudo começa,
-              escolha o pet que combina com você e o favorite.</p>
+    <div class="container">
+      <!-- cards de processo de adoção -->
+      <div class="d-flex w-100 align justify-content-between flex-wrap px-2 h-75 gap-3 ">
+  
+        <div class="col-md-3">
+          <div style="height: 20vh;" class="card">
+            <div  class="card-body">
+            <img style="padding: 10px;" src="icones/pesquisa.png" alt="">
+              <h5 class="card-title">Enconte o pet ideal</h5>
+              <p class="card-text">Aqui é onde tudo começa,
+                escolha o pet que combina com você e o favorite.</p>
+            </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-body">
-            <img src="icones/cuidado-animal.png" alt="">
-            <br><br>
-            <h5 class="card-title">Faça o cadastro</h5>
-            <p class="card-text">Para poder prosseguir com o processo de adoção você deve fazer o cadastro.</p>
+  
+        <div class="col-md-3">
+          <div class="card">
+            <div style="height: 20vh;" class="card-body">
+              <img style="padding: 10px;" src="icones/cuidado-animal.png" alt="">
+              <h5 class="card-title">Faça o cadastro</h5>
+              <p class="card-text">Para poder prosseguir com o processo de adoção você deve fazer o cadastro.</p>
+            </div>
           </div>
         </div>
-      </div>
-
-
-      <div class="col-md-3">
-        <div class="card">
-          <div class="card-body">
-            <img src="icones/seguro-pet.png" alt="">
-            <br><br>
-            <h5 class="card-title">Aguarde a Aprovação para ir buscá-lo</h5>
-            <p class="card-text">Após solicitar a adoção, basta aguardar 24 horas para poder buscar o seu pet. </p>
+  
+  
+        <div class="col-md-3">
+          <div class="card">
+            <div style="height: 20vh;" class="card-body">
+              <img style="padding: 10px;" src="icones/seguro-pet.png" alt="">
+              <h5 class="card-title">Aguarde a Aprovação para ir buscá-lo</h5>
+              <p class="card-text">Após solicitar a adoção, basta aguardar 24 horas para poder buscar o seu pet. </p>
+            </div>
           </div>
         </div>
-      </div>
+        <img style="width: 100%;" src="images/destaque.png" alt="">
     </div>
 
-    <!-- card adotar pet -->
-    <img src="/images/mulher-cacholo.PNG" alt="" class="">
+
+    <h3 style="color: #FF7F50; font-weight: bold; padding-top: 50px;">Feedback de quem adotou</h3>
+    <h3 style="color: #1E266D; font-weight: bold;">O que  algumas pessoas que </h3>
+    <h3 style="color: #1E266D; font-weight: bold; padding-bottom: 50px;"> adotaram Pet estão falando</h3>
+
+    <div class="container">
+
+    <!-- cards de processo de fedback -->
+    <div class="d-flex w-100 align justify-content-between flex-wrap px-2 h-75 gap-3 ">
+  
+        <div class="col-md-3">
+          <div style="height: 25vh;" class="card">
+            <div  class="card-body">
+              
+            <img style="padding: 10px; height: 80px; width: 80px;" src="images/moco.png" alt="">
+              <h4 style="color: #1E266D; font-weight: bold;" class="card-title">Lucas Ferreira</h4>
+              <p style="color: #C3C7E5; font-weight: bold;" class="card-text">Estou completamente apaixonado no meu gato. ele é super carinhoso e ama comer kkkk.</p>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-md-3">
+          <div class="card">
+            <div style="height: 25vh;" class="card-body">
+              <img style="padding: 10px; height: 80px; width: 80px;" src="images/moca.png" alt="">
+              <h4 style="color: #1E266D; font-weight: bold;" class="card-title">Julia Matos</h4>
+              <p style="color: #C3C7E5; font-weight: bold;" class="card-text">Tudo começa escolhendo os milhares de animaizinhos que temos disponíveis para você.</p>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="col-md-3">
+          <div class="card">
+            <div style="height: 25vh;" class="card-body">
+              <img style="padding: 10px; height: 80px; width: 80px;" src="images/moco2.png" alt="">
+              <h4 style="color: #1E266D; font-weight: bold;" class="card-title">Henrique Lima</h4>
+              <p style="color: #C3C7E5; font-weight: bold;" class="card-text">Se eu tivesse conhecido esse gatinho antes eu já teria adotado ele desde pequeno tempo</p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    
+    <div class="container bg-danger">
+      <h3 style="color: #FF7F50; font-weight: bold; padding-top: 50px;">FAQ</h3>
+      <h2 style="color: #1E266D; font-weight: bold;">Dúvidas Frequentes</h2>
+      <p style="color: #C3C7E5; font-weight: bold; padding: 0; margin: 0;" >Qualquer dúvida entre em</p>
+      <p style="color: #C3C7E5; font-weight: bold; padding: 0; margin: 0;" > contato com nossa central de</p>
+      <p style="color: #C3C7E5; font-weight: bold;"  >ajuda <a href="mailto:suporte.salvapets@gmail.com" style="color: #C3C7E5; font-weight: bold;">suporte.salvapets@gmail.com</a>
+      </p>
+
+      <section class="estilo-form m-auto d-flex align-items-right w-75">
+
+
+                <div class="accordion w-100" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                Como escolher o pet perfeito para minha família?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <strong>Resposta:</strong> Para encontrar o pet ideal, considere fatores como tamanho, personalidade, nível de atividade e requisitos de cuidados. Visite abrigos de animais, converse com os funcionários e considere a adoção responsável.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item ">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                Como preparar minha casa para a chegada de um pet recém adotado?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <strong>Resposta:</strong> Antes de trazer seu novo amigo para casa, certifique-se de que sua casa seja segura e pet-friendly. Isso envolve a remoção de objetos perigosos, fornecimento de abrigo adequado, comida, água e treinamento básico.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                Qual é a melhor maneira de acolher um pet recém adotado?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <strong>Resposta:</strong> A recepção apropriada de um pet recém adotado envolve paciência e carinho. Dê tempo ao animal para se adaptar ao novo ambiente, estabeleça uma rotina consistente e ofereça afeto gradualmente. Consulte um veterinário para garantir que o pet esteja saudável.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                Como lidar com problemas de comportamento em pets adotados?
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <strong>Resposta:</strong> Muitos pets adotados podem ter problemas de comportamento devido a experiências passadas. A melhor abordagem é a paciência e o treinamento positivo. Se os problemas persistirem, considere a consulta a um treinador de animais ou a um especialista em comportamento animal.
+
+                                <p class="p-2">em caso de dúvidas: </p>
+                                <p><a href="contato.php">Entre em contato</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    </div>
+
+    </div>
+    <div >
+
+    </div>
+
+
   </main>
 
   <!-- ====== FOOTER ====== -->
-  <footer class=" text-lg-start footer-color text-muted pt-2">
+<footer class=" text-lg-start footer-color text-muted pt-2">
 
     <!-- ====== Links ====== -->
     <section class="">
