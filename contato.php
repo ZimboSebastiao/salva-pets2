@@ -164,7 +164,7 @@
               </div>
 
               <div>
-                <button class="btn btn-primary btn-lg botao input-cadastro" type="submit">Enviar</button>
+                <button class="btn btn-primary btn-lg botao input-cadastro border-0" type="submit">Enviar</button>
               </div>
               </form>
             </section>
