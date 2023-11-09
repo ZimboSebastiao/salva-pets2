@@ -266,10 +266,10 @@ if (isset($_GET['sair'])) $sessao->logout();
 
     <div class="container">
       <!-- cards de processo de adoção -->
-      <div class="d-flex w-100 align justify-content-between flex-wrap px-2 h-75 gap-3 ">
+      <div class="d-flex w-100 align justify-content-between flex-wrap px-2 h-100 gap-3 ">
   
         <div class="col-md-3">
-          <div style="height: 20vh;" class="card">
+          <div style="" class="card">
             <div  class="card-body">
             <img style="padding: 10px;" src="icones/pesquisa.png" alt="">
               <h5 class="card-title">Enconte o pet ideal</h5>
@@ -281,7 +281,7 @@ if (isset($_GET['sair'])) $sessao->logout();
   
         <div class="col-md-3">
           <div class="card">
-            <div style="height: 20vh;" class="card-body">
+            <div style="" class="card-body">
               <img style="padding: 10px;" src="icones/cuidado-animal.png" alt="">
               <h5 class="card-title">Faça o cadastro</h5>
               <p class="card-text">Para poder prosseguir com o processo de adoção você deve fazer o cadastro.</p>
@@ -292,10 +292,10 @@ if (isset($_GET['sair'])) $sessao->logout();
   
         <div class="col-md-3">
           <div class="card">
-            <div style="height: 20vh;" class="card-body">
+            <div style="" class="card-body">
               <img style="padding: 10px;" src="icones/seguro-pet.png" alt="">
-              <h5 class="card-title">Aguarde a Aprovação para ir buscá-lo</h5>
-              <p class="card-text">Após solicitar a adoção, basta aguardar 24 horas para poder buscar o seu pet. </p>
+              <h5 class="card-title">Aguarde a Aprovação</h5>
+              <p class="card-text">Após solicitar a adoção, basta aguardar 24h para poder buscar o seu pet. </p>
             </div>
           </div>
         </div>
@@ -313,9 +313,8 @@ if (isset($_GET['sair'])) $sessao->logout();
     <div class="d-flex w-100 align justify-content-between flex-wrap px-2 h-100 gap-3 ">
   
         <div class="col-md-3">
-          <div style="" class="card">
+          <div class="card">
             <div  class="card-body">
-              
             <img style="padding: 10px; height: 80px; width: 80px;" src="images/moco.png" alt="">
               <h4 style="color: #1E266D; font-weight: bold;" class="card-title">Lucas Ferreira</h4>
               <p style="color: #C3C7E5; font-weight: bold;" class="card-text">Estou completamente apaixonado no meu gato. ele é super carinhoso e ama comer kkkk.</p>
@@ -325,7 +324,7 @@ if (isset($_GET['sair'])) $sessao->logout();
   
         <div class="col-md-3">
           <div class="card">
-            <div style="" class="card-body">
+            <div class="card-body">
               <img style="padding: 10px; height: 80px; width: 80px;" src="images/moca.png" alt="">
               <h4 style="color: #1E266D; font-weight: bold;" class="card-title">Julia Matos</h4>
               <p style="color: #C3C7E5; font-weight: bold;" class="card-text">Tudo começa escolhendo os milhares de animaizinhos que temos disponíveis para você.</p>
@@ -336,10 +335,10 @@ if (isset($_GET['sair'])) $sessao->logout();
   
         <div class="col-md-3">
           <div class="card">
-            <div style=";" class="card-body">
+            <div class="card-body">
               <img style="padding: 10px; height: 80px; width: 80px;" src="images/moco2.png" alt="">
               <h4 style="color: #1E266D; font-weight: bold;" class="card-title">Henrique Lima</h4>
-              <p style="color: #C3C7E5; font-weight: bold;" class="card-text">Se eu tivesse conhecido esse gatinho antes eu já teria adotado ele desde pequeno tempo</p>
+              <p style="color: #C3C7E5; font-weight: bold;" class="card-text">Se eu tivesse conhecido esse gatinho antes eu já teria adotado ele desde pequeno tempo hahaha</p>
             </div>
           </div>
         </div>
