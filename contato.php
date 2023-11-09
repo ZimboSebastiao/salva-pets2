@@ -116,7 +116,7 @@
       </div>
     </nav>
   </header>
-<hr class="my-4 d-md-none" > <!-- FIM CABEÇALHO  -->
+
 
 
 
@@ -126,22 +126,20 @@
 
         <!-- =========== Formulário  =========== -->
         
-        <div>
-            <h1 class="fs-1 text-center">Entre em <b>contato</b> com a gente!!</h1>
+        <div class="">
+            <h1 class="fs-1 text-center mt-5">Entre em contato com a gente!!</h1>
             
-            <div class="center-form-cadastro m-auto formatar-sections">
+            <div class="d-lg-flex align-items-center gap-5 mt-5">
 
-
-                <section>
+                <section class="mt-5">
                     <img class="formatar-img" src="images/cat-dog-removebg-preview.png" alt="pets-paginaContato">
                 </section>
-                
-            <section class="estilo-form  m-auto d-flex align-items-center w-75 gap-5">
+
                     
-            <form action="https://formspree.io/f/xbjvbldj" method="post" class="b-2" id="formulario-contato">
-            
+              <form action="https://formspree.io/f/xbjvbldj" method="post" class="mb-5 mb-lg-1" id="formulario-contato">
+             
               <div class="form-floating mb-3">
-                <input type="text" class="form-control input-cadastro" id="floatingInputGroup2" placeholder="Username" required name="nome">
+                <input type="text" class="form-control input-cadastro col-12" id="floatingInputGroup2" placeholder="Username" required name="nome">
                 <label for="floatingInputGroup2">Nome completo</label>
               </div>
 
@@ -151,23 +149,14 @@
               </div>
 
               <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="mensagem"></textarea>
+                <textarea class="form-control input-cadastro" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="mensagem"></textarea>
                 <label for="floatingTextarea2">Digite sua mensagem!</label>
-              </div>
-
-
-              <div class="form-check estilo-l">
-                <input class="form-check-input" type="checkbox" value="" id="">
-                <label class="form-check-label" for="">
-                  Aceita receber as novidades do site
-                </label>
-              </div>
+              </div><br>
 
               <div>
                 <button class="btn btn-primary btn-lg botao input-cadastro border-0" type="submit">Enviar</button>
               </div>
               </form>
-            </section>
         </div>
 
       </div>
