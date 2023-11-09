@@ -9,10 +9,8 @@
   $usuario = new Usuario;
  
 
-
-
-
   if (isset($_GET['sair'])) $sessao->logout();
+
 ?>
 
 <!DOCTYPE html>
@@ -121,7 +119,7 @@
                 
             <section class="estilo-form  m-auto d-flex align-items-center w-75 gap-5">
                     
-            <form action="https://formspree.io/f/xbjvbldj" method="post" class="b-2">
+            <form action="https://formspree.io/f/xyyqvvbb" method="post" class="b-2">
 
               <div class="form-floating mb-3">
                 <input type="text" class="form-control input-cadastro" id="floatingInputGroup2" placeholder="Username" required name="nome">
@@ -134,7 +132,7 @@
               </div>
 
               <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px" name="mensagem"></textarea>
                 <label for="floatingTextarea2">Digite sua mensagem!</label>
               </div>
 
