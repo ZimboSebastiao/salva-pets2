@@ -313,7 +313,7 @@ if (isset($_GET['sair'])) $sessao->logout();
     <div class="d-flex w-100 align justify-content-between flex-wrap px-2 h-100 gap-3 ">
   
         <div class="col-md-3">
-          <div style="height: 35vh;" class="card">
+          <div style="" class="card">
             <div  class="card-body">
               
             <img style="padding: 10px; height: 80px; width: 80px;" src="images/moco.png" alt="">
@@ -325,7 +325,7 @@ if (isset($_GET['sair'])) $sessao->logout();
   
         <div class="col-md-3">
           <div class="card">
-            <div style="height: 25vh;" class="card-body">
+            <div style="" class="card-body">
               <img style="padding: 10px; height: 80px; width: 80px;" src="images/moca.png" alt="">
               <h4 style="color: #1E266D; font-weight: bold;" class="card-title">Julia Matos</h4>
               <p style="color: #C3C7E5; font-weight: bold;" class="card-text">Tudo começa escolhendo os milhares de animaizinhos que temos disponíveis para você.</p>
@@ -336,7 +336,7 @@ if (isset($_GET['sair'])) $sessao->logout();
   
         <div class="col-md-3">
           <div class="card">
-            <div style="height: 25vh;" class="card-body">
+            <div style=";" class="card-body">
               <img style="padding: 10px; height: 80px; width: 80px;" src="images/moco2.png" alt="">
               <h4 style="color: #1E266D; font-weight: bold;" class="card-title">Henrique Lima</h4>
               <p style="color: #C3C7E5; font-weight: bold;" class="card-text">Se eu tivesse conhecido esse gatinho antes eu já teria adotado ele desde pequeno tempo</p>
