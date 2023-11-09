@@ -310,10 +310,10 @@ if (isset($_GET['sair'])) $sessao->logout();
     <div class="container">
 
     <!-- cards de processo de fedback -->
-    <div class="d-flex w-100 align justify-content-between flex-wrap px-2 h-75 gap-3 ">
+    <div class="d-flex w-100 align justify-content-between flex-wrap px-2 h-100 gap-3 ">
   
         <div class="col-md-3">
-          <div style="height: 25vh;" class="card">
+          <div style="height: 35vh;" class="card">
             <div  class="card-body">
               
             <img style="padding: 10px; height: 80px; width: 80px;" src="images/moco.png" alt="">
@@ -346,80 +346,76 @@ if (isset($_GET['sair'])) $sessao->logout();
     </div>
 
     
-    <div class="container bg-danger">
-      <h3 style="color: #FF7F50; font-weight: bold; padding-top: 50px;">FAQ</h3>
-      <h2 style="color: #1E266D; font-weight: bold;">Dúvidas Frequentes</h2>
-      <p style="color: #C3C7E5; font-weight: bold; padding: 0; margin: 0;" >Qualquer dúvida entre em</p>
-      <p style="color: #C3C7E5; font-weight: bold; padding: 0; margin: 0;" > contato com nossa central de</p>
-      <p style="color: #C3C7E5; font-weight: bold;"  >ajuda <a href="mailto:suporte.salvapets@gmail.com" style="color: #C3C7E5; font-weight: bold;">suporte.salvapets@gmail.com</a>
-      </p>
+    <h3 style="color: #FF7F50; font-weight: bold; padding-top: 80px;">FAQ</h3>
+    <h2 style="color: #1E266D; font-weight: bold;">Dúvidas Frequentes</h2>
+    <p style="color: #C3C7E5; font-weight: bold; padding: 0; margin: 0;" >Qualquer dúvida entre em</p>
+    <p style="color: #C3C7E5; font-weight: bold; padding: 0; margin: 0;" > contato com nossa central de</p>
+    <p style="color: #C3C7E5; font-weight: bold; padding-bottom: 50px;"  >ajuda <a href="mailto:suporte.salvapets@gmail.com" style="color: #C3C7E5; font-weight: bold;">suporte.salvapets@gmail.com</a>
+    </p>
 
-      <section class="estilo-form m-auto d-flex align-items-right w-75">
+    <div class="container">
 
-
-                <div class="accordion w-100" id="accordionPanelsStayOpenExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                Como escolher o pet perfeito para minha família?
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                <strong>Resposta:</strong> Para encontrar o pet ideal, considere fatores como tamanho, personalidade, nível de atividade e requisitos de cuidados. Visite abrigos de animais, converse com os funcionários e considere a adoção responsável.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item ">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                Como preparar minha casa para a chegada de um pet recém adotado?
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <strong>Resposta:</strong> Antes de trazer seu novo amigo para casa, certifique-se de que sua casa seja segura e pet-friendly. Isso envolve a remoção de objetos perigosos, fornecimento de abrigo adequado, comida, água e treinamento básico.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                Qual é a melhor maneira de acolher um pet recém adotado?
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <strong>Resposta:</strong> A recepção apropriada de um pet recém adotado envolve paciência e carinho. Dê tempo ao animal para se adaptar ao novo ambiente, estabeleça uma rotina consistente e ofereça afeto gradualmente. Consulte um veterinário para garantir que o pet esteja saudável.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-                                Como lidar com problemas de comportamento em pets adotados?
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                <strong>Resposta:</strong> Muitos pets adotados podem ter problemas de comportamento devido a experiências passadas. A melhor abordagem é a paciência e o treinamento positivo. Se os problemas persistirem, considere a consulta a um treinador de animais ou a um especialista em comportamento animal.
-
-                                <p class="p-2">em caso de dúvidas: </p>
-                                <p><a href="contato.php">Entre em contato</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+      <div  class="d-flex justify-content-end align-items-center">
+        <section>
+                  <div class="accordion w-100" id="accordionPanelsStayOpenExample">
+                      <div class="accordion-item">
+                          <h2 class="accordion-header">
+                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                              Como eu faço para adotar um pet?
+                              </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                              <div style="color: #C3C7E5;" class="accordion-body">
+                              Para adotar um pet basta fazer o cadastro no nosso site,  encontrar o pet que mais combina com você e clicar em “adotar “. Após responder um  pequeno questinário você será avisado sobre o processo de adoção
+                              </div>
+                          </div>
+                      </div>
+                      <div class="accordion-item ">
+                          <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                  Como preparar minha casa para a chegada de um pet recém adotado?
+                              </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                              <div style="color: #C3C7E5;" class="accordion-body">
+                                   Antes de trazer seu novo amigo para casa, certifique-se de que sua casa seja segura e pet-friendly. Isso envolve a remoção de objetos perigosos, fornecimento de abrigo adequado, comida, água e treinamento básico.
+                              </div>
+                          </div>
+                      </div>
+                      <div class="accordion-item">
+                          <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                  Qual é a melhor maneira de acolher um pet recém adotado?
+                              </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                              <div style="color: #C3C7E5;" class="accordion-body">
+                                  A recepção apropriada de um pet recém adotado envolve paciência e carinho. Dê tempo ao animal para se adaptar ao novo ambiente, estabeleça uma rotina consistente e ofereça afeto gradualmente. Consulte um veterinário para garantir que o pet esteja saudável.
+                              </div>
+                          </div>
+                      </div>
+                      <div class="accordion-item">
+                          <h2 class="accordion-header">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                  Como lidar com problemas de comportamento em pets adotados?
+                              </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                              <div style="color: #C3C7E5;" class="accordion-body">
+                                   Muitos pets adotados podem ter problemas de comportamento devido a experiências passadas. A melhor abordagem é a paciência e o treinamento positivo. Se os problemas persistirem, considere a consulta a um treinador de animais ou a um especialista em comportamento animal.
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+        </section>
+      </div>
+      
     </div>
-
-    </div>
-    <div >
-
-    </div>
-
-
+    
+  </div>
+  
+  
+  <br>
   </main>
 
   <!-- ====== FOOTER ====== -->
