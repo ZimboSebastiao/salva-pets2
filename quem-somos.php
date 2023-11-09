@@ -32,7 +32,7 @@
       <div class="container-fluid m-none">
         <a class="navbar-brand px-lg-5 px-xl-5 fw-bold" href="home.php"><img src="icones/pet1.png" alt="..." height="46">
           SalvaPets</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " id="navbarScroll">
@@ -42,20 +42,20 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Nossos pets
           </a>
-          <ul class="dropdown-menu col-3 m-auto">
-            <li><a class="nav-link text-center" href="nossos-pets.php">Todos pets</a></li>
-            <li><a class="nav-link text-center" href="nossos-pets.php?dogs">Cachorros</a></li>
-            <li><a class="nav-link text-center" href="nossos-pets.php?cats">Gatos</a></li>
+          <ul class="dropdown-menu dropdown-menu-end text-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item text-end" href="nossos-pets.php">Todos pets</a></li>
+            <li><a class="dropdown-item text-end" href="nossos-pets.php?dogs">Cachorros</a></li>
+            <li><a class="dropdown-item text-end" href="nossos-pets.php?cats">Gatos</a></li>
           </ul>
         </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold" href="#">Serviços</a>
+              <a class="nav-link fs-5 fw-bold" href="ajuda.php">Ajuda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold px-0 z-1 position-relative" href="#">Contato</a>
+              <a class="nav-link fs-5 fw-bold px-0 z-1 position-relative" href="contato.php">Contato</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fw-bold z-1 position-relative" href="#">Quem somos</a>
+              <a class="nav-link fs-5 fw-bold z-1 position-relative" href="quem-somos.php">Quem somos</a>
             </li>
           </ul><hr>
           <?php if (!isset($_SESSION['id'])){ ?>
@@ -112,8 +112,8 @@
         </div>
       </div>
     </nav>
-  </header>
-<hr> <!-- FIM CABEÇALHO  -->
+</header>
+<!-- FIM CABEÇALHO  -->
 
 
 <main >

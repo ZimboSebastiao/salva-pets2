@@ -269,7 +269,7 @@ if (isset($_GET['sair'])) $sessao->logout();
       <div class="d-flex w-100 align justify-content-between flex-wrap px-2 h-100 gap-3 ">
   
         <div class="col-md-3">
-          <div style="" class="card">
+          <div  class="card">
             <div  class="card-body">
             <img style="padding: 10px;" src="icones/pesquisa.png" alt="">
               <h5 style="color: #1E266D;" class="card-title">Enconte o pet ideal</h5>
