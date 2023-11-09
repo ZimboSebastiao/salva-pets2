@@ -930,12 +930,6 @@ nav h2 a {
   img { max-width: 100%; }
   .fundo{
     background-color: #070b35;
-    background-image: url(../../images/1.png);
+    background-image: url(../../images/tela.png);
     background-size: cover;
-    /* background-attachment: fixed; */
-    /* width: 110vw; */
-    /* height: 120vh; */
-
-    
-
   }

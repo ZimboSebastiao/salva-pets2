@@ -92,17 +92,19 @@
         </div>
     </header>
 
-    <section class="fundo">
-
         <article class="d-flex flex-column w-50 ms-5">
         <h1 class="fs-1 text-center">Conheça um pouco da nossa história</h1>
             <p class="fs-3 text-wrap lh-lg">Tudo começou com uma iniciativa de um projeto integrador, pelo Senac penha visando ajudar do jeito que podiamos a cuidar de um problema muito grande de SP, que são os cachorros e gatos (pets) sem um lar.</p>
             <p class="fs-3 text-wrap lh-lg">Desde o inicio do projeto, a principal ideia era ajudar cães e gatos que precisam ser adotados/salvos. Tentamos entrar em contato com diversas ONGS voltados ao público que queríamos mais infelizmente não tivemos retorno, então decidimos ajudar os pets a nossa maneira.</p>
             <p class="fs-3 text-wrap lh-lg">Criamos um site para relacionar projetos voluntarios com os animais, á pessoas que gostariam de ter pets e além disso tem bastante amor e paciência para dar a eles, bem como um lar.</p>
+            
+            <p class="fs-3 text-wrap lh-lg">Aqui você pode encontrar o pet ideal para seu convivio e que não tem nenhum lar, basta cuidar e dar carinho que logo ele se tornará seu pequeno companheiro em casa.</p>
         </article>
-    </section>
-zdfgyzrdyzery
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<section class="">
+    
+            <img src="../images/tela.png" alt="">
+</section>
+
 
     <!-- ====== FOOTER ====== -->
     <footer class=" text-lg-start footer-color text-muted">
