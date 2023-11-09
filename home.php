@@ -272,7 +272,7 @@ if (isset($_GET['sair'])) $sessao->logout();
           <div style="" class="card">
             <div  class="card-body">
             <img style="padding: 10px;" src="icones/pesquisa.png" alt="">
-              <h5 class="card-title">Enconte o pet ideal</h5>
+              <h5 style="color: #1E266D;" class="card-title">Enconte o pet ideal</h5>
               <p class="card-text">Aqui é onde tudo começa,
                 escolha o pet que combina com você e o favorite.</p>
             </div>
@@ -281,9 +281,9 @@ if (isset($_GET['sair'])) $sessao->logout();
   
         <div class="col-md-3">
           <div class="card">
-            <div style="" class="card-body">
+            <div  class="card-body">
               <img style="padding: 10px;" src="icones/cuidado-animal.png" alt="">
-              <h5 class="card-title">Faça o cadastro</h5>
+              <h5 style="color: #1E266D;" class="card-title">Faça o cadastro</h5>
               <p class="card-text">Para poder prosseguir com o processo de adoção você deve fazer o cadastro.</p>
             </div>
           </div>
@@ -292,9 +292,9 @@ if (isset($_GET['sair'])) $sessao->logout();
   
         <div class="col-md-3">
           <div class="card">
-            <div style="" class="card-body">
+            <div  class="card-body">
               <img style="padding: 10px;" src="icones/seguro-pet.png" alt="">
-              <h5 class="card-title">Aguarde a Aprovação</h5>
+              <h5 style="color: #1E266D;" class="card-title">Aguarde a Aprovação</h5>
               <p class="card-text">Após solicitar a adoção, basta aguardar 24h para poder buscar o seu pet. </p>
             </div>
           </div>
