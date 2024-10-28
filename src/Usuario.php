@@ -21,7 +21,7 @@ class Usuario {
 
     // INSERT de usuarios
     public function inserir():void {
-        $sql = "INSERT usuario(nome, cep, email, senha)
+        $sql = "INSERT INTO usuario(nome, cep, email, senha)
                 VALUES(:nome, :cep, :email, :senha)";
 
         try {
@@ -121,7 +121,7 @@ class Usuario {
  
         try {
             $consulta = $this->conexao->prepare($sql);
-            $consulta->bindValue("email", $this->email, PDO::PARAM_STR);
+            $consulta->bindValue(":email", $this->email, PDO::PARAM_STR);
             $consulta->execute();
             $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
             

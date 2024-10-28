@@ -70,10 +70,7 @@ if (isset($_POST['inserir'])) {
                         <label for="floatingPassword">Senha</label>
                     </div>
 
-                    <div class="form-floating mb-3">
-                        <input  class="form-control input-cadastro" id="floatingPassword" placeholder="Password" required type="password">
-                        <label for="floatingPassword">Confirma senha</label>
-                    </div>
+                   
 
                     <div class="form-check estilo-l">
                         <input class="form-check-input" type="checkbox" value="" id="" >

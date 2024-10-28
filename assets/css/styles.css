@@ -245,7 +245,7 @@ a {
 
 #destaque-cadastro {
   width: 40%;
-  height: 135vh;
+  height: 123vh;
   background: url(../../images/destaque-cadastro.jpg);
   background-size: cover;
   border-radius: 0;
@@ -264,8 +264,8 @@ a {
 }
 
 .form-check-label {
-  white-space: normal; /* Permite o wrap de texto */
-  max-width: 400px; /* Define um limite de largura */
+  white-space: normal;
+  max-width: 400px;
 }
 
 .tag-style-c {
