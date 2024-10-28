@@ -30,15 +30,15 @@ if( isset($_GET["campos_obrigatorios"]) ){
 
 </head>
 <body>
-<main>
-<div class="img-responsivo-cadastro">
+<main class="img-responsivo-login">
+   
 
         <!-- =========== Formulário  =========== -->
-        <div class=" formatar-input-login">
+        <div class="formatar-input-login">
             
-            <div class="center-form">
+            <div class="center-form" >
                 <img src="icones/pet1.png" alt="..." height="58">
-                <div class="d-flex flex-column justify-content-center align-items-center"></div>
+              
                 <h1 style="padding-left: 10px; padding-top: 10px;">Seja bem <br> vindo de volta</h1>
                 <p class="estilo-p">Coloque seus dados e venha ver os seus pets</p>
 
@@ -57,13 +57,11 @@ if( isset($_GET["campos_obrigatorios"]) ){
                         </div>
                         <br>
     
-                        <div class="form-floating">
+                        <div class="form-floating mb-3">
                             <input  class="form-control input-login" id="floatingPassword" placeholder="Password"  type="password" name="senha">
                             <label for="floatingPassword">Senha</label>
-                        </div>
-    
-                        
-                            <div class="estilo-cadeado">
+                        </div class="cadeado">
+                            <div class="estilo-cadeado mb-3">
                                 <div class="esqueci-senha">
                                     <a  href="#" rel="" >
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
@@ -76,7 +74,7 @@ if( isset($_GET["campos_obrigatorios"]) ){
                         </div>
                 
     
-                        <br>
+                       
     
                         <div>
                             <button class="btn btn-primary btn-lg botao input-login input-cd" name="entrar">Entrar</button>
@@ -113,10 +111,9 @@ if( isset($_GET["campos_obrigatorios"]) ){
             </div>
             
         </div>
-        
         <div id="destaque"></div>
-        
-    </div>
+           
+    
     
 
 </main>
